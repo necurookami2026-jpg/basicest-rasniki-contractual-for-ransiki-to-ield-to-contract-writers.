@@ -56,3 +56,7 @@ Boot, UEFI, the OS kernel and DEMO_CREDIT mint are declared simulations. Guardia
 [Combined edition validation](publication/VALIDATION.md) records the final bootstrap and reader checks.
 
 ![Local Lair of Lairs reader](docs/lair-reader.png)
+
+## Orange Instagram Saver
+
+The original Chrome extension has orange single (↓) and bulk (↓↓↓) controls for loaded session-accessible media. [Installation and limits](extensions/instagram-orange/README.md); [download the extension ZIP](releases/instagram-orange.zip). Bulk is limited to loaded media, with a 200-item cap and cancellation.
