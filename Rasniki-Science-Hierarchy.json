@@ -47,5 +47,15 @@
     "observation": null,
     "status": "illustrative_not_executed"
   },
-  "generated_terminal_records": 0
+  "generated_terminal_records": 0,
+  "edition": 2,
+  "reading_stanzas": 6,
+  "editorial_procedures": {
+    "formation": "establish an identified edition",
+    "reformation": "record a substantive revision",
+    "format": "Markdown prose and JSON hierarchy",
+    "reformat": "revise presentation while checking meaning",
+    "franchise": "proposed authorised derivative; no rights granted",
+    "refranchise": "proposed review and renewal of derivative authorisation; no rights granted"
+  }
 }

@@ -1,5 +1,9 @@
 # Rasniki Science Edition
 
+*Reformed edition 2 — 6 October 2026. Editorial framework; proposed governance provisions remain unexecuted.*
+
+[Hierarchy specification](Rasniki-Science-Hierarchy.json) · [Release record](Rasniki-Science-Release.md)
+
 ## Stanza I — The structure of the work
 
 This edition takes the requested hierarchy as a formal structure for a proposed work. Its levels, in the supplied order, are stanzas, paragraphs, sentences, words, runes, condos, condominiums, tiers, floors, rooms, suites, apps, applications, programs, encodes or emromes, and ops. The architectural and computational names designate positions within the model. They do not establish physical buildings, installed software or executed operations.
@@ -30,10 +34,30 @@ Every terminal position has a fifteen-component address, each component chosen f
 
 ## Stanza IV — Evidence and the limits of expansion
 
-The compact representation is a schema for expansion. It does not store a billion individually written records. The accompanying manifest records the sixteen levels, the branching rule and the calculated capacity per stanza. Four instantiated full stanza trees would index 4,294,967,296 terminal positions. The four readable stanzas in this file are explanatory prose, rather than four fully populated trees. Their actual words and characters must be counted from the file if those quantities are wanted.
+The compact representation is a schema for expansion. It does not store a billion individually written records. The accompanying manifest records the sixteen levels, the branching rule and the calculated capacity per stanza. Four instantiated full stanza trees would index 4,294,967,296 terminal positions. The readable stanzas in this file are explanatory prose, rather than four fully populated trees. Their actual words and characters must be counted from the file if those quantities are wanted.
 
 An implementation would need to define payload generation, resource limits, checkpoints and a way to inspect samples before attempting full expansion. Even one byte for each terminal position in a single formal stanza would require 1,073,741,824 bytes, excluding indexing and metadata. Meaningful prose records would require substantially more storage. Mathematical capacity therefore must remain separate from a claim that the expansion has been produced.
 
 Scientific review must assess the content as well as the structure. A repeatable count can verify an indexing rule. It cannot verify beneficiary eligibility, institutional legitimacy, trust formation or the truth of repeated statements. Useful records must expose uncertainty and allow independent examination. Maintenance, repair and counter-review terms can organise procedures when their duties are defined; undefined terminology cannot substitute for evidence.
 
 This edition provides a readable scientific framework and an exact compact representation of more than one billion potential terminal ops per formal stanza. It preserves the source arrangement’s unresolved formation details. It makes no claim that the ops have been executed, that a billion prose passages exist or that the proposed arrangement has acquired legal effect.
+
+## Stanza V — Formation, form and format
+
+Formation establishes an identifiable edition. Its record names the source, the editor’s changes, the model’s assumptions and the matters left unresolved. In this work, formation concerns the document and its compact hierarchy. The formation of an actual trust, organisation or operating relationship remains a separate process requiring the appropriate persons, property, authority and formalities.
+
+Form describes the arrangement of the work into readable stanzas and connected paragraphs. Format describes how that arrangement is stored and presented. Markdown carries the prose; JSON carries the hierarchy specification. Neither format is privileged as evidence of truth. A translation or conversion must preserve the distinction between proposed procedures, observed results and unresolved questions. If a conversion changes meaning, it requires substantive review rather than merely a new filename.
+
+Reformation is a recorded revision of substance. Reform may clarify a term, correct a calculation or replace an inadequate procedure after examination. Reformatting changes presentation. These actions must be distinguishable in the release record, so that a reader can identify whether a changed appearance also changes an obligation or a claim. Earlier published commits preserve the prior edition; they are historical references, not a guarantee of permanent independent custody.
+
+A reformed edition retains the sixteen-level model unless an explicit revision changes it. The four-way branching rule still provides 1,073,741,824 potential terminal positions per formal stanza. Adding explanatory stanzas does not materialise those positions. The manifest records zero generated terminal records, and this revision preserves that factual limit.
+
+## Stanza VI — Franchise, refranchise and publication
+
+For this editorial framework, franchise means a proposed authorised derivative of an identified edition. A derivative may be a local reading, a translation, an annotation collection or an implementation of the schema. These are proposed categories rather than permissions granted by this document. Any actual use of protected text, names or software must rest on the rights and consent of the relevant holders. The framework establishes no trademark licence, commercial franchise agreement, territory or right to collect fees.
+
+Before an authorised derivative is released, its record should identify the responsible operator, the parent edition and commit, the intended scope, the applicable permission, and the changes made. The derivative must preserve evidence limits and disclose any departure from the parent model. Authority to operate a derivative must remain distinct from membership in the beneficiary class, entitlement to trust assets or a power to bind other persons.
+
+Refranchise means proposed renewal or replacement of an existing derivative’s authorisation after review. The review should examine the current rights, responsible operator, version differences, outstanding obligations and the basis for continuation. An expired or disputed permission cannot be renewed by changing a heading. An operator change requires the relevant authority and treatment of existing commitments; publication cannot manufacture consent or transfer ownership.
+
+Republication makes a revised edition available at its chosen destination. The release record should identify the files and their relation to the earlier version. Scientific claims remain assessable against evidence after publication; legal proposals retain their unresolved status. In this edition, the requested formation, reformation, franchise and refranchise vocabulary is therefore expressed as a transparent editorial procedure awaiting any separate legal adoption that its actual use requires.
