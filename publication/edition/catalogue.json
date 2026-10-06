@@ -111,6 +111,11 @@
       "status": "implemented-static"
     },
     {
+      "id": "offline-adult-romance",
+      "scope": "Original fictional adult, non-explicit comic and visual-novel creator proposal; private offline comfort guidance; not medical treatment or implemented generation",
+      "status": "documented-proposal"
+    },
+    {
       "id": "organiser",
       "scope": "Persistent practice records, priority queue and reviewed rule revisions",
       "status": "implemented"
@@ -161,7 +166,7 @@
       "status": "implemented-local"
     }
   ],
-  "edition": "4",
+  "edition": "5",
   "format": "rasniki-hopput-catalogue",
   "language_boundary": "Ministry fictional Kerot vocabulary does not extend or redefine the executable K0 ISA.",
   "repositories": [

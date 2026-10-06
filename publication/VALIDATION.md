@@ -41,3 +41,7 @@ The complete bootstrap passed after including the orange Instagram extension and
 Additional functional checks converted a generated MP4 with AAC audio to verified FFV1/PCM Matroska and ran the download-folder watcher until it automatically produced a verified TIFF and retained the original. Codec checks used Pillow 12.3.0 and the installed FFmpeg/ffprobe. The edition 4 reader has 75 prose documents, 40 current editorial files and 325 lair nodes; the same 254 historical source files remain unchanged.
 
 Live Instagram compatibility, personal-desktop systemd startup, Web Store review/browser automatic distribution and future scheduled GitHub runs are untested. The workflow is committed, not evidence that future runs already succeeded. Automatic repository updates test candidates before clean fast-forward; running desktop services need the supplied installer, and unpacked extensions need Chrome reload. Quality labels remain editorial rather than technical measurements or indefinite compatibility guarantees.
+
+## Edition 5: offline romance and comfort proposal
+
+The complete bootstrap and byte-reproducible publication rebuild passed. The reader contains 76 documents, 41 current editorial files and 326 lair nodes. Inclusion of the new offline adult romance and comfort chapter was checked directly in reader data. Historical snapshots remain at 254 verified files. The chapter documents a non-explicit fictional-adult creator proposal and general comfort guidance, not implemented generation, medical treatment or legal certification.

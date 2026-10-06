@@ -111,6 +111,11 @@
       "scope": "Retained fictional archive, seven-term search and four rotating story seeds; no account or ministry integration"
     },
     {
+      "id": "offline-adult-romance",
+      "status": "documented-proposal",
+      "scope": "Original fictional adult, non-explicit comic and visual-novel creator proposal; private offline comfort guidance; not medical treatment or implemented generation"
+    },
+    {
       "id": "organiser",
       "status": "implemented",
       "scope": "Persistent practice records, priority queue and reviewed rule revisions"

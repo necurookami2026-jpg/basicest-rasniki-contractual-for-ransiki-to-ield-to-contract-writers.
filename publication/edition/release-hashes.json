@@ -32,6 +32,10 @@
       "sha256": "78f0259b82eab2ef93f360a62e671d3a1a4ac9429e7afd2353a13b390648abfd",
       "size": 8193
     },
+    "docs/OFFLINE-ADULT-ROMANCE-AND-COPING.md": {
+      "sha256": "845376e3e9ef44ce39e06447dcda93be518c88fb2604c61e6728f326804e117b",
+      "size": 4748
+    },
     "docs/OMNIARCHY.md": {
       "sha256": "9c52a278b6dd7ded37557346a499fc8a0a9aefc14bca0f2497e5bd1fdca00be8",
       "size": 8980
@@ -161,37 +165,37 @@
       "size": 3659
     },
     "publication/catalogue-source.json": {
-      "sha256": "7687f1ce69d7664aa6f0c15452d1ca8c34675ac4d7f52794468d81cdd39d7a6e",
-      "size": 779012
+      "sha256": "be5c9cc26de76082de7b062dfe808b7dc1d4e3960903afb7ddba0da38d49fc63",
+      "size": 779280
     }
   },
-  "edition": "4",
+  "edition": "5",
   "format": "rasniki-hopput-release-hashes",
   "outputs": {
     "PUBLICATION.md": {
-      "sha256": "d52ff651218fe1b8a167b5457958f26cad60af84d833144b6de74d05afc88bb5",
-      "size": 734392
+      "sha256": "fbb221ba7a4460c4c6346e2c96382b96020cf2832367c19f2ff0ed85b91d076f",
+      "size": 739435
     },
     "catalogue.json": {
-      "sha256": "f84404af6fb55e9ff3c8f585278e0803847bac10bfdd2a414f9f38843f3e0c2c",
-      "size": 21747
+      "sha256": "0f740aaba9b527be4db773e8498d8805fe5e6f421007c40d406467cb6de69272",
+      "size": 22015
     },
     "index.html": {
-      "sha256": "57ef4e105aa6e0870d7bd240da7e534e5e0f7f1bfbd125b17673b045232950ad",
-      "size": 981706
+      "sha256": "91c383767e6688e41850d552941ec34110a237db4078f4015cd0ffc3d5edb258",
+      "size": 987475
     },
     "reader-data.json": {
-      "sha256": "85f22dc4301e9567b9e35454d9fd00ca720dc6f2d017ad85ea19b90f76d48090",
-      "size": 1035807
+      "sha256": "f49e5951c0978926f2f7d1c915cd435203a8810efd0989662fed649ab40c962c",
+      "size": 1041846
     },
     "sources.zip": {
-      "sha256": "b20f7f99fa143ff53c1f2a88e3d88ca8ba5910d2e2786deb5ac81945741b5b39",
+      "sha256": "7df00b7ab365d2ccea9aaeb9d6b88c3b70c96e048e510e77d9f2f9c94308689d",
       "size": 9424335
     }
   },
   "self_hash": "Excluded to avoid a circular hash; hash this file independently when archiving the release.",
   "source_lock": {
-    "sha256": "6a7cacafe6d8f8b83c11a082c8afcc3bd575d8d05fe77de6203df42603f4055a",
+    "sha256": "1caf2b77905129ba383b24920fbc293eacd587bb5891a43bc2eee38cbf8ada21",
     "size": 44037
   },
   "version": 1
