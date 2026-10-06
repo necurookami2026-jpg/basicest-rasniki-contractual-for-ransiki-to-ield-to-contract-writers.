@@ -240,4 +240,28 @@ class HTTPTests(unittest.TestCase):
         self.assertTrue(any(g['term']=='counterabolshivik' and g['meaning'] is None for g in catalogue['glossary']))
         self.assertEqual(self.action('unknown',{})[0],400)
 
+    def test_symbolic_comparison_requires_consent_and_retains_no_record(self):
+        status, body = self.request('GET','/api/symbolic')
+        self.assertEqual(status,200)
+        form = json.loads(body)
+        self.assertEqual((len(form['archetypes']),len(form['criteria'])),(5,6))
+        record = {'archetype':'thaumturgy','title':'Fictional review',
+                  'purpose':'Review a voluntary story.','consent':False,'opt_out':False,
+                  'support':{c['id']:'Supplied bounded description.' for c in form['criteria']}}
+        before = self.server.lab.status()
+        self.assertEqual(self.action('symbolic-compare',{'record':record})[0],400)
+        record['consent'] = True
+        status, body = self.action('symbolic-compare',{'record':record})
+        self.assertEqual(status,200)
+        result = json.loads(body)['result']
+        self.assertEqual(result['record']['archetype'],'thaumaturgy')
+        self.assertEqual(result['comparison']['submitted_score'],6)
+        self.assertEqual(result['comparison']['documentation_only_score'],4)
+        self.assertEqual(result['comparison']['absent_support_score'],0)
+        self.assertEqual(self.server.lab.status(),before)
+        self.assertEqual(self.action('symbolic-evaluate',{'record':record})[0],200)
+        record['opt_out'] = True
+        self.assertEqual(self.action('symbolic-compare',{'record':record})[0],400)
+        self.assertEqual(self.action('symbolic-evaluate',{'record':record})[0],400)
+
 if __name__=='__main__':unittest.main()

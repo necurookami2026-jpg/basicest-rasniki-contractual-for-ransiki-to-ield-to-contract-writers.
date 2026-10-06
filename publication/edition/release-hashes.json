@@ -4,9 +4,13 @@
       "sha256": "587cd598e1fd2d248f995fd8ddbb5bf6c025ae9ca1545412f198c8ed6b10bb5c",
       "size": 3093
     },
+    "docs/CONFLICT-PROTECTION-LIBRARY.md": {
+      "sha256": "25ad8f168127e67e66aae78dbcae80f4c577cae785fdb14206fbc7b45a07b1b0",
+      "size": 3778
+    },
     "docs/IMPLEMENTATION.md": {
-      "sha256": "973dd9e337ae4d638ee30e7a3c52cab39e0cdbb70eb7429e56bffed88099286c",
-      "size": 11442
+      "sha256": "f04afaf7fc536fb94ee57f679823f4bae3417b08db2fbdb0de0a3d735d783c45",
+      "size": 12799
     },
     "docs/LAIR-OF-LAIRS.md": {
       "sha256": "f0fb2fa1a51fe52fea0efb181ab20b2b814c3d2de27dff9339ed08ae7642227b",
@@ -24,39 +28,87 @@
       "sha256": "c3f9565400fe18b8ba533b3b7d3fb48ebad0f53e7ad7f6b982ada92607300a73",
       "size": 2714
     },
+    "docs/SPIRITUAL-SYMBOLIC-WORKBENCH.md": {
+      "sha256": "8f589b63da5d5496dc198bea4bbcc619ccce5fab5c3e696499ddebed97b85581",
+      "size": 11958
+    },
+    "docs/conflict/01-purpose-and-scope.md": {
+      "sha256": "14d4a7310ff08e3fd728d4d32346905bd7497354c96288a551730151f2e4b8cd",
+      "size": 1841
+    },
+    "docs/conflict/02-access-and-participation.md": {
+      "sha256": "3b3b4a41ab3692f101085e9b23c427c0dc23001936d0c107bc3fdc960aa1a96c",
+      "size": 1911
+    },
+    "docs/conflict/03-consent-and-boundaries.md": {
+      "sha256": "fe23e59d77384c224c8c14d5144fcbda81422593adb96723ec3c52187cfe62ac",
+      "size": 1934
+    },
+    "docs/conflict/04-incident-notes.md": {
+      "sha256": "e2bdc6e79cab72d57ecd795ae36dfb48902875c460d420ab931d1a62ccaebe28",
+      "size": 1937
+    },
+    "docs/conflict/05-de-escalation-and-dialogue.md": {
+      "sha256": "5e4bbb2a6b89737f80a1b96b47a9e3eb999e8682de3761f99fc0fad261ec1de0",
+      "size": 1884
+    },
+    "docs/conflict/06-evidence-custody.md": {
+      "sha256": "56774a6bbbd5d8fdc410275623eba4dcaa31e2ab083f250fab88eeb865dfb0c2",
+      "size": 2001
+    },
+    "docs/conflict/07-correction-and-review.md": {
+      "sha256": "7ae146db7455022cb47cf9d5ea7c7247c17311b8d5a5284a04c9fa0f8e1e315c",
+      "size": 1951
+    },
+    "docs/conflict/08-civilian-aid-coordination.md": {
+      "sha256": "1478ab1d3c236184cd653ea3b97464c22da4de85a456335e1516918ccb387c5d",
+      "size": 1962
+    },
+    "docs/conflict/09-simulation-and-learning.md": {
+      "sha256": "fe25421df7c3ddab7a8d921efd439c2ad27c025a55a09307460f89f2d1fcfa6f",
+      "size": 2082
+    },
+    "docs/conflict/10-handover-and-continuity.md": {
+      "sha256": "e7bd56838b8719aeedff66de79f598e75f81e5dea22f439af0bb1fca0a18d9a6",
+      "size": 1982
+    },
+    "docs/conflict/README.md": {
+      "sha256": "4051e90f0d6a264c8a1c75d06be8201e68647483601dcdf461781dcb697801c4",
+      "size": 2543
+    },
     "publication/catalogue-source.json": {
-      "sha256": "9d09770be572e88f6e039d85734acc0f47ddb151f430ea4ef28b5cc77c1217f1",
-      "size": 15433
+      "sha256": "5e6bec17f88541233b2c2fea4a35591e06070465c592c715f25ee339b2ffd8c9",
+      "size": 21800
     }
   },
-  "edition": "1",
+  "edition": "2",
   "format": "rasniki-hopput-release-hashes",
   "outputs": {
     "PUBLICATION.md": {
-      "sha256": "a98a33e4727a7b175be631cbfa467c79b7f54b7d196b111b01e70051175b9495",
-      "size": 535444
+      "sha256": "c82cf6bc6905be36db65b61dfda7319a9f5cb487d2c883b33438a1251f252e21",
+      "size": 590035
     },
     "catalogue.json": {
-      "sha256": "df6bd268a5fb867e96b408a0249b66e4ceca410b51674f9cfe98e7508ffd99fa",
-      "size": 16627
+      "sha256": "6778eda1cb1ab722b5067866d8b3eb737aac3a15137c00a3f70618b50ab7e763",
+      "size": 19564
     },
     "index.html": {
-      "sha256": "93539d40c19b2539bc0f7fade1f8d0a5da5c413b1d6cb460ae9262369669d885",
-      "size": 756104
+      "sha256": "95bf672a019c2a0992ac25f98ea79742939beec0cd8b907e568fa22c19793ced",
+      "size": 820377
     },
     "reader-data.json": {
-      "sha256": "6d944995f9963540a227bcdd2c9ab698dc80272ac19e6bbc58957378fb92d422",
-      "size": 800520
+      "sha256": "2944041007422dab08d08199ecc685c454425ab97da06cbd9f3302b23a29c0b9",
+      "size": 868466
     },
     "sources.zip": {
-      "sha256": "9eb53537f1566044da45483bc9de007db7c7eaef82b143aa8ccbbcf029cec6b7",
-      "size": 9424341
+      "sha256": "72a9e9c27ec0aa02f04c1251d86ce88cf07a4e3fc34417a5137ae39dcb27b9e9",
+      "size": 9424335
     }
   },
   "self_hash": "Excluded to avoid a circular hash; hash this file independently when archiving the release.",
   "source_lock": {
-    "sha256": "034aa8381f5d3b2b518cd9cd0e231395aac4eab4553d6a761675838aaadffc23",
-    "size": 44043
+    "sha256": "1048d95b28177c3d334fd977630037642ee1708658cd8962c3cac094ddbcaec8",
+    "size": 44037
   },
   "version": 1
 }

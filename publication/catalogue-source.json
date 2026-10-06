@@ -11,9 +11,14 @@
       "scope": "Intranet read-only jobs and HTTPS internet fetch to operator-configured hosts"
     },
     {
+      "id": "conflict-protection-library",
+      "status": "editorial-templates",
+      "scope": "Finite consent, accessibility, civilian-support, de-escalation and review documents; no guaranteed perpetual protection"
+    },
+    {
       "id": "curriculum",
       "status": "implemented",
-      "scope": "Five exercises with stated acceptance evidence"
+      "scope": "Seven exercises with stated acceptance evidence"
     },
     {
       "id": "defense",
@@ -24,6 +29,11 @@
       "id": "domain-host",
       "status": "simulated",
       "scope": "Persistent .lab name-to-document registry; no public DNS registration"
+    },
+    {
+      "id": "easterbunny-rubric",
+      "status": "implemented-proposed-rubric",
+      "scope": "Six supplied support fields compared with documentation-only and absent-input baselines; no effect or truth verification"
     },
     {
       "id": "files",
@@ -96,6 +106,11 @@
       "scope": "Fictional governance notes with no grant of political authority"
     },
     {
+      "id": "symbolic-practice",
+      "status": "implemented-local",
+      "scope": "Voluntary fictional-archetype reflection, bounded input review and deliberate client JSON export; no server retention"
+    },
+    {
       "id": "virtualisation",
       "status": "simulated",
       "scope": "Fresh K0 memory per execution; emulated ISA rather than hardware hypervisor"
@@ -154,6 +169,18 @@
       "meaning": "Voluntary learning and practice records within the lore.",
       "status": "source-defined",
       "source": "vendor/rasnikism/MAKKAKAH.md"
+    },
+    {
+      "term": "asith-inspired",
+      "meaning": "User label retained for a fictional reflection archetype; no affiliation, endorsement or franchise rights are asserted.",
+      "status": "implemented-fictional-archetype",
+      "source": "madrigal_lab/symbolic.py"
+    },
+    {
+      "term": "asorcery",
+      "meaning": "A fictional symbolic-reflection archetype in the voluntary workbench.",
+      "status": "implemented-fictional-archetype",
+      "source": "madrigal_lab/symbolic.py"
     },
     {
       "term": "asuresuch",
@@ -238,6 +265,12 @@
       "source": "user supplied label"
     },
     {
+      "term": "Easterbunny",
+      "meaning": "Proposed local six-field documentation-presence rubric with transparent absent-support and documentation-only baselines.",
+      "status": "implemented-proposed-rubric",
+      "source": "madrigal_lab/symbolic.py"
+    },
+    {
       "term": "emergency",
       "meaning": "Highest-priority simulated organiser item; no emergency service dispatch.",
       "status": "implemented-convention",
@@ -314,6 +347,12 @@
       "source": "user supplied edition title"
     },
     {
+      "term": "Jedi-inspired",
+      "meaning": "A fictional reflection archetype; no affiliation, endorsement or franchise rights are asserted.",
+      "status": "implemented-fictional-archetype",
+      "source": "madrigal_lab/symbolic.py"
+    },
+    {
       "term": "Kerot (Ministry)",
       "meaning": "Fictional craft of tracing how a change to a thread affects its pattern; distinct from executable K0.",
       "status": "fictional-worldbuilding",
@@ -351,6 +390,12 @@
       "meaning": "Versioned rule proposals reviewed before adoption; no automatic lawmaking.",
       "status": "proposed-convention",
       "source": "lab design"
+    },
+    {
+      "term": "nonexistenced",
+      "meaning": "In this proposed rubric, the absent-support comparison contains no supplied supporting fields; no conclusion about people or beings.",
+      "status": "proposed-comparison-label",
+      "source": "docs/SPIRITUAL-SYMBOLIC-WORKBENCH.md"
     },
     {
       "term": "omniarchy",
@@ -415,6 +460,12 @@
       "source": "Rasniki-Monarchic-Charter.md"
     },
     {
+      "term": "spiritual sciences",
+      "meaning": "Participant-chosen reflective subject label, with spiritual beliefs distinguished from tested software behavior.",
+      "status": "editorial-scope",
+      "source": "docs/SPIRITUAL-SYMBOLIC-WORKBENCH.md"
+    },
+    {
       "term": "suitable",
       "meaning": "Lab convention: acceptance criteria recorded with their checks.",
       "status": "proposed-convention",
@@ -427,10 +478,28 @@
       "source": "user supplied label"
     },
     {
+      "term": "thaumaturgy",
+      "meaning": "A fictional wonder-working narrative archetype; no measured supernatural ability is inferred.",
+      "status": "implemented-fictional-archetype",
+      "source": "madrigal_lab/symbolic.py"
+    },
+    {
+      "term": "thaumturgy",
+      "meaning": "User spelling retained as an alias of the thaumaturgy archetype.",
+      "status": "implemented-alias",
+      "source": "madrigal_lab/symbolic.py"
+    },
+    {
       "term": "urgency",
       "meaning": "Second-priority simulated organiser item.",
       "status": "implemented-convention",
       "source": "lab design"
+    },
+    {
+      "term": "wizardry",
+      "meaning": "A fictional study and worldbuilding archetype.",
+      "status": "implemented-fictional-archetype",
+      "source": "madrigal_lab/symbolic.py"
     }
   ],
   "curriculum": [
@@ -458,6 +527,16 @@
       "cycle": "Federation",
       "exercise": "Compare an explicitly trusted file baseline after editing a document.",
       "evidence": "Modified path is reported; scan findings remain indicators."
+    },
+    {
+      "cycle": "Symbolic practice",
+      "exercise": "Compare an opted-in record with four documentation fields, then add implementation and evidence descriptions.",
+      "evidence": "Support coverage rises from 4/6 to 6/6; absent baseline remains zero and opt-out rejects evaluation."
+    },
+    {
+      "cycle": "Conflict review",
+      "exercise": "Use a fictional disagreement to complete an access plan, de-escalation note and correction record.",
+      "evidence": "Separate observed facts from interpretations, preserve opt-out, and record the next bounded review."
     }
   ],
   "scope": "Finite tools and simulations; no universal exact-science or native-sovereignty claim",
@@ -471,5 +550,89 @@
     "Max Rawful Omniarchy"
   ],
   "layout": "lair-of-lairs",
-  "subtitle": "Recursive Form, Format and Formate"
+  "subtitle": "Recursive Form, Format and Formate",
+  "symbolic": {
+    "format": "rasniki-symbolic-catalogue",
+    "version": 1,
+    "rubric_name": "Easterbunny",
+    "max_score": 6,
+    "archetypes": [
+      {
+        "id": "asorcery",
+        "name": "Asorcery",
+        "scope": "Fictional symbolic reflection"
+      },
+      {
+        "id": "thaumaturgy",
+        "name": "Thaumaturgy",
+        "scope": "Fictional wonder-working narrative"
+      },
+      {
+        "id": "wizardry",
+        "name": "Wizardry",
+        "scope": "Fictional study and worldbuilding"
+      },
+      {
+        "id": "jedi-inspired",
+        "name": "Jedi-inspired",
+        "scope": "Fictional reflection; no affiliation or endorsement"
+      },
+      {
+        "id": "asith-inspired",
+        "name": "Asith-inspired",
+        "scope": "Fictional reflection; no affiliation or endorsement"
+      }
+    ],
+    "criteria": [
+      {
+        "id": "scope_and_limits",
+        "label": "Scope and limits",
+        "scope": "Describe the finite fictional practice and the limits of its claims."
+      },
+      {
+        "id": "consent_and_accessibility",
+        "label": "Consent and accessibility",
+        "scope": "Describe voluntary participation and access arrangements."
+      },
+      {
+        "id": "withdrawal",
+        "label": "Withdrawal and opt-out",
+        "scope": "Describe how a participant can stop, decline or withdraw."
+      },
+      {
+        "id": "provenance",
+        "label": "Provenance",
+        "scope": "Identify the source, author or revision of the supplied documentation."
+      },
+      {
+        "id": "implementation",
+        "label": "Implementation description",
+        "scope": "Describe supplied software or procedures; this declaration is not independently checked."
+      },
+      {
+        "id": "evidence",
+        "label": "Evidence references",
+        "scope": "Record observations or references; their existence and contents are not independently checked."
+      }
+    ],
+    "aliases": {
+      "thaumatugy": "thaumaturgy",
+      "thaumaturgry": "thaumaturgy",
+      "thaumturgy": "thaumaturgy"
+    },
+    "limits": {
+      "archetype": 64,
+      "title": 160,
+      "purpose": 1000,
+      "reflection": 4000,
+      "accessibility": 1000,
+      "withdrawal": 1000,
+      "support_field": 2000
+    },
+    "scoring": "One point per nonempty support field; every field is supplied text, not verified implementation or evidence.",
+    "scope": "Input documentation presence; no supernatural, safety or correctness certification.",
+    "retention": "No server retention. A client may offer an explicitly requested local JSON export.",
+    "participation": "Consent must be explicitly true and opt_out false before evaluation.",
+    "non_affiliation": "Jedi-inspired and Asith-inspired are fictional labels; no franchise affiliation or endorsement is claimed."
+  }
 }

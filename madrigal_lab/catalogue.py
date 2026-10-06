@@ -47,7 +47,22 @@ GLOSSARY += [
     {'term': 'asuresuch', 'meaning': None, 'status': 'awaiting-author-definition', 'source': 'user supplied label'},
 ]
 
+GLOSSARY += [
+    {'term': 'asorcery', 'meaning': 'A fictional symbolic-reflection archetype in the voluntary workbench.', 'status': 'implemented-fictional-archetype', 'source': 'madrigal_lab/symbolic.py'},
+    {'term': 'thaumaturgy', 'meaning': 'A fictional wonder-working narrative archetype; no measured supernatural ability is inferred.', 'status': 'implemented-fictional-archetype', 'source': 'madrigal_lab/symbolic.py'},
+    {'term': 'thaumturgy', 'meaning': 'User spelling retained as an alias of the thaumaturgy archetype.', 'status': 'implemented-alias', 'source': 'madrigal_lab/symbolic.py'},
+    {'term': 'wizardry', 'meaning': 'A fictional study and worldbuilding archetype.', 'status': 'implemented-fictional-archetype', 'source': 'madrigal_lab/symbolic.py'},
+    {'term': 'Jedi-inspired', 'meaning': 'A fictional reflection archetype; no affiliation, endorsement or franchise rights are asserted.', 'status': 'implemented-fictional-archetype', 'source': 'madrigal_lab/symbolic.py'},
+    {'term': 'asith-inspired', 'meaning': 'User label retained for a fictional reflection archetype; no affiliation, endorsement or franchise rights are asserted.', 'status': 'implemented-fictional-archetype', 'source': 'madrigal_lab/symbolic.py'},
+    {'term': 'Easterbunny', 'meaning': 'Proposed local six-field documentation-presence rubric with transparent absent-support and documentation-only baselines.', 'status': 'implemented-proposed-rubric', 'source': 'madrigal_lab/symbolic.py'},
+    {'term': 'nonexistenced', 'meaning': 'In this proposed rubric, the absent-support comparison contains no supplied supporting fields; no conclusion about people or beings.', 'status': 'proposed-comparison-label', 'source': 'docs/SPIRITUAL-SYMBOLIC-WORKBENCH.md'},
+    {'term': 'spiritual sciences', 'meaning': 'Participant-chosen reflective subject label, with spiritual beliefs distinguished from tested software behavior.', 'status': 'editorial-scope', 'source': 'docs/SPIRITUAL-SYMBOLIC-WORKBENCH.md'},
+]
+
 COMPONENTS = [
+    ('symbolic-practice', 'implemented-local', 'Voluntary fictional-archetype reflection, bounded input review and deliberate client JSON export; no server retention'),
+    ('easterbunny-rubric', 'implemented-proposed-rubric', 'Six supplied support fields compared with documentation-only and absent-input baselines; no effect or truth verification'),
+    ('conflict-protection-library', 'editorial-templates', 'Finite consent, accessibility, civilian-support, de-escalation and review documents; no guaranteed perpetual protection'),
     ('language', 'implemented', 'K0 assembler, disassembler, canonical formatter, Ras script compiler and bounded interpreter'),
     ('quilt', 'implemented', 'Eight finite source-backed modes; Boolean inputs are user assertions'),
     ('recursive-exact-science', 'implemented-bounded', 'Boolean addition exhaustive suite and bounded interpreter runs; not universal scientific proof'),
@@ -63,7 +78,7 @@ COMPONENTS = [
     ('internet-server', 'local-only', 'HTTP desktop/API binds IPv4 loopback; public hosting and TLS termination not deployed'),
     ('game-server', 'implemented-local', 'Shared target game state available through the local API'),
     ('organiser', 'implemented', 'Persistent practice records, priority queue and reviewed rule revisions'),
-    ('curriculum', 'implemented', 'Five exercises with stated acceptance evidence'),
+    ('curriculum', 'implemented', 'Seven exercises with stated acceptance evidence'),
     ('franchise', 'proposed', 'Derivative manifest and version/authority record; no rights granted'),
     ('sovereignty', 'editorial', 'Fictional governance notes with no grant of political authority'),
     ('ministry-archive', 'implemented-static', 'Retained fictional archive, seven-term search and four rotating story seeds; no account or ministry integration'),
@@ -75,6 +90,8 @@ CURRICULUM = [
     {'cycle': 'Household', 'exercise': 'Create a practice and record continuation, review and release.', 'evidence': 'Permitted state transitions with persisted history.'},
     {'cycle': 'Ashram', 'exercise': 'Create demo accounts, issue credits and transfer a portion.', 'evidence': 'Balanced postings, unchanged circulation after transfer, failed overdraw has no effect.'},
     {'cycle': 'Federation', 'exercise': 'Compare an explicitly trusted file baseline after editing a document.', 'evidence': 'Modified path is reported; scan findings remain indicators.'},
+    {'cycle': 'Symbolic practice', 'exercise': 'Compare an opted-in record with four documentation fields, then add implementation and evidence descriptions.', 'evidence': 'Support coverage rises from 4/6 to 6/6; absent baseline remains zero and opt-out rejects evaluation.'},
+    {'cycle': 'Conflict review', 'exercise': 'Use a fictional disagreement to complete an access plan, de-escalation note and correction record.', 'evidence': 'Separate observed facts from interpretations, preserve opt-out, and record the next bounded review.'},
 ]
 
 

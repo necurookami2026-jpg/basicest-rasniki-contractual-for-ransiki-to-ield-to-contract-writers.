@@ -10,6 +10,10 @@ sh bootstrap.sh
 
 The [bootstrap contract](docs/BOOTSTRAP.md), [source lock](publication/source-lock.json), [Lair of Lairs prose](docs/LAIR-OF-LAIRS.md), [reformed publication prose](docs/OMNIARCHY.md) and [ministry volume](docs/MINISTRY.md) identify construction steps, finite checks and the status of each source. Edition labels do not establish universal scientific proof or sovereign authority.
 
+Edition 2 adds the [spiritual and symbolic workbench](docs/SPIRITUAL-SYMBOLIC-WORKBENCH.md), with asorcery, thaumaturgy, wizardry, Jedi-inspired and asith-inspired fictional archetypes. The local app compares six supplied support fields using the proposed Easterbunny rubric, requires voluntary consent and offers a deliberate JSON download without server retention. Spiritual interpretations remain participant-held beliefs; the score counts documentation presence.
+
+The [conflict-protection library](docs/CONFLICT-PROTECTION-LIBRARY.md) contains [ten distinct working templates](docs/conflict/README.md) for purpose, access, consent, incidents, de-escalation, evidence, corrections, civilian aid, simulation and handover. They support bounded review using sake, sakety, asakety and asake terminology. They grant no authority over opponents or guarantee protection forever.
+
 ---
 
 # basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.

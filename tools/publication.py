@@ -28,8 +28,14 @@ OUTPUT_NAMES = (
     'sources.zip', 'release-hashes.json',
 )
 CURRENT_DOCUMENTS = (
-    'docs/BOOTSTRAP.md', 'docs/IMPLEMENTATION.md', 'docs/LAIR-OF-LAIRS.md', 'docs/MINISTRY.md',
-    'docs/OMNIARCHY.md', 'docs/PROVENANCE.md',
+    'docs/BOOTSTRAP.md', 'docs/CONFLICT-PROTECTION-LIBRARY.md', 'docs/IMPLEMENTATION.md',
+    'docs/LAIR-OF-LAIRS.md', 'docs/MINISTRY.md', 'docs/OMNIARCHY.md', 'docs/PROVENANCE.md',
+    'docs/SPIRITUAL-SYMBOLIC-WORKBENCH.md', 'docs/conflict/README.md',
+    'docs/conflict/01-purpose-and-scope.md', 'docs/conflict/02-access-and-participation.md',
+    'docs/conflict/03-consent-and-boundaries.md', 'docs/conflict/04-incident-notes.md',
+    'docs/conflict/05-de-escalation-and-dialogue.md', 'docs/conflict/06-evidence-custody.md',
+    'docs/conflict/07-correction-and-review.md', 'docs/conflict/08-civilian-aid-coordination.md',
+    'docs/conflict/09-simulation-and-learning.md', 'docs/conflict/10-handover-and-continuity.md',
 )
 CHAMBERS = (
     {'id': 'threshold', 'name': 'Threshold · dictionary', 'query': 'glossary', 'guide': 'Find terms, aliases and definitions before adopting their use.'},

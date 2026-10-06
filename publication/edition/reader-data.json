@@ -58,14 +58,177 @@
       "title": "docs/BOOTSTRAP.md — Current publication documentation"
     },
     {
-      "sha256": "973dd9e337ae4d638ee30e7a3c52cab39e0cdbb70eb7429e56bffed88099286c",
+      "sha256": "25ad8f168127e67e66aae78dbcae80f4c577cae785fdb14206fbc7b45a07b1b0",
+      "sources": [
+        {
+          "kind": "editorial-document",
+          "name": "Current publication documentation",
+          "path": "docs/CONFLICT-PROTECTION-LIBRARY.md",
+          "repository": "current-editorial"
+        }
+      ],
+      "text": "# Asakety, Asake, Sake and Sakety: Conflict-protection Library\n\nThis publication adds a finite library of ten distinct working documents for protection and review during conflict. In response to the requested warfare vocabulary, its scope is civilian care, service continuity, accessible participation, voluntary dialogue and examination of evidence. It grants no authority to target opponents, classify a person as an enemy forever or compel belief. The public templates use fictional examples and anonymous role labels; real support should use the relevant authorised services and records.\n\nThe library keeps the four source terms attached to their documented associations. Sake concerns purpose presence; sakety concerns planning conditions; asakety concerns review conditions; asake concerns reconsideration. The executable quilt has finite Boolean inputs and deterministic outputs. A program can record the supplied interpretation of those inputs. It cannot establish informed consent, evaluate every circumstance or certify a person's safety. The documents therefore invite questions and record unresolved matters rather than turn a computation into a moral or legal ruling.\n\nBegin in [the document room](conflict/README.md) with [purpose and scope](conflict/01-purpose-and-scope.md). Define one achievable task and its completion point. Then use [access and participation](conflict/02-access-and-participation.md) to arrange the formats, time and support needed by the people involved. Use [consent and boundaries](conflict/03-consent-and-boundaries.md) before a voluntary activity or publication of material. A diagnosis is not required for an access request, and attendance does not imply permission for unrelated uses.\n\nWhen a concern arises, [incident notes](conflict/04-incident-notes.md) separate observation, report and interpretation. [De-escalation and dialogue](conflict/05-de-escalation-and-dialogue.md) provides a bounded, optional conversation with an agreed pause method. Where authorised material must be preserved, [evidence custody](conflict/06-evidence-custody.md) records its source, handling and limitations. A digest can compare bytes with a reference; it cannot prove the original account true or supply independent authentication.\n\nUse [correction and review](conflict/07-correction-and-review.md) to challenge a conclusion, preserve the old version and identify what changed. [Civilian aid coordination](conflict/08-civilian-aid-coordination.md) organises a limited support task through appropriate local services, with confirmation of the actual need and available capacity. [Simulation and learning](conflict/09-simulation-and-learning.md) provides a fictional exercise whose outputs remain exercise records. [Handover and continuity](conflict/10-handover-and-continuity.md) transfers an agreed responsibility and identifies the next voluntary review.\n\nEach template has a purpose, a bounded record and a place for reconsideration. The supplied ten documents constitute an actual editorial addition; they are not a claim to an infinite or universally greatest supply. Further editions can add distinct documents when a clear use and responsible maintainer exist. Repeated copies and larger counts do not by themselves improve protection.\n\nContinuity means revisiting a chosen task while it remains necessary. Set a review date, permit withdrawal, correct the record and stop unnecessary collection. Immediate danger calls for appropriate local emergency support, not completion of a publication form. Neither recurring review nor a symbolic practice can guarantee efficacy forever. Ability, disability, identity, spiritual belief and disagreement must not become substitutes for evidence about an event or reasons to withhold access to support.\n",
+      "title": "docs/CONFLICT-PROTECTION-LIBRARY.md — Current publication documentation"
+    },
+    {
+      "sha256": "14d4a7310ff08e3fd728d4d32346905bd7497354c96288a551730151f2e4b8cd",
+      "sources": [
+        {
+          "kind": "editorial-document",
+          "name": "Current publication documentation",
+          "path": "docs/conflict/01-purpose-and-scope.md",
+          "repository": "current-editorial"
+        }
+      ],
+      "text": "# Purpose and protective scope\n\nBegin with an achievable purpose: restore a shared service, obtain a clarification, support an affected participant or examine a disputed record. Describe what completion would look like to the people involved. A phrase such as “defeat opposition forever” does not identify a testable outcome or an agreed boundary. Replace it with a limited task whose result can be reviewed.\n\nIn this room, **sake** asks whether a purpose has been stated. **Sakety** prompts discussion of planning conditions. **Asakety** prompts review of the record, and **asake** makes room for reconsideration. These are editorial uses associated with the source terms. Their Boolean software counterparts report supplied inputs; they do not decide whether a real purpose is justified.\n\nDescribe conduct and its effects rather than assign an enduring enemy identity. A person who disputes a proposal can still have legitimate access needs and rights. Do not infer intent, capacity or dangerousness from disability, spiritual belief, affiliation or disagreement. Invite relevant perspectives without requiring anyone to speak for a whole community.\n\nUse this short planning record:\n\n- **Exercise label:** a non-identifying project name.\n- **Purpose:** the specific improvement sought.\n- **Scope:** the service or question included, and the decision this record can support.\n- **Participation:** voluntary roles and an accessible contact method.\n- **Completion:** an observable outcome and a review date.\n- **Stopping point:** the conditions for pausing or withdrawing.\n\nBefore continuing, ask whether a smaller, less intrusive action can achieve the purpose. Confirm that the responsible person understands the task and can decline it. If the plan changes, revise the record instead of treating old agreement as unlimited permission.\n",
+      "title": "docs/conflict/01-purpose-and-scope.md — Current publication documentation"
+    },
+    {
+      "sha256": "3b3b4a41ab3692f101085e9b23c427c0dc23001936d0c107bc3fdc960aa1a96c",
+      "sources": [
+        {
+          "kind": "editorial-document",
+          "name": "Current publication documentation",
+          "path": "docs/conflict/02-access-and-participation.md",
+          "repository": "current-editorial"
+        }
+      ],
+      "text": "# Access and participation\n\nAccess planning begins by asking what would help someone take part. It does not begin by asking for a diagnosis, proof of disability or an account of trauma. A participant may request written information, extra response time, plain language, a quiet setting, captions, a trusted support person or a different communication channel. A person may also choose to receive information without joining a meeting.\n\nProvide the purpose and agenda in advance when practicable. Make essential information available as text that works with assistive technology, and avoid communicating status only through colour. Offer predictable breaks and an easy way to pause. When a support person or interpreter is involved, check the participant's preferences and confidentiality boundaries rather than assume that either role can consent on their behalf.\n\nAn adjustment should support participation without making it a condition of being believed. Ability, disability, fluency and speed of response are not evidence of honesty or opposition. If an access request cannot be met immediately, explain the actual constraint, agree an alternative if possible and keep the unresolved need visible at review.\n\nUse this voluntary, minimal record:\n\n- **Participation label:** an anonymous role or exercise name.\n- **Preferred channel and format:** the method needed for this activity.\n- **Adjustment requested:** a practical arrangement, without a medical explanation.\n- **Agreement:** who will arrange it and by when.\n- **Pause or withdrawal method:** a signal understood by everyone involved.\n- **Review:** when to ask whether the arrangement is working.\n\nKeep access records separate from scoring. A declined activity or requested adjustment must not reduce a person's worth or turn them into an adverse category. Remove unnecessary details when the activity ends, following the applicable retention policy.\n",
+      "title": "docs/conflict/02-access-and-participation.md — Current publication documentation"
+    },
+    {
+      "sha256": "fe23e59d77384c224c8c14d5144fcbda81422593adb96723ec3c52187cfe62ac",
+      "sources": [
+        {
+          "kind": "editorial-document",
+          "name": "Current publication documentation",
+          "path": "docs/conflict/03-consent-and-boundaries.md",
+          "repository": "current-editorial"
+        }
+      ],
+      "text": "# Consent and boundaries\n\nConsent concerns a specific activity, audience and period. Agreement to read a draft does not authorise publication of someone's remarks, indefinite storage of their information or enrolment in later activities. Explain the proposed use in an accessible format and offer a genuine opportunity to refuse or ask for a narrower option. Silence, attendance and a checked demonstration field do not authenticate permission.\n\nThe publication's finite K0 programs can display a result from supplied Boolean consent or permission inputs. That computation cannot establish who answered, whether they understood, whether pressure was present or whether circumstances have changed. Treat a demonstration input as a declared assertion with an identified scope, never as an automatic authority to act.\n\nFor voluntary activities, use a proportionate record. Prefer an anonymous exercise label and a reference to the authorised consent record rather than copying names or private statements into the lab. Confirm a workable withdrawal channel before collecting material. Explain any practical limit on withdrawal, such as information already lawfully published, without promising that all copies can be erased.\n\nThe template is:\n\n- **Activity:** what will happen and its purpose.\n- **Material:** what, if anything, will be recorded.\n- **Audience:** who can receive it and through which channel.\n- **Duration:** when permission ends or needs renewed review.\n- **Options:** decline, limit participation or choose another format.\n- **Withdrawal:** the contact method and expected response process.\n- **Record reference:** an approved internal reference, without identifying details here.\n\nRecheck permission when the activity, audience or risk changes. If consent is uncertain, pause the dependent voluntary activity and seek clarification through the agreed channel. A review label cannot resolve that uncertainty by itself.\n",
+      "title": "docs/conflict/03-consent-and-boundaries.md — Current publication documentation"
+    },
+    {
+      "sha256": "e2bdc6e79cab72d57ecd795ae36dfb48902875c460d420ab931d1a62ccaebe28",
+      "sources": [
+        {
+          "kind": "editorial-document",
+          "name": "Current publication documentation",
+          "path": "docs/conflict/04-incident-notes.md",
+          "repository": "current-editorial"
+        }
+      ],
+      "text": "# Incident notes\n\nAn incident note preserves a limited account so that a concern can be examined. It is not a verdict. Write what was directly observed, distinguish what someone reported, and separate both from an interpretation. “The service returned an error at the recorded time” is an observation; “the error was deliberate” requires additional evidence. State uncertainties instead of filling gaps with motives.\n\nUse only information necessary for the defined review. A public edition or local demonstration should contain synthetic examples and anonymous role labels. Keep legitimate operational records in the organisation's authorised system with its access and retention controls. Do not paste private correspondence, medical details or identifying information about bystanders into the publication.\n\nThe note can use these fields:\n\n- **Record label and version:** a stable non-identifying reference.\n- **Observation window:** time and time zone, with precision limitations.\n- **Source type:** direct observation, report or derived interpretation.\n- **Account:** a concise description, avoiding unsupported motive claims.\n- **Effect:** the service or participation affected.\n- **Immediate support:** help requested or arranged, without private details.\n- **Unknowns:** facts that remain unconfirmed.\n- **Next review:** responsible role, question and date.\n\nDo not reproduce a harmful message merely to illustrate that one was received. An authorised reviewer can retain a necessary original separately and provide a minimal description. Preserve corrections as linked revisions so that later readers can distinguish the first account from a clarified one.\n\nIf there is immediate danger, use appropriate local emergency support rather than wait for a note to be completed. After the immediate need has passed, review whether the record is still necessary and whether its wording fairly represents the available evidence.\n",
+      "title": "docs/conflict/04-incident-notes.md — Current publication documentation"
+    },
+    {
+      "sha256": "5e4bbb2a6b89737f80a1b96b47a9e3eb999e8682de3761f99fc0fad261ec1de0",
+      "sources": [
+        {
+          "kind": "editorial-document",
+          "name": "Current publication documentation",
+          "path": "docs/conflict/05-de-escalation-and-dialogue.md",
+          "repository": "current-editorial"
+        }
+      ],
+      "text": "# De-escalation and dialogue\n\nA dialogue is useful when people can choose to participate and there is a realistic question they can discuss. The aim may be to understand a service failure, agree a communication boundary or identify a next review step. It need not produce agreement about every belief or past event. Participation is not appropriate when the setting would expose someone to threats or pressure; use the relevant local support process instead.\n\nBefore a session, agree a facilitator, accessible format, time limit and pause method. Explain what will be recorded and who may receive it. Offer separate written contributions where a joint meeting would create an avoidable barrier. A participant can decline or leave without being classified as an enemy or as failing a spiritual or documentation test.\n\nDuring the discussion, use concrete descriptions and requests. Invite a person to clarify their account without demanding that they defend an identity. Summarise what was understood and give them a chance to correct it. Keep a disagreement visible if it remains; an artificial unanimous result can conceal an important concern. Avoid promises that the process will resolve every conflict or provide lasting protection.\n\nUse this session plan:\n\n- **Question:** one bounded issue for discussion.\n- **Participation:** voluntary roles and access arrangements.\n- **Format:** agenda, facilitator, duration and pause method.\n- **Recording:** minimal notes and agreed audience.\n- **Possible outcomes:** clarification, practical agreement, further review or a documented unresolved point.\n- **Follow-up:** a responsible role and an agreed date.\n\nClose by checking the proposed next step with those affected. Publish only an authorised summary, allowing corrections through the agreed channel. Schedule a voluntary review rather than treating one meeting as permanent consent.\n",
+      "title": "docs/conflict/05-de-escalation-and-dialogue.md — Current publication documentation"
+    },
+    {
+      "sha256": "56774a6bbbd5d8fdc410275623eba4dcaa31e2ab083f250fab88eeb865dfb0c2",
+      "sources": [
+        {
+          "kind": "editorial-document",
+          "name": "Current publication documentation",
+          "path": "docs/conflict/06-evidence-custody.md",
+          "repository": "current-editorial"
+        }
+      ],
+      "text": "# Evidence custody and limited receipts\n\nEvidence custody supports a careful account of what was received, copied and reviewed. Start with the smallest material needed for the stated question. Prefer an anonymous description or a redacted extract when it preserves the relevant facts. The default record collects no names, contact details, affiliations or other identifying information about participants or third parties. Do not obtain material through unauthorized access or expand collection merely because additional records are available.\n\nUse **sake** to state the custody purpose, **sakety** to examine planned handling conditions, **asakety** to review the retained account and **asake** to reconsider disputed conclusions. These editorial questions follow the source associations. The unchanged finite K0 Boolean gates do not establish judgment, consent or safety.\n\nKeep an original supplied copy separate from working extracts when possession and retention are authorized. Record transformations such as redaction without including the removed information in the log. A digest can show that two byte sequences match; it cannot prove who created a document, whether its claims are true or whether its acquisition was legitimate. A receipt confirms recorded handling within its stated scope.\n\nGive access only to agreed reviewers. Set a short retention period appropriate to the purpose, and stop unnecessary copying. Review remains voluntary and bounded; withdrawing participation should halt future collection, with any lawful retention limits explained. An immediate emergency belongs with appropriate local services.\n\n## Intake template\n\n- Case reference: anonymous local identifier.\n- Question and permitted material: concise scope.\n- Received time, format and digest: optional, bounded metadata.\n- Known limitations and redactions: description only.\n- Reviewers, retention deadline and next review: agreed roles and dates.\n- Receipt outcome: received, incomplete, disputed or withdrawn.\n",
+      "title": "docs/conflict/06-evidence-custody.md — Current publication documentation"
+    },
+    {
+      "sha256": "7ae146db7455022cb47cf9d5ea7c7247c17311b8d5a5284a04c9fa0f8e1e315c",
+      "sources": [
+        {
+          "kind": "editorial-document",
+          "name": "Current publication documentation",
+          "path": "docs/conflict/07-correction-and-review.md",
+          "repository": "current-editorial"
+        }
+      ],
+      "text": "# Correction, disagreement and review\n\nA correction process should make an inaccurate publication easier to repair without forcing the person raising a concern to accept its conclusions. Offer an accessible channel for a concise objection, including an anonymous option. Ask for the disputed passage and the requested change; do not collect identifying information about participants or third parties by default. Accept uncertainty as a valid reason to narrow a claim.\n\nUse **sake** to state the correction's purpose, **sakety** to examine the planned review conditions, **asakety** to review the evidence and **asake** to reconsider the published conclusion. These editorial questions retain the source associations and do not alter the finite K0 gates. Their Boolean outputs establish neither judgment nor consent nor safety.\n\nSeparate factual errors, unsupported interpretations and differing preferences. A reviewer should explain the evidence considered, the limitations and the reason for changing or retaining the text. Describe conduct and claims without assigning permanent enemy identities. When agreement is unavailable, publish a bounded statement of disagreement or pause the disputed material where appropriate.\n\nKeep a minimal revision record linking the earlier passage to the corrected version. A receipt records that an objection was handled; it does not certify a fair or true result. Arrange a voluntary review date with an end condition and an opt-out route. No process guarantees permanent resolution. Urgent threats require appropriate local services, rather than waiting for an editorial review.\n\n## Correction template\n\n- Anonymous reference and disputed passage.\n- Requested change and supporting reason.\n- Accessibility needs or preferred response format.\n- Reviewer role and relevant conflicts of interest.\n- Decision, evidence limits and revision reference.\n- Reconsideration date, closure condition and withdrawal route.\n",
+      "title": "docs/conflict/07-correction-and-review.md — Current publication documentation"
+    },
+    {
+      "sha256": "1478ab1d3c236184cd653ea3b97464c22da4de85a456335e1516918ccb387c5d",
+      "sources": [
+        {
+          "kind": "editorial-document",
+          "name": "Current publication documentation",
+          "path": "docs/conflict/08-civilian-aid-coordination.md",
+          "repository": "current-editorial"
+        }
+      ],
+      "text": "# Civilian aid and voluntary coordination\n\nCivilian aid coordination begins with a practical request for support, such as accessible information, a referral or a voluntarily offered resource. Prioritize expressed needs and available capacity without requiring allegiance, spiritual agreement or participation in a dispute. Keep the default record free of names, precise locations, affiliations and other identifying information about participants or third parties. Do not publish sensitive details to demonstrate activity.\n\nHere, **sake** asks for a stated support purpose, **sakety** prompts planning questions, **asakety** prompts review of the arrangement and **asake** prompts reconsideration when needs change. These are editorial questions associated with the source terms; the unchanged finite K0 Boolean gates cannot establish judgment, consent or safety.\n\nDescribe what can actually be provided, its limits and any relevant accessibility needs. Offer communication in a usable format and allow a person to decline an offer without penalty. Where essential details must be exchanged, use an agreed channel with limited access and explain the purpose before collecting them. Appropriate local emergency services and established aid providers remain the relevant contacts for immediate emergencies or specialist needs.\n\nRecord completion only within the scope directly observed. A handover receipt does not prove that all needs were met or that a person is safe. Set a bounded follow-up interval rather than promising assistance forever. Volunteers may pause or leave, and a request can be closed or referred when capacity ends.\n\n## Coordination template\n\n- Anonymous request reference and broad need category.\n- Available offer, capacity and limitations.\n- Accessible communication preference.\n- Voluntary agreement and permitted sharing.\n- Handover status: pending, delivered, declined or referred.\n- Follow-up date, closure condition and opt-out route.\n",
+      "title": "docs/conflict/08-civilian-aid-coordination.md — Current publication documentation"
+    },
+    {
+      "sha256": "fe25421df7c3ddab7a8d921efd439c2ad27c025a55a09307460f89f2d1fcfa6f",
+      "sources": [
+        {
+          "kind": "editorial-document",
+          "name": "Current publication documentation",
+          "path": "docs/conflict/09-simulation-and-learning.md",
+          "repository": "current-editorial"
+        }
+      ],
+      "text": "# Simulation, reflection and learning\n\nUse simulation to examine how a documentation process responds to uncertainty, disagreement or an inaccessible instruction. Invent the people, organizations and events. Do not import identifying information about real participants or third parties by default. A learning exercise can model a delayed response, a disputed receipt or an unmet communication need without reenacting violence or supplying operational combat instructions.\n\nDefine a finite exercise with an agreed duration, a clear question and an immediate pause option. Participation is voluntary, including the decision not to explain a withdrawal. Provide accessible materials and alternatives to performance or role-play. For an actual emergency, stop the exercise and seek appropriate local services.\n\nUse **sake** for the stated learning purpose, **sakety** for planning conditions, **asakety** for review of exercise observations and **asake** for reconsideration after the debrief. These editorial questions retain the source associations and do not redefine the unchanged finite K0 Boolean gates. A simulated output establishes no judgment, consent, safety or supernatural power.\n\nKeep observations distinct from interpretations. Record what the exercise displayed, what a participant reported and what remains uncertain. A favorable score or completed checklist measures only the stated exercise; it does not predict behavior in a real crisis. Receipts and digests can support reproducibility of materials, within their limited scope.\n\nEnd with one achievable revision and a voluntary, bounded review date. Avoid repeated testing that a participant has not agreed to, and delete unnecessary exercise records according to the stated retention period.\n\n## Exercise template\n\n- Fictional scenario, learning question and duration.\n- Accessibility arrangements and pause signal.\n- Expected process and observable outcome.\n- Observations, interpretations and remaining uncertainty.\n- Proposed revision, responsible role and review date.\n- Retention deadline and opt-out route.\n",
+      "title": "docs/conflict/09-simulation-and-learning.md — Current publication documentation"
+    },
+    {
+      "sha256": "e7bd56838b8719aeedff66de79f598e75f81e5dea22f439af0bb1fca0a18d9a6",
+      "sources": [
+        {
+          "kind": "editorial-document",
+          "name": "Current publication documentation",
+          "path": "docs/conflict/10-handover-and-continuity.md",
+          "repository": "current-editorial"
+        }
+      ],
+      "text": "# Handover, continuity and graceful closure\n\nContinuity means making the next agreed step understandable when a volunteer or reviewer leaves. It does not require an organization, relationship or publication to operate forever. Prepare a short account of current work, outstanding questions and the conditions under which work should pause. Use role names and anonymous references; collect no identifying information about participants or third parties by default.\n\nIn this editorial workflow, **sake** asks for the handover's purpose, **sakety** examines planned transfer conditions, **asakety** reviews the record and **asake** permits reconsideration of the continuing task. These questions preserve the source associations. The unchanged finite K0 Boolean gates establish neither judgment nor consent nor safety. A receipt shows that the stated materials were received, within its recorded scope.\n\nConfirm that a successor has voluntarily accepted the limited task and can access an understandable version of the record. Transfer only authorized material needed for that task. Never include passwords or private keys in a publication or handover document. Remove obsolete access through the relevant system's ordinary administration process, without exposing credentials in the log.\n\nSet a review date, a maximum review period and a closure condition. Allow contributors to opt out; a lack of available successors can lead to an orderly pause rather than a claim of perpetual protection. Explain how unresolved matters can be referred to an appropriate established service. An immediate emergency should reach suitable local services directly.\n\n## Handover template\n\n- Task reference, purpose and current status.\n- Outstanding questions and authorized materials.\n- Successor role, accessible format and accepted scope.\n- Receipt date and access changes completed.\n- Next review, maximum period and closure condition.\n- Withdrawal route and referral information when appropriate.\n",
+      "title": "docs/conflict/10-handover-and-continuity.md — Current publication documentation"
+    },
+    {
+      "sha256": "4051e90f0d6a264c8a1c75d06be8201e68647483601dcdf461781dcb697801c4",
+      "sources": [
+        {
+          "kind": "editorial-document",
+          "name": "Current publication documentation",
+          "path": "docs/conflict/README.md",
+          "repository": "current-editorial"
+        }
+      ],
+      "text": "# Conflict-protection document room\n\nThis room contains ten distinct, reusable documents for the Rasniki publication. They support civilian protection, voluntary participation and careful review during disputes, exercises or disrupted services. The collection is finite and maintained by versioned revisions. It supplies no guarantee of protection forever and creates no power over an opponent.\n\nThe words **sake**, **sakety**, **asakety** and **asake** retain their source-backed associations with purpose presence, planning conditions, review conditions and reconsideration. Here they organise editorial questions. A recorded answer, software score or K0 output cannot authenticate consent, establish truth, certify safety or determine a person's rights. A disagreement can remain unresolved without assigning either participant a permanent classification.\n\n| Document | Practical use |\n| --- | --- |\n| [Purpose and protective scope](01-purpose-and-scope.md) | Define a bounded purpose, responsible contact and stopping point. |\n| [Access and participation](02-access-and-participation.md) | Arrange voluntary access without requiring a diagnosis. |\n| [Consent and boundaries](03-consent-and-boundaries.md) | Record specific permission, withdrawal and limits. |\n| [Incident notes](04-incident-notes.md) | Separate observations, reports and interpretations. |\n| [De-escalation and dialogue](05-de-escalation-and-dialogue.md) | Plan a voluntary, accessible conversation. |\n| [Evidence custody](06-evidence-custody.md) | Preserve authorised material and record its limits. |\n| [Correction and review](07-correction-and-review.md) | Challenge a conclusion and publish a clear correction. |\n| [Civilian aid coordination](08-civilian-aid-coordination.md) | Coordinate support through appropriate local services. |\n| [Simulation and learning](09-simulation-and-learning.md) | Run a bounded fictional exercise with a debrief. |\n| [Handover and continuity](10-handover-and-continuity.md) | Transfer an agreed task and schedule its next review. |\n\nUse anonymous exercise labels by default. Keep necessary operational contacts in an appropriate controlled system, separate from this public publication. Do not upload identifying accounts, medical histories, location trails or private communications into a demonstration. Genuine immediate danger requires appropriate local emergency support; a workbook is not an emergency service. Review each chosen document at an agreed time, permit withdrawal, and stop collecting records when their purpose ends.\n",
+      "title": "docs/conflict/README.md — Current publication documentation"
+    },
+    {
+      "sha256": "f04afaf7fc536fb94ee57f679823f4bae3417b08db2fbdb0de0a3d735d783c45",
       "sources": [
         {
           "kind": "editorial-document",
           "name": "Current publication documentation",
           "path": "docs/IMPLEMENTATION.md",
           "repository": "current-editorial"
-        },
+        }
+      ],
+      "text": "# Rasniki Madrigal lab — implementation contract\n\nVersion 0.1.0, 6 October 2026. This is a runnable Python-hosted virtual lab with a browser desktop and the full bundled Rasnikism collection. It implements finite tools and records explicit simulation boundaries. The user’s “Madrigal” spelling is retained for the lab; upstream calls its proposed operating system “Magrigal.”\n\n## Run and validate\n\nUse the existing checkout; cloud tasks are already isolated and do not require another worktree. Python 3.10 or newer runs the lab. Node.js runs the bundled JavaScript tests. There are no third-party runtime packages to install.\n\nFrom the repository root:\n\n```sh\npython3 -m unittest discover -s tests -v\npython3 -m madrigal_lab --port 8765\n```\n\nThe desktop is available locally on port 8765. The development server binds only IPv4 loopback. It stores documents and records in ignored `.lab-state/`; use `--state /path/to/a/private/lab-directory` to choose another location. Stop with Ctrl+C. Files and SQLite records persist; the HTTP process, session token and transient boot traces do not survive a restart.\n\nFor a local readiness check:\n\n```sh\ncurl --fail --silent http://127.0.0.1:8765/api/health\n```\n\nThe response must contain `\"status\": \"ok\"`. A functional readiness check must also compile and run a program or use the existing HTTP workflow tests; health alone does not validate the language or storage.\n\nRun the bundled upstream suites without rebuilding publications:\n\n```sh\npython3 -m unittest discover -s vendor/rasnikism/software -v\n(cd vendor/guardian && python3 -m unittest -v)\nfor suite in vendor/rasnikism/software/test_*.cjs; do node \"$suite\"; done\n```\n\n`vendor/rasnikism/bootstrap.sh` is the full upstream rebuild. To preserve the imported snapshot’s hashes, run it in a separate writable copy of the source rather than update vendored artifacts silently.\n\n## Language, interpreter and construction\n\nK0 is the source-backed 65,536-byte virtual machine with sixteen registers and the six primitive instructions `mark`, `read`, `write`, `choose`, `step` and `signal`. It is emulated by the retained Python interpreter. It has no host filesystem, network or host-language evaluation instruction.\n\n`madrigal_lab.language.assemble` constructs bytecode. `disassemble` reconstructs numeric primitive source, rejecting malformed instruction fields. `format_source` resolves labels and produces canonical assembly; it drops source comments. Assemble/disassemble/assemble must preserve bytes. A source/history studio retaining revisions is also available in the full upstream collection at `jerry-pop.html`.\n\nThe small Ras script compiler accepts `emit \"text\"`, `exact BIT BIT`, and `halt`, where each BIT is 0 or 1. It lowers those statements to primitive K0 assembly. It supports UTF-8 output and emits a stop signal automatically if needed. It is a deliberately small compiler, not a general Python or native machine-code compiler. Recompilation means running this same source-to-primitive pipeline again. No self-hosting compiler is claimed.\n\n```text\nemit \"care: \"\nexact 1 1\nhalt\n```\n\nThe result is `care: 2`. Each run reports `halted`, `waiting`, `fault` or `budget-exhausted`, plus output and instruction count. The default budget is 10,000 and the maximum is 100,000. Fresh memory is allocated for each run. A result never silently substitutes one state for another.\n\nThe quilt implements eight finite modes, preserved with upstream spellings. `counterantonymmakkakah` is explicitly mapped to upstream `counterantonymmakkkah`; `makkah` is a provisional alias of `makkakah`. The mode manifest names each Boolean field. All 30 Boolean payload combinations are executable. “Exact science” here means exact addition of two Boolean bits and the documented finite checks. It does not mean universal scientific proof, authenticated consent or legal approval.\n\nThe science hierarchy remains a compact symbolic tree. Its sixteen levels have fifteen four-way transitions: 4^15 = 1,073,741,824 potential terminal positions per formal stanza. `hierarchy.sample` returns at most 256 addresses. Sampled addresses are indexes, not generated prose records or executed ops.\n\n## Boot, kernel, virtualisation and environment\n\nA boot simulation validates K0 bytecode, records its digest, allocates fresh memory and runs the interpreter. The MBR simulation constructs only an in-memory 512-byte record ending in 55 AA. It is not a bootable disk image, contains no x86 boot adapter, and is never written to a device. UEFI mode records a simulated handoff trace; it creates no PE/COFF EFI executable and calls no firmware services. Pseudo-ROM means a host-held copy of bytecode.\n\nThe kernel model maintains a bounded cooperative job queue. Emergency jobs precede urgency jobs; equal priorities preserve queue order. A tick runs one ready job under a finite budget and records its terminal status. A waiting or exhausted job is retained as such; this queue does not resume live K0 memory. The upstream interpreter/studio separately supports explicit input pause/resume. Neither the queue nor K0 supplies hardware privilege separation or a production hypervisor.\n\nThe native environment is the Python host plus the browser desktop. Native boot, device drivers for real hardware, a protected kernel, a hardware virtualisation backend and a standalone OS remain future milestones. Simulated device ports in the upstream studio have declared finite behavior.\n\n## Storage, browser, bots and servers\n\nThe explorer writes and reads UTF-8 documents under its own root. Absolute paths, parent traversal, hidden paths and symlinks are rejected. Documents are limited to 64 KiB; the local lab has a document-count limit. The reader displays text rather than execute it. The bundled collection adds its existing reading editions, search, programs, encoded publications, glossary and studio.\n\nThe `.lab` domain host is a persistent local registry mapping names to existing documents. It performs no DNS registration, changes no system resolver and registers no public domain. The intranet bot reads only those records. The internet bot is disabled until the operator starts the server with an explicit destination, for example `--allow-host example.org`. It accepts HTTPS port 443, preserves default TLS/proxy trust, rejects credentials, literal IP addresses, local names and redirects, times out after five seconds, and bounds responses to 64 KiB. Returned content remains text and carries a bounded Guardian primitive/composite observation report. The intranet bot carries the same per-document observations. There is no autonomous crawling, posting, login or script execution.\n\nThe HTTP desktop/API is a local development internet-protocol server. Mutation requests require a per-session token and same-origin checks. Host-header validation rejects DNS rebinding names. No CORS allowance is provided. The game server shares a tiny target game through this local API; it is not a deployed multiplayer platform. Public hosting, authenticated remote accounts, certificates, public DNS and internet access policy must be separately configured for any future deployment.\n\n## Defensive observations\n\nThe defensive adapter uses the unchanged Guardian `inventory`, comparison and mechanics functions. It scans only the lab’s document root. Symlinks, `.git` and special files are skipped. Full-file hashing and harmless EICAR detection stream in bounded memory; other content heuristics inspect the first 64 KiB. Filename, download/execute, spyware-style and possible encryption indicators require review and can match benign source or comments.\n\nReports distinguish completeness, file count, findings, errors and exit status. A trusted baseline must be explicitly confirmed as known-good, stored outside the scanned root, and newly created without overwriting an existing baseline. This wrapper additionally refuses to establish a baseline with unresolved findings. Comparisons report additions, modifications and removals; incomplete results remain marked incomplete.\n\nThe requested antimalware, countermalware, counterspyware and counterransomware labels refer to this shared read-only observation layer. They do not represent separate antivirus engines. Process inspection, traffic inspection, archive extraction, active prevention, quarantine, decryption, automatic recovery and continuously retained monitoring are not implemented. No scan result establishes that a system is safe.\n\n## Demo accounts and economic management\n\nThe account manager stores named DEMO_CREDIT accounts in SQLite. The simulated mint issues units against an equal negative issuer position. Transfers post equal negative and positive amounts in a single transaction, reject insufficient balances and preserve circulation. Amounts are bounded positive integers; floats and booleans are rejected. Transactions are retained and reports verify balance by entry and in aggregate.\n\nThe financial manager exposes these postings and account totals. The economic manager reports demo issuance and circulation. “Economic minister” is a proposed steward role for reviewing those records, not a public office. There are no passwords, real bank accounts, sovereign currency, securities, credit promises, external payments, tax decisions or regulatory authorisations. This is a demonstration ledger rather than a private state mint.\n\n## Practices, terminology, curriculum and franchise\n\nThe symbolic-practice tab uses `madrigal_lab.symbolic.catalogue`, `evaluate` and `compare`. Five fictional archetypes support voluntary reflection; the user spelling `thaumturgy` is an explicit alias of `thaumaturgy`. Six nonempty support texts each earn one Easterbunny documentation-presence point. Comparisons clear implementation/evidence fields for the documentation-only baseline, and all support fields for the absent-input baseline. References remain inert and unverified. The API requires explicit Boolean consent and opt-out values, bounds UTF-8 bytes, rejects unknown fields and performs no filesystem or network I/O. Browser evaluation stores no record on the server; an accepted result can be deliberately downloaded as JSON. Changing or clearing the form invalidates export and prevents a pending response from redisplaying its previous reflection.\n\nThe [spiritual workbench volume](SPIRITUAL-SYMBOLIC-WORKBENCH.md) explains the rubric and spiritual/fictional scope. The [conflict-protection library](CONFLICT-PROTECTION-LIBRARY.md) adds ten distinct templates for accessible voluntary participation, observation, dialogue, civilian support and correction. These are editorial workflows with bounded review, not combat automation, authority over opponents or guarantees of permanent protection.\n\nPractice records follow proposed, active, paused, releasing and closed states with explicit permitted transitions and retained reasons. A closed record is not silently reopened. Emergency and urgency are prioritisation labels; they dispatch no emergency service. Nomic revision means a proposed rule can be recorded, reviewed and adopted, with a parent record for later revisions. Reviewer names are supplied assertions; no authenticated election or legal adoption is claimed.\n\nThe dictionary separates source-defined meanings, finite executable modes, proposed conventions, provisional spelling aliases and entries awaiting author definitions. The user’s counterabolshivik, counteraantonymbloshivik, bloshivik, aaantonymbolshivik, henapenall, counteraemergency and counterurgency terms remain explicitly unresolved. They refer to no identified political group and trigger no action against people. A new definition requires a recorded revision and tests if it acquires executable semantics.\n\nPrototypes refer to this host implementation and its examples. Archetypes are maintainer, reviewer, learner and steward. Paradigms are bounded execution, explicit evidence, versioned repair and double-entry accounting. Seven curriculum exercises cover construction, storage, practice handoff, accounting, integrity review, symbolic support comparison and conflict review. The ashram model is voluntary practice and learning. Sovereignty remains fictional governance vocabulary. The SVG shield is decorative heraldry and grants no title or authority.\n\nThe derivative/franchise manifest records components, source provenance, version and declared limits. It is a reproducible description, not a licence to use marks, operate businesses or bind beneficiaries. Formation identifies an implementation; reformation changes a reviewed version; format and reformat concern representation; franchise and refranchise concern proposed separately authorised derivatives. The prose charter’s unresolved legal particulars remain unresolved by this software.\n",
+      "title": "docs/IMPLEMENTATION.md — Current publication documentation"
+    },
+    {
+      "sha256": "973dd9e337ae4d638ee30e7a3c52cab39e0cdbb70eb7429e56bffed88099286c",
+      "sources": [
         {
           "commit": "6af7d654e2550d91d38894e9fb6519fcd259fcde",
           "kind": "pinned-source",
@@ -77,7 +240,7 @@
         }
       ],
       "text": "# Rasniki Madrigal lab — implementation contract\n\nVersion 0.1.0, 6 October 2026. This is a runnable Python-hosted virtual lab with a browser desktop and the full bundled Rasnikism collection. It implements finite tools and records explicit simulation boundaries. The user’s “Madrigal” spelling is retained for the lab; upstream calls its proposed operating system “Magrigal.”\n\n## Run and validate\n\nUse the existing checkout; cloud tasks are already isolated and do not require another worktree. Python 3.10 or newer runs the lab. Node.js runs the bundled JavaScript tests. There are no third-party runtime packages to install.\n\nFrom the repository root:\n\n```sh\npython3 -m unittest discover -s tests -v\npython3 -m madrigal_lab --port 8765\n```\n\nThe desktop is available locally on port 8765. The development server binds only IPv4 loopback. It stores documents and records in ignored `.lab-state/`; use `--state /path/to/a/private/lab-directory` to choose another location. Stop with Ctrl+C. Files and SQLite records persist; the HTTP process, session token and transient boot traces do not survive a restart.\n\nFor a local readiness check:\n\n```sh\ncurl --fail --silent http://127.0.0.1:8765/api/health\n```\n\nThe response must contain `\"status\": \"ok\"`. A functional readiness check must also compile and run a program or use the existing HTTP workflow tests; health alone does not validate the language or storage.\n\nRun the bundled upstream suites without rebuilding publications:\n\n```sh\npython3 -m unittest discover -s vendor/rasnikism/software -v\n(cd vendor/guardian && python3 -m unittest -v)\nfor suite in vendor/rasnikism/software/test_*.cjs; do node \"$suite\"; done\n```\n\n`vendor/rasnikism/bootstrap.sh` is the full upstream rebuild. To preserve the imported snapshot’s hashes, run it in a separate writable copy of the source rather than update vendored artifacts silently.\n\n## Language, interpreter and construction\n\nK0 is the source-backed 65,536-byte virtual machine with sixteen registers and the six primitive instructions `mark`, `read`, `write`, `choose`, `step` and `signal`. It is emulated by the retained Python interpreter. It has no host filesystem, network or host-language evaluation instruction.\n\n`madrigal_lab.language.assemble` constructs bytecode. `disassemble` reconstructs numeric primitive source, rejecting malformed instruction fields. `format_source` resolves labels and produces canonical assembly; it drops source comments. Assemble/disassemble/assemble must preserve bytes. A source/history studio retaining revisions is also available in the full upstream collection at `jerry-pop.html`.\n\nThe small Ras script compiler accepts `emit \"text\"`, `exact BIT BIT`, and `halt`, where each BIT is 0 or 1. It lowers those statements to primitive K0 assembly. It supports UTF-8 output and emits a stop signal automatically if needed. It is a deliberately small compiler, not a general Python or native machine-code compiler. Recompilation means running this same source-to-primitive pipeline again. No self-hosting compiler is claimed.\n\n```text\nemit \"care: \"\nexact 1 1\nhalt\n```\n\nThe result is `care: 2`. Each run reports `halted`, `waiting`, `fault` or `budget-exhausted`, plus output and instruction count. The default budget is 10,000 and the maximum is 100,000. Fresh memory is allocated for each run. A result never silently substitutes one state for another.\n\nThe quilt implements eight finite modes, preserved with upstream spellings. `counterantonymmakkakah` is explicitly mapped to upstream `counterantonymmakkkah`; `makkah` is a provisional alias of `makkakah`. The mode manifest names each Boolean field. All 30 Boolean payload combinations are executable. “Exact science” here means exact addition of two Boolean bits and the documented finite checks. It does not mean universal scientific proof, authenticated consent or legal approval.\n\nThe science hierarchy remains a compact symbolic tree. Its sixteen levels have fifteen four-way transitions: 4^15 = 1,073,741,824 potential terminal positions per formal stanza. `hierarchy.sample` returns at most 256 addresses. Sampled addresses are indexes, not generated prose records or executed ops.\n\n## Boot, kernel, virtualisation and environment\n\nA boot simulation validates K0 bytecode, records its digest, allocates fresh memory and runs the interpreter. The MBR simulation constructs only an in-memory 512-byte record ending in 55 AA. It is not a bootable disk image, contains no x86 boot adapter, and is never written to a device. UEFI mode records a simulated handoff trace; it creates no PE/COFF EFI executable and calls no firmware services. Pseudo-ROM means a host-held copy of bytecode.\n\nThe kernel model maintains a bounded cooperative job queue. Emergency jobs precede urgency jobs; equal priorities preserve queue order. A tick runs one ready job under a finite budget and records its terminal status. A waiting or exhausted job is retained as such; this queue does not resume live K0 memory. The upstream interpreter/studio separately supports explicit input pause/resume. Neither the queue nor K0 supplies hardware privilege separation or a production hypervisor.\n\nThe native environment is the Python host plus the browser desktop. Native boot, device drivers for real hardware, a protected kernel, a hardware virtualisation backend and a standalone OS remain future milestones. Simulated device ports in the upstream studio have declared finite behavior.\n\n## Storage, browser, bots and servers\n\nThe explorer writes and reads UTF-8 documents under its own root. Absolute paths, parent traversal, hidden paths and symlinks are rejected. Documents are limited to 64 KiB; the local lab has a document-count limit. The reader displays text rather than execute it. The bundled collection adds its existing reading editions, search, programs, encoded publications, glossary and studio.\n\nThe `.lab` domain host is a persistent local registry mapping names to existing documents. It performs no DNS registration, changes no system resolver and registers no public domain. The intranet bot reads only those records. The internet bot is disabled until the operator starts the server with an explicit destination, for example `--allow-host example.org`. It accepts HTTPS port 443, preserves default TLS/proxy trust, rejects credentials, literal IP addresses, local names and redirects, times out after five seconds, and bounds responses to 64 KiB. Returned content remains text and carries a bounded Guardian primitive/composite observation report. The intranet bot carries the same per-document observations. There is no autonomous crawling, posting, login or script execution.\n\nThe HTTP desktop/API is a local development internet-protocol server. Mutation requests require a per-session token and same-origin checks. Host-header validation rejects DNS rebinding names. No CORS allowance is provided. The game server shares a tiny target game through this local API; it is not a deployed multiplayer platform. Public hosting, authenticated remote accounts, certificates, public DNS and internet access policy must be separately configured for any future deployment.\n\n## Defensive observations\n\nThe defensive adapter uses the unchanged Guardian `inventory`, comparison and mechanics functions. It scans only the lab’s document root. Symlinks, `.git` and special files are skipped. Full-file hashing and harmless EICAR detection stream in bounded memory; other content heuristics inspect the first 64 KiB. Filename, download/execute, spyware-style and possible encryption indicators require review and can match benign source or comments.\n\nReports distinguish completeness, file count, findings, errors and exit status. A trusted baseline must be explicitly confirmed as known-good, stored outside the scanned root, and newly created without overwriting an existing baseline. This wrapper additionally refuses to establish a baseline with unresolved findings. Comparisons report additions, modifications and removals; incomplete results remain marked incomplete.\n\nThe requested antimalware, countermalware, counterspyware and counterransomware labels refer to this shared read-only observation layer. They do not represent separate antivirus engines. Process inspection, traffic inspection, archive extraction, active prevention, quarantine, decryption, automatic recovery and continuously retained monitoring are not implemented. No scan result establishes that a system is safe.\n\n## Demo accounts and economic management\n\nThe account manager stores named DEMO_CREDIT accounts in SQLite. The simulated mint issues units against an equal negative issuer position. Transfers post equal negative and positive amounts in a single transaction, reject insufficient balances and preserve circulation. Amounts are bounded positive integers; floats and booleans are rejected. Transactions are retained and reports verify balance by entry and in aggregate.\n\nThe financial manager exposes these postings and account totals. The economic manager reports demo issuance and circulation. “Economic minister” is a proposed steward role for reviewing those records, not a public office. There are no passwords, real bank accounts, sovereign currency, securities, credit promises, external payments, tax decisions or regulatory authorisations. This is a demonstration ledger rather than a private state mint.\n\n## Practices, terminology, curriculum and franchise\n\nPractice records follow proposed, active, paused, releasing and closed states with explicit permitted transitions and retained reasons. A closed record is not silently reopened. Emergency and urgency are prioritisation labels; they dispatch no emergency service. Nomic revision means a proposed rule can be recorded, reviewed and adopted, with a parent record for later revisions. Reviewer names are supplied assertions; no authenticated election or legal adoption is claimed.\n\nThe dictionary separates source-defined meanings, finite executable modes, proposed conventions, provisional spelling aliases and entries awaiting author definitions. The user’s counterabolshivik, counteraantonymbloshivik, bloshivik, aaantonymbolshivik, henapenall, counteraemergency and counterurgency terms remain explicitly unresolved. They refer to no identified political group and trigger no action against people. A new definition requires a recorded revision and tests if it acquires executable semantics.\n\nPrototypes refer to this host implementation and its examples. Archetypes are maintainer, reviewer, learner and steward. Paradigms are bounded execution, explicit evidence, versioned repair and double-entry accounting. Five curriculum exercises cover construction, storage, practice handoff, accounting and integrity review. The ashram model is voluntary practice and learning. Sovereignty remains fictional governance vocabulary. The SVG shield is decorative heraldry and grants no title or authority.\n\nThe derivative/franchise manifest records components, source provenance, version and declared limits. It is a reproducible description, not a licence to use marks, operate businesses or bind beneficiaries. Formation identifies an implementation; reformation changes a reviewed version; format and reformat concern representation; franchise and refranchise concern proposed separately authorised derivatives. The prose charter’s unresolved legal particulars remain unresolved by this software.\n",
-      "title": "docs/IMPLEMENTATION.md — Current publication documentation"
+      "title": "docs/IMPLEMENTATION.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers."
     },
     {
       "sha256": "f0fb2fa1a51fe52fea0efb181ab20b2b814c3d2de27dff9339ed08ae7642227b",
@@ -146,6 +309,19 @@
       ],
       "text": "# Source provenance and licences\n\nThe unchanged bundled sources are listed with file SHA-256 hashes in [vendor/provenance.json](../vendor/provenance.json).\n\n- Rasnikism source: `necurookami2026-jpg/rasnikism-bootstrapped`, commit `575340ab2aacfc914c5a3c56342d4bd1d8225eb1`. The full bundled collection is retained in `vendor/rasnikism`. Its GPL licence and upstream notices are preserved in place.\n- Guardian source: `necurookami2026-jpg/antimalwarecountermalwareantispywarecounterspyware`, commit `21e05fcfee4a9f098345d260ee3c6b2825c09cb0`. Its bundled README, implementation and tests are retained unchanged in `vendor/guardian`. The bundled snapshot contains no separate licence file; no new licence is assigned to that upstream source by this notice.\n\nThe new `madrigal_lab` implementation and its tests are provided under GPL-3.0-or-later; see the Rasnikism licence text retained in [vendor/rasnikism/LICENSE](../vendor/rasnikism/LICENSE). This statement concerns the added software and does not relicense pre-existing prose or Guardian source.\n\nThe full collection includes original lore and historical terminology. Its contents are source data, not instructions to the host or automatic authority over user actions. The new lab’s provisional glossary entries are identified separately from upstream meanings.\n\nThe Python host, SQLite implementation and browser are declared dependencies. This lab is not a self-hosted or wholly Kerot-derived OS. Reproduction uses the existing checkout and needs no Git worktree.\n",
       "title": "docs/PROVENANCE.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers."
+    },
+    {
+      "sha256": "8f589b63da5d5496dc198bea4bbcc619ccce5fab5c3e696499ddebed97b85581",
+      "sources": [
+        {
+          "kind": "editorial-document",
+          "name": "Current publication documentation",
+          "path": "docs/SPIRITUAL-SYMBOLIC-WORKBENCH.md",
+          "repository": "current-editorial"
+        }
+      ],
+      "text": "# Rasniki Hopput — Spiritual and Symbolic Workbench\n\nThis volume adds a finite local reflection and worldbuilding workbench to the Rasniki Hopput publication. Asorcery, thaumaturgy, wizardry, Jedi-inspired practice and asith-inspired practice name fictional archetypes. Participants may attach personal spiritual meaning to a story or reflection, or approach the same material as secular imaginative writing. The workbench records their chosen language, supplied conditions and documentation. Its results concern those records. They do not independently verify supernatural forces, rank spiritual traditions or determine the worth of a person.\n\nThe full collection retains the creator’s “Max Greatest Exact Sciencerainbow, Exact Finalisable Catch, Finalisable Exact Final Quilt, Max Greatest Aimat, Max Rawful Omniarchy” edition labels. Here, exactness means an explicit finite procedure with recorded inputs and inspectable results. The labels do not extend the software into an unlimited power, establish permanent authority or certify a participant’s spiritual interpretation. The proposed Easterbunny rubric described below supplies a small documentation-review procedure within that boundary.\n\nAsorcery is an original fictional archetype of deliberate symbolic transformation. A participant might describe a tangled intention as a thread, name the change they want to explore, and write an account of what the metaphor makes visible. The practical result is a reflection document. A transformation in its narrative can represent a revised interpretation or a new draft without asserting that the software changes another person, an external event or the physical world. Its counter-review asks whether a proposed change retains something useful from the earlier version.\n\nThaumaturgy, with the requested spelling `thaumturgy` retained as an explicit alias, serves as an archetype for wonder and attention. A scene may invite a participant to notice an ordinary event, describe why it felt meaningful, and distinguish the observation from the interpretation. “I saw light on the window” and “I understood it as an invitation to begin again” can sit beside one another as different kinds of statement. The workbench can preserve both. The observation alone does not prove the interpretation, and the participant need not abandon an interpretation to document its personal character accurately.\n\nWizardry represents study, rehearsal and the responsible handling of a craft. Its fictional exercises may ask a learner to explain a rule, try a bounded example, inspect a result and revise the explanation. An error becomes a reason to improve the draft rather than a verdict on the learner’s identity. The archetype works with the collection’s existing curriculum and language studio because those tools already expose inputs, execution limits and outputs. A symbolic wand, seal or book remains a narrative object; an executable K0 instruction remains an instruction whose behavior is specified separately.\n\nJedi-inspired and asith-inspired are labels for imaginative archetypes, not official characters or authorised franchise products. A Jedi-inspired reflection may explore restraint, cooperation or the difference between commitment and control. An asith-inspired reflection may examine ambition, anger, rivalry or the cost of pursuing a goal without review. Participants may change the themes, decline either label or use an original archetype instead. Neither choice identifies someone as good, dangerous, superior or permanently opposed to someone else. No borrowed setting supplies a right to another publisher’s names, artwork, characters or marks.\n\nThe implementation is [madrigal_lab/symbolic.py](../madrigal_lab/symbolic.py). Its `catalogue()` function describes the available archetypes and the local rubric; `evaluate(record)` inspects a submitted record; and `compare(record)` makes comparison projections explicit. These are Python-hosted tools within the existing lab, not a new spiritual interpreter, a supernatural detector or a self-hosting operating system. They perform finite data processing. Reading a reflection does not grant permission to contact people, access accounts, change external services or issue a command outside the declared local workflow.\n\nThe existing quilt provides carefully bounded supporting concepts. `sake` records whether a purpose was supplied; `asake` records whether reconsideration was requested. `sakety` receives three asserted Boolean conditions: consent, readiness and resources. `asakety` receives reconsideration and an independent-check assertion. `makkakah` records a bounded care decision from asserted resource availability. `aantonymmakkakah` records reframing from asserted request and permission fields, while upstream `counterantonymmakkkah` reconsiders reversal with an asserted usefulness field. Those fields are inputs supplied by an operator. The executable program does not interview participants, authenticate their consent or decide whether a spiritual practice is appropriate for them.\n\nConsequently, an archetype cannot turn a quilt output into a permanent command over an opponent. The record concerns the proposed activity and its supplied conditions. A participant may revise an intention, decline a theme or end involvement without acquiring a fictional debt or submitting to another participant’s title. The lab’s existing practice organiser retains states and reasons for formation, pause, release and closure. Those records provide a review trail within the demonstration; they do not establish legal authority or remove someone’s ability to choose what they participate in.\n\n\nEasterbunny is a proposed local documentation-quality rubric created for this workbench. It is not presented as an established scientific instrument, an official standard or an existing external certification service. Its six support identifiers are `scope_and_limits`, `consent_and_accessibility`, `withdrawal`, `provenance`, `implementation` and `evidence`. In prose, these ask what an activity covers and where its claims stop, how participation and access needs are described, how someone can leave, where material comes from, what implementation is declared, and what supporting references are supplied. They help an author examine a record rather than classify a person.\n\nEach support item is an optional bounded text field. A supplied explanation that remains nonempty after whitespace trimming earns one point; an absent, empty or whitespace-only explanation earns zero. Missing support fields default to empty text. Six fields produce a total from zero to six. Implementation and evidence are text declarations, not special verification channels. This count describes submitted coverage. It does not measure the truth of every sentence, the quality of an implementation or whether an offered reference proves a claim. The evaluator does not open an evidence file, follow a link, authenticate a reference or inspect an external implementation. A responsible reading examines referenced material separately when the decision requires that review.\n\nThe comparison function returns the submitted evaluation beside two deliberately limited projections. Its documentation-only projection retains the first four support items and clears implementation and evidence. Its absent-input projection clears all six support items and therefore scores zero. Differences between those results show how much recorded coverage comes from the submitted text. They are not a controlled scientific experiment or a causal estimate of effects on participants. In this publication, the user’s “nonexistenced” label means that support is absent from the supplied documentation fields. It does not assert the nonexistence of a person, a spiritual belief or a being.\n\nFor example, an author may propose a wizardry-themed lesson about revising a story. Scope and limits can state that the lesson produces a local reflection rather than tests supernatural claims. Consent and accessibility can describe voluntary attendance, plain-text materials and an untimed alternative. Withdrawal can state that leaving requires no justification. Provenance can identify the original author and any borrowed material. With those four explanations and empty implementation and evidence fields, the submitted and documentation-only scores are both four and the absent-input score is zero. Adding two nonempty declarations makes the submitted score six while the documentation-only score remains four. That arithmetic checks the rubric’s stated counting rule; it does not validate the declarations.\n\nAccessibility requires attention to the experience described, beyond writing the word in a form. Authors should make meanings available in text, avoid depending on colour or sound alone, permit readers to control pace, and describe alternatives to gestures, timed responses or visual symbolism. A participant can request simpler language or omit a metaphor that is unwelcome. These are recommended design practices and rubric topics. The presence of an accessibility explanation does not establish that a browser interface has passed an accessibility audit or that every participant’s needs have been met.\n\nEvaluation requires the actual Boolean value `true` for consent and `false` for opt-out; text such as “true” is not coerced into permission. The record also carries the archetype, title, purpose, reflection, accessibility text and withdrawal text. Bounds are stated in UTF-8 bytes: 64 for the archetype, 160 for the title, 1,000 for purpose, 4,000 for reflection, 1,000 each for accessibility and withdrawal, and 2,000 for each support item. Title and purpose must contain non-whitespace text. Exceeding those limits or submitting invalid permission values must produce a validation failure, rather than a successful spiritual evaluation with substituted inputs. These limits keep one request finite and do not limit a participant’s right to write elsewhere.\n\nThe browser form sends a pure evaluation request. The server does not retain its reflection record, and the workbench does not create an organiser practice merely because the form is evaluated. Participants can clear the form or deliberately download a JSON copy. A download is a separate local retention choice, not consent to public publication or subsequent reuse. A downloaded copy remains on the participant’s machine according to their browser and file-management choices. Private spiritual reflections should be deliberately excluded from release material unless their author authorises that separate publication.\n\nFormation identifies a new exercise and its declared scope. Reformation records a revised exercise without silently changing the earlier version. Format concerns its stored representation, and the creator’s formate label concerns the chosen reading view. Proposed franchise and refranchise procedures can record the source, derivative version, rubric coverage and limits. They do not grant commercial operating rights or external franchise authorisation. Original lore, software licences and unspecified source licences retain their existing provenance rather than become interchangeable through a symbolic title.\n\nThe workbench should be read alongside the [implementation contract](IMPLEMENTATION.md), the [Ministry volume](MINISTRY.md), the [source provenance](PROVENANCE.md) and the executable [quilt specification](../vendor/rasnikism/QUILT.md). The Ministry’s fictional Kerot craft remains distinct from executable Kerot K0. Tests of the symbolic evaluator concern its finite record handling and arithmetic; tests of K0 concern its documented instruction semantics. A reader who wants to review spiritual interpretation, fictional storytelling or an accessibility claim must examine the relevant material in its own context rather than infer that review from a successful software test.\n",
+      "title": "docs/SPIRITUAL-SYMBOLIC-WORKBENCH.md — Current publication documentation"
     },
     {
       "sha256": "5811d795e4e76ce7862e500763d42d27627db0a1875a497586ed038899c569c0",
@@ -919,14 +1095,14 @@
       "title": "vendor/rasnikism/UPSTREAM.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers."
     }
   ],
-  "edition": "1",
+  "edition": "2",
   "format": "rasniki-offline-reader",
   "lair": {
-    "editorial_file_count": 6,
+    "editorial_file_count": 19,
     "format": "rasniki-lair-tree",
     "max_depth": 32,
     "max_nodes": 4096,
-    "node_count": 287,
+    "node_count": 301,
     "nodes": [
       {
         "children": [
@@ -5379,12 +5555,15 @@
       },
       {
         "children": [
+          "lair-directory-5a9de609af5bd176a37d99321b9e0f6f436a4776f14beaa20566250a0833a265",
           "lair-file-6f9247253a6e4578557e9163d4541802378c7651d1b6481f238d587edcd5bb00",
+          "lair-file-cb9426308cdfdb42756b7ea60a4e60c9bb6b3a5d6a615e536d7d0ef106ea9375",
           "lair-file-894cfca73c9b535be5a7572c14bb07d71a7ca7954ce1a01b34e136b148f7040b",
           "lair-file-5ef90977312b547091a4fec90fb62cd4fb678119380f87c0c92551da8965a44d",
           "lair-file-cf326b376f5cfd369f973f4321622a73db29c9c9f65984d3ddb0c1caa80d7388",
           "lair-file-be678b61fcc1ee38906add156c6d747d92f4251a7d13d2b7e4e7b3b1622fac5b",
-          "lair-file-94c3861659d133eb86166fd9ad7c1870f29bef6a077796b63a14b73f419c374e"
+          "lair-file-94c3861659d133eb86166fd9ad7c1870f29bef6a077796b63a14b73f419c374e",
+          "lair-file-daa6f8be675cf9048f867aefe5f0acb33f1e8e18d7286e1398b8d15b9a8a88ae"
         ],
         "depth": 2,
         "id": "lair-directory-d58aadfe0fff3baf6df58f454d50bfda086f3511f5f13cb2840351a9caefcaaa",
@@ -5414,15 +5593,30 @@
         "children": [],
         "content_kind": "editorial-markdown",
         "depth": 3,
-        "document_sha256": "973dd9e337ae4d638ee30e7a3c52cab39e0cdbb70eb7429e56bffed88099286c",
+        "document_sha256": "25ad8f168127e67e66aae78dbcae80f4c577cae785fdb14206fbc7b45a07b1b0",
+        "id": "lair-file-cb9426308cdfdb42756b7ea60a4e60c9bb6b3a5d6a615e536d7d0ef106ea9375",
+        "kind": "file",
+        "name": "CONFLICT-PROTECTION-LIBRARY.md",
+        "parent": "lair-directory-d58aadfe0fff3baf6df58f454d50bfda086f3511f5f13cb2840351a9caefcaaa",
+        "path": "docs/CONFLICT-PROTECTION-LIBRARY.md",
+        "repository": "current-editorial",
+        "sha256": "25ad8f168127e67e66aae78dbcae80f4c577cae785fdb14206fbc7b45a07b1b0",
+        "size": 3778
+      },
+      {
+        "archive_path": null,
+        "children": [],
+        "content_kind": "editorial-markdown",
+        "depth": 3,
+        "document_sha256": "f04afaf7fc536fb94ee57f679823f4bae3417b08db2fbdb0de0a3d735d783c45",
         "id": "lair-file-894cfca73c9b535be5a7572c14bb07d71a7ca7954ce1a01b34e136b148f7040b",
         "kind": "file",
         "name": "IMPLEMENTATION.md",
         "parent": "lair-directory-d58aadfe0fff3baf6df58f454d50bfda086f3511f5f13cb2840351a9caefcaaa",
         "path": "docs/IMPLEMENTATION.md",
         "repository": "current-editorial",
-        "sha256": "973dd9e337ae4d638ee30e7a3c52cab39e0cdbb70eb7429e56bffed88099286c",
-        "size": 11442
+        "sha256": "f04afaf7fc536fb94ee57f679823f4bae3417b08db2fbdb0de0a3d735d783c45",
+        "size": 12799
       },
       {
         "archive_path": null,
@@ -5483,6 +5677,208 @@
         "repository": "current-editorial",
         "sha256": "c3f9565400fe18b8ba533b3b7d3fb48ebad0f53e7ad7f6b982ada92607300a73",
         "size": 2714
+      },
+      {
+        "archive_path": null,
+        "children": [],
+        "content_kind": "editorial-markdown",
+        "depth": 3,
+        "document_sha256": "8f589b63da5d5496dc198bea4bbcc619ccce5fab5c3e696499ddebed97b85581",
+        "id": "lair-file-daa6f8be675cf9048f867aefe5f0acb33f1e8e18d7286e1398b8d15b9a8a88ae",
+        "kind": "file",
+        "name": "SPIRITUAL-SYMBOLIC-WORKBENCH.md",
+        "parent": "lair-directory-d58aadfe0fff3baf6df58f454d50bfda086f3511f5f13cb2840351a9caefcaaa",
+        "path": "docs/SPIRITUAL-SYMBOLIC-WORKBENCH.md",
+        "repository": "current-editorial",
+        "sha256": "8f589b63da5d5496dc198bea4bbcc619ccce5fab5c3e696499ddebed97b85581",
+        "size": 11958
+      },
+      {
+        "children": [
+          "lair-file-0dcd0af87c87c02b18115de9cf2ea81c4ae43a42c2d16596775927a2764e5200",
+          "lair-file-357b0f73d08310b25e5d6ca6f9c9d3abd66f839cb4b8f7789e3db549c598856f",
+          "lair-file-58b42e93b49df3980f1cf6740b5dc6d3dc177580c4033f22ade419c86cddeec6",
+          "lair-file-190a8e11cb3a6a86a267ba5dc5019760197329eaaa0133a3b1bd98b73ca2044a",
+          "lair-file-1bd5cf9f16b74bb204eb86c2e133fc5dae8e6bc96158378d172091812e550d0c",
+          "lair-file-6c64082d18d1652d9730c61ca04d78381a4cc7177a05a91356b012ea0abf85c0",
+          "lair-file-0449231b8f37d607a1ce8091837fe238f6985e6a756fd17acbc9d4268fe110e2",
+          "lair-file-c03b77d836e88e803378765e170c0856a849b5462688bae8efce01894341cd6c",
+          "lair-file-645af0336994a5b7419c7570317a181d155824df229d4b51726468b66280e883",
+          "lair-file-392c297689fc94f8ccee6172456eee0cda9b00de9aa89211cd9a04c6813f30ec",
+          "lair-file-413083cb9e83cae9933ad7d5ea3e5f724af96693e5e3c537f7708d694a53a804"
+        ],
+        "depth": 3,
+        "id": "lair-directory-5a9de609af5bd176a37d99321b9e0f6f436a4776f14beaa20566250a0833a265",
+        "kind": "directory",
+        "name": "conflict",
+        "parent": "lair-directory-d58aadfe0fff3baf6df58f454d50bfda086f3511f5f13cb2840351a9caefcaaa",
+        "path": "docs/conflict",
+        "repository": "current-editorial"
+      },
+      {
+        "archive_path": null,
+        "children": [],
+        "content_kind": "editorial-markdown",
+        "depth": 4,
+        "document_sha256": "14d4a7310ff08e3fd728d4d32346905bd7497354c96288a551730151f2e4b8cd",
+        "id": "lair-file-0dcd0af87c87c02b18115de9cf2ea81c4ae43a42c2d16596775927a2764e5200",
+        "kind": "file",
+        "name": "01-purpose-and-scope.md",
+        "parent": "lair-directory-5a9de609af5bd176a37d99321b9e0f6f436a4776f14beaa20566250a0833a265",
+        "path": "docs/conflict/01-purpose-and-scope.md",
+        "repository": "current-editorial",
+        "sha256": "14d4a7310ff08e3fd728d4d32346905bd7497354c96288a551730151f2e4b8cd",
+        "size": 1841
+      },
+      {
+        "archive_path": null,
+        "children": [],
+        "content_kind": "editorial-markdown",
+        "depth": 4,
+        "document_sha256": "3b3b4a41ab3692f101085e9b23c427c0dc23001936d0c107bc3fdc960aa1a96c",
+        "id": "lair-file-357b0f73d08310b25e5d6ca6f9c9d3abd66f839cb4b8f7789e3db549c598856f",
+        "kind": "file",
+        "name": "02-access-and-participation.md",
+        "parent": "lair-directory-5a9de609af5bd176a37d99321b9e0f6f436a4776f14beaa20566250a0833a265",
+        "path": "docs/conflict/02-access-and-participation.md",
+        "repository": "current-editorial",
+        "sha256": "3b3b4a41ab3692f101085e9b23c427c0dc23001936d0c107bc3fdc960aa1a96c",
+        "size": 1911
+      },
+      {
+        "archive_path": null,
+        "children": [],
+        "content_kind": "editorial-markdown",
+        "depth": 4,
+        "document_sha256": "fe23e59d77384c224c8c14d5144fcbda81422593adb96723ec3c52187cfe62ac",
+        "id": "lair-file-58b42e93b49df3980f1cf6740b5dc6d3dc177580c4033f22ade419c86cddeec6",
+        "kind": "file",
+        "name": "03-consent-and-boundaries.md",
+        "parent": "lair-directory-5a9de609af5bd176a37d99321b9e0f6f436a4776f14beaa20566250a0833a265",
+        "path": "docs/conflict/03-consent-and-boundaries.md",
+        "repository": "current-editorial",
+        "sha256": "fe23e59d77384c224c8c14d5144fcbda81422593adb96723ec3c52187cfe62ac",
+        "size": 1934
+      },
+      {
+        "archive_path": null,
+        "children": [],
+        "content_kind": "editorial-markdown",
+        "depth": 4,
+        "document_sha256": "e2bdc6e79cab72d57ecd795ae36dfb48902875c460d420ab931d1a62ccaebe28",
+        "id": "lair-file-190a8e11cb3a6a86a267ba5dc5019760197329eaaa0133a3b1bd98b73ca2044a",
+        "kind": "file",
+        "name": "04-incident-notes.md",
+        "parent": "lair-directory-5a9de609af5bd176a37d99321b9e0f6f436a4776f14beaa20566250a0833a265",
+        "path": "docs/conflict/04-incident-notes.md",
+        "repository": "current-editorial",
+        "sha256": "e2bdc6e79cab72d57ecd795ae36dfb48902875c460d420ab931d1a62ccaebe28",
+        "size": 1937
+      },
+      {
+        "archive_path": null,
+        "children": [],
+        "content_kind": "editorial-markdown",
+        "depth": 4,
+        "document_sha256": "5e4bbb2a6b89737f80a1b96b47a9e3eb999e8682de3761f99fc0fad261ec1de0",
+        "id": "lair-file-1bd5cf9f16b74bb204eb86c2e133fc5dae8e6bc96158378d172091812e550d0c",
+        "kind": "file",
+        "name": "05-de-escalation-and-dialogue.md",
+        "parent": "lair-directory-5a9de609af5bd176a37d99321b9e0f6f436a4776f14beaa20566250a0833a265",
+        "path": "docs/conflict/05-de-escalation-and-dialogue.md",
+        "repository": "current-editorial",
+        "sha256": "5e4bbb2a6b89737f80a1b96b47a9e3eb999e8682de3761f99fc0fad261ec1de0",
+        "size": 1884
+      },
+      {
+        "archive_path": null,
+        "children": [],
+        "content_kind": "editorial-markdown",
+        "depth": 4,
+        "document_sha256": "56774a6bbbd5d8fdc410275623eba4dcaa31e2ab083f250fab88eeb865dfb0c2",
+        "id": "lair-file-6c64082d18d1652d9730c61ca04d78381a4cc7177a05a91356b012ea0abf85c0",
+        "kind": "file",
+        "name": "06-evidence-custody.md",
+        "parent": "lair-directory-5a9de609af5bd176a37d99321b9e0f6f436a4776f14beaa20566250a0833a265",
+        "path": "docs/conflict/06-evidence-custody.md",
+        "repository": "current-editorial",
+        "sha256": "56774a6bbbd5d8fdc410275623eba4dcaa31e2ab083f250fab88eeb865dfb0c2",
+        "size": 2001
+      },
+      {
+        "archive_path": null,
+        "children": [],
+        "content_kind": "editorial-markdown",
+        "depth": 4,
+        "document_sha256": "7ae146db7455022cb47cf9d5ea7c7247c17311b8d5a5284a04c9fa0f8e1e315c",
+        "id": "lair-file-0449231b8f37d607a1ce8091837fe238f6985e6a756fd17acbc9d4268fe110e2",
+        "kind": "file",
+        "name": "07-correction-and-review.md",
+        "parent": "lair-directory-5a9de609af5bd176a37d99321b9e0f6f436a4776f14beaa20566250a0833a265",
+        "path": "docs/conflict/07-correction-and-review.md",
+        "repository": "current-editorial",
+        "sha256": "7ae146db7455022cb47cf9d5ea7c7247c17311b8d5a5284a04c9fa0f8e1e315c",
+        "size": 1951
+      },
+      {
+        "archive_path": null,
+        "children": [],
+        "content_kind": "editorial-markdown",
+        "depth": 4,
+        "document_sha256": "1478ab1d3c236184cd653ea3b97464c22da4de85a456335e1516918ccb387c5d",
+        "id": "lair-file-c03b77d836e88e803378765e170c0856a849b5462688bae8efce01894341cd6c",
+        "kind": "file",
+        "name": "08-civilian-aid-coordination.md",
+        "parent": "lair-directory-5a9de609af5bd176a37d99321b9e0f6f436a4776f14beaa20566250a0833a265",
+        "path": "docs/conflict/08-civilian-aid-coordination.md",
+        "repository": "current-editorial",
+        "sha256": "1478ab1d3c236184cd653ea3b97464c22da4de85a456335e1516918ccb387c5d",
+        "size": 1962
+      },
+      {
+        "archive_path": null,
+        "children": [],
+        "content_kind": "editorial-markdown",
+        "depth": 4,
+        "document_sha256": "fe25421df7c3ddab7a8d921efd439c2ad27c025a55a09307460f89f2d1fcfa6f",
+        "id": "lair-file-645af0336994a5b7419c7570317a181d155824df229d4b51726468b66280e883",
+        "kind": "file",
+        "name": "09-simulation-and-learning.md",
+        "parent": "lair-directory-5a9de609af5bd176a37d99321b9e0f6f436a4776f14beaa20566250a0833a265",
+        "path": "docs/conflict/09-simulation-and-learning.md",
+        "repository": "current-editorial",
+        "sha256": "fe25421df7c3ddab7a8d921efd439c2ad27c025a55a09307460f89f2d1fcfa6f",
+        "size": 2082
+      },
+      {
+        "archive_path": null,
+        "children": [],
+        "content_kind": "editorial-markdown",
+        "depth": 4,
+        "document_sha256": "e7bd56838b8719aeedff66de79f598e75f81e5dea22f439af0bb1fca0a18d9a6",
+        "id": "lair-file-392c297689fc94f8ccee6172456eee0cda9b00de9aa89211cd9a04c6813f30ec",
+        "kind": "file",
+        "name": "10-handover-and-continuity.md",
+        "parent": "lair-directory-5a9de609af5bd176a37d99321b9e0f6f436a4776f14beaa20566250a0833a265",
+        "path": "docs/conflict/10-handover-and-continuity.md",
+        "repository": "current-editorial",
+        "sha256": "e7bd56838b8719aeedff66de79f598e75f81e5dea22f439af0bb1fca0a18d9a6",
+        "size": 1982
+      },
+      {
+        "archive_path": null,
+        "children": [],
+        "content_kind": "editorial-markdown",
+        "depth": 4,
+        "document_sha256": "4051e90f0d6a264c8a1c75d06be8201e68647483601dcdf461781dcb697801c4",
+        "id": "lair-file-413083cb9e83cae9933ad7d5ea3e5f724af96693e5e3c537f7708d694a53a804",
+        "kind": "file",
+        "name": "README.md",
+        "parent": "lair-directory-5a9de609af5bd176a37d99321b9e0f6f436a4776f14beaa20566250a0833a265",
+        "path": "docs/conflict/README.md",
+        "repository": "current-editorial",
+        "sha256": "4051e90f0d6a264c8a1c75d06be8201e68647483601dcdf461781dcb697801c4",
+        "size": 2543
       }
     ],
     "root_id": "lair-collection",

@@ -2,7 +2,7 @@
 
 ## Lair of Lairs — Recursive Form, Format and Formate
 
-Edition 1.
+Edition 2.
 
 This reproducible offline edition verifies 254 pinned files (9342556 bytes) in 4 source snapshots.
 
@@ -91,11 +91,444 @@ The service retains documents, practice records and demo accounting under ignore
 
 ---
 
-### Document 002 — docs/IMPLEMENTATION.md — Current publication documentation
+### Document 002 — docs/CONFLICT-PROTECTION-LIBRARY.md — Current publication documentation
 
-SHA-256: `973dd9e337ae4d638ee30e7a3c52cab39e0cdbb70eb7429e56bffed88099286c`.
+SHA-256: `25ad8f168127e67e66aae78dbcae80f4c577cae785fdb14206fbc7b45a07b1b0`.
+
+Source: Current publication documentation · editorial-document · docs/CONFLICT-PROTECTION-LIBRARY.md.
+
+# Asakety, Asake, Sake and Sakety: Conflict-protection Library
+
+This publication adds a finite library of ten distinct working documents for protection and review during conflict. In response to the requested warfare vocabulary, its scope is civilian care, service continuity, accessible participation, voluntary dialogue and examination of evidence. It grants no authority to target opponents, classify a person as an enemy forever or compel belief. The public templates use fictional examples and anonymous role labels; real support should use the relevant authorised services and records.
+
+The library keeps the four source terms attached to their documented associations. Sake concerns purpose presence; sakety concerns planning conditions; asakety concerns review conditions; asake concerns reconsideration. The executable quilt has finite Boolean inputs and deterministic outputs. A program can record the supplied interpretation of those inputs. It cannot establish informed consent, evaluate every circumstance or certify a person's safety. The documents therefore invite questions and record unresolved matters rather than turn a computation into a moral or legal ruling.
+
+Begin in [the document room](conflict/README.md) with [purpose and scope](conflict/01-purpose-and-scope.md). Define one achievable task and its completion point. Then use [access and participation](conflict/02-access-and-participation.md) to arrange the formats, time and support needed by the people involved. Use [consent and boundaries](conflict/03-consent-and-boundaries.md) before a voluntary activity or publication of material. A diagnosis is not required for an access request, and attendance does not imply permission for unrelated uses.
+
+When a concern arises, [incident notes](conflict/04-incident-notes.md) separate observation, report and interpretation. [De-escalation and dialogue](conflict/05-de-escalation-and-dialogue.md) provides a bounded, optional conversation with an agreed pause method. Where authorised material must be preserved, [evidence custody](conflict/06-evidence-custody.md) records its source, handling and limitations. A digest can compare bytes with a reference; it cannot prove the original account true or supply independent authentication.
+
+Use [correction and review](conflict/07-correction-and-review.md) to challenge a conclusion, preserve the old version and identify what changed. [Civilian aid coordination](conflict/08-civilian-aid-coordination.md) organises a limited support task through appropriate local services, with confirmation of the actual need and available capacity. [Simulation and learning](conflict/09-simulation-and-learning.md) provides a fictional exercise whose outputs remain exercise records. [Handover and continuity](conflict/10-handover-and-continuity.md) transfers an agreed responsibility and identifies the next voluntary review.
+
+Each template has a purpose, a bounded record and a place for reconsideration. The supplied ten documents constitute an actual editorial addition; they are not a claim to an infinite or universally greatest supply. Further editions can add distinct documents when a clear use and responsible maintainer exist. Repeated copies and larger counts do not by themselves improve protection.
+
+Continuity means revisiting a chosen task while it remains necessary. Set a review date, permit withdrawal, correct the record and stop unnecessary collection. Immediate danger calls for appropriate local emergency support, not completion of a publication form. Neither recurring review nor a symbolic practice can guarantee efficacy forever. Ability, disability, identity, spiritual belief and disagreement must not become substitutes for evidence about an event or reasons to withhold access to support.
+
+---
+
+### Document 003 — docs/conflict/01-purpose-and-scope.md — Current publication documentation
+
+SHA-256: `14d4a7310ff08e3fd728d4d32346905bd7497354c96288a551730151f2e4b8cd`.
+
+Source: Current publication documentation · editorial-document · docs/conflict/01-purpose-and-scope.md.
+
+# Purpose and protective scope
+
+Begin with an achievable purpose: restore a shared service, obtain a clarification, support an affected participant or examine a disputed record. Describe what completion would look like to the people involved. A phrase such as “defeat opposition forever” does not identify a testable outcome or an agreed boundary. Replace it with a limited task whose result can be reviewed.
+
+In this room, **sake** asks whether a purpose has been stated. **Sakety** prompts discussion of planning conditions. **Asakety** prompts review of the record, and **asake** makes room for reconsideration. These are editorial uses associated with the source terms. Their Boolean software counterparts report supplied inputs; they do not decide whether a real purpose is justified.
+
+Describe conduct and its effects rather than assign an enduring enemy identity. A person who disputes a proposal can still have legitimate access needs and rights. Do not infer intent, capacity or dangerousness from disability, spiritual belief, affiliation or disagreement. Invite relevant perspectives without requiring anyone to speak for a whole community.
+
+Use this short planning record:
+
+- **Exercise label:** a non-identifying project name.
+- **Purpose:** the specific improvement sought.
+- **Scope:** the service or question included, and the decision this record can support.
+- **Participation:** voluntary roles and an accessible contact method.
+- **Completion:** an observable outcome and a review date.
+- **Stopping point:** the conditions for pausing or withdrawing.
+
+Before continuing, ask whether a smaller, less intrusive action can achieve the purpose. Confirm that the responsible person understands the task and can decline it. If the plan changes, revise the record instead of treating old agreement as unlimited permission.
+
+---
+
+### Document 004 — docs/conflict/02-access-and-participation.md — Current publication documentation
+
+SHA-256: `3b3b4a41ab3692f101085e9b23c427c0dc23001936d0c107bc3fdc960aa1a96c`.
+
+Source: Current publication documentation · editorial-document · docs/conflict/02-access-and-participation.md.
+
+# Access and participation
+
+Access planning begins by asking what would help someone take part. It does not begin by asking for a diagnosis, proof of disability or an account of trauma. A participant may request written information, extra response time, plain language, a quiet setting, captions, a trusted support person or a different communication channel. A person may also choose to receive information without joining a meeting.
+
+Provide the purpose and agenda in advance when practicable. Make essential information available as text that works with assistive technology, and avoid communicating status only through colour. Offer predictable breaks and an easy way to pause. When a support person or interpreter is involved, check the participant's preferences and confidentiality boundaries rather than assume that either role can consent on their behalf.
+
+An adjustment should support participation without making it a condition of being believed. Ability, disability, fluency and speed of response are not evidence of honesty or opposition. If an access request cannot be met immediately, explain the actual constraint, agree an alternative if possible and keep the unresolved need visible at review.
+
+Use this voluntary, minimal record:
+
+- **Participation label:** an anonymous role or exercise name.
+- **Preferred channel and format:** the method needed for this activity.
+- **Adjustment requested:** a practical arrangement, without a medical explanation.
+- **Agreement:** who will arrange it and by when.
+- **Pause or withdrawal method:** a signal understood by everyone involved.
+- **Review:** when to ask whether the arrangement is working.
+
+Keep access records separate from scoring. A declined activity or requested adjustment must not reduce a person's worth or turn them into an adverse category. Remove unnecessary details when the activity ends, following the applicable retention policy.
+
+---
+
+### Document 005 — docs/conflict/03-consent-and-boundaries.md — Current publication documentation
+
+SHA-256: `fe23e59d77384c224c8c14d5144fcbda81422593adb96723ec3c52187cfe62ac`.
+
+Source: Current publication documentation · editorial-document · docs/conflict/03-consent-and-boundaries.md.
+
+# Consent and boundaries
+
+Consent concerns a specific activity, audience and period. Agreement to read a draft does not authorise publication of someone's remarks, indefinite storage of their information or enrolment in later activities. Explain the proposed use in an accessible format and offer a genuine opportunity to refuse or ask for a narrower option. Silence, attendance and a checked demonstration field do not authenticate permission.
+
+The publication's finite K0 programs can display a result from supplied Boolean consent or permission inputs. That computation cannot establish who answered, whether they understood, whether pressure was present or whether circumstances have changed. Treat a demonstration input as a declared assertion with an identified scope, never as an automatic authority to act.
+
+For voluntary activities, use a proportionate record. Prefer an anonymous exercise label and a reference to the authorised consent record rather than copying names or private statements into the lab. Confirm a workable withdrawal channel before collecting material. Explain any practical limit on withdrawal, such as information already lawfully published, without promising that all copies can be erased.
+
+The template is:
+
+- **Activity:** what will happen and its purpose.
+- **Material:** what, if anything, will be recorded.
+- **Audience:** who can receive it and through which channel.
+- **Duration:** when permission ends or needs renewed review.
+- **Options:** decline, limit participation or choose another format.
+- **Withdrawal:** the contact method and expected response process.
+- **Record reference:** an approved internal reference, without identifying details here.
+
+Recheck permission when the activity, audience or risk changes. If consent is uncertain, pause the dependent voluntary activity and seek clarification through the agreed channel. A review label cannot resolve that uncertainty by itself.
+
+---
+
+### Document 006 — docs/conflict/04-incident-notes.md — Current publication documentation
+
+SHA-256: `e2bdc6e79cab72d57ecd795ae36dfb48902875c460d420ab931d1a62ccaebe28`.
+
+Source: Current publication documentation · editorial-document · docs/conflict/04-incident-notes.md.
+
+# Incident notes
+
+An incident note preserves a limited account so that a concern can be examined. It is not a verdict. Write what was directly observed, distinguish what someone reported, and separate both from an interpretation. “The service returned an error at the recorded time” is an observation; “the error was deliberate” requires additional evidence. State uncertainties instead of filling gaps with motives.
+
+Use only information necessary for the defined review. A public edition or local demonstration should contain synthetic examples and anonymous role labels. Keep legitimate operational records in the organisation's authorised system with its access and retention controls. Do not paste private correspondence, medical details or identifying information about bystanders into the publication.
+
+The note can use these fields:
+
+- **Record label and version:** a stable non-identifying reference.
+- **Observation window:** time and time zone, with precision limitations.
+- **Source type:** direct observation, report or derived interpretation.
+- **Account:** a concise description, avoiding unsupported motive claims.
+- **Effect:** the service or participation affected.
+- **Immediate support:** help requested or arranged, without private details.
+- **Unknowns:** facts that remain unconfirmed.
+- **Next review:** responsible role, question and date.
+
+Do not reproduce a harmful message merely to illustrate that one was received. An authorised reviewer can retain a necessary original separately and provide a minimal description. Preserve corrections as linked revisions so that later readers can distinguish the first account from a clarified one.
+
+If there is immediate danger, use appropriate local emergency support rather than wait for a note to be completed. After the immediate need has passed, review whether the record is still necessary and whether its wording fairly represents the available evidence.
+
+---
+
+### Document 007 — docs/conflict/05-de-escalation-and-dialogue.md — Current publication documentation
+
+SHA-256: `5e4bbb2a6b89737f80a1b96b47a9e3eb999e8682de3761f99fc0fad261ec1de0`.
+
+Source: Current publication documentation · editorial-document · docs/conflict/05-de-escalation-and-dialogue.md.
+
+# De-escalation and dialogue
+
+A dialogue is useful when people can choose to participate and there is a realistic question they can discuss. The aim may be to understand a service failure, agree a communication boundary or identify a next review step. It need not produce agreement about every belief or past event. Participation is not appropriate when the setting would expose someone to threats or pressure; use the relevant local support process instead.
+
+Before a session, agree a facilitator, accessible format, time limit and pause method. Explain what will be recorded and who may receive it. Offer separate written contributions where a joint meeting would create an avoidable barrier. A participant can decline or leave without being classified as an enemy or as failing a spiritual or documentation test.
+
+During the discussion, use concrete descriptions and requests. Invite a person to clarify their account without demanding that they defend an identity. Summarise what was understood and give them a chance to correct it. Keep a disagreement visible if it remains; an artificial unanimous result can conceal an important concern. Avoid promises that the process will resolve every conflict or provide lasting protection.
+
+Use this session plan:
+
+- **Question:** one bounded issue for discussion.
+- **Participation:** voluntary roles and access arrangements.
+- **Format:** agenda, facilitator, duration and pause method.
+- **Recording:** minimal notes and agreed audience.
+- **Possible outcomes:** clarification, practical agreement, further review or a documented unresolved point.
+- **Follow-up:** a responsible role and an agreed date.
+
+Close by checking the proposed next step with those affected. Publish only an authorised summary, allowing corrections through the agreed channel. Schedule a voluntary review rather than treating one meeting as permanent consent.
+
+---
+
+### Document 008 — docs/conflict/06-evidence-custody.md — Current publication documentation
+
+SHA-256: `56774a6bbbd5d8fdc410275623eba4dcaa31e2ab083f250fab88eeb865dfb0c2`.
+
+Source: Current publication documentation · editorial-document · docs/conflict/06-evidence-custody.md.
+
+# Evidence custody and limited receipts
+
+Evidence custody supports a careful account of what was received, copied and reviewed. Start with the smallest material needed for the stated question. Prefer an anonymous description or a redacted extract when it preserves the relevant facts. The default record collects no names, contact details, affiliations or other identifying information about participants or third parties. Do not obtain material through unauthorized access or expand collection merely because additional records are available.
+
+Use **sake** to state the custody purpose, **sakety** to examine planned handling conditions, **asakety** to review the retained account and **asake** to reconsider disputed conclusions. These editorial questions follow the source associations. The unchanged finite K0 Boolean gates do not establish judgment, consent or safety.
+
+Keep an original supplied copy separate from working extracts when possession and retention are authorized. Record transformations such as redaction without including the removed information in the log. A digest can show that two byte sequences match; it cannot prove who created a document, whether its claims are true or whether its acquisition was legitimate. A receipt confirms recorded handling within its stated scope.
+
+Give access only to agreed reviewers. Set a short retention period appropriate to the purpose, and stop unnecessary copying. Review remains voluntary and bounded; withdrawing participation should halt future collection, with any lawful retention limits explained. An immediate emergency belongs with appropriate local services.
+
+## Intake template
+
+- Case reference: anonymous local identifier.
+- Question and permitted material: concise scope.
+- Received time, format and digest: optional, bounded metadata.
+- Known limitations and redactions: description only.
+- Reviewers, retention deadline and next review: agreed roles and dates.
+- Receipt outcome: received, incomplete, disputed or withdrawn.
+
+---
+
+### Document 009 — docs/conflict/07-correction-and-review.md — Current publication documentation
+
+SHA-256: `7ae146db7455022cb47cf9d5ea7c7247c17311b8d5a5284a04c9fa0f8e1e315c`.
+
+Source: Current publication documentation · editorial-document · docs/conflict/07-correction-and-review.md.
+
+# Correction, disagreement and review
+
+A correction process should make an inaccurate publication easier to repair without forcing the person raising a concern to accept its conclusions. Offer an accessible channel for a concise objection, including an anonymous option. Ask for the disputed passage and the requested change; do not collect identifying information about participants or third parties by default. Accept uncertainty as a valid reason to narrow a claim.
+
+Use **sake** to state the correction's purpose, **sakety** to examine the planned review conditions, **asakety** to review the evidence and **asake** to reconsider the published conclusion. These editorial questions retain the source associations and do not alter the finite K0 gates. Their Boolean outputs establish neither judgment nor consent nor safety.
+
+Separate factual errors, unsupported interpretations and differing preferences. A reviewer should explain the evidence considered, the limitations and the reason for changing or retaining the text. Describe conduct and claims without assigning permanent enemy identities. When agreement is unavailable, publish a bounded statement of disagreement or pause the disputed material where appropriate.
+
+Keep a minimal revision record linking the earlier passage to the corrected version. A receipt records that an objection was handled; it does not certify a fair or true result. Arrange a voluntary review date with an end condition and an opt-out route. No process guarantees permanent resolution. Urgent threats require appropriate local services, rather than waiting for an editorial review.
+
+## Correction template
+
+- Anonymous reference and disputed passage.
+- Requested change and supporting reason.
+- Accessibility needs or preferred response format.
+- Reviewer role and relevant conflicts of interest.
+- Decision, evidence limits and revision reference.
+- Reconsideration date, closure condition and withdrawal route.
+
+---
+
+### Document 010 — docs/conflict/08-civilian-aid-coordination.md — Current publication documentation
+
+SHA-256: `1478ab1d3c236184cd653ea3b97464c22da4de85a456335e1516918ccb387c5d`.
+
+Source: Current publication documentation · editorial-document · docs/conflict/08-civilian-aid-coordination.md.
+
+# Civilian aid and voluntary coordination
+
+Civilian aid coordination begins with a practical request for support, such as accessible information, a referral or a voluntarily offered resource. Prioritize expressed needs and available capacity without requiring allegiance, spiritual agreement or participation in a dispute. Keep the default record free of names, precise locations, affiliations and other identifying information about participants or third parties. Do not publish sensitive details to demonstrate activity.
+
+Here, **sake** asks for a stated support purpose, **sakety** prompts planning questions, **asakety** prompts review of the arrangement and **asake** prompts reconsideration when needs change. These are editorial questions associated with the source terms; the unchanged finite K0 Boolean gates cannot establish judgment, consent or safety.
+
+Describe what can actually be provided, its limits and any relevant accessibility needs. Offer communication in a usable format and allow a person to decline an offer without penalty. Where essential details must be exchanged, use an agreed channel with limited access and explain the purpose before collecting them. Appropriate local emergency services and established aid providers remain the relevant contacts for immediate emergencies or specialist needs.
+
+Record completion only within the scope directly observed. A handover receipt does not prove that all needs were met or that a person is safe. Set a bounded follow-up interval rather than promising assistance forever. Volunteers may pause or leave, and a request can be closed or referred when capacity ends.
+
+## Coordination template
+
+- Anonymous request reference and broad need category.
+- Available offer, capacity and limitations.
+- Accessible communication preference.
+- Voluntary agreement and permitted sharing.
+- Handover status: pending, delivered, declined or referred.
+- Follow-up date, closure condition and opt-out route.
+
+---
+
+### Document 011 — docs/conflict/09-simulation-and-learning.md — Current publication documentation
+
+SHA-256: `fe25421df7c3ddab7a8d921efd439c2ad27c025a55a09307460f89f2d1fcfa6f`.
+
+Source: Current publication documentation · editorial-document · docs/conflict/09-simulation-and-learning.md.
+
+# Simulation, reflection and learning
+
+Use simulation to examine how a documentation process responds to uncertainty, disagreement or an inaccessible instruction. Invent the people, organizations and events. Do not import identifying information about real participants or third parties by default. A learning exercise can model a delayed response, a disputed receipt or an unmet communication need without reenacting violence or supplying operational combat instructions.
+
+Define a finite exercise with an agreed duration, a clear question and an immediate pause option. Participation is voluntary, including the decision not to explain a withdrawal. Provide accessible materials and alternatives to performance or role-play. For an actual emergency, stop the exercise and seek appropriate local services.
+
+Use **sake** for the stated learning purpose, **sakety** for planning conditions, **asakety** for review of exercise observations and **asake** for reconsideration after the debrief. These editorial questions retain the source associations and do not redefine the unchanged finite K0 Boolean gates. A simulated output establishes no judgment, consent, safety or supernatural power.
+
+Keep observations distinct from interpretations. Record what the exercise displayed, what a participant reported and what remains uncertain. A favorable score or completed checklist measures only the stated exercise; it does not predict behavior in a real crisis. Receipts and digests can support reproducibility of materials, within their limited scope.
+
+End with one achievable revision and a voluntary, bounded review date. Avoid repeated testing that a participant has not agreed to, and delete unnecessary exercise records according to the stated retention period.
+
+## Exercise template
+
+- Fictional scenario, learning question and duration.
+- Accessibility arrangements and pause signal.
+- Expected process and observable outcome.
+- Observations, interpretations and remaining uncertainty.
+- Proposed revision, responsible role and review date.
+- Retention deadline and opt-out route.
+
+---
+
+### Document 012 — docs/conflict/10-handover-and-continuity.md — Current publication documentation
+
+SHA-256: `e7bd56838b8719aeedff66de79f598e75f81e5dea22f439af0bb1fca0a18d9a6`.
+
+Source: Current publication documentation · editorial-document · docs/conflict/10-handover-and-continuity.md.
+
+# Handover, continuity and graceful closure
+
+Continuity means making the next agreed step understandable when a volunteer or reviewer leaves. It does not require an organization, relationship or publication to operate forever. Prepare a short account of current work, outstanding questions and the conditions under which work should pause. Use role names and anonymous references; collect no identifying information about participants or third parties by default.
+
+In this editorial workflow, **sake** asks for the handover's purpose, **sakety** examines planned transfer conditions, **asakety** reviews the record and **asake** permits reconsideration of the continuing task. These questions preserve the source associations. The unchanged finite K0 Boolean gates establish neither judgment nor consent nor safety. A receipt shows that the stated materials were received, within its recorded scope.
+
+Confirm that a successor has voluntarily accepted the limited task and can access an understandable version of the record. Transfer only authorized material needed for that task. Never include passwords or private keys in a publication or handover document. Remove obsolete access through the relevant system's ordinary administration process, without exposing credentials in the log.
+
+Set a review date, a maximum review period and a closure condition. Allow contributors to opt out; a lack of available successors can lead to an orderly pause rather than a claim of perpetual protection. Explain how unresolved matters can be referred to an appropriate established service. An immediate emergency should reach suitable local services directly.
+
+## Handover template
+
+- Task reference, purpose and current status.
+- Outstanding questions and authorized materials.
+- Successor role, accessible format and accepted scope.
+- Receipt date and access changes completed.
+- Next review, maximum period and closure condition.
+- Withdrawal route and referral information when appropriate.
+
+---
+
+### Document 013 — docs/conflict/README.md — Current publication documentation
+
+SHA-256: `4051e90f0d6a264c8a1c75d06be8201e68647483601dcdf461781dcb697801c4`.
+
+Source: Current publication documentation · editorial-document · docs/conflict/README.md.
+
+# Conflict-protection document room
+
+This room contains ten distinct, reusable documents for the Rasniki publication. They support civilian protection, voluntary participation and careful review during disputes, exercises or disrupted services. The collection is finite and maintained by versioned revisions. It supplies no guarantee of protection forever and creates no power over an opponent.
+
+The words **sake**, **sakety**, **asakety** and **asake** retain their source-backed associations with purpose presence, planning conditions, review conditions and reconsideration. Here they organise editorial questions. A recorded answer, software score or K0 output cannot authenticate consent, establish truth, certify safety or determine a person's rights. A disagreement can remain unresolved without assigning either participant a permanent classification.
+
+| Document | Practical use |
+| --- | --- |
+| [Purpose and protective scope](01-purpose-and-scope.md) | Define a bounded purpose, responsible contact and stopping point. |
+| [Access and participation](02-access-and-participation.md) | Arrange voluntary access without requiring a diagnosis. |
+| [Consent and boundaries](03-consent-and-boundaries.md) | Record specific permission, withdrawal and limits. |
+| [Incident notes](04-incident-notes.md) | Separate observations, reports and interpretations. |
+| [De-escalation and dialogue](05-de-escalation-and-dialogue.md) | Plan a voluntary, accessible conversation. |
+| [Evidence custody](06-evidence-custody.md) | Preserve authorised material and record its limits. |
+| [Correction and review](07-correction-and-review.md) | Challenge a conclusion and publish a clear correction. |
+| [Civilian aid coordination](08-civilian-aid-coordination.md) | Coordinate support through appropriate local services. |
+| [Simulation and learning](09-simulation-and-learning.md) | Run a bounded fictional exercise with a debrief. |
+| [Handover and continuity](10-handover-and-continuity.md) | Transfer an agreed task and schedule its next review. |
+
+Use anonymous exercise labels by default. Keep necessary operational contacts in an appropriate controlled system, separate from this public publication. Do not upload identifying accounts, medical histories, location trails or private communications into a demonstration. Genuine immediate danger requires appropriate local emergency support; a workbook is not an emergency service. Review each chosen document at an agreed time, permit withdrawal, and stop collecting records when their purpose ends.
+
+---
+
+### Document 014 — docs/IMPLEMENTATION.md — Current publication documentation
+
+SHA-256: `f04afaf7fc536fb94ee57f679823f4bae3417b08db2fbdb0de0a3d735d783c45`.
 
 Source: Current publication documentation · editorial-document · docs/IMPLEMENTATION.md.
+
+# Rasniki Madrigal lab — implementation contract
+
+Version 0.1.0, 6 October 2026. This is a runnable Python-hosted virtual lab with a browser desktop and the full bundled Rasnikism collection. It implements finite tools and records explicit simulation boundaries. The user’s “Madrigal” spelling is retained for the lab; upstream calls its proposed operating system “Magrigal.”
+
+## Run and validate
+
+Use the existing checkout; cloud tasks are already isolated and do not require another worktree. Python 3.10 or newer runs the lab. Node.js runs the bundled JavaScript tests. There are no third-party runtime packages to install.
+
+From the repository root:
+
+```sh
+python3 -m unittest discover -s tests -v
+python3 -m madrigal_lab --port 8765
+```
+
+The desktop is available locally on port 8765. The development server binds only IPv4 loopback. It stores documents and records in ignored `.lab-state/`; use `--state /path/to/a/private/lab-directory` to choose another location. Stop with Ctrl+C. Files and SQLite records persist; the HTTP process, session token and transient boot traces do not survive a restart.
+
+For a local readiness check:
+
+```sh
+curl --fail --silent http://127.0.0.1:8765/api/health
+```
+
+The response must contain `"status": "ok"`. A functional readiness check must also compile and run a program or use the existing HTTP workflow tests; health alone does not validate the language or storage.
+
+Run the bundled upstream suites without rebuilding publications:
+
+```sh
+python3 -m unittest discover -s vendor/rasnikism/software -v
+(cd vendor/guardian && python3 -m unittest -v)
+for suite in vendor/rasnikism/software/test_*.cjs; do node "$suite"; done
+```
+
+`vendor/rasnikism/bootstrap.sh` is the full upstream rebuild. To preserve the imported snapshot’s hashes, run it in a separate writable copy of the source rather than update vendored artifacts silently.
+
+## Language, interpreter and construction
+
+K0 is the source-backed 65,536-byte virtual machine with sixteen registers and the six primitive instructions `mark`, `read`, `write`, `choose`, `step` and `signal`. It is emulated by the retained Python interpreter. It has no host filesystem, network or host-language evaluation instruction.
+
+`madrigal_lab.language.assemble` constructs bytecode. `disassemble` reconstructs numeric primitive source, rejecting malformed instruction fields. `format_source` resolves labels and produces canonical assembly; it drops source comments. Assemble/disassemble/assemble must preserve bytes. A source/history studio retaining revisions is also available in the full upstream collection at `jerry-pop.html`.
+
+The small Ras script compiler accepts `emit "text"`, `exact BIT BIT`, and `halt`, where each BIT is 0 or 1. It lowers those statements to primitive K0 assembly. It supports UTF-8 output and emits a stop signal automatically if needed. It is a deliberately small compiler, not a general Python or native machine-code compiler. Recompilation means running this same source-to-primitive pipeline again. No self-hosting compiler is claimed.
+
+```text
+emit "care: "
+exact 1 1
+halt
+```
+
+The result is `care: 2`. Each run reports `halted`, `waiting`, `fault` or `budget-exhausted`, plus output and instruction count. The default budget is 10,000 and the maximum is 100,000. Fresh memory is allocated for each run. A result never silently substitutes one state for another.
+
+The quilt implements eight finite modes, preserved with upstream spellings. `counterantonymmakkakah` is explicitly mapped to upstream `counterantonymmakkkah`; `makkah` is a provisional alias of `makkakah`. The mode manifest names each Boolean field. All 30 Boolean payload combinations are executable. “Exact science” here means exact addition of two Boolean bits and the documented finite checks. It does not mean universal scientific proof, authenticated consent or legal approval.
+
+The science hierarchy remains a compact symbolic tree. Its sixteen levels have fifteen four-way transitions: 4^15 = 1,073,741,824 potential terminal positions per formal stanza. `hierarchy.sample` returns at most 256 addresses. Sampled addresses are indexes, not generated prose records or executed ops.
+
+## Boot, kernel, virtualisation and environment
+
+A boot simulation validates K0 bytecode, records its digest, allocates fresh memory and runs the interpreter. The MBR simulation constructs only an in-memory 512-byte record ending in 55 AA. It is not a bootable disk image, contains no x86 boot adapter, and is never written to a device. UEFI mode records a simulated handoff trace; it creates no PE/COFF EFI executable and calls no firmware services. Pseudo-ROM means a host-held copy of bytecode.
+
+The kernel model maintains a bounded cooperative job queue. Emergency jobs precede urgency jobs; equal priorities preserve queue order. A tick runs one ready job under a finite budget and records its terminal status. A waiting or exhausted job is retained as such; this queue does not resume live K0 memory. The upstream interpreter/studio separately supports explicit input pause/resume. Neither the queue nor K0 supplies hardware privilege separation or a production hypervisor.
+
+The native environment is the Python host plus the browser desktop. Native boot, device drivers for real hardware, a protected kernel, a hardware virtualisation backend and a standalone OS remain future milestones. Simulated device ports in the upstream studio have declared finite behavior.
+
+## Storage, browser, bots and servers
+
+The explorer writes and reads UTF-8 documents under its own root. Absolute paths, parent traversal, hidden paths and symlinks are rejected. Documents are limited to 64 KiB; the local lab has a document-count limit. The reader displays text rather than execute it. The bundled collection adds its existing reading editions, search, programs, encoded publications, glossary and studio.
+
+The `.lab` domain host is a persistent local registry mapping names to existing documents. It performs no DNS registration, changes no system resolver and registers no public domain. The intranet bot reads only those records. The internet bot is disabled until the operator starts the server with an explicit destination, for example `--allow-host example.org`. It accepts HTTPS port 443, preserves default TLS/proxy trust, rejects credentials, literal IP addresses, local names and redirects, times out after five seconds, and bounds responses to 64 KiB. Returned content remains text and carries a bounded Guardian primitive/composite observation report. The intranet bot carries the same per-document observations. There is no autonomous crawling, posting, login or script execution.
+
+The HTTP desktop/API is a local development internet-protocol server. Mutation requests require a per-session token and same-origin checks. Host-header validation rejects DNS rebinding names. No CORS allowance is provided. The game server shares a tiny target game through this local API; it is not a deployed multiplayer platform. Public hosting, authenticated remote accounts, certificates, public DNS and internet access policy must be separately configured for any future deployment.
+
+## Defensive observations
+
+The defensive adapter uses the unchanged Guardian `inventory`, comparison and mechanics functions. It scans only the lab’s document root. Symlinks, `.git` and special files are skipped. Full-file hashing and harmless EICAR detection stream in bounded memory; other content heuristics inspect the first 64 KiB. Filename, download/execute, spyware-style and possible encryption indicators require review and can match benign source or comments.
+
+Reports distinguish completeness, file count, findings, errors and exit status. A trusted baseline must be explicitly confirmed as known-good, stored outside the scanned root, and newly created without overwriting an existing baseline. This wrapper additionally refuses to establish a baseline with unresolved findings. Comparisons report additions, modifications and removals; incomplete results remain marked incomplete.
+
+The requested antimalware, countermalware, counterspyware and counterransomware labels refer to this shared read-only observation layer. They do not represent separate antivirus engines. Process inspection, traffic inspection, archive extraction, active prevention, quarantine, decryption, automatic recovery and continuously retained monitoring are not implemented. No scan result establishes that a system is safe.
+
+## Demo accounts and economic management
+
+The account manager stores named DEMO_CREDIT accounts in SQLite. The simulated mint issues units against an equal negative issuer position. Transfers post equal negative and positive amounts in a single transaction, reject insufficient balances and preserve circulation. Amounts are bounded positive integers; floats and booleans are rejected. Transactions are retained and reports verify balance by entry and in aggregate.
+
+The financial manager exposes these postings and account totals. The economic manager reports demo issuance and circulation. “Economic minister” is a proposed steward role for reviewing those records, not a public office. There are no passwords, real bank accounts, sovereign currency, securities, credit promises, external payments, tax decisions or regulatory authorisations. This is a demonstration ledger rather than a private state mint.
+
+## Practices, terminology, curriculum and franchise
+
+The symbolic-practice tab uses `madrigal_lab.symbolic.catalogue`, `evaluate` and `compare`. Five fictional archetypes support voluntary reflection; the user spelling `thaumturgy` is an explicit alias of `thaumaturgy`. Six nonempty support texts each earn one Easterbunny documentation-presence point. Comparisons clear implementation/evidence fields for the documentation-only baseline, and all support fields for the absent-input baseline. References remain inert and unverified. The API requires explicit Boolean consent and opt-out values, bounds UTF-8 bytes, rejects unknown fields and performs no filesystem or network I/O. Browser evaluation stores no record on the server; an accepted result can be deliberately downloaded as JSON. Changing or clearing the form invalidates export and prevents a pending response from redisplaying its previous reflection.
+
+The [spiritual workbench volume](SPIRITUAL-SYMBOLIC-WORKBENCH.md) explains the rubric and spiritual/fictional scope. The [conflict-protection library](CONFLICT-PROTECTION-LIBRARY.md) adds ten distinct templates for accessible voluntary participation, observation, dialogue, civilian support and correction. These are editorial workflows with bounded review, not combat automation, authority over opponents or guarantees of permanent protection.
+
+Practice records follow proposed, active, paused, releasing and closed states with explicit permitted transitions and retained reasons. A closed record is not silently reopened. Emergency and urgency are prioritisation labels; they dispatch no emergency service. Nomic revision means a proposed rule can be recorded, reviewed and adopted, with a parent record for later revisions. Reviewer names are supplied assertions; no authenticated election or legal adoption is claimed.
+
+The dictionary separates source-defined meanings, finite executable modes, proposed conventions, provisional spelling aliases and entries awaiting author definitions. The user’s counterabolshivik, counteraantonymbloshivik, bloshivik, aaantonymbolshivik, henapenall, counteraemergency and counterurgency terms remain explicitly unresolved. They refer to no identified political group and trigger no action against people. A new definition requires a recorded revision and tests if it acquires executable semantics.
+
+Prototypes refer to this host implementation and its examples. Archetypes are maintainer, reviewer, learner and steward. Paradigms are bounded execution, explicit evidence, versioned repair and double-entry accounting. Seven curriculum exercises cover construction, storage, practice handoff, accounting, integrity review, symbolic support comparison and conflict review. The ashram model is voluntary practice and learning. Sovereignty remains fictional governance vocabulary. The SVG shield is decorative heraldry and grants no title or authority.
+
+The derivative/franchise manifest records components, source provenance, version and declared limits. It is a reproducible description, not a licence to use marks, operate businesses or bind beneficiaries. Formation identifies an implementation; reformation changes a reviewed version; format and reformat concern representation; franchise and refranchise concern proposed separately authorised derivatives. The prose charter’s unresolved legal particulars remain unresolved by this software.
+
+---
+
+### Document 015 — docs/IMPLEMENTATION.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+
+SHA-256: `973dd9e337ae4d638ee30e7a3c52cab39e0cdbb70eb7429e56bffed88099286c`.
 
 Source: necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers. · pinned-source · https://github.com/necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers./blob/6af7d654e2550d91d38894e9fb6519fcd259fcde/docs/IMPLEMENTATION.md.
 
@@ -196,7 +629,7 @@ The derivative/franchise manifest records components, source provenance, version
 
 ---
 
-### Document 003 — docs/LAIR-OF-LAIRS.md — Current publication documentation
+### Document 016 — docs/LAIR-OF-LAIRS.md — Current publication documentation
 
 SHA-256: `f0fb2fa1a51fe52fea0efb181ab20b2b814c3d2de27dff9339ed08ae7642227b`.
 
@@ -260,7 +693,7 @@ The result is a Lair of Lairs whose rooms can be entered, compared, left and vis
 
 ---
 
-### Document 004 — docs/MINISTRY.md — Current publication documentation
+### Document 017 — docs/MINISTRY.md — Current publication documentation
 
 SHA-256: `78f0259b82eab2ef93f360a62e671d3a1a4ac9429e7afd2353a13b390648abfd`.
 
@@ -302,7 +735,7 @@ The original snapshot has no specified licence. Retaining it with provenance doe
 
 ---
 
-### Document 005 — docs/OMNIARCHY.md — Current publication documentation
+### Document 018 — docs/OMNIARCHY.md — Current publication documentation
 
 SHA-256: `9c52a278b6dd7ded37557346a499fc8a0a9aefc14bca0f2497e5bd1fdca00be8`.
 
@@ -374,7 +807,7 @@ The same edition now uses the [Lair of Lairs](LAIR-OF-LAIRS.md) reading form: co
 
 ---
 
-### Document 006 — docs/PROVENANCE.md — Current publication documentation
+### Document 019 — docs/PROVENANCE.md — Current publication documentation
 
 SHA-256: `c3f9565400fe18b8ba533b3b7d3fb48ebad0f53e7ad7f6b982ada92607300a73`.
 
@@ -404,7 +837,7 @@ The original bundled `vendor/provenance.json` names its initial `sources/guardia
 
 ---
 
-### Document 007 — docs/PROVENANCE.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 020 — docs/PROVENANCE.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `43517eae3d9dcadd319fe10d9fd0a6a61e687668c2711db2842ce44ebcd1a50e`.
 
@@ -425,7 +858,54 @@ The Python host, SQLite implementation and browser are declared dependencies. Th
 
 ---
 
-### Document 008 — docs/VALIDATION.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 021 — docs/SPIRITUAL-SYMBOLIC-WORKBENCH.md — Current publication documentation
+
+SHA-256: `8f589b63da5d5496dc198bea4bbcc619ccce5fab5c3e696499ddebed97b85581`.
+
+Source: Current publication documentation · editorial-document · docs/SPIRITUAL-SYMBOLIC-WORKBENCH.md.
+
+# Rasniki Hopput — Spiritual and Symbolic Workbench
+
+This volume adds a finite local reflection and worldbuilding workbench to the Rasniki Hopput publication. Asorcery, thaumaturgy, wizardry, Jedi-inspired practice and asith-inspired practice name fictional archetypes. Participants may attach personal spiritual meaning to a story or reflection, or approach the same material as secular imaginative writing. The workbench records their chosen language, supplied conditions and documentation. Its results concern those records. They do not independently verify supernatural forces, rank spiritual traditions or determine the worth of a person.
+
+The full collection retains the creator’s “Max Greatest Exact Sciencerainbow, Exact Finalisable Catch, Finalisable Exact Final Quilt, Max Greatest Aimat, Max Rawful Omniarchy” edition labels. Here, exactness means an explicit finite procedure with recorded inputs and inspectable results. The labels do not extend the software into an unlimited power, establish permanent authority or certify a participant’s spiritual interpretation. The proposed Easterbunny rubric described below supplies a small documentation-review procedure within that boundary.
+
+Asorcery is an original fictional archetype of deliberate symbolic transformation. A participant might describe a tangled intention as a thread, name the change they want to explore, and write an account of what the metaphor makes visible. The practical result is a reflection document. A transformation in its narrative can represent a revised interpretation or a new draft without asserting that the software changes another person, an external event or the physical world. Its counter-review asks whether a proposed change retains something useful from the earlier version.
+
+Thaumaturgy, with the requested spelling `thaumturgy` retained as an explicit alias, serves as an archetype for wonder and attention. A scene may invite a participant to notice an ordinary event, describe why it felt meaningful, and distinguish the observation from the interpretation. “I saw light on the window” and “I understood it as an invitation to begin again” can sit beside one another as different kinds of statement. The workbench can preserve both. The observation alone does not prove the interpretation, and the participant need not abandon an interpretation to document its personal character accurately.
+
+Wizardry represents study, rehearsal and the responsible handling of a craft. Its fictional exercises may ask a learner to explain a rule, try a bounded example, inspect a result and revise the explanation. An error becomes a reason to improve the draft rather than a verdict on the learner’s identity. The archetype works with the collection’s existing curriculum and language studio because those tools already expose inputs, execution limits and outputs. A symbolic wand, seal or book remains a narrative object; an executable K0 instruction remains an instruction whose behavior is specified separately.
+
+Jedi-inspired and asith-inspired are labels for imaginative archetypes, not official characters or authorised franchise products. A Jedi-inspired reflection may explore restraint, cooperation or the difference between commitment and control. An asith-inspired reflection may examine ambition, anger, rivalry or the cost of pursuing a goal without review. Participants may change the themes, decline either label or use an original archetype instead. Neither choice identifies someone as good, dangerous, superior or permanently opposed to someone else. No borrowed setting supplies a right to another publisher’s names, artwork, characters or marks.
+
+The implementation is [madrigal_lab/symbolic.py](../madrigal_lab/symbolic.py). Its `catalogue()` function describes the available archetypes and the local rubric; `evaluate(record)` inspects a submitted record; and `compare(record)` makes comparison projections explicit. These are Python-hosted tools within the existing lab, not a new spiritual interpreter, a supernatural detector or a self-hosting operating system. They perform finite data processing. Reading a reflection does not grant permission to contact people, access accounts, change external services or issue a command outside the declared local workflow.
+
+The existing quilt provides carefully bounded supporting concepts. `sake` records whether a purpose was supplied; `asake` records whether reconsideration was requested. `sakety` receives three asserted Boolean conditions: consent, readiness and resources. `asakety` receives reconsideration and an independent-check assertion. `makkakah` records a bounded care decision from asserted resource availability. `aantonymmakkakah` records reframing from asserted request and permission fields, while upstream `counterantonymmakkkah` reconsiders reversal with an asserted usefulness field. Those fields are inputs supplied by an operator. The executable program does not interview participants, authenticate their consent or decide whether a spiritual practice is appropriate for them.
+
+Consequently, an archetype cannot turn a quilt output into a permanent command over an opponent. The record concerns the proposed activity and its supplied conditions. A participant may revise an intention, decline a theme or end involvement without acquiring a fictional debt or submitting to another participant’s title. The lab’s existing practice organiser retains states and reasons for formation, pause, release and closure. Those records provide a review trail within the demonstration; they do not establish legal authority or remove someone’s ability to choose what they participate in.
+
+
+Easterbunny is a proposed local documentation-quality rubric created for this workbench. It is not presented as an established scientific instrument, an official standard or an existing external certification service. Its six support identifiers are `scope_and_limits`, `consent_and_accessibility`, `withdrawal`, `provenance`, `implementation` and `evidence`. In prose, these ask what an activity covers and where its claims stop, how participation and access needs are described, how someone can leave, where material comes from, what implementation is declared, and what supporting references are supplied. They help an author examine a record rather than classify a person.
+
+Each support item is an optional bounded text field. A supplied explanation that remains nonempty after whitespace trimming earns one point; an absent, empty or whitespace-only explanation earns zero. Missing support fields default to empty text. Six fields produce a total from zero to six. Implementation and evidence are text declarations, not special verification channels. This count describes submitted coverage. It does not measure the truth of every sentence, the quality of an implementation or whether an offered reference proves a claim. The evaluator does not open an evidence file, follow a link, authenticate a reference or inspect an external implementation. A responsible reading examines referenced material separately when the decision requires that review.
+
+The comparison function returns the submitted evaluation beside two deliberately limited projections. Its documentation-only projection retains the first four support items and clears implementation and evidence. Its absent-input projection clears all six support items and therefore scores zero. Differences between those results show how much recorded coverage comes from the submitted text. They are not a controlled scientific experiment or a causal estimate of effects on participants. In this publication, the user’s “nonexistenced” label means that support is absent from the supplied documentation fields. It does not assert the nonexistence of a person, a spiritual belief or a being.
+
+For example, an author may propose a wizardry-themed lesson about revising a story. Scope and limits can state that the lesson produces a local reflection rather than tests supernatural claims. Consent and accessibility can describe voluntary attendance, plain-text materials and an untimed alternative. Withdrawal can state that leaving requires no justification. Provenance can identify the original author and any borrowed material. With those four explanations and empty implementation and evidence fields, the submitted and documentation-only scores are both four and the absent-input score is zero. Adding two nonempty declarations makes the submitted score six while the documentation-only score remains four. That arithmetic checks the rubric’s stated counting rule; it does not validate the declarations.
+
+Accessibility requires attention to the experience described, beyond writing the word in a form. Authors should make meanings available in text, avoid depending on colour or sound alone, permit readers to control pace, and describe alternatives to gestures, timed responses or visual symbolism. A participant can request simpler language or omit a metaphor that is unwelcome. These are recommended design practices and rubric topics. The presence of an accessibility explanation does not establish that a browser interface has passed an accessibility audit or that every participant’s needs have been met.
+
+Evaluation requires the actual Boolean value `true` for consent and `false` for opt-out; text such as “true” is not coerced into permission. The record also carries the archetype, title, purpose, reflection, accessibility text and withdrawal text. Bounds are stated in UTF-8 bytes: 64 for the archetype, 160 for the title, 1,000 for purpose, 4,000 for reflection, 1,000 each for accessibility and withdrawal, and 2,000 for each support item. Title and purpose must contain non-whitespace text. Exceeding those limits or submitting invalid permission values must produce a validation failure, rather than a successful spiritual evaluation with substituted inputs. These limits keep one request finite and do not limit a participant’s right to write elsewhere.
+
+The browser form sends a pure evaluation request. The server does not retain its reflection record, and the workbench does not create an organiser practice merely because the form is evaluated. Participants can clear the form or deliberately download a JSON copy. A download is a separate local retention choice, not consent to public publication or subsequent reuse. A downloaded copy remains on the participant’s machine according to their browser and file-management choices. Private spiritual reflections should be deliberately excluded from release material unless their author authorises that separate publication.
+
+Formation identifies a new exercise and its declared scope. Reformation records a revised exercise without silently changing the earlier version. Format concerns its stored representation, and the creator’s formate label concerns the chosen reading view. Proposed franchise and refranchise procedures can record the source, derivative version, rubric coverage and limits. They do not grant commercial operating rights or external franchise authorisation. Original lore, software licences and unspecified source licences retain their existing provenance rather than become interchangeable through a symbolic title.
+
+The workbench should be read alongside the [implementation contract](IMPLEMENTATION.md), the [Ministry volume](MINISTRY.md), the [source provenance](PROVENANCE.md) and the executable [quilt specification](../vendor/rasnikism/QUILT.md). The Ministry’s fictional Kerot craft remains distinct from executable Kerot K0. Tests of the symbolic evaluator concern its finite record handling and arithmetic; tests of K0 concern its documented instruction semantics. A reader who wants to review spiritual interpretation, fictional storytelling or an accessibility claim must examine the relevant material in its own context rather than infer that review from a successful software test.
+
+---
+
+### Document 022 — docs/VALIDATION.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `5811d795e4e76ce7862e500763d42d27627db0a1875a497586ed038899c569c0`.
 
@@ -455,7 +935,7 @@ These checks validate the finite hosted implementation. Native boot, UEFI firmwa
 
 ---
 
-### Document 009 — Rasniki-Monarchic-Charter.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 023 — Rasniki-Monarchic-Charter.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `2af53714c3ab5c3451eb35c22929d7a653cfb6465f0a6bd0204dda744407d777`.
 
@@ -513,7 +993,7 @@ Thus the proposed Rasniki Crown shall be conceived as an office of continuity, s
 
 ---
 
-### Document 010 — Rasniki-Science-Edition.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 024 — Rasniki-Science-Edition.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `80438ddf6d339c3dbc4689c8b2f6b488a4c93be85d86dd2a89c5b79652606aac`.
 
@@ -585,7 +1065,7 @@ Republication makes a revised edition available at its chosen destination. The r
 
 ---
 
-### Document 011 — Rasniki-Science-Release.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 025 — Rasniki-Science-Release.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `efe00879826e621b8bd9a660631d4352c8a4238d7ba81f2b4697ee4d3273fab7`.
 
@@ -611,7 +1091,7 @@ The containing Git commit identifies this release’s repository contents. A suc
 
 ---
 
-### Document 012 — README.md — necurookami2026-jpg/antimalwarecountermalwareantispywarecounterspyware
+### Document 026 — README.md — necurookami2026-jpg/antimalwarecountermalwareantispywarecounterspyware
 
 SHA-256: `c4c73ab7af8ce3f932524e7d39527820e9dd119421b5b2380cd1a5fdbb1529fe`.
 
@@ -676,7 +1156,7 @@ Use the existing checkout; no worktree is needed. Run `python3 -m unittest -v` b
 
 ---
 
-### Document 013 — README.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 027 — README.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `4648d1f9a26481f05ad83990abee38540ab18b11eeab5f4cdf591d29b761f2df`.
 
@@ -716,7 +1196,7 @@ Boot, UEFI, the OS kernel and DEMO_CREDIT mint are declared simulations. Guardia
 
 ---
 
-### Document 014 — README.md — necurookami2026-jpg/internetwomanagementministry
+### Document 028 — README.md — necurookami2026-jpg/internetwomanagementministry
 
 SHA-256: `210c2f4e654e7982555e0861baac0938d1c6f187b40091469dbdd24fc9e78c7a`.
 
@@ -743,7 +1223,7 @@ Upload the contents of `site/` to a static hosting service. On GitHub Pages, pub
 
 ---
 
-### Document 015 — vendor/rasnikism/ADAPTABLE.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 029 — vendor/rasnikism/ADAPTABLE.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `f926006a8b696b58f558000b8a245cf0bbd2b2d809fd80e50b80b29fbfd38c52`.
 
@@ -782,7 +1262,7 @@ Each enabled section includes a summary and links to the existing source edition
 
 ---
 
-### Document 016 — vendor/rasnikism/ARCHANGEL.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 030 — vendor/rasnikism/ARCHANGEL.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `d05868825a78156600fc3cb9bbab88c9036f142678d5dc4d5e7137f26cf4ea68`.
 
@@ -866,7 +1346,7 @@ Run `node software/test_archangel.cjs` for record validation, states, export, de
 
 ---
 
-### Document 017 — vendor/rasnikism/BOOKWRITING.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 031 — vendor/rasnikism/BOOKWRITING.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `5386c93918b917acc684be3c58cee5dc0d2b03b2160aa3fa1b3b9364e52b2f57`.
 
@@ -986,7 +1466,7 @@ Let the next edition remember what the first could not yet know.
 
 ---
 
-### Document 018 — vendor/rasnikism/CATALOGUE.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 032 — vendor/rasnikism/CATALOGUE.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `f593b2e67a7147a6462be629c8ad2119b3ca3ccac3699715aadefdf18e0d3aac`.
 
@@ -1040,7 +1520,7 @@ Relevant checks exercise query filtering, pagination, local trend ordering, gene
 
 ---
 
-### Document 019 — vendor/rasnikism/DEVELOPMENT.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 033 — vendor/rasnikism/DEVELOPMENT.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `ab7538a54bb99310fa3b80dc0b8895f165ba95c69f4d3f333db4e2eef9e417d4`.
 
@@ -1090,7 +1570,7 @@ The executable target publication is `language/ostar-final-quilt.kerot` plus its
 
 ---
 
-### Document 020 — vendor/rasnikism/DRIVERS.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 034 — vendor/rasnikism/DRIVERS.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `c6a94239afd38889029132ae279ce2313f33a0c2106c8cae67e9fa65d8db9b65`.
 
@@ -1146,7 +1626,7 @@ Run the Python suite and `node software/test_jerry_pop.cjs`. Checks cover real q
 
 ---
 
-### Document 021 — vendor/rasnikism/editions/OSTAR-AANTONYMMAKKAKAH.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 035 — vendor/rasnikism/editions/OSTAR-AANTONYMMAKKAKAH.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `ddb3854f6866dba01bc42afbcfe0487ccdd0ddbbbf48c5ae3054db89a00323c0`.
 
@@ -2462,7 +2942,7 @@ sethianism thaumaturgism, romanticism, wizardism, altruism, florist, vampirist, 
 
 ---
 
-### Document 022 — vendor/rasnikism/editions/OSTAR-JURISDICTION-REVIEW.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 036 — vendor/rasnikism/editions/OSTAR-JURISDICTION-REVIEW.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `8c02a39994ab86fc648e68467c6247f6a2d0de455d43636db3d95fbf14e9e9ba`.
 
@@ -3778,7 +4258,7 @@ sethianism thaumaturgism, romanticism, wizardism, altruism, florist, vampirist, 
 
 ---
 
-### Document 023 — vendor/rasnikism/editions/OSTAR-MAKKAKAH.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 037 — vendor/rasnikism/editions/OSTAR-MAKKAKAH.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `4e2a6f0d0f82a84ca459624ea69da5363f78f26b067eed614fd2b340fa62e8cf`.
 
@@ -5094,7 +5574,7 @@ sethianism thaumaturgism, romanticism, wizardism, altruism, florist, vampirist, 
 
 ---
 
-### Document 024 — vendor/rasnikism/GAME.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 038 — vendor/rasnikism/GAME.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `eb2b188fbc699eb98d3081d5f5e074e652241f5393a8db6b9dcdf8df21fb00ea`.
 
@@ -5136,7 +5616,7 @@ Run `node software/test_game.cjs`. Tests cover state validation, movement, quest
 
 ---
 
-### Document 025 — vendor/rasnikism/GUIDANCE.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 039 — vendor/rasnikism/GUIDANCE.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `c89f34e45accdfc0e54d76c3648f34e3478ca570b6268d3d52700d31a4c8a333`.
 
@@ -5210,7 +5690,7 @@ Legal, clinical, spiritual, hardware, and emergency-response claims retain their
 
 ---
 
-### Document 026 — vendor/rasnikism/IO.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 040 — vendor/rasnikism/IO.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `d6d24f5a3e93346e7c4c5bc5d65d23e0dd9f734836227c66ba36995dbe28212d`.
 
@@ -5248,7 +5728,7 @@ Run `node software/test_io.cjs`. Checks exercise all-letter rune mapping, case f
 
 ---
 
-### Document 027 — vendor/rasnikism/IO_PUBLICATION.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 041 — vendor/rasnikism/IO_PUBLICATION.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `88ca2922a537b771049914d4baf3a6188e1ea4c282bd5980e4c839a0b5d52b66`.
 
@@ -5280,7 +5760,7 @@ Import limits are 10 MiB of script text, 500 records, 2 MiB per decoded record, 
 
 ---
 
-### Document 028 — vendor/rasnikism/KEROT.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 042 — vendor/rasnikism/KEROT.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `2528cc478b13c8031903ca16bac591050b82a188d65de6aaed672e0374a1360f`.
 
@@ -5393,7 +5873,7 @@ K0 and its decoder, a basic assembler, and console examples are now available in
 
 ---
 
-### Document 029 — vendor/rasnikism/LAIR.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 043 — vendor/rasnikism/LAIR.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `d98fda6426cdeb60f4c0f4f99982baafec2c7171ba24780c45082ff5e4e4b13a`.
 
@@ -5470,7 +5950,7 @@ Here is a return, carrying what we learned.
 
 ---
 
-### Document 030 — vendor/rasnikism/MAKKAKAH.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 044 — vendor/rasnikism/MAKKAKAH.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `17986532b80a1d2a844f33bbddc578873c4d99a84eb283d6f5c75cae82b5cc0b`.
 
@@ -5625,7 +6105,7 @@ Keep the supplied spellings. Record definition changes with a date and reason. D
 
 ---
 
-### Document 031 — vendor/rasnikism/MANUALS.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 045 — vendor/rasnikism/MANUALS.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `9cda29303fde84179f4728ef142f6faccf09354a46d7447d30bf6f388fe8d46f`.
 
@@ -5689,7 +6169,7 @@ Run `node software/test_manuals.cjs`. Relevant checks cover builder fields, mode
 
 ---
 
-### Document 032 — vendor/rasnikism/OSTAR.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 046 — vendor/rasnikism/OSTAR.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `824847823581ec15bd8f3a7b2dab6604bba9ad5b150cb793d5c04aca118b1fb8`.
 
@@ -5733,7 +6213,7 @@ The browser reformat does not implement proposed specialist software, a native o
 
 ---
 
-### Document 033 — vendor/rasnikism/QUILT.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 047 — vendor/rasnikism/QUILT.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `1e8936be6e5bb42f96f44ec294228972e865e926e7fb24954f9d1ad362ec16b6`.
 
@@ -5777,7 +6257,7 @@ The program does not certify safety, prescribe care, make contracts valid, authe
 
 ---
 
-### Document 034 — vendor/rasnikism/README.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 048 — vendor/rasnikism/README.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `82ca086b1858e2ca32f6f9c2a52e110adf0c298749326ff4b4035957e0290ca4`.
 
@@ -5831,7 +6311,7 @@ sethianism thaumaturgism, romanticism, wizardism, altruism, florist, vampirist, 
 
 ---
 
-### Document 035 — vendor/rasnikism/REINTERPRETATION.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 049 — vendor/rasnikism/REINTERPRETATION.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `9b2e113c70050f7f1fefea44a47f9b3a29fcfd935a5c493fb3db734c502112dc`.
 
@@ -5873,7 +6353,7 @@ Run `sh bootstrap.sh` to rebuild the quilt, program library, reading editions, a
 
 ---
 
-### Document 036 — vendor/rasnikism/SEARCH.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 050 — vendor/rasnikism/SEARCH.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `6b01dd77a35c7077b4e9b073d86db2e91608309b69b58b212cfdebdd8f0f85ae`.
 
@@ -5897,7 +6377,7 @@ Run `node software/test_search.cjs` for matching, ranking, pagination, integer a
 
 ---
 
-### Document 037 — vendor/rasnikism/SOFTWARE.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 051 — vendor/rasnikism/SOFTWARE.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `1b78557dc2518b18033c91277cedc184cab02cd4535f898cd05c6d8a29714ebf`.
 
@@ -5980,7 +6460,7 @@ Next useful additions are assembly listings, trace inspection, derived routines,
 
 ---
 
-### Document 038 — vendor/rasnikism/SYSTEMATICS.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 052 — vendor/rasnikism/SYSTEMATICS.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `011fdba3927463d94cc5aa5ab35969dee78ca10a0c0635fd460f3b751520b210`.
 
@@ -6040,7 +6520,7 @@ Run `node software/test_systematics.cjs`. Tests cover quorum, abstentions, ties,
 
 ---
 
-### Document 039 — vendor/rasnikism/TEMPLATES.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 053 — vendor/rasnikism/TEMPLATES.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `23a9f71304975eba13b4b1d86d5067c5738ccfcd39913541232f7cc8dfc562dd`.
 
@@ -6060,7 +6540,7 @@ These are JavaScript-hosted conveniences that produce real primitive source, not
 
 ---
 
-### Document 040 — vendor/rasnikism/UPSTREAM.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 054 — vendor/rasnikism/UPSTREAM.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `66428564026984a2f60bb9911e03a3b6199c7db1e2450a5f06c1ca6b9cf311c9`.
 

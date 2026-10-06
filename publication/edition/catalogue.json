@@ -11,8 +11,13 @@
       "status": "implemented-bounded"
     },
     {
+      "id": "conflict-protection-library",
+      "scope": "Finite consent, accessibility, civilian-support, de-escalation and review documents; no guaranteed perpetual protection",
+      "status": "editorial-templates"
+    },
+    {
       "id": "curriculum",
-      "scope": "Five exercises with stated acceptance evidence",
+      "scope": "Seven exercises with stated acceptance evidence",
       "status": "implemented"
     },
     {
@@ -24,6 +29,11 @@
       "id": "domain-host",
       "scope": "Persistent .lab name-to-document registry; no public DNS registration",
       "status": "simulated"
+    },
+    {
+      "id": "easterbunny-rubric",
+      "scope": "Six supplied support fields compared with documentation-only and absent-input baselines; no effect or truth verification",
+      "status": "implemented-proposed-rubric"
     },
     {
       "id": "files",
@@ -96,12 +106,17 @@
       "status": "editorial"
     },
     {
+      "id": "symbolic-practice",
+      "scope": "Voluntary fictional-archetype reflection, bounded input review and deliberate client JSON export; no server retention",
+      "status": "implemented-local"
+    },
+    {
       "id": "virtualisation",
       "scope": "Fresh K0 memory per execution; emulated ISA rather than hardware hypervisor",
       "status": "simulated"
     }
   ],
-  "edition": "1",
+  "edition": "2",
   "format": "rasniki-hopput-catalogue",
   "language_boundary": "Ministry fictional Kerot vocabulary does not extend or redefine the executable K0 ISA.",
   "repositories": [
@@ -199,6 +214,18 @@
       "term": "ashram"
     },
     {
+      "meaning": "User label retained for a fictional reflection archetype; no affiliation, endorsement or franchise rights are asserted.",
+      "source": "madrigal_lab/symbolic.py",
+      "status": "implemented-fictional-archetype",
+      "term": "asith-inspired"
+    },
+    {
+      "meaning": "A fictional symbolic-reflection archetype in the voluntary workbench.",
+      "source": "madrigal_lab/symbolic.py",
+      "status": "implemented-fictional-archetype",
+      "term": "asorcery"
+    },
+    {
       "meaning": null,
       "source": "user supplied label",
       "status": "awaiting-author-definition",
@@ -281,6 +308,12 @@
       "term": "counterurgency"
     },
     {
+      "meaning": "Proposed local six-field documentation-presence rubric with transparent absent-support and documentation-only baselines.",
+      "source": "madrigal_lab/symbolic.py",
+      "status": "implemented-proposed-rubric",
+      "term": "Easterbunny"
+    },
+    {
       "meaning": "Highest-priority simulated organiser item; no emergency service dispatch.",
       "source": "lab design",
       "status": "implemented-convention",
@@ -357,6 +390,12 @@
       "term": "hopput"
     },
     {
+      "meaning": "A fictional reflection archetype; no affiliation, endorsement or franchise rights are asserted.",
+      "source": "madrigal_lab/symbolic.py",
+      "status": "implemented-fictional-archetype",
+      "term": "Jedi-inspired"
+    },
+    {
       "meaning": "Fictional craft of tracing how a change to a thread affects its pattern; distinct from executable K0.",
       "source": "vendor/internetwomanagementministry/site/index.html",
       "status": "fictional-worldbuilding",
@@ -394,6 +433,12 @@
       "source": "lab design",
       "status": "proposed-convention",
       "term": "nomic"
+    },
+    {
+      "meaning": "In this proposed rubric, the absent-support comparison contains no supplied supporting fields; no conclusion about people or beings.",
+      "source": "docs/SPIRITUAL-SYMBOLIC-WORKBENCH.md",
+      "status": "proposed-comparison-label",
+      "term": "nonexistenced"
     },
     {
       "meaning": "Author-supplied publication label; no additional executable or governing semantics are established.",
@@ -458,6 +503,12 @@
       "term": "sovereignty"
     },
     {
+      "meaning": "Participant-chosen reflective subject label, with spiritual beliefs distinguished from tested software behavior.",
+      "source": "docs/SPIRITUAL-SYMBOLIC-WORKBENCH.md",
+      "status": "editorial-scope",
+      "term": "spiritual sciences"
+    },
+    {
       "meaning": "Lab convention: acceptance criteria recorded with their checks.",
       "source": "lab design",
       "status": "proposed-convention",
@@ -470,10 +521,28 @@
       "term": "sureasuch"
     },
     {
+      "meaning": "A fictional wonder-working narrative archetype; no measured supernatural ability is inferred.",
+      "source": "madrigal_lab/symbolic.py",
+      "status": "implemented-fictional-archetype",
+      "term": "thaumaturgy"
+    },
+    {
+      "meaning": "User spelling retained as an alias of the thaumaturgy archetype.",
+      "source": "madrigal_lab/symbolic.py",
+      "status": "implemented-alias",
+      "term": "thaumturgy"
+    },
+    {
       "meaning": "Second-priority simulated organiser item.",
       "source": "lab design",
       "status": "implemented-convention",
       "term": "urgency"
+    },
+    {
+      "meaning": "A fictional study and worldbuilding archetype.",
+      "source": "madrigal_lab/symbolic.py",
+      "status": "implemented-fictional-archetype",
+      "term": "wizardry"
     }
   ],
   "title": "Rasniki Hopput — Max Greatest Exact Sciencerainbow, Exact Finalisable Catch, Finalisable Exact Final Quilt, Max Greatest Aimat, Max Rawful Omniarchy",

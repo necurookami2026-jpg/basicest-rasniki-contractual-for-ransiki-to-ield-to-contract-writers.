@@ -11,7 +11,7 @@ import urllib.parse
 import urllib.error
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from . import language, defense, hierarchy
+from . import language, defense, hierarchy, symbolic
 from .catalogue import catalogue
 from .finance import Ledger
 from .runtime import Runtime
@@ -60,6 +60,8 @@ class Lab:
         if action=='mint':return self.ledger.mint(args['account'],args['amount'])
         if action=='transfer':return self.ledger.transfer(args['from'],args['to'],args['amount'])
         if action=='hierarchy':return hierarchy.sample(args.get('limit',16))
+        if action=='symbolic-evaluate':return symbolic.evaluate(args['record'])
+        if action=='symbolic-compare':return symbolic.compare(args['record'])
         if action=='economy':return self.ledger.economic_report()
         if action=='practice':return r.practice(args['purpose'],args.get('priority','normal'))
         if action=='transition':return r.transition(args['id'],args['state'],args['reason'])
@@ -110,6 +112,7 @@ class Handler(BaseHTTPRequestHandler):
         try:
             if path=='/api/session':return self.send(200,{'token':self.server.lab.token})
             if path=='/api/catalogue':return self.send(200,catalogue())
+            if path=='/api/symbolic':return self.send(200,symbolic.catalogue())
             if path=='/api/status':
                 with self.server.lab.lock:return self.send(200,self.server.lab.status())
             if path=='/api/health':return self.send(200,{'status':'ok','local_only':True})
