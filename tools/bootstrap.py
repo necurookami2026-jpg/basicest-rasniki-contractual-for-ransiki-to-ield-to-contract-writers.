@@ -68,6 +68,8 @@ def main(argv=None):
         run('guardian-tests',[sys.executable,'-m','unittest','-v'],ROOT/'vendor'/'guardian')
         run('ministry-smoke',['node','tests/ministry-smoke.cjs'])
         run('desktop-script-syntax',['node','--check','madrigal_lab/web/app.js'])
+        run('workbench-script-syntax',['node','--check','madrigal_lab/web/workbench.js'])
+        run('media-script-syntax',['node','--check','madrigal_lab/web/media-studio.js'])
         with tempfile.TemporaryDirectory(prefix='rasniki-bootstrap-') as temporary:
             contractual=Path(temporary)/'contractual'
             shutil.copytree(ROOT/'publication'/'sources'/'contractual',contractual,ignore=shutil.ignore_patterns('__pycache__','*.pyc'))

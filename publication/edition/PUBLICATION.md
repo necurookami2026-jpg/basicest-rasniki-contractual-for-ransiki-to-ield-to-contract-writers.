@@ -2,7 +2,7 @@
 
 ## Lair of Lairs — Recursive Form, Format and Formate
 
-Edition 2.
+Edition 3.
 
 This reproducible offline edition verifies 254 pinned files (9342556 bytes) in 4 source snapshots.
 
@@ -419,9 +419,339 @@ Use anonymous exercise labels by default. Keep necessary operational contacts in
 
 ---
 
-### Document 014 — docs/IMPLEMENTATION.md — Current publication documentation
+### Document 014 — docs/DEMO-ECONOMY-CONTRACTS.md — Current publication documentation
 
-SHA-256: `f04afaf7fc536fb94ee57f679823f4bae3417b08db2fbdb0de0a3d735d783c45`.
+SHA-256: `dc0ef05ef5da3611dbe92dd2d09f66913bcb6ab8d986def6308cc5374240299b`.
+
+Source: Current publication documentation · editorial-document · docs/DEMO-ECONOMY-CONTRACTS.md.
+
+# Ruddered demonstration economy and contractual revision
+
+This chamber joins a finite accounting exercise to a finite document workflow. Its unit is `DEMO_CREDIT`, an integer counter stored in the local laboratory database. The software makes no payment, opens no bank account, issues no public currency, charges no interest, and connects to no financial provider. A balance is an exercise record. A finalised contract is an internally consistent document revision with local assertions attached. Its receipt does not identify a person or create an enforceable agreement.
+
+The practical aim is to make an undertaking legible. A learner can distinguish a proposal from a funded obligation, a repayment from a new issuance, a price illustration from a transfer, and an unchanged parent document from a later revision. The same distinction applies to a box office, franchise kiosk, merchandise exercise, household budget, community project, charity proposal or fictional ministry: selecting that label changes the narrative, while the ledger rules stay the same.
+
+## Account, amount and the named vocabulary
+
+`account`, `amount`, `debt`, `deficit`, `credit` and `discount` have narrow meanings in this implementation. An account is a named local ledger bucket. An amount is a positive integer from 1 through 1,000,000,000,000. A funded debt is an obligation whose lender has transferred an existing balance to its borrower. A deficit can describe a negative calculated net position; it does not authorise an overdraft. A credit is an exercise unit or the positive side of a posting, with its context recorded. A discount coupon is a single-use annotation of an imagined price reduction, with no ledger movement.
+
+The publication preserves `count`, `aamount`, `imbalance`, `abalance`, `amint`, `racasidy`, `casidy`, `asupsidy`, `abenefit`, `gravy`, `ashanty` and `accredit` as requested vocabulary. Their invented spellings are not silently expanded into financial rules. A worksheet can state the meaning its author proposes for a term and the established operation, if any, it refers to. Until that definition exists, it remains an unresolved label. For example, a writer may propose `amint` as a display label for the existing demo mint, but this proposal grants no minting authority outside the exercise. A proposed `asupsidy` label does not make a coupon spendable or create an entitlement.
+
+`economic coin`, `economic groin` and `republic credits` can appear as fictional display names for the same `DEMO_CREDIT` counters. They introduce no cryptocurrency, wallet secret, token market or exchange rate. A narrative described as `gravy`, revenue, passive income or franchise returns records an assumption when the learner supplies one; this software does not promise earnings or model a real investment. A counter copied into another story remains a counter.
+
+## Conservation before enlargement
+
+The existing `Ledger` keeps each movement as two postings: a negative delta in one account and an equal positive delta in another. The reserved `issuer` account is the balancing side of a demo mint. Ordinary transfers cannot use it as a source. The `Economy` wrapper adds obligation, coupon and contract tables in the same SQLite database without altering the original ledger class. Its lending and repayment paths only transfer existing units between ordinary accounts.
+
+A proposed obligation contains a lender, borrower, principal and title. Creating it moves nothing and its outstanding amount is zero. Funding it requires the lender to have the full principal. Funding inserts the transfer and changes the obligation to `funded` in one transaction. A failed balance check leaves the obligation proposed and inserts no postings. A funded obligation cannot be funded again.
+
+A repayment transfers units from the borrower to the lender and increases the obligation's paid amount in the same transaction. A partial repayment leaves the state funded. Paying exactly the remaining amount changes the state to `settled`. Repayment cannot exceed the outstanding amount, cannot draw an overdraft, and cannot run after settlement. Each obligation permits at most 256 repayment records. Its final available record is reserved for settling the entire outstanding amount: after 255 partial repayments, another partial repayment rejects before changing balances or debt, while payment of the full remaining amount can complete the obligation. If either the postings or the obligation update fails, SQLite rolls back both. This is an accounting property of the local application; it is not a recovery promise for an external service.
+
+Consider a lender given 100 demo units. A proposed principal of 40 leaves its balance at 100. Funding leaves the lender at 60 and the borrower at 40, with a receivable and payable of 40 respectively. Repaying 15 leaves balances of 75 and 25, with a remaining obligation of 25. The lender's calculated position is 75 + 25 = 100; the borrower's is 25 − 25 = 0. Repaying the final 25 restores the lender's balance to 100 and settles the obligation. None of these steps creates additional units.
+
+The portfolio uses `balance + receivable − payable` as a local demonstration net position. It does not price risk, recognise collateral or determine legal net worth. The report also checks each ledger entry's two postings, the funded principal against its recorded transfer, and repayments against their linked entries. `independent_audit` remains false because this is an internal consistency check over the same locally editable database.
+
+## Coupons and subsidy illustrations
+
+A coupon has a title, positive integer face amount and either `discount` or `subsidy` as its kind. It starts available and can be assigned once to an existing ordinary account. Redemption changes only the coupon record. It creates no balance, makes no payment, and asserts no right to goods or services. The returned field `transfers_units` is always false.
+
+Use this worksheet for an ordinary educational price example:
+
+> Item or service: ______. Imagined gross price: ______ demo units. Coupon kind: discount / subsidy. Coupon face amount: ______ demo units. Intended recipient account: ______. Fictional conditions: ______. Actual ledger movement: none. Real issuer, real redemption and payment integration: absent.
+
+The implemented kinds describe budget illustrations. There is no coupon operation for an attack, bodily service, coercion or exclusion. Titles supplied by an operator are ordinary record text and are not endorsements, entitlements or instructions to carry out the named activity.
+
+## Contractuals and a final quilt receipt
+
+The document workflow has three states: `proposed`, `reviewed` and `finalised`. A proposed contract holds a title and text. A local operator records review by naming a reviewer and passing the literal Boolean `True` as `consent_asserted`. Finalisation separately names an author and requires the same explicit Boolean assertion. Strings such as `"yes"`, the integer `1`, omitted values and false do not count as assertions. Neither field verifies the named person's identity or agreement.
+
+The content hash covers the record ID, version, parent ID, parent content hash, title and full text. A final receipt covers that content hash together with the recorded author, reviewer and their assertion fields. Verification recomputes the hashes and follows the parent chain. A successful check means these locally stored fields are consistent with the stored digests. Someone able to rewrite the database can also rewrite digests; therefore these checks are not signatures, external timestamping, witness testimony or proof of authenticity.
+
+A finalised document remains retained. To change its terms, create a child with `parent_id` pointing to the intact finalised revision. The child receives the next version number and stores its parent's content hash. It begins proposed and must pass its own review and finalisation. Multiple proposed alternatives can share a parent; the software does not choose between them or silently replace the parent. An altered parent, damaged receipt or broken revision chain blocks creation or review of a dependent revision.
+
+“Final quilt” can name this finite closing receipt in the publication. It means completion of this local workflow for this revision. It does not make every future interpretation final, settle an external debt, or override the source quilt's bounded Boolean semantics. The source modes `asakety`, `asake`, `sake` and `sakety` can supply exercise records elsewhere in the laboratory; their outputs do not establish actual safety, consent or contractual authority.
+
+Use this document template before creating a proposed revision:
+
+> Document title and purpose: ______. Version parent, if any: ______. Participants as supplied by the local operator: ______. Defined terms: ______. Voluntary proposed activities: ______. Demo units and their meaning: ______. Scope and end conditions: ______. Review date: ______. Author's local assertion: ______. Reviewer's local assertion: ______. External agreement, legal review or independently verified evidence, if any: ______. Unresolved questions: ______.
+
+## Working API and finite limits
+
+The wrapper can be used directly without the browser. This example creates local exercise accounts and records one partial repayment:
+
+```python
+from madrigal_lab.finance import Ledger
+from madrigal_lab.economy import Economy
+
+ledger = Ledger('.lab-state/demo.sqlite3')
+ledger.account('lender')
+ledger.account('borrower')
+ledger.mint('lender', 100)
+economy = Economy(ledger)
+obligation = economy.create_obligation('lender', 'borrower', 40, 'Learning exercise')
+economy.lend(obligation['id'])
+economy.repay(obligation['id'], 15)
+report = economy.report()
+```
+
+Run the example in a fresh exercise database; repeating the mint adds another issuance. Existing accounts and records persist across application restarts. The wrapper refuses a database, parent directory or SQLite sidecar that is a symlink. It accepts only the existing `Ledger` object rather than a remote URL or arbitrary database connection.
+
+The complete public methods are `create_obligation(lender, borrower, amount, title='Demo obligation')`, `lend(obligation_id)`, `repay(obligation_id, amount)`, `create_coupon(title, amount, kind='discount')`, `redeem_coupon(coupon_id, account)`, `create_contract(title, text, parent_id=None)`, `review_contract(contract_id, reviewer, consent_asserted=False)`, `finalise_contract(contract_id, author, consent_asserted=False)`, `verify_contract(contract_id)` and `report()`.
+
+The obligation, coupon and contract collections each permit at most 256 records. Repayments permit at most 256 records per obligation, with the last available record reserved for full settlement; the 256-obligation limit bounds the total to 65,536 repayment records. IDs are positive integers from 1 to 256; Boolean IDs and amounts are rejected. Titles have at most 120 characters, author and reviewer labels at most 80, and contract text at most 16,384 UTF-8 bytes. Accounts retain the ledger's letter-led, at-most-40-character naming rule, and `issuer` stays reserved. The recursion in revision verification is bounded by the retained record count. No method expands “all recursively” into an infinite document, executes a contract's text, deciphers a password, changes another provider's access decision or publishes personal financial records automatically.
+
+---
+
+### Document 015 — docs/handbooks/01-advice-and-guidance.md — Current publication documentation
+
+SHA-256: `23ec732c7f4ba7d2c56078410010999f98483596484effb5673511cd9ca551a1`.
+
+Source: Current publication documentation · editorial-document · docs/handbooks/01-advice-and-guidance.md.
+
+# Advice and guidance
+
+Advice begins with a question whose scope the person asking can recognise. Describe the intended outcome, the information already available and what remains uncertain. A request to understand a document is different from permission to make a decision for its author. The Rasniki workbench offers a place to organise such requests and a vocabulary for reflection; it does not give its maintainer universal expertise or authority over a participant.
+
+Guidance should show a usable next step and the reason for it. For example, a learner trying to reproduce an example can identify the source version, record the command, preserve the result and compare it with the documented expectation. If the result differs, the guide should make the difference visible rather than announce success because a preferred phrase appeared. A proposed interpretation belongs beside its assumptions, with a route to correction. Source-backed definitions, implementation declarations and fictional metaphors should retain their distinct labels.
+
+Ask what format and pace would make the guidance accessible. Plain text, a worked example, an untimed response and a shorter explanation may serve different readers. Someone can decline advice, request another approach or stop without being assigned a permanent adverse identity. Advice on a fictional practice remains fictional; questions requiring professional or emergency support should reach the appropriate established service.
+
+Before sharing a worked example, replace personal details with a synthetic scenario and inspect it for unnecessary private information. Record a bounded review date if follow-up is useful. A guidance note is complete when it explains its own question, sources, limits and next step; greater length or a higher record count does not establish greater care.
+
+---
+
+### Document 016 — docs/handbooks/02-immanuel-emmanuel-manual.md — Current publication documentation
+
+SHA-256: `a8d867f18d72e73489c03bdbc9afacf9865be3c3327f593ad5ba404d15bdb39f`.
+
+Source: Current publication documentation · editorial-document · docs/handbooks/02-immanuel-emmanuel-manual.md.
+
+# ImmanuelEmmanuel — manual
+
+ImmanuelEmmanuel is retained as the requested manual title. The workbench does not supply an established meaning for the combined label, identify it with a real person or institution, or derive religious authority from it. A maintainer may use this title for a finite reading manual while recording that its title is editorial. If the author later defines another meaning, that definition should appear as a versioned addition rather than silently replace earlier uses.
+
+A practical manual starts by describing the reader's task and the prerequisites that genuinely apply. Name the host and source version, identify the input and expected output, and explain how to stop the activity. Walk through one ordinary example before introducing variations. When the example uses the quilt, refer to the documented Boolean fields and treat their values as supplied assertions. A planning output does not authenticate the circumstances represented by those assertions.
+
+Use a predictable reading order. First explain what the activity is for, then show the finite procedure, then describe limitations and possible corrections. Keep essential information available in text and allow the reader to proceed at their own pace. Illustrations and poetic language can accompany an instruction, but an unfamiliar metaphor should not be required to understand an access or withdrawal option.
+
+Preserve the original source and distinguish a reformatted explanation from a changed implementation. A successful local example supports the recorded example, not every imaginable use of the manual. End with the relevant source references and a bounded review route. Publishing the manual does not appoint an instructor, execute a contract or oblige anyone to follow its fictional roles.
+
+---
+
+### Document 017 — docs/handbooks/03-family-and-classical-governance.md — Current publication documentation
+
+SHA-256: `ec42a6e4c00d56664c67a54b8e958c1502d04164e5ae56087125da410a13ca46`.
+
+Source: Current publication documentation · editorial-document · docs/handbooks/03-family-and-classical-governance.md.
+
+# Family and originalclassical governance
+
+Family and originalclassical are editorial labels for a fictional arrangement of voluntary roles. Originalclassical remains a coined title without a new legal definition. A family in this handbook may mean an agreed group of related stories, documents or learning roles; it does not require a biological relationship, allegiance or acceptance of a hierarchy. A participant can prefer another label or decline the arrangement altogether.
+
+The governance exercise assigns finite tasks rather than enduring status. A keeper maintains a specified record, a reviewer examines a specified question, a learner explores an example and a steward coordinates an agreed handover. Name the task, its boundary and its review period. A title does not make one role competent in every subject, grant access to another person's records or authorise control of another participant. When a task ends, its fictional title supplies no continuing command.
+
+Genealogy in a fictional world can document invented characters or relationships between editions. Where real family history is studied, use information its holders have authorised for that particular purpose and keep private details out of public demonstrations. A diagram cannot establish parentage, inheritance, citizenship, sovereign office or beneficiary rights. The publication's monarchic and franchise proposals retain their unresolved formation terms.
+
+Allow disagreements to remain visible and provide an accessible route to propose correction. A role-holder may pause or withdraw; continuity can mean transferring one bounded task or closing it gracefully. Preserve the earlier record when revising the arrangement. The originalclassical exercise becomes useful through explicit responsibility and review, rather than a claim that its fictional authority is universal or permanent.
+
+---
+
+### Document 018 — docs/handbooks/04-logistics-and-rudder.md — Current publication documentation
+
+SHA-256: `b47abb68ac69bc8b63f10928abaec1ae0cdd5fdeb65dedcefe1f6c34639b9f1b`.
+
+Source: Current publication documentation · editorial-document · docs/handbooks/04-logistics-and-rudder.md.
+
+# Logistics with rudder prose
+
+Rudder prose names a presentation metaphor: a short, readable account that helps someone steer an agreed task. It is not a navigation device, vehicle controller or automatic dispatch system. The logistics record should describe one ordinary purpose, the resources actually offered, the dependencies that remain and a completion point. A promise of endless availability is less useful than an honest statement of present capacity.
+
+Begin with what needs to move or change. In a fictional exercise this might be a document passing between two invented roles. In a voluntary learning activity it might be a plain-text handout prepared for a session. Record the source, destination role, expected handover and the condition that confirms receipt. Use anonymous exercise labels in the public example. Necessary real contact information belongs in an appropriate controlled system and should not be copied into a demonstration to make the record look complete.
+
+The rudder paragraph connects the next action to its reason: the material is being revised because a reader could not access its format; a handover is delayed because the proposed successor has not accepted it. Keep uncertainty visible. An acknowledgment establishes only the acknowledgment's recorded scope. It does not prove that every need was met or that the receiving person is safe.
+
+Agree an accessible communication channel, a pause route and a review time. When capacity or permission changes, revise the plan and explain the consequence. A local board or queue can organise this information, but its priority labels dispatch no emergency service. Immediate danger requires appropriate local support, while the handbook remains a finite guide to records and voluntary coordination.
+
+---
+
+### Document 019 — docs/handbooks/05-fandom-merchandise-and-number-seeds.md — Current publication documentation
+
+SHA-256: `6b21fe38106cf799d1c9000fdeee182e381551d7bd3d167810f49ca3182abeeb`.
+
+Source: Current publication documentation · editorial-document · docs/handbooks/05-fandom-merchandise-and-number-seeds.md.
+
+# Fandom, number seeds and merchandise
+
+Fandom in this edition means a voluntary reader's relationship with original fictional material. A number seed, including the creator's numerseed label, is a supplied identifier or design convention whose meaning should be stated. The workpaper tool's `fandom(seed, count)` function deterministically derives one to thirty-two original story prompts from a supplied text seed and their indexes. Its numer field is a proposed local identifier. Repeating the same inputs and source version reproduces the prompts; the procedure neither predicts events nor authenticates a fan's identity, and it does not promise that all prompt texts are distinct.
+
+Describe a fictional item by its source, version and intended presentation. A mock catalogue can associate an original shield, story or text design with an invented product. Mark the record as fictional or proposed and distinguish a sketch from an item actually manufactured. The demonstration economy uses DEMO_CREDIT records, so a mock price is not a real payment, financial promise or commercial offer. No purchase, shipment or stock guarantee follows from a saved description.
+
+Rights require their own review. A reference to Jedi-inspired fiction, an asith-inspired archetype or another recognisable influence does not grant permission to copy a publisher's characters, artwork or marks. The collection's proposed franchise framework does not supply official endorsement or external operating rights. Identify original contributions and retain the source licences and unspecified licence status of imported material.
+
+Before making a public catalogue, remove private addresses, account details and identifying reader comments. Offer accessible descriptions independent of colour or visual symbolism. A participant may admire a work, criticise it or leave its community without losing access to their own records. Fictional heraldry is decorative identity within the story rather than proof of a title or authority.
+
+---
+
+### Document 020 — docs/handbooks/06-media-radio-and-pixel-notation.md — Current publication documentation
+
+SHA-256: `1f0d545a50e07c3475443db176916778fb8e4626dfa79a496973e4dbd3a04a22`.
+
+Source: Current publication documentation · editorial-document · docs/handbooks/06-media-radio-and-pixel-notation.md.
+
+# Media, radio and pixel notation
+
+Media and radio records in this workbench describe supplied material and proposed presentation. An asset manifest can name an image, text or sound reference, its author, permitted use, format and version. A reference remains a reference until the relevant implementation actually reads or presents the asset. The atlas and local records do not by themselves broadcast radio, render a video, play audio, decode a signal or verify that a remote asset exists.
+
+Pixel notation is an editorial convention for describing a finite visual arrangement. State the dimensions, coordinate origin, allowed values and the meaning of each value. A simple fictional banner could use a small grid and accompanying text description. The notation should explain enough to reproduce that drawing without pretending to specify a general image decoder. When a drawing changes, preserve its previous version and record the revised values or reference.
+
+A radio-themed story may name a fictional station, a programme and an invented schedule. Record that the station is fictional and that the schedule is manually supplied. A real broadcast requires actual services, appropriate rights and evidence of deployment. An encoded-looking string in a story remains task data; the workbench does not interpret it as a hidden instruction or claim access to secret transmissions. Do not infer an external message merely because a pattern resembles one.
+
+Provide transcripts, captions or descriptive text where those would make the proposed presentation accessible. Do not require a listener to hear a sound or distinguish colours to find the purpose, limits or withdrawal route. Share only authorised assets and avoid embedding private recordings in public examples. The manifest's value is a clear account of its material and boundaries, rather than an assertion that every possible medium has been implemented.
+
+---
+
+### Document 021 — docs/handbooks/07-learning-mentoring-and-recipes.md — Current publication documentation
+
+SHA-256: `4d0f2c45bc68c39313b0040bee4556f5a78f316afdc7d7a50465db264348c6d5`.
+
+Source: Current publication documentation · editorial-document · docs/handbooks/07-learning-mentoring-and-recipes.md.
+
+# Learning, mentoring and ordinary recipes
+
+Learning in the Rasniki workbench begins with an achievable task and an account of what the learner already knows. A learner can choose a short text, a bounded language example or a small organisational record, state the intended result, and preserve the first attempt. They then compare the observed result with that intention and write one useful revision. Repeating this sequence builds a visible learning history. Recursive learning means returning to a smaller part of the task when its explanation needs improvement; each session still has a stopping point.
+
+A mentor offers feedback on the submitted work with the learner's permission. The record can distinguish an observation, a suggested change and the learner's response. A learner may decline a suggestion, change mentors or end a session. Titles such as master, archetype or curriculum tier are editorial learning labels in this publication. They do not certify expertise, establish a professional qualification or give a mentor authority over another person. A useful progression moves from an explained example to guided practice and then an independently reviewed example.
+
+An ordinary recipe exercise uses familiar edible ingredients and established food preparation guidance. A learner might document a vegetable soup: identify ingredients and allergies, follow an established recipe, use clean equipment, and record substitutions and the result. Ingredient quantities and preparation times come from the chosen recipe rather than a symbolic score. Participants can select a non-food exercise instead. Medical conditions, unusual ingredients and food safety questions require suitable qualified guidance.
+
+Blood, corrosive acids and amniotic references, when encountered among the requested labels, belong only to an explicitly editorial glossary. They supply no ingredients, ingestion instructions or experimental recipes. The learning workpaper records its source, practical limits and evidence of the particular exercise. Completing it establishes that an exercise was documented, without claiming mastery of every possible topic.
+
+---
+
+### Document 022 — docs/handbooks/08-mapping-time-and-adaptation.md — Current publication documentation
+
+SHA-256: `35916072456ec4dbe19b829847e4bb53c1b8957ef4034a2c941e8bef1ac41bd0`.
+
+Source: Current publication documentation · editorial-document · docs/handbooks/08-mapping-time-and-adaptation.md.
+
+# Mapping, time and adaptation records
+
+A mapping record describes a place or arrangement supplied by its author. A fictional floor plan can identify a room by a local coordinate such as column three, row two, together with the map's title and version. An ordinary planning record can use a broad place description when precise location is unnecessary. The author states the coordinate convention, scale if known, and whether the place is fictional. These are manual descriptions. They do not locate a participant, follow a device or verify that someone is present at a place.
+
+A time record identifies the event being described, the timestamp supplied by the author and the time zone or offset used. A meeting planned for 14:00 in one zone can have a separate local reading for another participant after an ordinary time-zone conversion. If a time is approximate or recalled later, the record says so. The workbench's editorial clock, recursion and time labels do not establish physical time models, sensor measurements or travel through time. A calculation can be exact relative to specified inputs while those inputs remain uncertain.
+
+Adaptation records explain a change in response to a stated circumstance. For example, a workshop may replace a steep walking route with a seated discussion after participants request another access option. The revised plan preserves the earlier version, identifies the request without exposing a participant's private details, and records the chosen alternative and review date. The author can mark the outcome unknown until feedback arrives. A successful adaptation concerns that bounded activity rather than a universal judgment about suitability.
+
+Recursive review follows the collection, map, route and individual step only as far as the decision requires. Authors set a depth or stopping condition and retain unresolved questions. Location, calendar and media references remain supplied records or references to identified material. No assumption of live tracking, automatic navigation, broadcasting or playback follows from their presence in a catalogue.
+
+---
+
+### Document 023 — docs/handbooks/09-community-surveys-and-quests.md — Current publication documentation
+
+SHA-256: `e3d7a6e32446cb302cb93ac4d519702ffb3b1b1b36751aea4feea3c24c1eacf3`.
+
+Source: Current publication documentation · editorial-document · docs/handbooks/09-community-surveys-and-quests.md.
+
+# Community, surveys and inquiry quests
+
+A community exercise starts by stating its purpose, who may participate and what information will be retained. Participants can choose pseudonyms and keep identifying details outside the shared record. A local conversation or board is suitable for drafting questions and exchanging voluntary responses within its declared boundary. Its local records persist until deliberately removed; they have no automatic expiry. A stored message does not prove the sender's legal identity or permission for wider publication. Any later publication needs its own review of consent, attribution and private information.
+
+A survey asks a small number of questions that directly serve the stated purpose. An organiser might ask which workshop time people prefer, offer a way to skip the question and report how many submissions were received. Local aggregate counts do not authenticate unique respondents. The summary records the date, selection method and unanswered items. A convenient voluntary sample describes submitted answers; it does not establish the preferences of every resident, reader or community. Sensitive information is unnecessary for routine scheduling and should remain outside the exercise.
+
+An inquiry quest names a question, an accessible activity, an expected workpaper and a stopping condition. One quest could ask participants to compare two descriptions of the same fictional room and explain the differences. Evidence can include the two source texts and each participant's chosen observations. Fictional guilds, sovereignty titles and quest ranks are editorial organising labels. They confer no public office or authority over participation. A person can pause or leave a quest without explaining private circumstances.
+
+A voluntary leaderboard can count declared task completions under a visible rule. It should explain ties, corrections and the period covered, and offer an equally usable route without ranking. A task count describes recorded activity; it does not measure intelligence, moral worth or a person's value. Recursive community review examines the question, collection process and summary in bounded stages. Disagreement becomes a documented reason to revise the exercise, with previous versions retained and participants free to withdraw from later rounds.
+
+---
+
+### Document 024 — docs/handbooks/10-self-reported-preferences.md — Current publication documentation
+
+SHA-256: `eed8af08cda571f802eb4a012cb4cad9a3be773970dd4a8af4b252b9672012a4`.
+
+Source: Current publication documentation · editorial-document · docs/handbooks/10-self-reported-preferences.md.
+
+# Self-reported preferences and patterns
+
+A preference record states what its author chooses to report about a particular activity. It can say that the author prefers shorter reading sessions, quieter discussion, larger text or examples before formal definitions. The record identifies its date and context because a preference may change with the task or circumstances. Leaving a field unanswered is an available choice. An organiser can use the supplied preference to propose an option and ask whether it remains useful.
+
+Patterns emerge only within the observations the author elects to include. Someone who repeatedly chooses an untimed exercise may describe that pattern in their own words without explaining its cause. The record can preserve several possible interpretations or no interpretation at all. Requested personality, suitability and archetype labels remain editorial or self-selected presentation labels unless a separate specification gives them a narrower meaning. They supply no diagnosis, hidden psychological profile or ranking of another person's character.
+
+For example, a learner may write that diagrams helped in three recent sessions but plain text was easier on a small screen. A useful response offers both representations and lets the learner choose again. The author records which option they tried and whether it helped. This account concerns their stated experience. It does not authorise a system to infer medical status, detect concealed beliefs or predict another person's behaviour from similar wording.
+
+Recursive preference review can return from a broad learning goal to one exercise and one presentation choice. Each review has a finite purpose and an opportunity to stop. Participants can correct their wording, remove optional details from future shared copies or replace an old preference with a dated revision. Local retention and published retention are separate decisions; deleting a local record does not erase copies already shared elsewhere. A review should make those practical limits visible before the author chooses what to share.
+
+---
+
+### Document 025 — docs/handbooks/11-accessible-guardrails-and-recovery.md — Current publication documentation
+
+SHA-256: `bb84e3d60479caf74093acf2df277b663584273f82ac4c08cf109d753be5e19a`.
+
+Source: Current publication documentation · editorial-document · docs/handbooks/11-accessible-guardrails-and-recovery.md.
+
+# Accessible guardrails and scoped recovery
+
+An accessible workflow states its purpose in ordinary language, presents essential meaning in text and allows people to control their pace. Colour, sound and a decorative seal can enrich a presentation while a readable description carries the same information. Participants should have alternatives to timed responses and difficult gestures, a clear way to pause, and a way to decline optional records. These are design and review practices; their inclusion in a handbook does not establish that every interface has passed an accessibility audit.
+
+A guardrail identifies the boundary of an action before it runs. A reviewer asks which files or records are involved, who owns them, what the action changes and how it can stop. A local recovery exercise can inspect an owner's backup, compare a file with a retained integrity reference and restore a chosen copy after review. The comparison establishes agreement with that reference. It does not prove that the reference was trustworthy or that a matching file is free from every possible threat. Preserving the current copy before a reversible restoration makes the result easier to examine.
+
+Account recovery follows the provider's official password-reset, recovery or support process. A closed or restricted account uses the provider's documented appeal procedure. The owner can collect the non-secret information that the provider requests and record the outcome locally. The workbench supplies no universal unblocking mechanism, password guessing, bypass of account closure or reconstruction of someone else's credentials. Credentials and recovery codes remain outside published workpapers.
+
+Recursive scope review follows a collection into its named records only where permission and the task require it. It stops at excluded or unowned material. Simulated emergency labels describe local planning states and do not contact emergency services. A real urgent incident calls for the relevant local service or responsible operator through established channels. After a recovery exercise, the reviewer records the chosen source, observed result, unresolved concerns and whether the owner accepted the outcome.
+
+---
+
+### Document 026 — docs/handbooks/12-document-types-and-workpapers.md — Current publication documentation
+
+SHA-256: `89fb8167bd948cdf6257175f75d7f9aa114a619051f85138d96a459f5584468e`.
+
+Source: Current publication documentation · editorial-document · docs/handbooks/12-document-types-and-workpapers.md.
+
+# Document types, presentation labels and workpapers
+
+Raw, magazine, rings, seek, hobbit, brochure, searchwise and lecture are retained as the creator's coined presentation labels. An author can use raw for an unpolished source account, brochure for a brief introduction or lecture for an extended explanation after declaring that choice. The labels do not establish standard file formats or inherited semantics. Hobbit is an editorial label in this collection; its presence grants no rights to another publisher's fictional setting or marks. Each document still identifies its ordinary storage format, author, version and purpose.
+
+A finite type-address convention can give seven choices at each of seven successive levels. Seven branching transitions yield 7^7, or 823,543, potential terminal addresses. That arithmetic defines capacity under the proposed convention. A compact sampler displays only a bounded selection of those addresses, and an address can exist as a possible label without any document written at it. The convention does not establish that hundreds of thousands of documents or operations have been generated. An author states the chosen depth, sample limit and ordering so another reader can reproduce the same selection.
+
+A workpaper describes a particular piece of work in ordinary prose. It records the question, supplied inputs, source references, assumptions, steps, outputs and practical limits. If a local example produces a number, the workpaper states the calculation and where its inputs came from. If the result is an interpretation, it identifies the author and leaves room for another reading. Evidence references describe material actually available for review rather than invent hidden decoding, undisclosed access or an external authority.
+
+Reformatting changes presentation while preserving the cited source; reformation records a substantive revision with a reason. Proposed franchise and refranchise labels organise derivative editions and their provenance. They grant no automatic operating rights. A recursive document review follows the collection, selected type and workpaper to a finite stopping point, retaining earlier versions and recording questions that remain open.
+
+---
+
+### Document 027 — docs/handbooks/README.md — Current publication documentation
+
+SHA-256: `f17f8fbd552cfe200b95e945f9c53e2ef245055330883c500c161dbd335c2d2a`.
+
+Source: Current publication documentation · editorial-document · docs/handbooks/README.md.
+
+# Recursive handbook room
+
+This room contains twelve distinct prose handbooks for the Rasniki Hopput recursive workbench. Each describes one finite practice and preserves the difference between implemented local tools, proposed conventions, fictional worldbuilding and supplied assertions. An index entry is a route to a document, not a generated replacement for it. The compact document-type sampler describes possible addresses rather than hundreds of thousands of written handbooks.
+
+Read the [operational guide](../RECURSIVE-WORKBENCH.md) to identify the actual atlas, boards, economy, workpaper and recovery functions before choosing a practice. Public examples should use fictional scenarios and anonymous labels. Local records, downloaded copies and public publication have separate retention and permission boundaries. Readers can decline a practice or choose an accessible alternative.
+
+| Handbook | Reading purpose |
+| --- | --- |
+| [Advice and guidance](01-advice-and-guidance.md) | Explain a scoped question, source, next step and correction route. |
+| [ImmanuelEmmanuel — manual](02-immanuel-emmanuel-manual.md) | Use an undefined editorial title for a finite, readable manual. |
+| [Family and originalclassical governance](03-family-and-classical-governance.md) | Organise fictional voluntary roles without creating authority over people. |
+| [Logistics with rudder prose](04-logistics-and-rudder.md) | Describe capacity, handover, uncertainty and stopping conditions. |
+| [Fandom, number seeds and merchandise](05-fandom-merchandise-and-number-seeds.md) | Work with original prompts and fictional catalogues while preserving rights limits. |
+| [Media, radio and pixel notation](06-media-radio-and-pixel-notation.md) | Document supplied assets and finite notation without claiming broadcasting or secret decoding. |
+| [Learning, mentoring and ordinary recipes](07-learning-mentoring-and-recipes.md) | Review a chosen exercise and use established ordinary-food guidance. |
+| [Mapping, time and adaptation records](08-mapping-time-and-adaptation.md) | Describe manual coordinates, supplied times and bounded access changes. |
+| [Community, surveys and inquiry quests](09-community-surveys-and-quests.md) | Use pseudonyms, local records, voluntary submissions and limited rankings. |
+| [Self-reported preferences and patterns](10-self-reported-preferences.md) | Record an author's chosen preferences without diagnosis or hidden profiling. |
+| [Accessible guardrails and scoped recovery](11-accessible-guardrails-and-recovery.md) | Review permitted actions and use owned backups or official recovery channels. |
+| [Document types, presentation labels and workpapers](12-document-types-and-workpapers.md) | Distinguish representation, sampled type addresses and a documented piece of work. |
+
+The separate [conflict-protection room](../conflict/README.md) supplies ten additional templates for civilian care and review. The [spiritual and symbolic volume](../SPIRITUAL-SYMBOLIC-WORKBENCH.md) describes fictional archetypes and the proposed local Easterbunny documentation rubric. These existing volumes retain their own scopes; linking them does not convert their labels into new commands or authorise wider publication of a participant's records.
+
+---
+
+### Document 028 — docs/IMPLEMENTATION.md — Current publication documentation
+
+SHA-256: `40ccc2b3ecf36db5aa8ad92f698b17b3d00df3598c9e91f91de3d585b9a87756`.
 
 Source: Current publication documentation · editorial-document · docs/IMPLEMENTATION.md.
 
@@ -512,6 +842,12 @@ The financial manager exposes these postings and account totals. The economic ma
 
 ## Practices, terminology, curriculum and franchise
 
+The [recursive workbench](RECURSIVE-WORKBENCH.md) extends the local desktop with a [630-label atlas](RECURSIVE-SYSTEMS-ATLAS.md), ten prose formats, deterministic original fandom prompts, manual coordinate SVGs and persisted local boards. The atlas supplies bounded per-label advice/guidance and pagination; it declares omitted branches. BoardStore requires an explicit consent assertion for every mutation, limits records to 256, parent depth to eight, and combined interactions to 1,024. Surveys count submitted choices rather than authenticated people. Only reviewed quests contribute fictional points. Typed media, logistics, health, radio and community records do not confer their named real-world services.
+
+The [demo economy extension](DEMO-ECONOMY-CONTRACTS.md) transfers existing DEMO_CREDIT balances into funded obligations and repays them atomically, retaining bounded portfolios and documentary contract versions. Coupons annotate a budget without moving units. Contract hashes compare local content and receipts; they authenticate no identity or legal authority. The [owner recovery module](OWNER-RECOVERY.md) supplies official account recovery plans, bounded data encoding and exclusive new-file restoration from owned backups with an expected digest. It performs no password guessing or remote access bypass.
+
+The [owned-media studio](MEDIA-DATA-RENDITION.md) provides browser-local playback, raster brightness/contrast/crop edits, finite owned-data fingerprints and original seed renditions. Book text becomes a bounded episode/scene/shot plan. Canvas text cards can preview that plan or record a WebM draft. Local media is not uploaded. Permission withdrawal clears previews and prevents exports from a pending withdrawn recording. The output is an animatic rather than a guaranteed cinema-quality production; [device and safeguarding boundaries](SAFEGUARDING-AND-DEVICE-SCOPE.md) remain explicit.
+
 The symbolic-practice tab uses `madrigal_lab.symbolic.catalogue`, `evaluate` and `compare`. Five fictional archetypes support voluntary reflection; the user spelling `thaumturgy` is an explicit alias of `thaumaturgy`. Six nonempty support texts each earn one Easterbunny documentation-presence point. Comparisons clear implementation/evidence fields for the documentation-only baseline, and all support fields for the absent-input baseline. References remain inert and unverified. The API requires explicit Boolean consent and opt-out values, bounds UTF-8 bytes, rejects unknown fields and performs no filesystem or network I/O. Browser evaluation stores no record on the server; an accepted result can be deliberately downloaded as JSON. Changing or clearing the form invalidates export and prevents a pending response from redisplaying its previous reflection.
 
 The [spiritual workbench volume](SPIRITUAL-SYMBOLIC-WORKBENCH.md) explains the rubric and spiritual/fictional scope. The [conflict-protection library](CONFLICT-PROTECTION-LIBRARY.md) adds ten distinct templates for accessible voluntary participation, observation, dialogue, civilian support and correction. These are editorial workflows with bounded review, not combat automation, authority over opponents or guarantees of permanent protection.
@@ -520,13 +856,13 @@ Practice records follow proposed, active, paused, releasing and closed states wi
 
 The dictionary separates source-defined meanings, finite executable modes, proposed conventions, provisional spelling aliases and entries awaiting author definitions. The user’s counterabolshivik, counteraantonymbloshivik, bloshivik, aaantonymbolshivik, henapenall, counteraemergency and counterurgency terms remain explicitly unresolved. They refer to no identified political group and trigger no action against people. A new definition requires a recorded revision and tests if it acquires executable semantics.
 
-Prototypes refer to this host implementation and its examples. Archetypes are maintainer, reviewer, learner and steward. Paradigms are bounded execution, explicit evidence, versioned repair and double-entry accounting. Seven curriculum exercises cover construction, storage, practice handoff, accounting, integrity review, symbolic support comparison and conflict review. The ashram model is voluntary practice and learning. Sovereignty remains fictional governance vocabulary. The SVG shield is decorative heraldry and grants no title or authority.
+Prototypes refer to this host implementation and its examples. Archetypes are maintainer, reviewer, learner and steward. Paradigms are bounded execution, explicit evidence, versioned repair and double-entry accounting. Twelve curriculum exercises cover construction, storage, practice handoff, accounting, integrity review, symbolic support comparison, conflict review, local boards, obligations, owned backup restoration, workpapers/maps and owned media. The ashram model is voluntary practice and learning. Sovereignty remains fictional governance vocabulary. The SVG shield is decorative heraldry and grants no title or authority.
 
 The derivative/franchise manifest records components, source provenance, version and declared limits. It is a reproducible description, not a licence to use marks, operate businesses or bind beneficiaries. Formation identifies an implementation; reformation changes a reviewed version; format and reformat concern representation; franchise and refranchise concern proposed separately authorised derivatives. The prose charter’s unresolved legal particulars remain unresolved by this software.
 
 ---
 
-### Document 015 — docs/IMPLEMENTATION.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 029 — docs/IMPLEMENTATION.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `973dd9e337ae4d638ee30e7a3c52cab39e0cdbb70eb7429e56bffed88099286c`.
 
@@ -629,7 +965,7 @@ The derivative/franchise manifest records components, source provenance, version
 
 ---
 
-### Document 016 — docs/LAIR-OF-LAIRS.md — Current publication documentation
+### Document 030 — docs/LAIR-OF-LAIRS.md — Current publication documentation
 
 SHA-256: `f0fb2fa1a51fe52fea0efb181ab20b2b814c3d2de27dff9339ed08ae7642227b`.
 
@@ -693,7 +1029,55 @@ The result is a Lair of Lairs whose rooms can be entered, compared, left and vis
 
 ---
 
-### Document 017 — docs/MINISTRY.md — Current publication documentation
+### Document 031 — docs/MEDIA-DATA-RENDITION.md — Current publication documentation
+
+SHA-256: `adb2d0b0e70315e83c6612a8a62dd20e032cabca38fc0ebc2b581dd8dc506a00`.
+
+Source: Current publication documentation · editorial-document · docs/MEDIA-DATA-RENDITION.md.
+
+# Media, Data and Rendition Workbench
+
+This chamber turns deliberately supplied material into a finite data record, a fictional seed rendition or a book-to-series production plan. The operator first confirms that they can use the material and that participating people consent. These confirmations are recorded assertions. The software cannot determine copyright ownership, verify someone's age or establish that a participant has consented. Work involving real people needs those questions resolved outside the generator before recording or publishing.
+
+## Data to raw, raw to seed and seed to rendition
+
+An owned text export can be supplied as UTF-8; an owned binary excerpt can be supplied as canonical base64. Both routes accept at most 65,536 decoded bytes. A supplied source name accompanies the byte count and SHA-256 fingerprint. The UTF-8 route also returns at most 32 short word samples. The binary route does not interpret or execute its contents. Nothing in this transformation reads another file, probes process memory, connects to an account or performs a disk scan.
+
+The seed is the literal prefix `rasniki-data-seed:` followed by the fingerprint. It is an identifier for those bytes. It does not preserve the original content and cannot restore a deleted file, lost memory or forgotten experience. Keep the original export and a separately verified backup when recovery matters. A matching fingerprint establishes that two byte sequences match; it does not prove that the contents are accurate, safe, lawfully acquired or free from secrets.
+
+The rendition route checks that the supplied seed matches its supplied fingerprint, then uses the existing original-fiction generator to produce between one and 32 prompts. Each result retains the supplied source name and fingerprint, so the operator can return to the intended source. The source bytes are absent from this request and their fingerprint is therefore unverified. These are new fictional prompts, not recovered source prose or a faithful adaptation of the original material. The same seed and count produce the same prompts.
+
+Sensitive records, passwords, private account tokens and material belonging to someone else should not enter an export intended for publication. Review a local export before supplying it, retain access controls on its backup and delete unwanted browser downloads through the usual owner-controlled file tools. The pure Python transformation functions do not retain their inputs; browser displays, downloaded files and an operator's own recordings follow their separate retention choices.
+
+## Book specification to series plan
+
+The production-plan route accepts a supplied title of at most 160 UTF-8 bytes and a book specification of at most 12,000 UTF-8 bytes. Choose one to eight episodes, one to 24 total scenes and one to 30 seconds for each shot. Every episode requires at least one scene, and every requested scene requires at least one supplied word. These limits keep the plan reviewable and its eventual timed presentation bounded to 12 minutes.
+
+The planner divides the source words in their original order across the requested scenes. It assigns consecutive scene numbers, groups them into nonempty episodes and gives each scene one editable text-card shot. A scene includes its source word range, a source excerpt of at most 640 UTF-8 bytes and a flag when the excerpt is shortened. The original specification's fingerprint accompanies the plan. Whitespace is normalized in the excerpts, while the fingerprint refers to the original supplied bytes.
+
+The result is a deterministic production worksheet and timed animatic outline. It does not infer plot structure, invent footage or guarantee cinema quality. A director still develops narrative continuity, visual composition, casting, performance, sound, captions, rights clearances and accessible alternatives. Read each excerpt against its original passage before expanding it into a screenplay. Preserve contextual meaning when a scene is shortened or moved.
+
+The local browser player can display the supplied cards and play permitted local media through the computer's normal screen and speakers. Those are ordinary hardware outputs. They do not modify another person's body, personality, attraction, abilities or beliefs. Optional media playback should respect participants' preferences and allow pausing, muting and leaving the presentation. A multimedia editor should preserve an original copy and make its revised selection and metadata visible before any export.
+
+## Archangel effects and protective review
+
+“Archangel” remains a publication label for voluntary guidance, fictional roles and supplied workpapers. A workpaper may record a wish, a duty, an accessibility adjustment or a proposed protection measure. A generated card does not confer authority over a real person. Image quality, narrative quality and an individual's worth are separate questions; a social-media following list is not a suitable standard for ranking or changing people. This workbench does not fetch the linked Instagram accounts or profile their followers.
+
+Counterdisiri, counterlechery, counter child molestation and other supplied protective labels can accompany a review record, but their presence cannot certify that abuse has been prevented. The practical review asks whether the activity is voluntary, participants' privacy is respected, material is appropriate to their age, and anyone can refuse or withdraw. If a concern needs safeguarding support, use an appropriate trusted human or official reporting channel. The editor is a media tool rather than a substitute for such review.
+
+For publication, the operator checks the original source reference, intended audience, permitted uses, credits and whether real participants have approved their portrayal. No background upload, account recovery bypass, social-media scraping, radio decryption or light-based intervention is part of this chamber. The finite plan and rendition can then enter the edition through its existing form, format, review and reproducible-build process.
+
+## Declared software interfaces
+
+`madrigal_lab.media.raw_seed(record)` accepts `name`, `encoding` (`utf8` or `base64`), `data`, `owned: true` and `consent: true`. It returns the supplied source name, byte count, fingerprint and bounded seed description. Unknown fields and invalid types are rejected.
+
+`madrigal_lab.media.seed_rendition(record)` accepts `seed`, `source_sha256`, `source_name`, `count` from one to 32, `owned: true` and `consent: true`. It returns deterministic original-fiction prompts and the supplied origin reference. A seed whose digest differs from `source_sha256` is rejected.
+
+`madrigal_lab.media.parse_story(record)` accepts `title`, `book`, `episodes`, `scenes`, `duration`, `owned: true` and `consent: true`. Its episode array contains scenes with source ranges and shot cards. Every returned excerpt is ordinary text and must be rendered through a text-safe interface rather than executed as HTML or code.
+
+---
+
+### Document 032 — docs/MINISTRY.md — Current publication documentation
 
 SHA-256: `78f0259b82eab2ef93f360a62e671d3a1a4ac9429e7afd2353a13b390648abfd`.
 
@@ -735,7 +1119,7 @@ The original snapshot has no specified licence. Retaining it with provenance doe
 
 ---
 
-### Document 018 — docs/OMNIARCHY.md — Current publication documentation
+### Document 033 — docs/OMNIARCHY.md — Current publication documentation
 
 SHA-256: `9c52a278b6dd7ded37557346a499fc8a0a9aefc14bca0f2497e5bd1fdca00be8`.
 
@@ -807,7 +1191,126 @@ The same edition now uses the [Lair of Lairs](LAIR-OF-LAIRS.md) reading form: co
 
 ---
 
-### Document 019 — docs/PROVENANCE.md — Current publication documentation
+### Document 034 — docs/OWNER-RECOVERY.md — Current publication documentation
+
+SHA-256: `93f6d3ba9c37feaab6a5b91b3410b3fac82bff447523d6d0bec65cccf2eff883`.
+
+Source: Current publication documentation · editorial-document · docs/OWNER-RECOVERY.md.
+
+# Owner recovery, encoding envelopes and restored documents
+
+The recovery chamber gives an account owner a route back to the account provider and gives a local document owner a way to inspect and restore a supplied backup. These are different outcomes. A provider decides whether its account can be reopened, unblocked or recovered. The local workbench can create a new document inside its own document directory after its bytes match an expected SHA-256 digest. Every account checklist reports `account_restored: false`, and a successful local restore continues to report that value.
+
+The requested names “password decipherer,” “universal deblock” and “vaultception decipherer” are retained as requested concepts with defined implementation boundaries. The implemented password workflow is an official recovery checklist. The implemented blocked-account workflow is an official appeal checklist. The implemented vault envelope is a bounded text encoding container. There is no password guessing, credential collection, authentication bypass, recovery-code generator or cryptographic decryption engine in this chamber. A person's decision to block contact also remains their decision.
+
+## The account passage checklist
+
+`madrigal_lab.recovery.plan(record)` accepts a record with `case` and `owner_asserted`. The owner assertion must be the Boolean `true`; a number or a string does not substitute for it. The assertion is recorded as an assertion and does not verify identity. An optional `provider` label may contain up to 160 UTF-8 bytes. An optional `official_url` may contain up to 2,048 UTF-8 bytes and must be a HTTPS URL without embedded credentials, a fragment or a custom port. The software displays that URL as user-supplied. It never fetches the link or establishes that the provider controls it.
+
+The four case values lead to distinct advice. `forgotten-password` directs the owner to the provider's reset process, established recovery contacts and ownership review. `blocked` directs the owner to the restriction notice and the available appeal process, while distinguishing a provider restriction from an individual contact block. `closed` asks the owner to check reopening and permitted export windows and to use their own backups if the provider cannot return the data. `suspended` directs the owner to the suspension notice and its official appeal requirements. Each checklist asks the owner to reach the provider independently and keep passwords, recovery codes and identity documents out of the publication and workbench records.
+
+```python
+from madrigal_lab import recovery
+
+checklist = recovery.plan({
+    'case': 'forgotten-password',
+    'owner_asserted': True,
+    'provider': 'My account provider',
+    'official_url': 'https://example.com/support',
+})
+assert checklist['status'] == 'guidance-only'
+assert checklist['account_restored'] is False
+assert checklist['remote_actions'] == 0
+```
+
+The example URL is a placeholder. The result is a plan to review, not a submitted support request. This module has no remote account connection and sends no appeal, email or recovery request. A provider can refuse an appeal or have no reopening mechanism. The checklist preserves that uncertainty in `provider_decision` rather than translating a review into access.
+
+## The local vault envelope
+
+`recovery.decode(payload, encoding='utf8')` accepts a user-supplied string and one of four exact encoding names: `utf8`, `hex`, `base64` or `vault-json`. UTF-8 retains plain text. Hexadecimal requires complete byte pairs without spaces. Base64 requires its strict alphabet and padding. Every decoded document must be valid UTF-8. The input at every stage and the decoded output are each limited to 65,536 bytes, so an encoded representation can reach its input limit before its decoded document reaches the output limit.
+
+A `vault-json` payload contains exactly two fields, `encoding` and `payload`. The inner payload is another string and its encoding is one of the same four names. A JSON envelope can therefore contain another JSON envelope, up to eight envelope layers. Unknown fields, duplicate fields and additional layers are rejected. These layers are containers for text representation. They do not encrypt the text, conceal it from someone holding the payload or give access to a remote vault.
+
+```python
+import json
+from madrigal_lab import recovery
+
+envelope = json.dumps({'encoding': 'hex', 'payload': '63617265'})
+decoded = recovery.decode(envelope, 'vault-json')
+assert decoded['text'] == 'care'
+assert decoded['layers'] == ['vault-json', 'hex']
+assert decoded['cryptographic_decryption'] is False
+```
+
+The decoder returns the text, its byte count, its calculated SHA-256 digest and the encoding layers. It does not evaluate scripts, import code described by the payload or execute document contents. Binary documents that are not valid UTF-8 need another tool and are rejected here. The term “vaultception” describes this edition's nested encoding demonstration; it does not establish an external standard or an encrypted-vault compatibility claim.
+
+## Compare a backup before restoring it
+
+`recovery.inspect_backup(record)` requires `backup` and `owner_asserted: true`. `backup` is the supplied text, not an arbitrary path on disk, a URL or a remote account reference. `encoding` is optional and defaults to `utf8`. An optional `expected_sha256` must be exactly 64 lowercase hexadecimal characters. Without that digest the result says `integrity: 'not compared'`. With one it reports either `matches` or `mismatch`.
+
+```python
+import hashlib
+from madrigal_lab import recovery
+
+backup = 'My local notes\n'
+expected = hashlib.sha256(backup.encode('utf-8')).hexdigest()
+inspection = recovery.inspect_backup({
+    'backup': backup,
+    'owner_asserted': True,
+    'expected_sha256': expected,
+})
+assert inspection['integrity'] == 'matches'
+assert inspection['ownership_verified'] is False
+assert inspection['authenticity_verified'] is False
+```
+
+Calculating the expected digest from the same text is useful for this example, but it gives no independent historical evidence. In a real backup review, compare against a digest you retained separately when the backup was made or received through a trusted process. A matching digest says the supplied bytes equal the bytes represented by that digest. It does not identify their author, verify testimony, prove ownership or grant account access.
+
+## Create a new local document
+
+`recovery.restore(runtime, record)` accepts the inspection fields plus `target`. Both `expected_sha256` and `target` are required for a restore. The expected digest must match before the module attempts a filesystem change. The destination is a new relative document path under the supplied `Runtime`'s `files` directory. Existing files and directories cannot be overwritten. Absolute paths, hidden paths, empty path segments, `.` or `..` segments, backslashes and symlinks are rejected.
+
+```python
+import hashlib
+from madrigal_lab import recovery
+from madrigal_lab.runtime import Runtime
+
+runtime = Runtime('.lab-state')
+backup = 'My local notes\n'
+receipt = recovery.restore(runtime, {
+    'backup': backup,
+    'owner_asserted': True,
+    'expected_sha256': hashlib.sha256(backup.encode('utf-8')).hexdigest(),
+    'target': 'recovered/notes-copy.txt',
+})
+assert receipt['status'] == 'local-document-restored'
+assert runtime.read('recovered/notes-copy.txt')['text'] == backup
+assert receipt['account_restored'] is False
+```
+
+Run this example once or choose another new target path. The receipt records the local path, byte count and digest, and explicitly records zero remote actions. It does not change the publication, a provider account, a password or anyone's permission records. The caller's runtime controls which local state directory is used; the web workbench uses its existing local state directory rather than accepting a recovery state path from the request.
+
+The restoration checks the document-tree entry limit of 256, including new parent directories, before creation. It opens each absolute root ancestor without following symlinks, then counts and creates through anchored directory descriptors. This also rejects a state-directory ancestor that was replaced with a symlink after the runtime was constructed. The final file is created exclusively with owner-only file permissions, so competing attempts cannot replace one another's completed document.
+
+Restore calls in the same process share a lock, including calls through different runtime instances. A nonblocking POSIX directory lock also coordinates cooperating restore calls in other processes. A busy directory returns a failed restore rather than waiting indefinitely. The count check and creation occur inside those locks, so two cooperating restores cannot both consume the same last document-tree slot. These locks do not govern unrelated programs that directly modify the directory; run such writers separately, or use the workbench server's serialized actions.
+
+A failed digest comparison creates neither a file nor parent directories. If file creation fails after new parents were created, restoration attempts to remove only this call's newly created, empty directories whose identities still match. Preexisting directories and directories populated or replaced by another writer are retained. No successful restore is reported for that failure. This implementation uses the Linux/POSIX directory and locking facilities provided by the cloud environment.
+
+## Review, evidence and paperwork
+
+A useful private recovery record identifies the provider, the dated notice, the official route reviewed and a nonsecret support reference. It records whether the outcome is still pending, whether a provider decision arrived and whether a separate local document was restored. Keep sensitive evidence with the provider or in your own protected storage. Do not place passwords, identity documents, private recovery links or personal support transcripts in this public edition.
+
+For a closed account, the account outcome and the document outcome can diverge. A permitted export can be returned even when an account stays closed. A backup can restore a local note even when a provider declines reopening. An appeal can be accepted before the owner has retrieved any data. Keeping these entries separate helps the owner describe what actually changed.
+
+Recursive review is a bounded return through those recorded facts. It cannot turn repeated appeals into a guaranteed right of access, and it cannot turn decoding an envelope into deciphering a password. A new review can update the checklist or add a new document copy when the owner supplies new information. The provider remains responsible for its account decision, and the owner remains responsible for choosing which of their own documents to retain.
+
+## Verification
+
+Run `python -m unittest discover -s tests -p test_recovery.py -v` from the repository root. The focused checks exercise all four checklist cases; strict owner assertions and unknown-field rejection; UTF-8, hex and base64 round trips; the eight-layer JSON limit; invalid, binary and oversized payloads; digest comparisons; new-only local restoration; path and symlink confinement; replaced root ancestors and a symlink-parent replacement race; competing targets across runtime instances; directory lock contention; the document entry limit; rollback of empty parents while preserving unrelated contents; and absence of network access or payload execution. They test this module's behavior and do not certify an external provider's recovery procedure.
+
+---
+
+### Document 035 — docs/PROVENANCE.md — Current publication documentation
 
 SHA-256: `c3f9565400fe18b8ba533b3b7d3fb48ebad0f53e7ad7f6b982ada92607300a73`.
 
@@ -837,7 +1340,7 @@ The original bundled `vendor/provenance.json` names its initial `sources/guardia
 
 ---
 
-### Document 020 — docs/PROVENANCE.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 036 — docs/PROVENANCE.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `43517eae3d9dcadd319fe10d9fd0a6a61e687668c2711db2842ce44ebcd1a50e`.
 
@@ -858,7 +1361,953 @@ The Python host, SQLite implementation and browser are declared dependencies. Th
 
 ---
 
-### Document 021 — docs/SPIRITUAL-SYMBOLIC-WORKBENCH.md — Current publication documentation
+### Document 037 — docs/RECURSIVE-SYSTEMS-ATLAS.md — Current publication documentation
+
+SHA-256: `a206b7a66ae60d81665c967e973acc5725c60bab36e6221b81d49793adafba75`.
+
+Source: Current publication documentation · editorial-document · docs/RECURSIVE-SYSTEMS-ATLAS.md.
+
+# Recursive Systems Atlas — Advice, Guidance and Exact Labels
+
+This edition records 630 distinct author-supplied names and explicitly named components in 22 categories. The inventory contains 621 retained label mentions before deduplication, plus 28 separately marked components of compound phrases: 649 inventory mentions in total. Exact repeated labels have occurrence counts. A whole phrase and one of its explicit components can both appear, so these figures describe catalogue entries rather than a count of raw words or distinct implemented products.
+
+The publication preserves the requested spellings. It retains `immanuel`, `emmanuel`, `im manuel` and `im manue` separately, together with the functional expressions, governance variants, fandom forms, unusual box-office titles and every requested hospitality combination. Proposed spelling aliases remain proposals. An unfamiliar label acquires no hidden meaning merely because its name is entered in a catalogue.
+
+The complete machine-readable inventory is [REQUESTED-SYSTEMS.json](REQUESTED-SYSTEMS.json). Each entry supplies an exact label, category, occurrence count, implementation status, scope, suitable local record template, proposed aliases, advice, guidance and crosslinks. Explicit components name their source phrase. The grouped tables below reproduce every distinct inventory label, including unresolved and sensitive labels, so the documentation reader contains the entire finite list.
+
+## How recursion works here
+
+A recursive review begins with a declared purpose and returns to that purpose after examining a smaller record. The atlas has four actual levels: collection, category, exact label, and that label's advice or guidance. A depth budget between zero and eight controls the view; it does not invent additional copies of the four-level tree. A request returns at most 256 nodes. Every returned child refers to a returned node, and omitted-child counts disclose branches outside the current view.
+
+Each label's advice asks the author to state its meaning, willing participants, intended result and review boundary. Its guidance asks for a finite purpose and stop condition, source and access notes, the appropriate record template, and a correction or withdrawal review. These prompts are available for every inventoried label. They support revision of a record rather than establishing that all conceivable recursive advice exists.
+
+The catalogue uses literal, case-insensitive substring search. It searches supplied labels, scope, category, status, record-template names and proposed spelling aliases. A query is bounded to 512 UTF-8 bytes. Pagination returns one to 256 records per call, with total, matching and returned counts. Filter the tree to a particular term, such as `immanuel`, to see its complete advice and guidance branch within a small node budget. Crosslinks are references; following them never executes a label or changes access permissions.
+
+A local record template supports supplied paperwork. Media, map, radio, health, genealogy, learning and research records organize descriptions and references. Their names do not install a media renderer, radio transmitter, mapping service, diagnostic tool, school, bank or government. The finite local features are distinguished below from documentary references and terms awaiting the author's definition.
+
+## Status key
+
+| Status | Meaning in this edition |
+| --- | --- |
+| `implemented-record-framework` | A finite local record schema or address sampler supports the stated task, with the scope shown in its entry. |
+| `implemented-derived-quest-summary` | Reviewed fictional quest points can produce a local summary; no personal-worth ranking is implied. |
+| `simulated-demo-ledger` | The existing demo-credit ledger supports bounded accounts, amounts or balance reports. |
+| `review-and-integrity-only` | Supplied review paperwork or existing file-integrity tools support a limited check; they do not verify every claim. |
+| `official-owner-recovery-only` | A record can guide an account owner through the provider's official reset, support or appeal process. |
+| `documentary-reference` | The label can be organized as supplied documentation or a record reference; its full named product is not implemented. |
+| `editorial-governance-proposal` | A title, venue or governance idea is recorded without an appointment or grant of authority. |
+| `fictional-label-only` | A fictional menu or service name is retained without a real preparation or bodily-fluid procedure. |
+| `fictional-or-unresolved` | A sensitive or ambiguous label is retained for editorial review, with no operational instructions. |
+| `awaiting-author-definition` | The exact coined label is preserved, and its meaning or executable semantics remain unspecified. |
+| `unresolved-expression-no-access-rule` | The supplied access expression is quoted and is never applied as an authorization rule. |
+
+## Documentary families and seven-way addresses
+
+The governance family preserves 28 distinct requested original/classical titles from 32 mentions. Four classical titles occur twice. The family view also shows `classical apatriarch`, `classical apatriarchy`, `classical aheirarch` and `classical aheirararchy` as proposed completions with zero requested occurrences. Those four proposed names are outside the 616-item request inventory. Their status remains a proposal, and the family view gives none of the titles legal, hereditary or political powers.
+
+The hospitality family contains all 56 requested combinations: seven prefixes (`acid`, `water`, `milk`, `blood`, `sabbath`, `ambiotic`, `biotic`) crossed with eight suffixes (`drinks`, `soda`, `cafe`, `bistro`, `jacuzzi`, `spa`, `wine`, `saloon`). The spelling `ambiotic` is preserved. The labels are fictional catalogue names, without recipes, chemical dosing, biological-fluid consumption, spa procedures or medical assertions. The ten restaurant and takeout labels are preserved alongside them.
+
+The requested `my 7 amp 7 amp 7 amp 7 amp 7 amp 7 amp 7 document types` is given an explicitly proposed numerical interpretation: seven levels with seven branch choices at each level. This yields 7^7 = 823,543 potential leaf addresses. The sampler returns between one and 256 addresses, each containing seven digits from zero to six. It generates zero documents and executes zero terminal operations. The author's meaning for `amp` remains unconfirmed; a sampled address is a location for possible paperwork rather than proof that a document already exists.
+
+The original science-edition hierarchy and source-backed quilt modes remain distinct from this seven-way sampler. Calling a finite publication “final quilt” identifies a reviewable version and its limits. It cannot establish unlimited completion, universal scientific exactness or a perpetual guarantee.
+
+## Local interfaces
+
+The pure atlas functions are `catalogue(query='', limit=256, offset=0)`, `tree(depth=3, limit=256, query='')`, `families()` and `document_types(limit=32)`. They return fresh data, read the reviewed local inventory and execute no supplied labels. The atlas writes no accounts, sends no messages, performs no network requests and alters no source files.
+
+For example, `python -m madrigal_lab.atlas --query immanuel --tree --depth 3 --limit 16` prints that label's finite advice branch. `python -m madrigal_lab.atlas --document-types --limit 8` prints eight possible document addresses. `python -m madrigal_lab.atlas --families` prints the requested governance/hospitality families and clearly marks the four proposed title completions. The publication's workbench can call the same functions through its local interface.
+
+## Complete grouped inventory
+
+The complete inventory is sorted by category, then by the case-folded exact label with original spelling as the tie-breaker. Each label appears in its primary category; crosslinks in the JSON expose other relevant categories. These rows preserve all 630 labels.
+
+### Advice and symbolic lore
+
+Voluntary advice or symbolic lore records; no supernatural verification, affiliation or authority over people.
+
+| Exact label | Occurrences | Status | Record template |
+| --- | ---: | --- | --- |
+| advice | 1 | implemented-record-framework | advice |
+| agency | 2 | documentary-reference | manual |
+| agent | 1 | documentary-reference | manual |
+| aneed | 1 | awaiting-author-definition | manual |
+| archanagelics | 1 | awaiting-author-definition | manual |
+| archangel effects | 1 | fictional-or-unresolved | manual |
+| archangel of aneed and awant ology | 1 | awaiting-author-definition | manual |
+| archangelisings master of arms | 1 | fictional-or-unresolved | manual |
+| archangling software | 1 | awaiting-author-definition | manual |
+| archengelings softwares | 1 | awaiting-author-definition | manual |
+| arhcngel | 1 | awaiting-author-definition | manual |
+| asharking | 1 | awaiting-author-definition | manual |
+| awant | 1 | awaiting-author-definition | manual |
+| emblem | 1 | documentary-reference | manual |
+| emmanuel | 1 | awaiting-author-definition | manual |
+| flag | 1 | documentary-reference | manual |
+| guidance | 1 | implemented-record-framework | guidance |
+| guru | 1 | documentary-reference | manual |
+| icon | 1 | documentary-reference | manual |
+| immanuel | 1 | awaiting-author-definition | manual |
+| logo | 1 | documentary-reference | manual |
+| logos | 1 | documentary-reference | manual |
+| lore | 1 | documentary-reference | manual |
+| mageticism | 1 | awaiting-author-definition | manual |
+| master amasonry | 1 | awaiting-author-definition | manual |
+| master existencial form | 1 | awaiting-author-definition | manual |
+| master of arms | 1 | fictional-or-unresolved | manual |
+| my thaumaturgy | 1 | documentary-reference | manual |
+| name | 1 | documentary-reference | manual |
+| ology | 1 | awaiting-author-definition | manual |
+| prayer logistics | 1 | documentary-reference | manual |
+| sabbathamessiah | 1 | awaiting-author-definition | manual |
+| sage | 1 | documentary-reference | manual |
+| scoundrel | 1 | awaiting-author-definition | manual |
+| sims games | 1 | documentary-reference | manual |
+| symbol | 1 | documentary-reference | manual |
+| taliswoman | 1 | awaiting-author-definition | manual |
+| womandeanamandean | 1 | awaiting-author-definition | manual |
+| yeetabutt | 1 | awaiting-author-definition | manual |
+| yetabut | 1 | awaiting-author-definition | manual |
+
+### Boards and community
+
+Local community or board paperwork; no live chat delivery, citizenship grant, census, brokerage or inferred demographics.
+
+| Exact label | Occurrences | Status | Record template |
+| --- | ---: | --- | --- |
+| boards | 1 | documentary-reference | community |
+| chatboards | 1 | documentary-reference | community |
+| chatrooms | 1 | documentary-reference | community |
+| chatrooms for community | 1 | documentary-reference | community |
+| collective demographcs | 2 | documentary-reference | community |
+| collective special economics list | 2 | documentary-reference | community |
+| community ecosystem | 2 | documentary-reference | community |
+| community empire | 2 | documentary-reference | community |
+| group chatrooms | 2 | documentary-reference | community |
+| group house | 2 | documentary-reference | community |
+| individual citienship | 2 | documentary-reference | community |
+| individual home | 2 | documentary-reference | community |
+| leaderboard systems software | 1 | implemented-derived-quest-summary | quest |
+| my amalgamation | 1 | documentary-reference | community |
+| my antonymphilanthropy | 1 | awaiting-author-definition | community |
+| my aphilanthropy | 1 | awaiting-author-definition | community |
+| my assosiation | 1 | documentary-reference | community |
+| my buisness | 1 | documentary-reference | community |
+| my charity | 1 | documentary-reference | community |
+| my club | 1 | documentary-reference | community |
+| my conglomerate | 1 | documentary-reference | community |
+| my conglomeration | 1 | documentary-reference | community |
+| my guild | 1 | documentary-reference | community |
+| my investment oppportunities | 1 | documentary-reference | community |
+| my leagues | 1 | documentary-reference | community |
+| my mods | 1 | awaiting-author-definition | community |
+| my multis | 1 | awaiting-author-definition | community |
+| my syndicate | 1 | documentary-reference | community |
+| panels | 1 | documentary-reference | community |
+| questboard system software | 1 | implemented-record-framework | quest |
+| survey systems software | 1 | implemented-record-framework | survey |
+| white pages | 1 | documentary-reference | community |
+| yellow pages | 1 | documentary-reference | community |
+
+### Care learning and movement
+
+Voluntary learning and self-described wellbeing records; no medical advice, diagnosis, treatment, violence instructions or physical training certification.
+
+| Exact label | Occurrences | Status | Record template |
+| --- | ---: | --- | --- |
+| bathing | 1 | documentary-reference | learning |
+| bathingasnearing | 1 | awaiting-author-definition | learning |
+| bikings | 1 | documentary-reference | learning |
+| breeding | 1 | awaiting-author-definition | learning |
+| caring | 1 | documentary-reference | learning |
+| cycling | 1 | documentary-reference | learning |
+| discount | 1 | documentary-reference | learning |
+| gestures | 1 | documentary-reference | learning |
+| gym kinethetics | 1 | awaiting-author-definition | learning |
+| gym meditation | 1 | documentary-reference | learning |
+| martial arts | 1 | documentary-reference | learning |
+| mixed martial arts | 1 | documentary-reference | learning |
+| my acrobatics | 1 | documentary-reference | learning |
+| my aerobics | 1 | documentary-reference | learning |
+| my anaerobic | 1 | documentary-reference | learning |
+| my courtship | 1 | documentary-reference | learning |
+| my do exercises | 1 | documentary-reference | learning |
+| my doeth workouts | 1 | documentary-reference | learning |
+| my gym | 1 | documentary-reference | learning |
+| my healthtracking | 1 | implemented-record-framework | health |
+| my hensensualityaconsensuality | 1 | awaiting-author-definition | learning |
+| my musclemass | 1 | documentary-reference | learning |
+| my portals | 1 | awaiting-author-definition | learning |
+| my steps | 1 | documentary-reference | learning |
+| reviews | 1 | documentary-reference | learning |
+| service coaching | 1 | documentary-reference | learning |
+| service mentoring | 1 | documentary-reference | learning |
+| service taming | 1 | awaiting-author-definition | learning |
+| service tutoring | 1 | documentary-reference | learning |
+
+### Communications and files
+
+Communication/file references and local paperwork; no carrier service, message delivery, network administration or remote account access.
+
+| Exact label | Occurrences | Status | Record template |
+| --- | ---: | --- | --- |
+| blogging | 1 | documentary-reference | manual |
+| chats | 1 | documentary-reference | manual |
+| contractsacontacts | 1 | awaiting-author-definition | manual |
+| data to raw | 1 | implemented-record-framework | media |
+| directories | 1 | documentary-reference | manual |
+| downloads | 1 | documentary-reference | manual |
+| email | 1 | documentary-reference | manual |
+| explorersm uploads | 1 | documentary-reference | manual |
+| files | 1 | documentary-reference | manual |
+| folders | 1 | documentary-reference | manual |
+| gettings | 1 | awaiting-author-definition | manual |
+| internet | 1 | documentary-reference | manual |
+| intranet | 1 | documentary-reference | manual |
+| mms | 1 | documentary-reference | manual |
+| networking | 1 | documentary-reference | manual |
+| phoning | 1 | documentary-reference | manual |
+| settings | 1 | documentary-reference | manual |
+| social networking | 1 | documentary-reference | manual |
+| social vocalism | 1 | awaiting-author-definition | manual |
+| txt | 1 | documentary-reference | manual |
+| vloging | 1 | documentary-reference | manual |
+| vocal logging | 1 | documentary-reference | manual |
+| wifi | 1 | documentary-reference | manual |
+| writing | 1 | documentary-reference | manual |
+
+### Devices and automation
+
+Device and fictional-agent descriptions; no connected robot, weapon, camera, radar, microphone or appliance control.
+
+| Exact label | Occurrences | Status | Record template |
+| --- | ---: | --- | --- |
+| appliances | 1 | documentary-reference | manual |
+| do bots | 1 | awaiting-author-definition | manual |
+| doeth robots | 1 | awaiting-author-definition | manual |
+| droids | 1 | documentary-reference | manual |
+| equipments | 1 | documentary-reference | manual |
+| geeves my sonster butler bot | 1 | awaiting-author-definition | manual |
+| hardware effects to real people | 1 | fictional-or-unresolved | manual |
+| instruments | 1 | documentary-reference | manual |
+| machinery | 1 | documentary-reference | manual |
+| merchandise(goods) | 1 | documentary-reference | manual |
+| radar | 1 | documentary-reference | manual |
+| smg | 1 | fictional-or-unresolved | manual |
+| terran bot | 1 | awaiting-author-definition | manual |
+| terran bot my active bot and geeves my sonster butler bot | 1 | awaiting-author-definition | manual |
+
+### Estate rights and lineage
+
+Voluntary lineage and estate/rights paperwork; no ownership verification, legal protection, inheritance or inferred biological relationship.
+
+| Exact label | Occurrences | Status | Record template |
+| --- | ---: | --- | --- |
+| geneology | 1 | documentary-reference | genealogy |
+| incopyleft | 1 | awaiting-author-definition | genealogy |
+| incopyright | 1 | awaiting-author-definition | genealogy |
+| my blueprints | 1 | documentary-reference | genealogy |
+| my estate | 1 | documentary-reference | genealogy |
+| my estate routines | 1 | documentary-reference | genealogy |
+| my home patent | 1 | documentary-reference | genealogy |
+| my home trademark | 1 | documentary-reference | genealogy |
+| my house patents | 1 | documentary-reference | genealogy |
+| my house trademark | 1 | documentary-reference | genealogy |
+| my patent | 1 | documentary-reference | genealogy |
+| my trademark | 1 | documentary-reference | genealogy |
+| out copyleft | 1 | awaiting-author-definition | genealogy |
+| out copyright | 1 | awaiting-author-definition | genealogy |
+
+### Fandom and franchise
+
+Seeded local fandom notes and label records; no messages sent, merchandise produced, franchise rights or endorsement.
+
+| Exact label | Occurrences | Status | Record template |
+| --- | ---: | --- | --- |
+| fandom numer communicator | 1 | awaiting-author-definition | fandom |
+| fandom numer generator | 1 | awaiting-author-definition | fandom |
+| fandom numer sayer | 1 | awaiting-author-definition | fandom |
+| fandom numer writer | 1 | awaiting-author-definition | fandom |
+| fandom seed franchise | 1 | awaiting-author-definition | fandom |
+| fandom seed merchandise | 1 | awaiting-author-definition | fandom |
+| fandom seed numer | 1 | awaiting-author-definition | fandom |
+| fandoms | 1 | implemented-record-framework | fandom |
+| franchise kiosks | 1 | documentary-reference | fandom |
+| mercgandise kiosks | 1 | documentary-reference | fandom |
+
+### Fictional food and hospitality
+
+Fictional menu/service labels and source references only; no chemical or bodily-fluid recipes, consumption instructions or health claims.
+
+| Exact label | Occurrences | Status | Record template |
+| --- | ---: | --- | --- |
+| acid bistro | 1 | fictional-label-only | recipe |
+| acid cafe | 1 | fictional-label-only | recipe |
+| acid drinks | 1 | fictional-label-only | recipe |
+| acid jacuzzi | 1 | fictional-label-only | recipe |
+| acid saloon | 1 | fictional-label-only | recipe |
+| acid soda | 1 | fictional-label-only | recipe |
+| acid spa | 1 | fictional-label-only | recipe |
+| acid wine | 1 | fictional-label-only | recipe |
+| ambiotic bistro | 1 | fictional-label-only | recipe |
+| ambiotic cafe | 1 | fictional-label-only | recipe |
+| ambiotic drinks | 1 | fictional-label-only | recipe |
+| ambiotic jacuzzi | 1 | fictional-label-only | recipe |
+| ambiotic saloon | 1 | fictional-label-only | recipe |
+| ambiotic soda | 1 | fictional-label-only | recipe |
+| ambiotic spa | 1 | fictional-label-only | recipe |
+| ambiotic wine | 1 | fictional-label-only | recipe |
+| biotic bistro | 1 | fictional-label-only | recipe |
+| biotic cafe | 1 | fictional-label-only | recipe |
+| biotic drinks | 1 | fictional-label-only | recipe |
+| biotic jacuzzi | 1 | fictional-label-only | recipe |
+| biotic saloon | 1 | fictional-label-only | recipe |
+| biotic soda | 1 | fictional-label-only | recipe |
+| biotic spa | 1 | fictional-label-only | recipe |
+| biotic wine | 1 | fictional-label-only | recipe |
+| blood bistro | 1 | fictional-label-only | recipe |
+| blood cafe | 1 | fictional-label-only | recipe |
+| blood drinks | 1 | fictional-label-only | recipe |
+| blood jacuzzi | 1 | fictional-label-only | recipe |
+| blood saloon | 1 | fictional-label-only | recipe |
+| blood soda | 1 | fictional-label-only | recipe |
+| blood spa | 1 | fictional-label-only | recipe |
+| blood wine | 1 | fictional-label-only | recipe |
+| britanian dinner restaurant | 1 | fictional-label-only | recipe |
+| britanian takeoutplace | 1 | fictional-label-only | recipe |
+| chineese breakfast restaurant | 1 | fictional-label-only | recipe |
+| chineese takeoutplace | 1 | fictional-label-only | recipe |
+| italian lunch restaurant | 1 | fictional-label-only | recipe |
+| italian takeoutplace | 1 | fictional-label-only | recipe |
+| japanese linner restaurant | 1 | fictional-label-only | recipe |
+| japanese takeoutplace | 1 | fictional-label-only | recipe |
+| milk bistro | 1 | fictional-label-only | recipe |
+| milk cafe | 1 | fictional-label-only | recipe |
+| milk drinks | 1 | fictional-label-only | recipe |
+| milk jacuzzi | 1 | fictional-label-only | recipe |
+| milk saloon | 1 | fictional-label-only | recipe |
+| milk soda | 1 | fictional-label-only | recipe |
+| milk spa | 1 | fictional-label-only | recipe |
+| milk wine | 1 | fictional-label-only | recipe |
+| sabbath = bubbling bloodbath to amniotic fluid cleanness | 1 | fictional-or-unresolved | recipe |
+| sabbath bistro | 1 | fictional-label-only | recipe |
+| sabbath cafe | 1 | fictional-label-only | recipe |
+| sabbath drinks | 1 | fictional-label-only | recipe |
+| sabbath jacuzzi | 1 | fictional-label-only | recipe |
+| sabbath saloon | 1 | fictional-label-only | recipe |
+| sabbath soda | 1 | fictional-label-only | recipe |
+| sabbath spa | 1 | fictional-label-only | recipe |
+| sabbath wine | 1 | fictional-label-only | recipe |
+| vetnam brunch restaurant | 1 | fictional-label-only | recipe |
+| vetnam takeoutplace | 1 | fictional-label-only | recipe |
+| water bistro | 1 | fictional-label-only | recipe |
+| water cafe | 1 | fictional-label-only | recipe |
+| water drinks | 1 | fictional-label-only | recipe |
+| water jacuzzi | 1 | fictional-label-only | recipe |
+| water saloon | 1 | fictional-label-only | recipe |
+| water soda | 1 | fictional-label-only | recipe |
+| water spa | 1 | fictional-label-only | recipe |
+| water wine | 1 | fictional-label-only | recipe |
+
+### Finance and demo credits
+
+Demo-credit ledger concepts and financial paperwork; no real money, banking, interest, credit facilities or interbank connection.
+
+| Exact label | Occurrences | Status | Record template |
+| --- | ---: | --- | --- |
+| aamount | 1 | awaiting-author-definition | manual |
+| abalance | 1 | awaiting-author-definition | manual |
+| abenefit | 1 | awaiting-author-definition | manual |
+| account | 1 | simulated-demo-ledger | manual |
+| accredit | 1 | awaiting-author-definition | manual |
+| acounting | 1 | documentary-reference | manual |
+| amint | 1 | awaiting-author-definition | manual |
+| amount | 1 | simulated-demo-ledger | manual |
+| apprasing | 1 | documentary-reference | manual |
+| ashanty | 1 | awaiting-author-definition | manual |
+| asupsidy | 1 | awaiting-author-definition | manual |
+| auditing | 1 | simulated-demo-ledger | manual |
+| casidy | 1 | awaiting-author-definition | manual |
+| count | 1 | documentary-reference | manual |
+| credit | 1 | simulated-demo-ledger | manual |
+| debt | 1 | simulated-demo-ledger | manual |
+| debting | 1 | documentary-reference | manual |
+| deficit | 1 | simulated-demo-ledger | manual |
+| economic coin | 1 | documentary-reference | manual |
+| economic coin aka economic groin aka republic credits systems | 1 | documentary-reference | manual |
+| economic groin | 1 | awaiting-author-definition | manual |
+| final quilt finalised debting and banking system softwares | 1 | documentary-reference | manual |
+| financial kiosks | 1 | documentary-reference | manual |
+| gravy | 1 | awaiting-author-definition | manual |
+| gravying | 1 | awaiting-author-definition | manual |
+| imbalance | 1 | simulated-demo-ledger | manual |
+| interbanking | 1 | documentary-reference | manual |
+| passive income | 1 | documentary-reference | manual |
+| racasidy | 1 | awaiting-author-definition | manual |
+| reaccounting | 1 | simulated-demo-ledger | manual |
+| republic credits systems | 1 | documentary-reference | manual |
+| revenant | 2 | documentary-reference | manual |
+| theatrem revenue | 1 | documentary-reference | manual |
+
+### Governance and box office
+
+Documentary or fictional role/venue proposals; no state, legal office, succession, franchise or political authority is created.
+
+| Exact label | Occurrences | Status | Record template |
+| --- | ---: | --- | --- |
+| beirarchy patriarchy box office | 1 | editorial-governance-proposal | contract |
+| classical amatriarch | 1 | editorial-governance-proposal | contract |
+| classical amatriarchy | 1 | editorial-governance-proposal | contract |
+| classical aomniarch | 1 | editorial-governance-proposal | contract |
+| classical aomniarchy | 1 | editorial-governance-proposal | contract |
+| classical heirararchy | 2 | editorial-governance-proposal | contract |
+| classical heirarch | 2 | editorial-governance-proposal | contract |
+| classical matriarch | 1 | editorial-governance-proposal | contract |
+| classical matriarchy | 1 | editorial-governance-proposal | contract |
+| classical omniarch | 1 | editorial-governance-proposal | contract |
+| classical omniarchy | 1 | editorial-governance-proposal | contract |
+| classical patriarch | 2 | editorial-governance-proposal | contract |
+| classical patriarchy | 2 | editorial-governance-proposal | contract |
+| heirarchy omniarchy box office | 1 | editorial-governance-proposal | contract |
+| heraldry | 1 | editorial-governance-proposal | contract |
+| matrirchy and omniarchy box office | 1 | editorial-governance-proposal | contract |
+| original aheirararchy | 1 | editorial-governance-proposal | contract |
+| original aheirarch | 1 | editorial-governance-proposal | contract |
+| original amatriarch | 1 | editorial-governance-proposal | contract |
+| original amatriarchy | 1 | editorial-governance-proposal | contract |
+| original aomniarch | 1 | editorial-governance-proposal | contract |
+| original aomniarchy | 1 | editorial-governance-proposal | contract |
+| original apatriarch | 1 | editorial-governance-proposal | contract |
+| original apatriarchy | 1 | editorial-governance-proposal | contract |
+| original heirararchy | 1 | editorial-governance-proposal | contract |
+| original heirarch | 1 | editorial-governance-proposal | contract |
+| original matriarch | 1 | editorial-governance-proposal | contract |
+| original matriarchy | 1 | editorial-governance-proposal | contract |
+| original omniarch | 1 | editorial-governance-proposal | contract |
+| original omniarchy | 1 | editorial-governance-proposal | contract |
+| original patriarch | 1 | editorial-governance-proposal | contract |
+| original patriarchy | 1 | editorial-governance-proposal | contract |
+| patriarchy matriarchy box office | 1 | editorial-governance-proposal | contract |
+| sovereignty | 1 | editorial-governance-proposal | contract |
+
+### Inquiry and language
+
+Supplied inquiry wording and dialogue records; coined words and a-prefixed forms acquire no inferred definitions.
+
+| Exact label | Occurrences | Status | Record template |
+| --- | ---: | --- | --- |
+| ace thou | 1 | awaiting-author-definition | inquiry |
+| ahe | 1 | awaiting-author-definition | inquiry |
+| ahow | 1 | awaiting-author-definition | inquiry |
+| ai | 1 | awaiting-author-definition | inquiry |
+| aid | 1 | awaiting-author-definition | inquiry |
+| aidiocracysystem | 1 | awaiting-author-definition | inquiry |
+| ais | 1 | awaiting-author-definition | inquiry |
+| am | 1 | documentary-reference | inquiry |
+| ame | 1 | awaiting-author-definition | inquiry |
+| are | 1 | documentary-reference | inquiry |
+| as | 1 | documentary-reference | inquiry |
+| athem | 1 | awaiting-author-definition | inquiry |
+| awhat | 1 | awaiting-author-definition | inquiry |
+| awhen | 1 | awaiting-author-definition | inquiry |
+| awhere | 1 | awaiting-author-definition | inquiry |
+| awho | 1 | awaiting-author-definition | inquiry |
+| awhy | 1 | awaiting-author-definition | inquiry |
+| ayou this | 1 | awaiting-author-definition | inquiry |
+| catechization dialogs | 1 | documentary-reference | inquiry |
+| daoatao | 1 | awaiting-author-definition | inquiry |
+| frenchification | 1 | awaiting-author-definition | inquiry |
+| hot | 1 | documentary-reference | inquiry |
+| inquiry systems software | 1 | implemented-record-framework | inquiry |
+| insider scoops | 1 | documentary-reference | inquiry |
+| insider tips | 1 | documentary-reference | inquiry |
+| medial to lateral cli | 1 | documentary-reference | inquiry |
+| medial to lateral gui | 1 | documentary-reference | inquiry |
+| method | 1 | documentary-reference | inquiry |
+| petagogyapedagogy | 1 | awaiting-author-definition | inquiry |
+| philosophical compass | 1 | documentary-reference | inquiry |
+| qand a | 1 | documentary-reference | inquiry |
+| rudder likeness | 1 | awaiting-author-definition | inquiry |
+| rudder prosaic | 1 | awaiting-author-definition | inquiry |
+| she | 1 | documentary-reference | inquiry |
+| studenting | 1 | documentary-reference | inquiry |
+| surasuch | 1 | awaiting-author-definition | inquiry |
+| that | 1 | documentary-reference | inquiry |
+| thee | 1 | documentary-reference | inquiry |
+| then | 1 | documentary-reference | inquiry |
+| there | 1 | documentary-reference | inquiry |
+| they | 1 | documentary-reference | inquiry |
+| this | 1 | documentary-reference | inquiry |
+| tho | 1 | awaiting-author-definition | inquiry |
+| thy | 1 | awaiting-author-definition | inquiry |
+| tis | 1 | documentary-reference | inquiry |
+| translation | 1 | documentary-reference | inquiry |
+| transliteration | 1 | documentary-reference | inquiry |
+| transription | 1 | awaiting-author-definition | inquiry |
+| twas | 1 | documentary-reference | inquiry |
+| u | 1 | documentary-reference | inquiry |
+| vocalisation | 1 | documentary-reference | inquiry |
+| was | 1 | documentary-reference | inquiry |
+| we | 1 | documentary-reference | inquiry |
+| yinayan | 1 | awaiting-author-definition | inquiry |
+| yingayang | 1 | awaiting-author-definition | inquiry |
+| yodel | 1 | documentary-reference | inquiry |
+
+### Lessons and education
+
+Local lesson/manual/tutorial outlines; no operational device instructions, organ commerce, school accreditation or professional qualifications.
+
+| Exact label | Occurrences | Status | Record template |
+| --- | ---: | --- | --- |
+| aplliance lessons | 1 | documentary-reference | learning |
+| aplliance lessons im manuel | 1 | documentary-reference | learning |
+| aplliance lessons tutorials | 1 | documentary-reference | learning |
+| apparatus lessons | 1 | documentary-reference | learning |
+| apparatus lessons im manuel | 1 | documentary-reference | learning |
+| apparatus lessons tutorials | 1 | documentary-reference | learning |
+| classes | 1 | documentary-reference | learning |
+| colelges | 1 | documentary-reference | learning |
+| equipment lessons | 1 | documentary-reference | learning |
+| equipment lessons im manuel | 1 | documentary-reference | learning |
+| equipment lessons tutorials | 1 | documentary-reference | learning |
+| im manue | 1 | awaiting-author-definition | learning |
+| im manuel | 1 | awaiting-author-definition | learning |
+| instrument lessons | 1 | documentary-reference | learning |
+| instrument lessons im manuel | 1 | documentary-reference | learning |
+| instrument lessons tutorials | 1 | documentary-reference | learning |
+| machinery lessons | 1 | documentary-reference | learning |
+| machinery lessons im manuel | 1 | documentary-reference | learning |
+| machinery lessons tutorials | 1 | documentary-reference | learning |
+| merchandise(goods) aka organs lessons | 1 | awaiting-author-definition | learning |
+| merchandise(goods) aka organs lessons im manue | 1 | awaiting-author-definition | learning |
+| merchandise(goods) aka organs lessons tutorials | 1 | awaiting-author-definition | learning |
+| schools | 1 | documentary-reference | learning |
+| univeristies | 1 | documentary-reference | learning |
+
+### Maps places and tracking
+
+Manually supplied map/place descriptions; no map tiles, GPS, covert tracking, location collection or booking service.
+
+| Exact label | Occurrences | Status | Record template |
+| --- | ---: | --- | --- |
+| fames | 1 | awaiting-author-definition | map |
+| fames aka landmarks tracking | 1 | documentary-reference | map |
+| geocoordinating | 1 | documentary-reference | map |
+| hotel | 1 | documentary-reference | map |
+| landmarks tracking | 1 | documentary-reference | map |
+| maps | 1 | implemented-record-framework | map |
+| maps (offline, online) | 1 | implemented-record-framework | map |
+| motel | 1 | documentary-reference | map |
+| nearby locations tracking | 1 | documentary-reference | map |
+| nearby products tracking | 1 | documentary-reference | map |
+| nearby services tracking | 1 | documentary-reference | map |
+| offline | 1 | implemented-record-framework | map |
+| online | 1 | implemented-record-framework | map |
+
+### Music and audio
+
+Supplied audio/music manifest or radio-plan records; no signal transmission, audio capture, synthesis, playback or broadcast licence.
+
+| Exact label | Occurrences | Status | Record template |
+| --- | ---: | --- | --- |
+| audio | 1 | documentary-reference | radio |
+| band harmonics | 1 | documentary-reference | radio |
+| beatboxes | 1 | documentary-reference | radio |
+| beats | 1 | documentary-reference | radio |
+| harmonics | 1 | documentary-reference | radio |
+| hearing | 1 | documentary-reference | radio |
+| listening | 1 | documentary-reference | radio |
+| microphoning | 1 | documentary-reference | radio |
+| music | 1 | documentary-reference | radio |
+| musical plays | 1 | documentary-reference | radio |
+| notes | 1 | implemented-record-framework | manual |
+| orchestra symphonics | 1 | documentary-reference | radio |
+| organ musical | 1 | documentary-reference | radio |
+| plots | 1 | documentary-reference | radio |
+| radio | 1 | implemented-record-framework | radio |
+| scatterforms | 1 | awaiting-author-definition | radio |
+| songs | 1 | documentary-reference | radio |
+| sungs | 1 | awaiting-author-definition | radio |
+| symphonics | 1 | awaiting-author-definition | radio |
+
+### Organizations and preferences
+
+Voluntary self-described organization/preferences records; no inferred psychological profile, advertising delivery or third-party data collection.
+
+| Exact label | Occurrences | Status | Record template |
+| --- | ---: | --- | --- |
+| advertising | 1 | documentary-reference | preferences |
+| analytics | 1 | documentary-reference | preferences |
+| documentation sof metaview (metaview psych profile of rasniki) | 1 | documentary-reference | preferences |
+| metaview | 1 | awaiting-author-definition | preferences |
+| metaview psych profile of rasniki | 1 | documentary-reference | preferences |
+| rasniki preference genres | 1 | documentary-reference | preferences |
+| rasniki preference products | 1 | documentary-reference | preferences |
+| rasniki preferences brands | 1 | documentary-reference | preferences |
+| rasniki preferences styles | 1 | documentary-reference | preferences |
+| rasniki prference servicces | 1 | documentary-reference | preferences |
+
+### Owner recovery and access
+
+Official account-owner reset, support and appeal planning only; no password guessing, decryption, bypass or guaranteed unblocking.
+
+| Exact label | Occurrences | Status | Record template |
+| --- | ---: | --- | --- |
+| access = nonacess | 1 | unresolved-expression-no-access-rule | manual |
+| data recovery | 1 | official-owner-recovery-only | manual |
+| light decryption | 1 | official-owner-recovery-only | manual |
+| memory recovery | 1 | official-owner-recovery-only | manual |
+| nonacess = acess | 1 | unresolved-expression-no-access-rule | manual |
+| password decipherer | 1 | official-owner-recovery-only | manual |
+| radio decryption | 1 | official-owner-recovery-only | manual |
+| recovery | 1 | official-owner-recovery-only | manual |
+| recovery libraries | 1 | official-owner-recovery-only | manual |
+| recovery repositories | 1 | official-owner-recovery-only | manual |
+| software to restore digital and or virtual account passage despite systems having closed or kicked or blocked u from the account if u forgot passwords or such | 1 | official-owner-recovery-only | manual |
+| spftware to deblock anyone from being blocked | 1 | official-owner-recovery-only | manual |
+| vaultception decipherer software | 1 | official-owner-recovery-only | manual |
+
+### Physical temporal and engineering
+
+Manually supplied units, coordinates, dates and research notes; no measurement device, scientific proof, engineering approval or hardware control.
+
+| Exact label | Occurrences | Status | Record template |
+| --- | ---: | --- | --- |
+| adaptational | 1 | awaiting-author-definition | research |
+| anatomiing | 1 | awaiting-author-definition | research |
+| architecturing | 1 | documentary-reference | research |
+| automata | 1 | documentary-reference | research |
+| clockingaglocking | 1 | awaiting-author-definition | research |
+| composites | 1 | documentary-reference | research |
+| engineering | 1 | documentary-reference | research |
+| imperial metrics | 1 | documentary-reference | research |
+| light | 1 | documentary-reference | research |
+| light colours | 1 | documentary-reference | research |
+| light display | 1 | documentary-reference | research |
+| light images | 1 | documentary-reference | research |
+| light leagues | 1 | awaiting-author-definition | research |
+| light logging | 1 | documentary-reference | research |
+| light rudder documenting | 1 | awaiting-author-definition | research |
+| light rudder edocumenting | 1 | awaiting-author-definition | research |
+| light ruddering | 1 | awaiting-author-definition | research |
+| lightaweight scales | 1 | awaiting-author-definition | research |
+| limeatime | 1 | awaiting-author-definition | research |
+| limeatime (temporal) | 1 | awaiting-author-definition | research |
+| limeratimer | 1 | awaiting-author-definition | research |
+| limingatiming | 1 | awaiting-author-definition | research |
+| matterashatter | 1 | awaiting-author-definition | research |
+| matterashatter (adaptational) | 1 | awaiting-author-definition | research |
+| mechanics | 1 | documentary-reference | research |
+| metrical metrics | 1 | documentary-reference | research |
+| metrics | 1 | documentary-reference | research |
+| my research | 1 | implemented-record-framework | research |
+| photon data | 1 | documentary-reference | research |
+| photon data = light | 1 | documentary-reference | research |
+| physical | 1 | awaiting-author-definition | research |
+| quat | 1 | awaiting-author-definition | research |
+| quaternary | 1 | documentary-reference | research |
+| ratios | 1 | documentary-reference | research |
+| rockalock | 1 | awaiting-author-definition | research |
+| spaceamice | 1 | awaiting-author-definition | research |
+| spaceamice (physical) | 1 | awaiting-author-definition | research |
+| structuring | 1 | documentary-reference | research |
+| surveying | 1 | documentary-reference | research |
+| temporal | 1 | awaiting-author-definition | research |
+| theorum | 1 | awaiting-author-definition | research |
+
+### Protective review and integrity
+
+Read-only review and voluntary incident notes; indicators and supplied testimony do not establish safety, truth or a right to target people.
+
+| Exact label | Occurrences | Status | Record template |
+| --- | ---: | --- | --- |
+| anonimity | 1 | documentary-reference | guidance |
+| asakeguards | 1 | awaiting-author-definition | guidance |
+| asaketyguards | 1 | awaiting-author-definition | guidance |
+| asaketyrails | 1 | awaiting-author-definition | guidance |
+| counter child molestation | 1 | awaiting-author-definition | guidance |
+| counter sandwitching | 1 | awaiting-author-definition | guidance |
+| counterdisiri | 1 | awaiting-author-definition | guidance |
+| counterlechery | 1 | awaiting-author-definition | guidance |
+| coupons for footjob attacks | 1 | fictional-or-unresolved | guidance |
+| dichtomic matchersawatchers | 1 | awaiting-author-definition | guidance |
+| dichtomic scanners | 1 | awaiting-author-definition | guidance |
+| easterbunny sharks | 1 | awaiting-author-definition | guidance |
+| evidence authenticator | 1 | review-and-integrity-only | guidance |
+| mamwareamalware | 1 | awaiting-author-definition | guidance |
+| recording | 1 | documentary-reference | guidance |
+| sakeguards | 1 | awaiting-author-definition | guidance |
+| sakerails | 2 | awaiting-author-definition | guidance |
+| saketyguards | 1 | awaiting-author-definition | guidance |
+| saketyrails | 1 | awaiting-author-definition | guidance |
+| scanning | 1 | documentary-reference | guidance |
+| temae asharks | 1 | awaiting-author-definition | guidance |
+| testimony verifier | 1 | review-and-integrity-only | guidance |
+
+### Publication and documentation
+
+Local manual, document reference and checklist records; no unlimited supply, professional certification or automatic contract execution.
+
+| Exact label | Occurrences | Status | Record template |
+| --- | ---: | --- | --- |
+| ;aperowrk | 1 | documentary-reference | manual |
+| audiobooks | 1 | documentary-reference | manual |
+| brochure | 1 | documentary-reference | manual |
+| bucketlist | 1 | documentary-reference | manual |
+| calender | 1 | documentary-reference | manual |
+| clock | 1 | documentary-reference | manual |
+| computerwork | 1 | documentary-reference | manual |
+| contractuals | 1 | implemented-record-framework | contract |
+| cookbooks | 1 | documentary-reference | manual |
+| curriculum | 1 | documentary-reference | manual |
+| dat to seed | 1 | implemented-record-framework | media |
+| database | 1 | documentary-reference | manual |
+| docuemnts | 1 | documentary-reference | manual |
+| document type softwares | 1 | documentary-reference | manual |
+| documentations | 1 | documentary-reference | manual |
+| edocument editing | 1 | documentary-reference | manual |
+| edocuments | 1 | documentary-reference | manual |
+| final quilt finalising | 1 | documentary-reference | manual |
+| glossary | 1 | documentary-reference | manual |
+| hobbit | 1 | awaiting-author-definition | manual |
+| lecture | 1 | documentary-reference | manual |
+| libraries | 1 | documentary-reference | manual |
+| magazine | 1 | documentary-reference | manual |
+| my 7 amp 7 amp 7 amp 7 amp 7 amp 7 amp 7 document types | 1 | implemented-record-framework | manual |
+| my curriculary | 1 | documentary-reference | manual |
+| my working documents | 1 | documentary-reference | manual |
+| nomichenapenall books | 1 | awaiting-author-definition | manual |
+| notebooks | 1 | documentary-reference | manual |
+| organizery | 1 | awaiting-author-definition | manual |
+| paperwork | 1 | documentary-reference | manual |
+| primitives dictionary | 1 | documentary-reference | manual |
+| raw | 1 | documentary-reference | manual |
+| rawbooks | 1 | documentary-reference | manual |
+| rawful | 1 | awaiting-author-definition | manual |
+| recipebooks | 1 | documentary-reference | manual |
+| recpebooks | 1 | documentary-reference | manual |
+| registry | 2 | documentary-reference | manual |
+| repositories | 1 | documentary-reference | manual |
+| ring | 1 | awaiting-author-definition | manual |
+| routine | 1 | documentary-reference | manual |
+| schedule | 1 | documentary-reference | manual |
+| schoolbooks | 1 | documentary-reference | manual |
+| search | 1 | documentary-reference | manual |
+| seek | 1 | awaiting-author-definition | manual |
+| sho[ppinglist | 1 | documentary-reference | manual |
+| software | 1 | documentary-reference | manual |
+| tasklist | 1 | documentary-reference | manual |
+| textbooks | 1 | documentary-reference | manual |
+| todolist | 1 | documentary-reference | manual |
+| wise | 1 | awaiting-author-definition | manual |
+| wishlist | 1 | documentary-reference | manual |
+
+### Puzzles games and craft
+
+Puzzle/craft references and practice logs; no measured IQ, game engine, psychological ranking or certification.
+
+| Exact label | Occurrences | Status | Record template |
+| --- | ---: | --- | --- |
+| arting | 1 | documentary-reference | learning |
+| chess | 2 | documentary-reference | learning |
+| crafting | 1 | documentary-reference | learning |
+| eastereggs | 1 | documentary-reference | learning |
+| jigsawing | 1 | documentary-reference | learning |
+| jigsawm iq test | 1 | awaiting-author-definition | learning |
+| mazes | 1 | documentary-reference | learning |
+| origami | 1 | documentary-reference | learning |
+| puzzles | 1 | documentary-reference | learning |
+| sudoku | 1 | documentary-reference | learning |
+
+### Ships and logistics
+
+Manual logistics plans, milestones and review notes; no navigation, transport control, licensing or reservations.
+
+| Exact label | Occurrences | Status | Record template |
+| --- | ---: | --- | --- |
+| bathway | 1 | documentary-reference | logistics |
+| bookings | 1 | documentary-reference | logistics |
+| busing | 1 | documentary-reference | logistics |
+| byway | 1 | documentary-reference | logistics |
+| carriageway | 1 | documentary-reference | logistics |
+| carriaging | 1 | awaiting-author-definition | logistics |
+| cover | 1 | documentary-reference | logistics |
+| do scheduling | 1 | documentary-reference | logistics |
+| doeth routining | 1 | documentary-reference | logistics |
+| driveway | 1 | documentary-reference | logistics |
+| financial logistics | 1 | documentary-reference | logistics |
+| fuel | 1 | documentary-reference | logistics |
+| interstateway | 1 | documentary-reference | logistics |
+| landmark logistics | 1 | documentary-reference | logistics |
+| logging delta of delta portfolio of my to logging delta of delta logisticsm of by | 1 | awaiting-author-definition | logistics |
+| mobility | 1 | documentary-reference | logistics |
+| nighway | 1 | documentary-reference | logistics |
+| portablility | 1 | documentary-reference | logistics |
+| portfolio | 1 | documentary-reference | logistics |
+| rates | 1 | documentary-reference | logistics |
+| rations | 1 | documentary-reference | logistics |
+| rations of rates | 1 | documentary-reference | logistics |
+| rcking theory vs riding theory | 1 | awaiting-author-definition | logistics |
+| roadway | 1 | documentary-reference | logistics |
+| rock vs ride | 1 | awaiting-author-definition | logistics |
+| ruddered logistics | 1 | documentary-reference | logistics |
+| shippings | 1 | documentary-reference | logistics |
+| ships | 1 | documentary-reference | logistics |
+| streetway | 1 | documentary-reference | logistics |
+| traffic theory | 1 | documentary-reference | logistics |
+| vehicle cover | 1 | documentary-reference | logistics |
+| vehicle licensing | 1 | documentary-reference | logistics |
+| vehicle trader | 1 | documentary-reference | logistics |
+| ways | 1 | documentary-reference | logistics |
+
+### Visual media and social expression
+
+Supplied asset metadata and reflective records; no generated media, face identification, tracking, uploads or embedded payload execution.
+
+| Exact label | Occurrences | Status | Record template |
+| --- | ---: | --- | --- |
+| bimoji societies | 1 | awaiting-author-definition | media |
+| bitmoji societals | 1 | awaiting-author-definition | media |
+| bitmojis | 1 | documentary-reference | media |
+| catego catalog | 1 | awaiting-author-definition | media |
+| cinema quality series creatur from book spec | 1 | implemented-record-framework | media |
+| colors | 1 | documentary-reference | media |
+| colours | 1 | documentary-reference | media |
+| comics | 1 | documentary-reference | media |
+| diary | 1 | implemented-record-framework | diary |
+| drewadraw | 1 | awaiting-author-definition | media |
+| editing | 1 | documentary-reference | media |
+| emojis | 1 | documentary-reference | media |
+| emotions | 1 | documentary-reference | media |
+| films | 1 | documentary-reference | media |
+| gifs | 2 | documentary-reference | media |
+| manfam camera | 1 | awaiting-author-definition | media |
+| memes | 1 | documentary-reference | media |
+| moods | 1 | documentary-reference | media |
+| movies | 1 | documentary-reference | media |
+| multimedia editor | 1 | implemented-record-framework | media |
+| multimedia player | 1 | implemented-record-framework | media |
+| my bitmoticons | 1 | awaiting-author-definition | media |
+| my emoticons | 1 | documentary-reference | media |
+| my gif implants | 1 | awaiting-author-definition | media |
+| my meme implants | 1 | awaiting-author-definition | media |
+| my stickers | 1 | documentary-reference | media |
+| photography | 1 | documentary-reference | media |
+| photos | 2 | documentary-reference | media |
+| pictures | 1 | documentary-reference | media |
+| pixels | 1 | documentary-reference | media |
+| saga | 1 | documentary-reference | media |
+| seed to rendition | 1 | implemented-record-framework | media |
+| series | 1 | documentary-reference | media |
+| stamps | 1 | documentary-reference | media |
+| studios | 1 | documentary-reference | media |
+| texels | 1 | documentary-reference | media |
+| trending catalog | 1 | documentary-reference | media |
+| vibes | 1 | documentary-reference | media |
+| video | 1 | documentary-reference | media |
+
+## Review and release
+
+A reviewer can compare the JSON inventory with these tables, read each status and ask the author to define unresolved terms before adding new semantics. New definitions should preserve the earlier spelling, source and version, and distinguish what a record can store from what software can actually perform. A request to finalize the quilt marks the finite edition being released and leaves subsequent corrections possible.
+
+Meaningful checks cover complete sorted pagination, exact spellings and repetitions, all governance and hospitality variants, sensitive recovery/access limits, literal search, strict budgets, complete filtered advice branches, mutation isolation and the seven-way numerical sampler. The source inventory remains a finite reviewed artifact. No count, title, alias or recursive wrapper upgrades an unimplemented feature into a completed product.
+
+The continued recovery and media request is included in the same sorted inventory. Its actual local output comprises owned data references, production plans, image edits and user-controlled playback. Screen and speaker effects do not physically modify people or establish spiritual powers; social-media follows are not used to infer private traits.
+
+---
+
+### Document 038 — docs/RECURSIVE-WORKBENCH.md — Current publication documentation
+
+SHA-256: `5abda8d6a827102b667418e24de52564912ee992c0cff8cf644d73f425aca7af`.
+
+Source: Current publication documentation · editorial-document · docs/RECURSIVE-WORKBENCH.md.
+
+# Rasniki Hopput — Recursive Workbench
+
+This edition adds a finite term atlas, local community boards, demonstration obligations and contracts, prose workpapers, original fictional seed prompts, manual coordinate plots and scoped recovery tools to the existing Rasniki Madrigal lab. The [handbook room](handbooks/README.md) contains twelve distinct prose documents explaining ordinary uses and their limits. Its contents are actual written documents. Requested expressions such as greatest, recursive, ImmanuelEmmanuel, originalclassical, numer, rudder prose and formate retain their editorial or proposed status unless the relevant implementation explicitly defines a finite behavior.
+
+The workbench develops the earlier monarchic, science, ministry, symbolic and Lair of Lairs editions through recorded additions. It preserves their sources and individual licences. Formation identifies a new record or implementation; reformation identifies a revised one; formatting selects its representation. Proposed franchise and refranchise records preserve derivative provenance rather than grant operating rights, appoint public officials or settle the charter's unresolved formation terms. Fictional sovereignty, family roles and heraldry create no authority over a participant or an opponent.
+
+## Run a finite local workflow
+
+Use the existing checkout and the declared Python host. From the repository root, `python3 -m unittest discover -s tests -v` runs the local Python checks, and `python3 -m madrigal_lab --port 8765` starts the loopback development desktop. The [implementation contract](IMPLEMENTATION.md) explains the host, local storage and earlier language tools. The [bootstrap guide](BOOTSTRAP.md) describes reproduction of the pinned publication. Node.js remains the host for the retained JavaScript suites. None of these instructions requires a new Git worktree or the execution of an unknown installation script.
+
+Choose a small purpose before using a tool. An author can inspect a label in the atlas, create an anonymous local inquiry, prepare a workpaper describing its answer, and review the result. A separate example can use invented accounts to test a demonstration obligation. Keep private contacts, credentials, medical information and personal location trails outside public exercises. A supplied consent field records an assertion; it does not authenticate another person's permission. Publishing a document is a separate decision from evaluating or saving it locally.
+
+## Atlas, recursion and compact type addresses
+
+The [atlas](../madrigal_lab/atlas.py) indexes 630 metadata labels in this edition with their category, declared status, scope and occurrences. Its `catalogue(query='', limit=256, offset=0)` interface provides bounded search and paging. Its `tree(depth=3, limit=256, query='')` interface exposes a finite hierarchy of parent and child records with advice or guidance prompts. `families()` describes governance-family combinations while distinguishing requested labels from proposed combinations that had not been supplied. These functions organise metadata; they do not install every named system or resolve an undefined expression by assertion.
+
+The `document_types(limit=32)` sampler uses seven choices at each of seven successive positions. Under that proposed reading of the repeated “7 amp” labels, seven branching transitions produce 7^7 = 823,543 potential terminal addresses. A sample selects the first bounded prefix in the documented order, with at most 256 addresses. An address has not thereby acquired a written document or executed an operation. This type convention is separate from the earlier science hierarchy's four-way, sixteen-level capacity of 1,073,741,824 potential terminal positions per formal stanza. Neither capacity measures generated prose.
+
+Recursion means following a named relationship while respecting the implementation's depth and item limits. Reaching a limit should leave the remaining scope visible rather than claim a complete traversal. Clock, physical, adaptation, media, personality and sovereignty labels remain attached to their declared scopes. Atlas metadata supplies no sensor measurement, inferred diagnosis, broadcast service or universal physical model.
+
+## Community boards and voluntary participation
+
+The [board implementation](../madrigal_lab/boards.py) provides a local SQLite record tree through `BoardStore`. Its operations include create, list, get, tree, reply, vote, quest transition, delete and leaderboard. Records use one of twenty-one declared kinds, including advice, guidance, manual, inquiry, survey, quest, logistics, community, media, preferences, map, radio, recipe and research. A kind identifies the record's presentation; a health record does not become a diagnosis, and a radio record does not become a transmitter.
+
+Saving or changing a record requires the actual Boolean value `true` for its consent assertion. A supplied member alias defaults to anonymous and is not an authenticated account. Titles are limited to 160 UTF-8 bytes, bodies to 8,000 and replies to 2,000. Metadata is bounded JSON rather than executable content. The store allows 256 records, a parent depth of eight, and a shared budget of 1,024 replies, votes and quest-history entries. Local persistence has no automatic expiry; a maintainer must deliberately manage retention.
+
+Surveys contain two to eight distinct options. Counts describe submissions, not verified unique people or a representative population. Quests move through declared states from open to active, done and reviewed, with the specified cancellation and reconsideration routes. Each quest has at most 1,000 `FICTIONAL_QUEST_POINT` units. The leaderboard totals reviewed quest points by supplied alias. It measures those recorded fictional points rather than intelligence, moral worth, currency or entitlement to support. Participants can decline submission; local deletion is leaf-first and removes the deleted record's associated local interactions. It cannot erase copies already published elsewhere.
+
+The board is a local drafting and conversation store. It provides no remote chat publication, legal-identity authentication or inference of personality from a message. The [community handbook](handbooks/09-community-surveys-and-quests.md) explains accessible surveys, voluntary inquiry and non-ranking alternatives. The [preference handbook](handbooks/10-self-reported-preferences.md) keeps psychological language attached to the author's chosen self-report.
+
+## Demonstration economy and documentary contracts
+
+The [economy extension](../madrigal_lab/economy.py) wraps the existing `DEMO_CREDIT` ledger. `create_obligation` records a proposal between existing invented accounts; `lend` posts its transfer atomically; and `repay` posts a bounded repayment while updating the outstanding demonstration amount. These movements transfer existing units and preserve the ledger's accounting relationship. They do not create a bank loan, credit promise, debt against a person or sovereign currency.
+
+Coupons are single-use budgeting annotations labelled discount or subsidy. Redeeming a coupon moves zero units. The annotation cannot provide a real discount, authorise a public subsidy or promise goods. The economy limits each added collection to 256 records and uses positive bounded integer amounts rather than floating-point financial values. Fictional merchandise and quest points retain their separate scopes and are not automatically redeemable for ledger units.
+
+Documentary contracts have creation, review, finalisation and consistency-verification functions. A later child revision retains an intact finalised parent. Review and finalisation require explicit consent assertions, while results retain that consent is unverified and the record is not legally binding. Content and receipt digests can identify byte or payload consistency with the retained version. They do not authenticate the reviewer, prove informed consent or execute the proposed franchise terms. An account balance and a document receipt establish different finite records, so neither should be used as evidence for the other's broader claims. The [demonstration economy guide](DEMO-ECONOMY-CONTRACTS.md) supplies the detailed contract and obligation workflow.
+
+## Workpapers, prompts and manually supplied maps
+
+The [workpaper module](../madrigal_lab/papers.py) exposes `catalogue()`, `render(record)`, `fandom(seed, count)` and `map_svg(points)`. Rendering produces a finite Markdown draft with a digest, declared revision and supplied references. It does not save or publish that draft automatically and does not verify references. Accepted format identifiers are `rawful`, `raw`, `magazine`, `ring`, `seek`, `hobbit`, `brochure`, `search`, `wise` and `lecture`. Requested labels such as rings and searchwise remain editorial vocabulary rather than implicit code aliases.
+
+A workpaper requires a title, purpose and body. The body is limited to 16,000 UTF-8 bytes; no more than sixteen bounded source references can be supplied. The text makes room for observations, assumptions, interpretations and practical limits. Its stored format and chosen poetic presentation remain distinguishable. The [document-type handbook](handbooks/12-document-types-and-workpapers.md) describes that distinction without claiming that a coined label defines a standard decoder or a new programming language.
+
+The fandom function deterministically derives one to thirty-two original fictional prompts from a supplied text seed and prompt indexes. Its numer value is a proposed local identifier, not authenticated identity or a guarantee of unique prose. The map function plots one to sixty-four manually supplied latitude/longitude points on an illustrative equirectangular SVG grid, escaping labels as text. Coordinates must be finite and within geographic bounds. The function supplies no basemap, GPS access or live tracking. Manual time and adaptation records remain supplied accounts rather than measurements of an unknown physical model.
+
+Media, radio and pixel notation can be documented through supplied text and metadata. Those records do not render video, broadcast a signal or decode hidden transmissions. The [media handbook](handbooks/06-media-radio-and-pixel-notation.md) explains a finite asset manifest, while the [mapping handbook](handbooks/08-mapping-time-and-adaptation.md) separates coordinate descriptions and timestamps from tracking. References to blood, corrosive acids or amniotic subjects remain editorial glossary topics, without ingestion instructions or recipes. Ordinary food exercises use established guidance and offer a non-food alternative.
+
+## Owned backups and official recovery channels
+
+The [recovery module](../madrigal_lab/recovery.py) separates provider guidance from local document restoration. `plan(record)` requires asserted ownership and returns an unexecuted checklist for forgotten-password, blocked, closed or suspended cases. A supplied HTTPS provider reference is not fetched or independently authenticated. The checklist directs the owner to official reset, ownership-review, reopening, export or appeal processes as available. Provider decisions remain with the provider. An individual's contact block remains their choice, and the workbench supplies no universal unblock or closure bypass.
+
+`inspect_backup(record)` decodes an asserted owner's bounded text backup and optionally compares its SHA-256 digest with a supplied reference. Supported encodings are UTF-8, hexadecimal, strict base64 and bounded JSON encoding envelopes. These are representation conversions, not password recovery, cryptographic decryption or secret-message interpretation. Text is limited to 64 KiB, and nested envelopes have an eight-level limit. A matching digest shows agreement with the reference rather than ownership, authenticity or freedom from every possible threat.
+
+`restore(runtime, record)` requires asserted ownership and a matching expected digest before exclusively creating a new root-confined local document. It refuses an existing target, so it does not overwrite the owner's current file. It restores neither an online account nor a provider's deleted data. Credentials, recovery codes and identity documents belong only in the appropriate private provider process. The [guardrail and recovery handbook](handbooks/11-accessible-guardrails-and-recovery.md) explains accessible scope review and the practical boundaries of correction.
+
+## Review and publish the chosen record
+
+Review a draft's purpose, source, limits, accessibility, withdrawal route and private details before saving or sharing it. The twelve handbooks and existing ten conflict-protection templates are finite editorial additions. A local SQLite record, pure function result, downloaded document and Git publication retain their individual lifecycles. Public publication should include the intended source and documentation, rather than local databases, participant reflections or backup contents. Further versions can add distinct work when it has a useful purpose and a reviewable implementation; repeated labels and larger potential address counts do not establish universal completeness.
+
+---
+
+### Document 039 — docs/SAFEGUARDING-AND-DEVICE-SCOPE.md — Current publication documentation
+
+SHA-256: `a6e3c09ce7a0dfb074721c80494143638c326fa66e6888f4d153e8e3eb69be90`.
+
+Source: Current publication documentation · editorial-document · docs/SAFEGUARDING-AND-DEVICE-SCOPE.md.
+
+# Safeguarding, Participant Consent and Real Device Scope
+
+The publication's archangel language names symbolic roles and documentation workflows. Its working software processes supplied records, plays selected local media and renders pixels. A user-controlled player can produce sound through the user's speakers and visible images on a screen. Those are ordinary device outputs. Publication supplies no mechanism to change another person's body, identity, desires or quality, and no spiritual or medical effect is established by a successful computation.
+
+The supplied Instagram references have not been inspected, scraped or used to infer personal traits. Following a creator is not consent to profiling, alteration or publication of a person's likeness. Preferences may be entered voluntarily as self-reported design choices. They must not become rankings of girls, predictions about private relationships or claims that one person's body should match a social-media account. An artistic reference should identify the specific publicly permitted style or work and its reuse rights.
+
+Counterdisiri, counterlechery, counter child molestation and counter sandwitching are retained request labels. Unknown coined meanings remain unresolved. This edition gives those labels a limited place in safeguarding paperwork: describe a concern in plain language, distinguish direct observation from interpretation, protect private information, and refer a concrete concern through appropriate authorized channels. It does not detect abuse from photographs, authenticate testimony, punish people or guarantee prevention.
+
+Consent concerns a particular activity, audience and duration. A person's attendance, account follow, fictional title or asserted Boolean input does not independently establish permission. Obtain appropriate permission before using identifiable images, recordings or private accounts. For material involving children, use appropriate safeguarding procedures and authorized adults; prefer fictional or non-identifying examples in public work. A production exercise requires no intimate images, sexual material, private correspondence or disclosure of a child's identity.
+
+The practical review record identifies the task, source material, authorized audience, permission reference, access alternatives, retention period, withdrawal route and unresolved questions. Keep private evidence in its authorized custody rather than copying it into a public repository. If someone is in immediate danger, use the appropriate local emergency or safeguarding service. A documentation form should not delay that response or be mistaken for an investigation.
+
+Actual hardware integration needs a named device, a supported interface, explicit operating limits, a stop mechanism and informed participation consent. None is supplied by the words archangel, final quilt or exact science. The current software controls its own local media display only. It sends no device commands, contacts no Instagram accounts and remotely changes no hardware. A future device adapter requires its own concrete specification and testing; this edition provides no general adapter or authorization to experiment on people.
+
+The [owned-media guide](MEDIA-DATA-RENDITION.md), [owner recovery guide](OWNER-RECOVERY.md) and [conflict-protection library](CONFLICT-PROTECTION-LIBRARY.md) describe the implemented alternatives. Their outcomes remain bounded, voluntary and reviewable. Existing Guardian scans observe file indicators; they neither certify human safety nor establish that harmful conduct has occurred.
+
+---
+
+### Document 040 — docs/SPIRITUAL-SYMBOLIC-WORKBENCH.md — Current publication documentation
 
 SHA-256: `8f589b63da5d5496dc198bea4bbcc619ccce5fab5c3e696499ddebed97b85581`.
 
@@ -905,7 +2354,7 @@ The workbench should be read alongside the [implementation contract](IMPLEMENTAT
 
 ---
 
-### Document 022 — docs/VALIDATION.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 041 — docs/VALIDATION.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `5811d795e4e76ce7862e500763d42d27627db0a1875a497586ed038899c569c0`.
 
@@ -935,7 +2384,7 @@ These checks validate the finite hosted implementation. Native boot, UEFI firmwa
 
 ---
 
-### Document 023 — Rasniki-Monarchic-Charter.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 042 — Rasniki-Monarchic-Charter.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `2af53714c3ab5c3451eb35c22929d7a653cfb6465f0a6bd0204dda744407d777`.
 
@@ -993,7 +2442,7 @@ Thus the proposed Rasniki Crown shall be conceived as an office of continuity, s
 
 ---
 
-### Document 024 — Rasniki-Science-Edition.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 043 — Rasniki-Science-Edition.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `80438ddf6d339c3dbc4689c8b2f6b488a4c93be85d86dd2a89c5b79652606aac`.
 
@@ -1065,7 +2514,7 @@ Republication makes a revised edition available at its chosen destination. The r
 
 ---
 
-### Document 025 — Rasniki-Science-Release.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 044 — Rasniki-Science-Release.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `efe00879826e621b8bd9a660631d4352c8a4238d7ba81f2b4697ee4d3273fab7`.
 
@@ -1091,7 +2540,7 @@ The containing Git commit identifies this release’s repository contents. A suc
 
 ---
 
-### Document 026 — README.md — necurookami2026-jpg/antimalwarecountermalwareantispywarecounterspyware
+### Document 045 — README.md — necurookami2026-jpg/antimalwarecountermalwareantispywarecounterspyware
 
 SHA-256: `c4c73ab7af8ce3f932524e7d39527820e9dd119421b5b2380cd1a5fdbb1529fe`.
 
@@ -1156,7 +2605,7 @@ Use the existing checkout; no worktree is needed. Run `python3 -m unittest -v` b
 
 ---
 
-### Document 027 — README.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 046 — README.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `4648d1f9a26481f05ad83990abee38540ab18b11eeab5f4cdf591d29b761f2df`.
 
@@ -1196,7 +2645,7 @@ Boot, UEFI, the OS kernel and DEMO_CREDIT mint are declared simulations. Guardia
 
 ---
 
-### Document 028 — README.md — necurookami2026-jpg/internetwomanagementministry
+### Document 047 — README.md — necurookami2026-jpg/internetwomanagementministry
 
 SHA-256: `210c2f4e654e7982555e0861baac0938d1c6f187b40091469dbdd24fc9e78c7a`.
 
@@ -1223,7 +2672,7 @@ Upload the contents of `site/` to a static hosting service. On GitHub Pages, pub
 
 ---
 
-### Document 029 — vendor/rasnikism/ADAPTABLE.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 048 — vendor/rasnikism/ADAPTABLE.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `f926006a8b696b58f558000b8a245cf0bbd2b2d809fd80e50b80b29fbfd38c52`.
 
@@ -1262,7 +2711,7 @@ Each enabled section includes a summary and links to the existing source edition
 
 ---
 
-### Document 030 — vendor/rasnikism/ARCHANGEL.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 049 — vendor/rasnikism/ARCHANGEL.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `d05868825a78156600fc3cb9bbab88c9036f142678d5dc4d5e7137f26cf4ea68`.
 
@@ -1346,7 +2795,7 @@ Run `node software/test_archangel.cjs` for record validation, states, export, de
 
 ---
 
-### Document 031 — vendor/rasnikism/BOOKWRITING.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 050 — vendor/rasnikism/BOOKWRITING.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `5386c93918b917acc684be3c58cee5dc0d2b03b2160aa3fa1b3b9364e52b2f57`.
 
@@ -1466,7 +2915,7 @@ Let the next edition remember what the first could not yet know.
 
 ---
 
-### Document 032 — vendor/rasnikism/CATALOGUE.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 051 — vendor/rasnikism/CATALOGUE.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `f593b2e67a7147a6462be629c8ad2119b3ca3ccac3699715aadefdf18e0d3aac`.
 
@@ -1520,7 +2969,7 @@ Relevant checks exercise query filtering, pagination, local trend ordering, gene
 
 ---
 
-### Document 033 — vendor/rasnikism/DEVELOPMENT.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 052 — vendor/rasnikism/DEVELOPMENT.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `ab7538a54bb99310fa3b80dc0b8895f165ba95c69f4d3f333db4e2eef9e417d4`.
 
@@ -1570,7 +3019,7 @@ The executable target publication is `language/ostar-final-quilt.kerot` plus its
 
 ---
 
-### Document 034 — vendor/rasnikism/DRIVERS.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 053 — vendor/rasnikism/DRIVERS.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `c6a94239afd38889029132ae279ce2313f33a0c2106c8cae67e9fa65d8db9b65`.
 
@@ -1626,7 +3075,7 @@ Run the Python suite and `node software/test_jerry_pop.cjs`. Checks cover real q
 
 ---
 
-### Document 035 — vendor/rasnikism/editions/OSTAR-AANTONYMMAKKAKAH.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 054 — vendor/rasnikism/editions/OSTAR-AANTONYMMAKKAKAH.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `ddb3854f6866dba01bc42afbcfe0487ccdd0ddbbbf48c5ae3054db89a00323c0`.
 
@@ -2942,7 +4391,7 @@ sethianism thaumaturgism, romanticism, wizardism, altruism, florist, vampirist, 
 
 ---
 
-### Document 036 — vendor/rasnikism/editions/OSTAR-JURISDICTION-REVIEW.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 055 — vendor/rasnikism/editions/OSTAR-JURISDICTION-REVIEW.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `8c02a39994ab86fc648e68467c6247f6a2d0de455d43636db3d95fbf14e9e9ba`.
 
@@ -4258,7 +5707,7 @@ sethianism thaumaturgism, romanticism, wizardism, altruism, florist, vampirist, 
 
 ---
 
-### Document 037 — vendor/rasnikism/editions/OSTAR-MAKKAKAH.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 056 — vendor/rasnikism/editions/OSTAR-MAKKAKAH.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `4e2a6f0d0f82a84ca459624ea69da5363f78f26b067eed614fd2b340fa62e8cf`.
 
@@ -5574,7 +7023,7 @@ sethianism thaumaturgism, romanticism, wizardism, altruism, florist, vampirist, 
 
 ---
 
-### Document 038 — vendor/rasnikism/GAME.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 057 — vendor/rasnikism/GAME.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `eb2b188fbc699eb98d3081d5f5e074e652241f5393a8db6b9dcdf8df21fb00ea`.
 
@@ -5616,7 +7065,7 @@ Run `node software/test_game.cjs`. Tests cover state validation, movement, quest
 
 ---
 
-### Document 039 — vendor/rasnikism/GUIDANCE.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 058 — vendor/rasnikism/GUIDANCE.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `c89f34e45accdfc0e54d76c3648f34e3478ca570b6268d3d52700d31a4c8a333`.
 
@@ -5690,7 +7139,7 @@ Legal, clinical, spiritual, hardware, and emergency-response claims retain their
 
 ---
 
-### Document 040 — vendor/rasnikism/IO.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 059 — vendor/rasnikism/IO.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `d6d24f5a3e93346e7c4c5bc5d65d23e0dd9f734836227c66ba36995dbe28212d`.
 
@@ -5728,7 +7177,7 @@ Run `node software/test_io.cjs`. Checks exercise all-letter rune mapping, case f
 
 ---
 
-### Document 041 — vendor/rasnikism/IO_PUBLICATION.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 060 — vendor/rasnikism/IO_PUBLICATION.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `88ca2922a537b771049914d4baf3a6188e1ea4c282bd5980e4c839a0b5d52b66`.
 
@@ -5760,7 +7209,7 @@ Import limits are 10 MiB of script text, 500 records, 2 MiB per decoded record, 
 
 ---
 
-### Document 042 — vendor/rasnikism/KEROT.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 061 — vendor/rasnikism/KEROT.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `2528cc478b13c8031903ca16bac591050b82a188d65de6aaed672e0374a1360f`.
 
@@ -5873,7 +7322,7 @@ K0 and its decoder, a basic assembler, and console examples are now available in
 
 ---
 
-### Document 043 — vendor/rasnikism/LAIR.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 062 — vendor/rasnikism/LAIR.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `d98fda6426cdeb60f4c0f4f99982baafec2c7171ba24780c45082ff5e4e4b13a`.
 
@@ -5950,7 +7399,7 @@ Here is a return, carrying what we learned.
 
 ---
 
-### Document 044 — vendor/rasnikism/MAKKAKAH.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 063 — vendor/rasnikism/MAKKAKAH.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `17986532b80a1d2a844f33bbddc578873c4d99a84eb283d6f5c75cae82b5cc0b`.
 
@@ -6105,7 +7554,7 @@ Keep the supplied spellings. Record definition changes with a date and reason. D
 
 ---
 
-### Document 045 — vendor/rasnikism/MANUALS.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 064 — vendor/rasnikism/MANUALS.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `9cda29303fde84179f4728ef142f6faccf09354a46d7447d30bf6f388fe8d46f`.
 
@@ -6169,7 +7618,7 @@ Run `node software/test_manuals.cjs`. Relevant checks cover builder fields, mode
 
 ---
 
-### Document 046 — vendor/rasnikism/OSTAR.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 065 — vendor/rasnikism/OSTAR.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `824847823581ec15bd8f3a7b2dab6604bba9ad5b150cb793d5c04aca118b1fb8`.
 
@@ -6213,7 +7662,7 @@ The browser reformat does not implement proposed specialist software, a native o
 
 ---
 
-### Document 047 — vendor/rasnikism/QUILT.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 066 — vendor/rasnikism/QUILT.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `1e8936be6e5bb42f96f44ec294228972e865e926e7fb24954f9d1ad362ec16b6`.
 
@@ -6257,7 +7706,7 @@ The program does not certify safety, prescribe care, make contracts valid, authe
 
 ---
 
-### Document 048 — vendor/rasnikism/README.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 067 — vendor/rasnikism/README.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `82ca086b1858e2ca32f6f9c2a52e110adf0c298749326ff4b4035957e0290ca4`.
 
@@ -6311,7 +7760,7 @@ sethianism thaumaturgism, romanticism, wizardism, altruism, florist, vampirist, 
 
 ---
 
-### Document 049 — vendor/rasnikism/REINTERPRETATION.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 068 — vendor/rasnikism/REINTERPRETATION.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `9b2e113c70050f7f1fefea44a47f9b3a29fcfd935a5c493fb3db734c502112dc`.
 
@@ -6353,7 +7802,7 @@ Run `sh bootstrap.sh` to rebuild the quilt, program library, reading editions, a
 
 ---
 
-### Document 050 — vendor/rasnikism/SEARCH.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 069 — vendor/rasnikism/SEARCH.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `6b01dd77a35c7077b4e9b073d86db2e91608309b69b58b212cfdebdd8f0f85ae`.
 
@@ -6377,7 +7826,7 @@ Run `node software/test_search.cjs` for matching, ranking, pagination, integer a
 
 ---
 
-### Document 051 — vendor/rasnikism/SOFTWARE.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 070 — vendor/rasnikism/SOFTWARE.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `1b78557dc2518b18033c91277cedc184cab02cd4535f898cd05c6d8a29714ebf`.
 
@@ -6460,7 +7909,7 @@ Next useful additions are assembly listings, trace inspection, derived routines,
 
 ---
 
-### Document 052 — vendor/rasnikism/SYSTEMATICS.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 071 — vendor/rasnikism/SYSTEMATICS.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `011fdba3927463d94cc5aa5ab35969dee78ca10a0c0635fd460f3b751520b210`.
 
@@ -6520,7 +7969,7 @@ Run `node software/test_systematics.cjs`. Tests cover quorum, abstentions, ties,
 
 ---
 
-### Document 053 — vendor/rasnikism/TEMPLATES.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 072 — vendor/rasnikism/TEMPLATES.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `23a9f71304975eba13b4b1d86d5067c5738ccfcd39913541232f7cc8dfc562dd`.
 
@@ -6540,7 +7989,7 @@ These are JavaScript-hosted conveniences that produce real primitive source, not
 
 ---
 
-### Document 054 — vendor/rasnikism/UPSTREAM.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
+### Document 073 — vendor/rasnikism/UPSTREAM.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 
 SHA-256: `66428564026984a2f60bb9911e03a3b6199c7db1e2450a5f06c1ca6b9cf311c9`.
 

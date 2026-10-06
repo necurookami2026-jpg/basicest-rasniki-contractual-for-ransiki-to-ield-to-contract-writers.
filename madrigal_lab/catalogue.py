@@ -45,6 +45,7 @@ GLOSSARY += [
     {'term': 'formate', 'meaning': 'User spelling retained as an editorial label for the selected view of a recorded form; no new instruction.', 'status': 'proposed-presentation-label', 'source': 'docs/LAIR-OF-LAIRS.md'},
     {'term': 'sureasuch', 'meaning': None, 'status': 'awaiting-author-definition', 'source': 'user supplied label'},
     {'term': 'asuresuch', 'meaning': None, 'status': 'awaiting-author-definition', 'source': 'user supplied label'},
+    {'term': 'surasuch', 'meaning': None, 'status': 'awaiting-author-definition', 'source': 'user supplied label'},
 ]
 
 GLOSSARY += [
@@ -60,6 +61,12 @@ GLOSSARY += [
 ]
 
 COMPONENTS = [
+    ('owned-media-studio', 'implemented-local', 'Browser-local audio/video playback, raster brightness/contrast/crop edits, owned-data fingerprints, original seed renditions and timed text-card WebM animatics'),
+    ('recursive-systems-atlas', 'implemented-bounded', 'Sorted exact-label inventory, paginated search, finite advice/guidance trees and seven-way document address samples'),
+    ('local-boards', 'implemented-local', 'Consented local inquiries, surveys, replies, parented records, reviewed quests and fictional leaderboards; no authenticated public membership'),
+    ('workpapers', 'implemented-local', 'Ten prose rendering formats, deterministic original fictional seeds and manually supplied coordinate SVG plots'),
+    ('owner-recovery', 'implemented-local', 'Official account recovery checklists and digest-checked exclusive local backup restoration; no password cracking or access bypass'),
+    ('demo-obligations-contracts', 'simulated', 'Atomic DEMO_CREDIT loan/repayment records, zero-transfer coupon annotations and versioned local contract receipts'),
     ('symbolic-practice', 'implemented-local', 'Voluntary fictional-archetype reflection, bounded input review and deliberate client JSON export; no server retention'),
     ('easterbunny-rubric', 'implemented-proposed-rubric', 'Six supplied support fields compared with documentation-only and absent-input baselines; no effect or truth verification'),
     ('conflict-protection-library', 'editorial-templates', 'Finite consent, accessibility, civilian-support, de-escalation and review documents; no guaranteed perpetual protection'),
@@ -78,7 +85,7 @@ COMPONENTS = [
     ('internet-server', 'local-only', 'HTTP desktop/API binds IPv4 loopback; public hosting and TLS termination not deployed'),
     ('game-server', 'implemented-local', 'Shared target game state available through the local API'),
     ('organiser', 'implemented', 'Persistent practice records, priority queue and reviewed rule revisions'),
-    ('curriculum', 'implemented', 'Seven exercises with stated acceptance evidence'),
+    ('curriculum', 'implemented', 'Twelve exercises with stated acceptance evidence'),
     ('franchise', 'proposed', 'Derivative manifest and version/authority record; no rights granted'),
     ('sovereignty', 'editorial', 'Fictional governance notes with no grant of political authority'),
     ('ministry-archive', 'implemented-static', 'Retained fictional archive, seven-term search and four rotating story seeds; no account or ministry integration'),
@@ -92,6 +99,11 @@ CURRICULUM = [
     {'cycle': 'Federation', 'exercise': 'Compare an explicitly trusted file baseline after editing a document.', 'evidence': 'Modified path is reported; scan findings remain indicators.'},
     {'cycle': 'Symbolic practice', 'exercise': 'Compare an opted-in record with four documentation fields, then add implementation and evidence descriptions.', 'evidence': 'Support coverage rises from 4/6 to 6/6; absent baseline remains zero and opt-out rejects evaluation.'},
     {'cycle': 'Conflict review', 'exercise': 'Use a fictional disagreement to complete an access plan, de-escalation note and correction record.', 'evidence': 'Separate observed facts from interpretations, preserve opt-out, and record the next bounded review.'},
+    {'cycle': 'Local boards', 'exercise': 'Create an opted-in survey, submit a choice, then review a fictional quest.', 'evidence': 'Survey submission totals and once-only reviewed quest points, with no identity or financial-value claim.'},
+    {'cycle': 'Obligations', 'exercise': 'Fund a demo loan from an existing balance and repay it in two parts.', 'evidence': 'Preserved circulation, atomic postings, reconciled outstanding amounts and rejected overpayment.'},
+    {'cycle': 'Owned backup', 'exercise': 'Compare a known document digest and restore it to a new local path.', 'evidence': 'Digest mismatch writes nothing; existing files and path escapes are rejected.'},
+    {'cycle': 'Workpapers and maps', 'exercise': 'Render a lecture paper and plot a manually supplied hypothetical coordinate.', 'evidence': 'Retained prose inputs, escaped SVG label and explicit absence of live tracking.'},
+    {'cycle': 'Owned media', 'exercise': 'Edit an owned raster image and form a short text-card plan from original book prose.', 'evidence': 'Local PNG export, bounded scene provenance, permission withdrawal stops previews, and a draft WebM without cinema-quality or bodily-change claims.'},
 ]
 
 

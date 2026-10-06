@@ -17,13 +17,18 @@
     },
     {
       "id": "curriculum",
-      "scope": "Seven exercises with stated acceptance evidence",
+      "scope": "Twelve exercises with stated acceptance evidence",
       "status": "implemented"
     },
     {
       "id": "defense",
       "scope": "Unchanged Guardian scanner and explicit trusted-baseline comparison; no malware prevention/removal/decryption",
       "status": "implemented-read-only"
+    },
+    {
+      "id": "demo-obligations-contracts",
+      "scope": "Atomic DEMO_CREDIT loan/repayment records, zero-transfer coupon annotations and versioned local contract receipts",
+      "status": "simulated"
     },
     {
       "id": "domain-host",
@@ -76,6 +81,11 @@
       "status": "implemented"
     },
     {
+      "id": "local-boards",
+      "scope": "Consented local inquiries, surveys, replies, parented records, reviewed quests and fictional leaderboards; no authenticated public membership",
+      "status": "implemented-local"
+    },
+    {
       "id": "madrigal-os",
       "scope": "Local web desktop and hosted services; upstream spells the proposed OS Magrigal",
       "status": "simulated"
@@ -91,6 +101,16 @@
       "status": "implemented"
     },
     {
+      "id": "owned-media-studio",
+      "scope": "Browser-local audio/video playback, raster brightness/contrast/crop edits, owned-data fingerprints, original seed renditions and timed text-card WebM animatics",
+      "status": "implemented-local"
+    },
+    {
+      "id": "owner-recovery",
+      "scope": "Official account recovery checklists and digest-checked exclusive local backup restoration; no password cracking or access bypass",
+      "status": "implemented-local"
+    },
+    {
       "id": "quilt",
       "scope": "Eight finite source-backed modes; Boolean inputs are user assertions",
       "status": "implemented"
@@ -98,6 +118,11 @@
     {
       "id": "recursive-exact-science",
       "scope": "Boolean addition exhaustive suite and bounded interpreter runs; not universal scientific proof",
+      "status": "implemented-bounded"
+    },
+    {
+      "id": "recursive-systems-atlas",
+      "scope": "Sorted exact-label inventory, paginated search, finite advice/guidance trees and seven-way document address samples",
       "status": "implemented-bounded"
     },
     {
@@ -114,9 +139,14 @@
       "id": "virtualisation",
       "scope": "Fresh K0 memory per execution; emulated ISA rather than hardware hypervisor",
       "status": "simulated"
+    },
+    {
+      "id": "workpapers",
+      "scope": "Ten prose rendering formats, deterministic original fictional seeds and manually supplied coordinate SVG plots",
+      "status": "implemented-local"
     }
   ],
-  "edition": "2",
+  "edition": "3",
   "format": "rasniki-hopput-catalogue",
   "language_boundary": "Ministry fictional Kerot vocabulary does not extend or redefine the executable K0 ISA.",
   "repositories": [
@@ -513,6 +543,12 @@
       "source": "lab design",
       "status": "proposed-convention",
       "term": "suitable"
+    },
+    {
+      "meaning": null,
+      "source": "user supplied label",
+      "status": "awaiting-author-definition",
+      "term": "surasuch"
     },
     {
       "meaning": null,

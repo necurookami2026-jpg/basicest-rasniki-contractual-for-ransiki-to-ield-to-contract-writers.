@@ -264,4 +264,60 @@ class HTTPTests(unittest.TestCase):
         self.assertEqual(self.action('symbolic-compare',{'record':record})[0],400)
         self.assertEqual(self.action('symbolic-evaluate',{'record':record})[0],400)
 
+    def test_local_survey_quest_and_sorted_atlas_http_workflow(self):
+        status,body=self.request('GET','/api/atlas');self.assertEqual(status,200)
+        self.assertGreater(json.loads(body)['total'],500)
+        result=json.loads(self.action('atlas-search',{'query':'womandeanamandean'})[1])['result']
+        self.assertTrue(any(item['label']=='womandeanamandean' for item in result['items']))
+        record={'kind':'survey','title':'Review time','body':'When shall this fictional group review?',
+                'options':['Now','Later'],'consent':False}
+        self.assertEqual(self.action('board-create',{'record':record})[0],400)
+        record['consent']=True
+        identifier=json.loads(self.action('board-create',{'record':record})[1])['result']['id']
+        self.assertEqual(self.action('board-vote',{'id':identifier,'option':1,'consent':True})[0],200)
+        self.assertEqual(self.action('board-vote',{'id':identifier,'option':2,'consent':True})[0],400)
+        survey=json.loads(self.action('board-get',{'id':identifier})[1])['result']['survey']
+        self.assertEqual(survey['submissions'],1)
+        self.assertFalse(survey['verified_participants'])
+        quest={'kind':'quest','title':'Review a draft','body':'Fictional learning task.','points':7,'consent':True}
+        identifier=json.loads(self.action('board-create',{'record':quest})[1])['result']['id']
+        for state in ('active','done','reviewed'):
+            self.assertEqual(self.action('board-transition',{'id':identifier,'state':state,'reason':'Local assertion.','consent':True})[0],200)
+        leaderboard=json.loads(self.action('leaderboard',{})[1])['result']
+        self.assertEqual(leaderboard['entries'][0]['points'],7)
+        self.assertFalse(leaderboard['financial_value'])
+
+    def test_demo_lending_and_finalised_contract_http_workflow(self):
+        for name in ('lender','borrower'):self.assertEqual(self.action('account',{'name':name})[0],200)
+        self.action('mint',{'account':'lender','amount':100})
+        identifier=json.loads(self.action('obligation',{'lender':'lender','borrower':'borrower','amount':25})[1])['result']['id']
+        self.assertEqual(self.action('lend',{'id':identifier})[0],200)
+        for amount in (10,15):self.assertEqual(self.action('repay',{'id':identifier,'amount':amount})[0],200)
+        report=json.loads(self.action('economy-report',{})[1])['result']
+        self.assertEqual(report['accounts']['lender'],100)
+        self.assertEqual(report['accounts']['borrower'],0)
+        self.assertTrue(report['audit']['balanced']);self.assertTrue(report['audit']['obligations_reconciled'])
+        identifier=json.loads(self.action('demo-contract',{'title':'Test proposal','text':'A fictional agreement.'})[1])['result']['id']
+        self.assertEqual(self.action('review-contract',{'id':identifier,'reviewer':'steward','consent':1})[0],400)
+        self.assertEqual(self.action('review-contract',{'id':identifier,'reviewer':'steward','consent':True})[0],200)
+        self.assertEqual(self.action('finalise-contract',{'id':identifier,'author':'steward','consent':True})[0],200)
+        self.assertTrue(json.loads(self.action('verify-contract',{'id':identifier})[1])['result']['intact'])
+
+    def test_owned_restore_and_malformed_workpaper_inputs_http(self):
+        import hashlib
+        backup='An owned local backup. 🌿'
+        record={'backup':backup,'owner_asserted':True,'target':'restored/note.txt','expected_sha256':'0'*64}
+        self.assertEqual(self.action('backup-restore',{'record':record})[0],400)
+        self.assertEqual(self.server.lab.runtime.files(),[])
+        record['expected_sha256']=hashlib.sha256(backup.encode()).hexdigest()
+        status,body=self.action('backup-restore',{'record':record});self.assertEqual(status,200)
+        self.assertFalse(json.loads(body)['result']['account_restored'])
+        self.assertEqual(self.server.lab.runtime.read(record['target'])['text'],backup)
+        self.assertEqual(self.action('backup-restore',{'record':record})[0],400)
+        for label,latitude in [('Point',10**400),('Point\x00',0)]:
+            self.assertEqual(self.action('map-plot',{'points':[{'label':label,'latitude':latitude,'longitude':0}]})[0],400)
+        deep='{"action":"board-create","args":{"record":'+('['*1100)+'0'+(']'*1100)+'}}'
+        headers={'Content-Type':'application/json','X-Lab-Token':self.server.lab.token}
+        self.assertEqual(self.request('POST','/api/action',deep,headers)[0],400)
+
 if __name__=='__main__':unittest.main()

@@ -36,6 +36,15 @@ CURRENT_DOCUMENTS = (
     'docs/conflict/05-de-escalation-and-dialogue.md', 'docs/conflict/06-evidence-custody.md',
     'docs/conflict/07-correction-and-review.md', 'docs/conflict/08-civilian-aid-coordination.md',
     'docs/conflict/09-simulation-and-learning.md', 'docs/conflict/10-handover-and-continuity.md',
+    'docs/DEMO-ECONOMY-CONTRACTS.md', 'docs/OWNER-RECOVERY.md',
+    'docs/MEDIA-DATA-RENDITION.md', 'docs/SAFEGUARDING-AND-DEVICE-SCOPE.md',
+    'docs/RECURSIVE-SYSTEMS-ATLAS.md', 'docs/RECURSIVE-WORKBENCH.md', 'docs/handbooks/README.md',
+    'docs/handbooks/01-advice-and-guidance.md', 'docs/handbooks/02-immanuel-emmanuel-manual.md',
+    'docs/handbooks/03-family-and-classical-governance.md', 'docs/handbooks/04-logistics-and-rudder.md',
+    'docs/handbooks/05-fandom-merchandise-and-number-seeds.md', 'docs/handbooks/06-media-radio-and-pixel-notation.md',
+    'docs/handbooks/07-learning-mentoring-and-recipes.md', 'docs/handbooks/08-mapping-time-and-adaptation.md',
+    'docs/handbooks/09-community-surveys-and-quests.md', 'docs/handbooks/10-self-reported-preferences.md',
+    'docs/handbooks/11-accessible-guardrails-and-recovery.md', 'docs/handbooks/12-document-types-and-workpapers.md',
 )
 CHAMBERS = (
     {'id': 'threshold', 'name': 'Threshold · dictionary', 'query': 'glossary', 'guide': 'Find terms, aliases and definitions before adopting their use.'},

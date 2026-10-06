@@ -1,5 +1,9 @@
 # Rasniki Hopput — Lair of Lairs
 
+Edition 3 adds the [sorted recursive atlas](docs/RECURSIVE-SYSTEMS-ATLAS.md) of 630 retained labels, the [workbench guide and twelve handbooks](docs/RECURSIVE-WORKBENCH.md), local inquiry/survey/quest boards, demo obligations and versioned contracts, owner-authorized backup restoration, prose workpapers, original fandom seeds and manual coordinate plots.
+
+The [owned-media studio](docs/MEDIA-DATA-RENDITION.md) plays local audio/video, edits raster images and produces timed book-to-series plans with downloadable text-card animatics. [Safeguarding and device scope](docs/SAFEGUARDING-AND-DEVICE-SCOPE.md) distinguishes actual screen/speaker output from unsupported claims of changing people. Account recovery uses official provider routes; no password cracking, access bypass or social-media profiling is provided.
+
 *Max Greatest Exact Sciencerainbow · Exact Finalisable Catch · Finalisable Exact Final Quilt · Max Greatest Aimat*
 
 A recursively organised, sorted four-source publication of the Rasnikism collection, Guardian, contractual editions and fictional Ministry Archive. [Read the combined edition](publication/edition/PUBLICATION.md), [open the offline reader](publication/edition/index.html), or [download the pinned sources](publication/edition/sources.zip).

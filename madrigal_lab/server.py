@@ -6,15 +6,18 @@ import hmac
 import json
 import re
 import secrets
+import sqlite3
 import threading
 import urllib.parse
 import urllib.error
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
-from . import language, defense, hierarchy, symbolic
+from . import language, defense, hierarchy, symbolic, atlas, papers, recovery, media
 from .catalogue import catalogue
 from .finance import Ledger
 from .runtime import Runtime
+from .boards import BoardStore, KINDS
+from .economy import Economy
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -23,6 +26,8 @@ class Lab:
     def __init__(self,state_dir,allow_hosts=()):
         self.runtime=Runtime(state_dir,allow_hosts)
         self.ledger=Ledger(self.runtime.state/'demo-ledger.sqlite3')
+        self.economy=Economy(self.ledger)
+        self.boards=BoardStore(self.runtime.state/'boards.sqlite3')
         self.lock=threading.RLock()
         self.token=secrets.token_urlsafe(32)
 
@@ -32,7 +37,8 @@ class Lab:
                 'rules':self.runtime.records['rules'],'domains':self.runtime.records['domains'],
                 'jobs':[{k:v for k,v in j.items() if k!='source'} for j in self.runtime.records['jobs']],
                 'finance':self.ledger.summary(),'game':self.runtime.game(),
-                'internet_hosts':sorted(self.runtime.allow_hosts)}
+                'internet_hosts':sorted(self.runtime.allow_hosts),
+                'boards':{'records':len(self.boards.list()),'local_only':True,'authenticated_members':False}}
 
     def action(self,action,args):
         if not isinstance(args,dict):
@@ -62,6 +68,38 @@ class Lab:
         if action=='hierarchy':return hierarchy.sample(args.get('limit',16))
         if action=='symbolic-evaluate':return symbolic.evaluate(args['record'])
         if action=='symbolic-compare':return symbolic.compare(args['record'])
+        if action=='atlas-search':return atlas.catalogue(args.get('query',''),args.get('limit',128),args.get('offset',0))
+        if action=='atlas-tree':return atlas.tree(args.get('depth',3),args.get('limit',256),args.get('query',''))
+        if action=='governance-families':return atlas.families()
+        if action=='document-types':return atlas.document_types(args.get('limit',32))
+        if action=='workpaper':return papers.render(args['record'])
+        if action=='fandom-seed':return papers.fandom(args['seed'],args.get('count',4))
+        if action=='map-plot':return papers.map_svg(args['points'])
+        if action=='data-seed':return media.raw_seed(args['record'])
+        if action=='seed-rendition':return media.seed_rendition(args['record'])
+        if action=='series-plan':return media.parse_story(args['record'])
+        if action=='recovery-plan':return recovery.plan(args['record'])
+        if action=='backup-inspect':return recovery.inspect_backup(args['record'])
+        if action=='backup-restore':return recovery.restore(r,args['record'])
+        if action=='board-create':return self.boards.create(args['record'])
+        if action=='board-list':return self.boards.list(args.get('kind'))
+        if action=='board-get':return self.boards.get(args['id'])
+        if action=='board-tree':return self.boards.tree(args.get('parent'),args.get('depth',8),args.get('limit',256))
+        if action=='board-reply':return self.boards.reply(args['id'],args['body'],args.get('consent',False),args.get('member_alias','anonymous'))
+        if action=='board-vote':return self.boards.vote(args['id'],args['option'],args.get('consent',False),args.get('member_alias','anonymous'))
+        if action=='board-transition':return self.boards.transition(args['id'],args['state'],args['reason'],args.get('consent',False))
+        if action=='board-delete':return self.boards.delete(args['id'],args.get('consent',False))
+        if action=='leaderboard':return self.boards.leaderboard()
+        if action=='obligation':return self.economy.create_obligation(args['lender'],args['borrower'],args['amount'],args.get('title','Demo obligation'))
+        if action=='lend':return self.economy.lend(args['id'])
+        if action=='repay':return self.economy.repay(args['id'],args['amount'])
+        if action=='coupon':return self.economy.create_coupon(args['title'],args['amount'],args.get('kind','discount'))
+        if action=='redeem-coupon':return self.economy.redeem_coupon(args['id'],args['account'])
+        if action=='demo-contract':return self.economy.create_contract(args['title'],args['text'],args.get('parent'))
+        if action=='review-contract':return self.economy.review_contract(args['id'],args['reviewer'],args.get('consent',False))
+        if action=='finalise-contract':return self.economy.finalise_contract(args['id'],args['author'],args.get('consent',False))
+        if action=='verify-contract':return self.economy.verify_contract(args['id'])
+        if action=='economy-report':return self.economy.report()
         if action=='economy':return self.ledger.economic_report()
         if action=='practice':return r.practice(args['purpose'],args.get('priority','normal'))
         if action=='transition':return r.transition(args['id'],args['state'],args['reason'])
@@ -102,7 +140,7 @@ class Handler(BaseHTTPRequestHandler):
             policy="default-src 'self'; script-src 'self' "+' '.join(hashes)+"; style-src 'self' 'unsafe-inline'; img-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'"
             self.send_header('Content-Security-Policy',policy)
         elif not self.path.startswith('/collection/'):
-            self.send_header('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'")
+            self.send_header('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' blob:; media-src 'self' blob:; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'")
         self.end_headers()
         self.wfile.write(body)
 
@@ -113,6 +151,9 @@ class Handler(BaseHTTPRequestHandler):
             if path=='/api/session':return self.send(200,{'token':self.server.lab.token})
             if path=='/api/catalogue':return self.send(200,catalogue())
             if path=='/api/symbolic':return self.send(200,symbolic.catalogue())
+            if path=='/api/atlas':return self.send(200,atlas.catalogue())
+            if path=='/api/boards':return self.send(200,{'kinds':list(KINDS),'local_only':True,'record_limit':256,'depth_limit':8,'authenticated_members':False})
+            if path=='/api/workpapers':return self.send(200,papers.catalogue())
             if path=='/api/status':
                 with self.server.lab.lock:return self.send(200,self.server.lab.status())
             if path=='/api/health':return self.send(200,{'status':'ok','local_only':True})
@@ -166,7 +207,7 @@ class Handler(BaseHTTPRequestHandler):
             with self.server.lab.lock:
                 result=self.server.lab.action(data['action'],data.get('args',{}))
             return self.send(200,{'result':result})
-        except (ValueError,KeyError,TypeError,AttributeError,OSError,urllib.error.URLError) as error:
+        except (ValueError,KeyError,TypeError,AttributeError,OSError,urllib.error.URLError,sqlite3.Error,RecursionError) as error:
             return self.send(400,{'error':str(error)[:1000]})
 
 

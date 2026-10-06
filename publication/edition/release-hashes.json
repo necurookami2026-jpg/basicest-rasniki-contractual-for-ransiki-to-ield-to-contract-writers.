@@ -8,13 +8,21 @@
       "sha256": "25ad8f168127e67e66aae78dbcae80f4c577cae785fdb14206fbc7b45a07b1b0",
       "size": 3778
     },
+    "docs/DEMO-ECONOMY-CONTRACTS.md": {
+      "sha256": "dc0ef05ef5da3611dbe92dd2d09f66913bcb6ab8d986def6308cc5374240299b",
+      "size": 11476
+    },
     "docs/IMPLEMENTATION.md": {
-      "sha256": "f04afaf7fc536fb94ee57f679823f4bae3417b08db2fbdb0de0a3d735d783c45",
-      "size": 12799
+      "sha256": "40ccc2b3ecf36db5aa8ad92f698b17b3d00df3598c9e91f91de3d585b9a87756",
+      "size": 14799
     },
     "docs/LAIR-OF-LAIRS.md": {
       "sha256": "f0fb2fa1a51fe52fea0efb181ab20b2b814c3d2de27dff9339ed08ae7642227b",
       "size": 8591
+    },
+    "docs/MEDIA-DATA-RENDITION.md": {
+      "sha256": "adb2d0b0e70315e83c6612a8a62dd20e032cabca38fc0ebc2b581dd8dc506a00",
+      "size": 7023
     },
     "docs/MINISTRY.md": {
       "sha256": "78f0259b82eab2ef93f360a62e671d3a1a4ac9429e7afd2353a13b390648abfd",
@@ -24,9 +32,25 @@
       "sha256": "9c52a278b6dd7ded37557346a499fc8a0a9aefc14bca0f2497e5bd1fdca00be8",
       "size": 8980
     },
+    "docs/OWNER-RECOVERY.md": {
+      "sha256": "93f6d3ba9c37feaab6a5b91b3410b3fac82bff447523d6d0bec65cccf2eff883",
+      "size": 11612
+    },
     "docs/PROVENANCE.md": {
       "sha256": "c3f9565400fe18b8ba533b3b7d3fb48ebad0f53e7ad7f6b982ada92607300a73",
       "size": 2714
+    },
+    "docs/RECURSIVE-SYSTEMS-ATLAS.md": {
+      "sha256": "a206b7a66ae60d81665c967e973acc5725c60bab36e6221b81d49793adafba75",
+      "size": 51383
+    },
+    "docs/RECURSIVE-WORKBENCH.md": {
+      "sha256": "5abda8d6a827102b667418e24de52564912ee992c0cff8cf644d73f425aca7af",
+      "size": 13230
+    },
+    "docs/SAFEGUARDING-AND-DEVICE-SCOPE.md": {
+      "sha256": "a6e3c09ce7a0dfb074721c80494143638c326fa66e6888f4d153e8e3eb69be90",
+      "size": 3585
     },
     "docs/SPIRITUAL-SYMBOLIC-WORKBENCH.md": {
       "sha256": "8f589b63da5d5496dc198bea4bbcc619ccce5fab5c3e696499ddebed97b85581",
@@ -76,38 +100,90 @@
       "sha256": "4051e90f0d6a264c8a1c75d06be8201e68647483601dcdf461781dcb697801c4",
       "size": 2543
     },
+    "docs/handbooks/01-advice-and-guidance.md": {
+      "sha256": "23ec732c7f4ba7d2c56078410010999f98483596484effb5673511cd9ca551a1",
+      "size": 1838
+    },
+    "docs/handbooks/02-immanuel-emmanuel-manual.md": {
+      "sha256": "a8d867f18d72e73489c03bdbc9afacf9865be3c3327f593ad5ba404d15bdb39f",
+      "size": 1795
+    },
+    "docs/handbooks/03-family-and-classical-governance.md": {
+      "sha256": "ec42a6e4c00d56664c67a54b8e958c1502d04164e5ae56087125da410a13ca46",
+      "size": 1872
+    },
+    "docs/handbooks/04-logistics-and-rudder.md": {
+      "sha256": "b47abb68ac69bc8b63f10928abaec1ae0cdd5fdeb65dedcefe1f6c34639b9f1b",
+      "size": 1778
+    },
+    "docs/handbooks/05-fandom-merchandise-and-number-seeds.md": {
+      "sha256": "6b21fe38106cf799d1c9000fdeee182e381551d7bd3d167810f49ca3182abeeb",
+      "size": 2007
+    },
+    "docs/handbooks/06-media-radio-and-pixel-notation.md": {
+      "sha256": "1f0d545a50e07c3475443db176916778fb8e4626dfa79a496973e4dbd3a04a22",
+      "size": 1915
+    },
+    "docs/handbooks/07-learning-mentoring-and-recipes.md": {
+      "sha256": "4d0f2c45bc68c39313b0040bee4556f5a78f316afdc7d7a50465db264348c6d5",
+      "size": 2146
+    },
+    "docs/handbooks/08-mapping-time-and-adaptation.md": {
+      "sha256": "35916072456ec4dbe19b829847e4bb53c1b8957ef4034a2c941e8bef1ac41bd0",
+      "size": 2101
+    },
+    "docs/handbooks/09-community-surveys-and-quests.md": {
+      "sha256": "e3d7a6e32446cb302cb93ac4d519702ffb3b1b1b36751aea4feea3c24c1eacf3",
+      "size": 2327
+    },
+    "docs/handbooks/10-self-reported-preferences.md": {
+      "sha256": "eed8af08cda571f802eb4a012cb4cad9a3be773970dd4a8af4b252b9672012a4",
+      "size": 2085
+    },
+    "docs/handbooks/11-accessible-guardrails-and-recovery.md": {
+      "sha256": "bb84e3d60479caf74093acf2df277b663584273f82ac4c08cf109d753be5e19a",
+      "size": 2205
+    },
+    "docs/handbooks/12-document-types-and-workpapers.md": {
+      "sha256": "89fb8167bd948cdf6257175f75d7f9aa114a619051f85138d96a459f5584468e",
+      "size": 2219
+    },
+    "docs/handbooks/README.md": {
+      "sha256": "f17f8fbd552cfe200b95e945f9c53e2ef245055330883c500c161dbd335c2d2a",
+      "size": 3259
+    },
     "publication/catalogue-source.json": {
-      "sha256": "5e6bec17f88541233b2c2fea4a35591e06070465c592c715f25ee339b2ffd8c9",
-      "size": 21800
+      "sha256": "8c77c81d9106118ebcdf9c792276670e7fcf29f1d60f6b2910de0dafeb7460ae",
+      "size": 778344
     }
   },
-  "edition": "2",
+  "edition": "3",
   "format": "rasniki-hopput-release-hashes",
   "outputs": {
     "PUBLICATION.md": {
-      "sha256": "c82cf6bc6905be36db65b61dfda7319a9f5cb487d2c883b33438a1251f252e21",
-      "size": 590035
+      "sha256": "a96161cdf12bfd291501a2adcea1c681c7b992084e4d29251734662285dde3d6",
+      "size": 723542
     },
     "catalogue.json": {
-      "sha256": "6778eda1cb1ab722b5067866d8b3eb737aac3a15137c00a3f70618b50ab7e763",
-      "size": 19564
+      "sha256": "b5da23e00e5427c81c1314e1a13296b71a922c0e3165a4fb361743fa34b6e3fd",
+      "size": 21079
     },
     "index.html": {
-      "sha256": "95bf672a019c2a0992ac25f98ea79742939beec0cd8b907e568fa22c19793ced",
-      "size": 820377
+      "sha256": "331cf985a2da5374ce1ba7457b6de4986dd1bb3c3b0075187181d75af25ae34a",
+      "size": 968709
     },
     "reader-data.json": {
-      "sha256": "2944041007422dab08d08199ecc685c454425ab97da06cbd9f3302b23a29c0b9",
-      "size": 868466
+      "sha256": "44bd19245175355ef014590dd5c07fd1f7b94619c8317d69d89cec8ff7445739",
+      "size": 1022042
     },
     "sources.zip": {
-      "sha256": "72a9e9c27ec0aa02f04c1251d86ce88cf07a4e3fc34417a5137ae39dcb27b9e9",
+      "sha256": "230e9ab228bf3f773de5a07d584966c9313562728c24966d77de6525dcca4bf3",
       "size": 9424335
     }
   },
   "self_hash": "Excluded to avoid a circular hash; hash this file independently when archiving the release.",
   "source_lock": {
-    "sha256": "1048d95b28177c3d334fd977630037642ee1708658cd8962c3cac094ddbcaec8",
+    "sha256": "38053c87e2dc0f7bb0c5dcbe1ad42b5a2da41407315c81ab5aea42d2639c748d",
     "size": 44037
   },
   "version": 1
