@@ -58,6 +58,19 @@ class PublicationTests(unittest.TestCase):
         html = (output / 'index.html').read_text()
         self.assertTrue(all(entry['file'] in html for entry in catalogue['parallel_editions']))
 
+    def test_extra_complete_volume_includes_all_guides_and_full_body(self):
+        result = publication.build(self.root)
+        output = Path(result['output_dir'])
+        body = (output / 'PUBLICATION.md').read_bytes()
+        combined = (output / 'EXTRA-COMPLETE.md').read_bytes()
+        self.assertTrue(combined.endswith(body))
+        preface = combined[:-len(body)].decode('utf-8')
+        for name in ('Max Rawful', 'Max Raw', 'Max Law', 'Max Lawful'):
+            self.assertIn('### ' + name + '\n', preface)
+        catalogue = json.loads((output / 'catalogue.json').read_text())
+        self.assertFalse(catalogue['extra_complete_edition']['certification'])
+        self.assertIn('EXTRA-COMPLETE.md', (output / 'index.html').read_text())
+
     def test_verifies_full_binary_and_licenses(self):
         result = publication.verify_sources(self.root)
         self.assertTrue(result['ok'])

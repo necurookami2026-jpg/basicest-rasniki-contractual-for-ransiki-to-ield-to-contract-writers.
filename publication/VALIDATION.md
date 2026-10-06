@@ -49,3 +49,7 @@ The complete bootstrap and byte-reproducible publication rebuild passed. The rea
 ## Edition 6: four complete parallel reading editions
 
 The complete bootstrap and deterministic rebuild passed. A new publication test verifies that all four generated editions end with the exact complete standard publication body, have distinct editorial introductions, are indexed in the reader and catalogue, and expressly do not represent legal certification. SHA-256 release records cover the four additional outputs. The reader contains 77 documents, 42 current editorial files and 327 lair nodes; 254 historical source files remain verified and unchanged.
+
+## Edition 7: extra complete publication volume
+
+The full bootstrap and deterministic rebuild passed. A new publication test verifies that `EXTRA-COMPLETE.md` includes all four reading guides and the exact complete standard publication body, with a catalogue record and reader link. Release hashes cover eleven generated outputs. The collected document count and historical source snapshots are unchanged. This edition adds a combined reading volume, not additional implemented features or legal certification.

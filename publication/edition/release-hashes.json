@@ -173,49 +173,53 @@
       "size": 779280
     }
   },
-  "edition": "6",
+  "edition": "7",
   "format": "rasniki-hopput-release-hashes",
   "outputs": {
+    "EXTRA-COMPLETE.md": {
+      "sha256": "2ad95bda9700e5740130266c143a7776b0bc7dae4201535ad7e6095dd3eb2cc0",
+      "size": 744737
+    },
     "MAX-LAW.md": {
-      "sha256": "045c3eec25aad1e7acceaba52124b7ab9bfe68075fa66bc1d312fd12188e4a55",
-      "size": 743638
+      "sha256": "9fd8c88413622d67ea1ca9fd3171c5fe6d60ed1dcaa78a0dbb506835eb6f01af",
+      "size": 743746
     },
     "MAX-LAWFUL.md": {
-      "sha256": "42b55ca4c57659d8c3a6be8710f6a8810c3e5e12234867c1a828cf8b8818a8b8",
-      "size": 743677
+      "sha256": "91f3d67b36bf2d714d146b8caf2af91584c0edf8a7ea8cf872a4221f3dc24a8f",
+      "size": 743785
     },
     "MAX-RAW.md": {
-      "sha256": "0bbc6169f33c1db79e85cdc07b18fee910fc17a3edcdc13fcf01495de12ef06f",
-      "size": 743567
+      "sha256": "fe99b2c4f771dd96535d88f8b981cc26a75afa35c480acd6527208d30b4ff92c",
+      "size": 743675
     },
     "MAX-RAWFUL.md": {
-      "sha256": "983922a4d89fd3453d61b6b7e4064b47ce744c3ec7a5173718a1f3fb08b0d257",
-      "size": 743550
+      "sha256": "35a2e0cabbe12d8c94c6298fa1d7014621086babd22ea64158b50ee43d23e466",
+      "size": 743658
     },
     "PUBLICATION.md": {
-      "sha256": "ea9aae55a5a6d8b6f813ceb29f9fff7032af29ca8f6605ba928973fc21ee4095",
-      "size": 743041
+      "sha256": "a467bc218bfcf23e5f5d8623e7ed8f86c5ce07e19b8b8b66560ed9f1f1111d9f",
+      "size": 743149
     },
     "catalogue.json": {
-      "sha256": "d90e2596870453267ae927fa7b6c346bd2336c422741a6973a28e440326d8bdd",
-      "size": 22664
+      "sha256": "c55ec55dcab51d0f2f3a0618d470642dd7c4047f17dc89e72555682e44691752",
+      "size": 22833
     },
     "index.html": {
-      "sha256": "2d427aabd4449910f7663b5ffad2f09b58aa6c8e225fb4f2dc177e5b9f87c4e6",
-      "size": 991798
+      "sha256": "f309f2df11bc17f7ce1849e2121babcaf3987c2ae20f9ef9dc6ca4c761e19f1b",
+      "size": 991856
     },
     "reader-data.json": {
-      "sha256": "920996cfbbc3b9f8cdf4135909ce70ed0e7d9aa90d793e4f62f41dfe3379b507",
+      "sha256": "13db70b8fd1abb6b88dd87e3209c95cb8384f2f91d58fed52cd88d66520c952f",
       "size": 1046283
     },
     "sources.zip": {
-      "sha256": "cea06684bc3fc3056fdae877e9e061cce0d953b8414c6680b3c8f278390f2775",
+      "sha256": "68d87a5a02cca66655a681b05677043b5b787addd9fda412dfbe865611957068",
       "size": 9424335
     }
   },
   "self_hash": "Excluded to avoid a circular hash; hash this file independently when archiving the release.",
   "source_lock": {
-    "sha256": "50a441427ba784f71578bbd651b934f0a8fb63cd6abc86fc53b0abcc54e412d3",
+    "sha256": "993c5e47d27b326c377f5c7c59a724981b0c4f6489e7196545372af41303bb41",
     "size": 44037
   },
   "version": 1

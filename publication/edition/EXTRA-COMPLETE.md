@@ -1,13 +1,30 @@
-# Max Raw — full collection
+# Extra complete publication — edition 7
 
-Publication edition 7.
+This additional volume combines Max Rawful, Max Raw, Max Law and Max Lawful reading guides with the full collected prose. All previously documented implementation, consent, privacy and verification limits remain in force. Legal labels are not compliance certification.
+
+## Four reading guides
+
+### Max Rawful
+
+Read each retained source together with its provenance and implementation status. Keep the complete record visible, including unresolved vocabulary, fictional terminology and finite verification limits.
+
+### Max Raw
 
 Read the unabridged collected Markdown text as recorded. This is a textual reading edition, not camera RAW, executable firmware or an alternative source snapshot. Exact binary and original file bytes remain in sources.zip.
 
-All four editions retain the same complete collected body below. Their review guides differ; they do not introduce new implemented capabilities or remove source limitations. Historical original file bytes and licences remain in sources.zip.
+### Max Law
+
+Review ownership and licensing, consent and personal-data handling, platform access terms, consumer claims, financial representations and jurisdiction-specific duties for every relevant chapter. No jurisdiction or legal clearance is assumed; obtain qualified advice before making legal claims.
+
+### Max Lawful
+
+Use documented permissions, original or licensed assets, reversible consent, authorised access and preserved audit evidence. Keep simulations and proposed features labelled. Record which applicable rules were actually reviewed, by whom and when; decline to claim compliance without that evidence. This label is not certification.
+
+## Complete collected publication
+
+The complete standard body follows once, preserving every included document and source reference.
 
 ---
-
 # Rasniki Hopput — Max Greatest Exact Sciencerainbow, Exact Finalisable Catch, Finalisable Exact Final Quilt, Max Greatest Aimat, Max Rawful Omniarchy
 
 ## Lair of Lairs — Recursive Form, Format and Formate

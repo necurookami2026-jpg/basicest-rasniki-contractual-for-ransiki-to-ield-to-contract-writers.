@@ -66,3 +66,5 @@ Media archive conversion and checked repository upkeep are documented in [standa
 Edition 5 adds the [offline adult romance and personal comfort proposal](docs/OFFLINE-ADULT-ROMANCE-AND-COPING.md) to the standard publication alongside all prior chapters. It describes fictional adult, non-explicit creative formats and local privacy requirements; generation software is a proposal, not an implemented feature.
 
 Edition 6 includes four complete reading editions: [Max Rawful](publication/edition/MAX-RAWFUL.md), [Max Raw](publication/edition/MAX-RAW.md), [Max Law](publication/edition/MAX-LAW.md) and [Max Lawful](publication/edition/MAX-LAWFUL.md). Each retains the full collected prose, with a different review guide. Legal edition labels are not compliance certification.
+
+Edition 7 adds an [extra complete publication volume](publication/edition/EXTRA-COMPLETE.md), bringing all four reading guides and the full prior collection into one document.

@@ -1,6 +1,6 @@
 # Max Rawful — full collection
 
-Publication edition 6.
+Publication edition 7.
 
 Read each retained source together with its provenance and implementation status. Keep the complete record visible, including unresolved vocabulary, fictional terminology and finite verification limits.
 
@@ -12,7 +12,7 @@ All four editions retain the same complete collected body below. Their review gu
 
 ## Lair of Lairs — Recursive Form, Format and Formate
 
-Edition 6.
+Edition 7.
 
 This reproducible offline edition verifies 254 pinned files (9342556 bytes) in 4 source snapshots.
 
@@ -32,6 +32,7 @@ The ministry’s fictional Kerot vocabulary remains distinct from the executable
 - `index.html`: self-contained searchable reader; Markdown is displayed as inert text.
 - `reader-data.json`: deduplicated Markdown text, retained source references, seven reading chambers and a bounded recursively nested file tree.
 - `catalogue.json`: sorted sources, terms and components.
+- `EXTRA-COMPLETE.md`: extra combined volume with all four reading guides and the complete collected prose.
 - `MAX-RAWFUL.md`, `MAX-RAW.md`, `MAX-LAW.md`, `MAX-LAWFUL.md`: four full-collection reading editions with distinct editorial review guides.
 - `sources.zip`: exact original files under each repository ID, including licenses and binary bytecode; `_publication/source-lock.json` preserves the registry.
 - `release-hashes.json`: SHA-256 and byte sizes for the other outputs, source lock and included current editorial inputs.
