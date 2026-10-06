@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Rasniki Orange Instagram Saver",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Save loaded Instagram media with orange single and bulk controls.",
   "permissions": [
     "downloads",

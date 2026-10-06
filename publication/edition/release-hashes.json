@@ -24,6 +24,10 @@
       "sha256": "adb2d0b0e70315e83c6612a8a62dd20e032cabca38fc0ebc2b581dd8dc506a00",
       "size": 7023
     },
+    "docs/MEDIA-STANDARDISATION-AND-UPDATES.md": {
+      "sha256": "b1222945f69a4e6015eb1fc68b2de79518ff86db153cc1918e03d0e7f98618a1",
+      "size": 6605
+    },
     "docs/MINISTRY.md": {
       "sha256": "78f0259b82eab2ef93f360a62e671d3a1a4ac9429e7afd2353a13b390648abfd",
       "size": 8193
@@ -152,38 +156,42 @@
       "sha256": "f17f8fbd552cfe200b95e945f9c53e2ef245055330883c500c161dbd335c2d2a",
       "size": 3259
     },
+    "extensions/instagram-orange/README.md": {
+      "sha256": "682b66a5a4c7cdf0c7ad024c41dfb0f52ce368d248be9ad5ffb399241514e376",
+      "size": 3659
+    },
     "publication/catalogue-source.json": {
-      "sha256": "8c77c81d9106118ebcdf9c792276670e7fcf29f1d60f6b2910de0dafeb7460ae",
-      "size": 778344
+      "sha256": "7687f1ce69d7664aa6f0c15452d1ca8c34675ac4d7f52794468d81cdd39d7a6e",
+      "size": 779012
     }
   },
-  "edition": "3",
+  "edition": "4",
   "format": "rasniki-hopput-release-hashes",
   "outputs": {
     "PUBLICATION.md": {
-      "sha256": "a96161cdf12bfd291501a2adcea1c681c7b992084e4d29251734662285dde3d6",
-      "size": 723542
+      "sha256": "d52ff651218fe1b8a167b5457958f26cad60af84d833144b6de74d05afc88bb5",
+      "size": 734392
     },
     "catalogue.json": {
-      "sha256": "b5da23e00e5427c81c1314e1a13296b71a922c0e3165a4fb361743fa34b6e3fd",
-      "size": 21079
+      "sha256": "f84404af6fb55e9ff3c8f585278e0803847bac10bfdd2a414f9f38843f3e0c2c",
+      "size": 21747
     },
     "index.html": {
-      "sha256": "331cf985a2da5374ce1ba7457b6de4986dd1bb3c3b0075187181d75af25ae34a",
-      "size": 968709
+      "sha256": "57ef4e105aa6e0870d7bd240da7e534e5e0f7f1bfbd125b17673b045232950ad",
+      "size": 981706
     },
     "reader-data.json": {
-      "sha256": "44bd19245175355ef014590dd5c07fd1f7b94619c8317d69d89cec8ff7445739",
-      "size": 1022042
+      "sha256": "85f22dc4301e9567b9e35454d9fd00ca720dc6f2d017ad85ea19b90f76d48090",
+      "size": 1035807
     },
     "sources.zip": {
-      "sha256": "230e9ab228bf3f773de5a07d584966c9313562728c24966d77de6525dcca4bf3",
+      "sha256": "b20f7f99fa143ff53c1f2a88e3d88ca8ba5910d2e2786deb5ac81945741b5b39",
       "size": 9424335
     }
   },
   "self_hash": "Excluded to avoid a circular hash; hash this file independently when archiving the release.",
   "source_lock": {
-    "sha256": "38053c87e2dc0f7bb0c5dcbe1ad42b5a2da41407315c81ab5aea42d2639c748d",
+    "sha256": "6a7cacafe6d8f8b83c11a082c8afcc3bd575d8d05fe77de6203df42603f4055a",
     "size": 44037
   },
   "version": 1

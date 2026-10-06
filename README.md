@@ -60,3 +60,5 @@ Boot, UEFI, the OS kernel and DEMO_CREDIT mint are declared simulations. Guardia
 ## Orange Instagram Saver
 
 The original Chrome extension has orange single (↓) and bulk (↓↓↓) controls for loaded session-accessible media. [Installation and limits](extensions/instagram-orange/README.md); [download the extension ZIP](releases/instagram-orange.zip). Bulk is limited to loaded media, with a 200-item cap and cancellation.
+
+Media archive conversion and checked repository upkeep are documented in [standardisation and updates](docs/MEDIA-STANDARDISATION-AND-UPDATES.md), included in standard publication edition 4. Originals are retained; static images use verified TIFF and supported audiovisual media use verified FFV1/FLAC. Desktop installation is required.

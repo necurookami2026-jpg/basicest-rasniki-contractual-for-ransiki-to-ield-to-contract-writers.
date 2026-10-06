@@ -19,3 +19,7 @@ Queue progress and permissions are in memory. Browser/service-worker restart cle
 Run `node tests/instagram-orange/core.cjs` from the repository root. Tests cover URL boundaries, deduplication, cap, authorization, download request, completion and cancellation using a mocked Chrome API. Live Instagram compatibility and Chrome Web Store approval have not been verified.
 
 Design references supplied by the user: Mass Downloader (`ijcemfcomjlamigapfebkgdgehbmjpjj`), Turbo Downloader (`cpgaheeihidjmolbakklolchdplenjai`), Ulti Downloader (`ecocgofdjmiomgmgnchijbghkikolkkl`), Bulk Saver (`gkfioconmfepeapbgohmhdgccfkeddkb`), Reels Extractor (`ngfjkjdigiloiocgjehabfdiopknacmo`) and ToolMaster Downloader (`epocgljljclegljpgjdefgeejhiobnda`). Listing titles were checked where available; the Ulti listing returned only the generic store title. No third-party extension code or assets were copied.
+
+## Automatic standard renditions and upkeep
+
+Install and run the desktop companion described in `docs/MEDIA-STANDARDISATION-AND-UPDATES.md` to watch this extension’s download folder and create verified TIFF/FFV1/FLAC renditions while preserving originals. The extension downloads source bytes; conversion is performed by the companion. The checked repository updater tests candidates before fast-forwarding. An unpacked extension still requires Chrome reload; automatic Web Store distribution is not configured.

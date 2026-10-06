@@ -28,6 +28,7 @@ OUTPUT_NAMES = (
     'sources.zip', 'release-hashes.json',
 )
 CURRENT_DOCUMENTS = (
+    'docs/MEDIA-STANDARDISATION-AND-UPDATES.md', 'extensions/instagram-orange/README.md',
     'docs/BOOTSTRAP.md', 'docs/CONFLICT-PROTECTION-LIBRARY.md', 'docs/IMPLEMENTATION.md',
     'docs/LAIR-OF-LAIRS.md', 'docs/MINISTRY.md', 'docs/OMNIARCHY.md', 'docs/PROVENANCE.md',
     'docs/SPIRITUAL-SYMBOLIC-WORKBENCH.md', 'docs/conflict/README.md',

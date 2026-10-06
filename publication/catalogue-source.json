@@ -11,6 +11,11 @@
       "scope": "Intranet read-only jobs and HTTPS internet fetch to operator-configured hosts"
     },
     {
+      "id": "checked-maintenance",
+      "status": "implemented-local",
+      "scope": "Isolated candidate tests, clean fast-forward updates, optional Linux user service installer and weekly CI; browser store distribution not configured"
+    },
+    {
       "id": "conflict-protection-library",
       "status": "editorial-templates",
       "scope": "Finite consent, accessibility, civilian-support, de-escalation and review documents; no guaranteed perpetual protection"
@@ -66,6 +71,11 @@
       "scope": "Sorted source locks, documentation, offline reader and reproducible source archive"
     },
     {
+      "id": "instagram-orange",
+      "status": "implemented-unpacked",
+      "scope": "Orange single and bulk loaded-media saver; follower assertion; no live-account compatibility verification"
+    },
+    {
       "id": "internet-server",
       "status": "local-only",
       "scope": "HTTP desktop/API binds IPv4 loopback; public hosting and TLS termination not deployed"
@@ -89,6 +99,11 @@
       "id": "madrigal-os",
       "status": "simulated",
       "scope": "Local web desktop and hosted services; upstream spells the proposed OS Magrigal"
+    },
+    {
+      "id": "media-standardisation",
+      "status": "implemented-local-companion",
+      "scope": "Original-preserving verified TIFF, FFV1, FLAC and float PCM WAV; desktop installation required"
     },
     {
       "id": "ministry-archive",

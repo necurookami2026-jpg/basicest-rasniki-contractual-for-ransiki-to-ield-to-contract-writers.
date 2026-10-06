@@ -71,6 +71,7 @@ def main(argv=None):
         run('instagram-content-syntax',['node','--check','extensions/instagram-orange/content.js'])
         run('instagram-popup-syntax',['node','--check','extensions/instagram-orange/popup.js'])
         run('instagram-package',[sys.executable,'tools/package_instagram.py'])
+        run('maintenance-script-syntax',[sys.executable,'-m','py_compile','tools/media_standardize.py','tools/checked_update.py','tools/install_media_maintenance.py'])
         run('desktop-script-syntax',['node','--check','madrigal_lab/web/app.js'])
         run('workbench-script-syntax',['node','--check','madrigal_lab/web/workbench.js'])
         run('media-script-syntax',['node','--check','madrigal_lab/web/media-studio.js'])

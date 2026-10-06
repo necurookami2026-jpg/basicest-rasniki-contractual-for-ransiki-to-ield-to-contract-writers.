@@ -451,6 +451,19 @@
       "title": "docs/MEDIA-DATA-RENDITION.md — Current publication documentation"
     },
     {
+      "sha256": "b1222945f69a4e6015eb1fc68b2de79518ff86db153cc1918e03d0e7f98618a1",
+      "sources": [
+        {
+          "kind": "editorial-document",
+          "name": "Current publication documentation",
+          "path": "docs/MEDIA-STANDARDISATION-AND-UPDATES.md",
+          "repository": "current-editorial"
+        }
+      ],
+      "text": "# Media standardisation and checked maintenance\n\nThe Orange Instagram Saver supplies orange single-down-arrow and triple-down-arrow bulk controls, a follower/permission assertion, a 200-item loaded-media cap and cancellation. The Chrome popup is its app interface. It uses session-accessible loaded media rather than claiming an entire account archive. Source is in `extensions/instagram-orange`; the installable unpacked bundle is `releases/instagram-orange.zip`. No third-party extension code is used. See the included extension README for installation, access, queue and listing-reference details.\n\n## Original and standard rendition\n\nQuality means preserving the available source and testing the conversion, rather than inventing missing detail. The companion `tools/media_standardize.py` retains originals and SHA-256 receipts. Static RGB/RGBA/grayscale images become losslessly compressed TIFF after orientation normalisation; embedded ICC profiles are carried over. It verifies pixel equality. It refuses animation and unsupported colour modes instead of flattening them. It does not manufacture camera RAW, increase source bit depth, upscale images, repair Instagram compression or promise every metadata tag survives. Original files remain the metadata authority.\n\nVideo becomes Matroska with FFV1 video and FLAC integer audio or PCM floating-point audio. Integer audio alone becomes FLAC; floating-point audio becomes WAV with its decoded sample precision preserved. FFmpeg compares decoded frame/sample hashes before a result is marked verified. Unsupported stream types and conversion failures leave the original intact. These archive formats can be much larger than Instagram MP4/JPEG files and require compatible players. A 512 MiB input cap and ten-minute subprocess timeouts bound individual conversions; output disk space is still required. This is decoded-media preservation, not lossless recovery of an earlier camera source.\n\nOn a Linux desktop install Python 3.10+, Pillow and FFmpeg (for example `sudo apt install python3-pil ffmpeg`). From this repository run:\n\n```\npython3 tools/media_standardize.py \"$HOME/Downloads/RasnikiInstagram\" --watch\n```\n\nUse the actual Chrome download directory if customised. The process waits for stable filenames/sizes, ignores temporary browser downloads and writes a `standardized` subdirectory. Keep it running for automatic conversion upon download. On other platforms install equivalent tools and supply the appropriate directory. This cloud instance cannot install or start software on your personal computer. The companion needs explicit desktop installation; no passwords, native-message bridge or background remote-code loader is installed by the extension.\n\nOne file can also be converted using `python3 tools/media_standardize.py /path/to/file --output /path/to/archive`. Receipts include source and output hashes, finite verification status and an explicit statement that detail was not recovered. Failures are reported and originals remain available.\n\nFor automatic startup and daily checked updates on a Linux desktop with systemd user services, use a dedicated clean repository checkout and run:\n\n```\npython3 tools/install_media_maintenance.py --downloads \"$HOME/Downloads/RasnikiInstagram\"\n```\n\nThis installs and starts `rasniki-media.service` and `rasniki-update.timer` for the current user. A successful checked update restarts the watcher so it uses new code. It does not restart other apps or overwrite existing service files. The user service manager must be available; startup before login requires the desktop administrator's normal user-service configuration. Inspect logs with `journalctl --user -u rasniki-media -u rasniki-update`; stop automation with `systemctl --user disable --now rasniki-update.timer rasniki-media.service`. This installer has not been run on your desktop or enabled in the cloud instance.\n\n## Updating through input/output\n\n`python3 tools/checked_update.py --check-only` checks the configured Git origin/main. `python3 tools/checked_update.py` tests a fetched candidate in a disposable clone using the complete bootstrap, then permits only a fast-forward of a clean checkout. It refuses local edits, divergent histories, failed tests and changes during validation. Preserve `.lab-state`; restart running app/companion processes after an update. This workflow trusts maintainers of the configured origin; passing tests is not a proof that arbitrary code is safe. It never imports code from media files or changes the immutable historical snapshots.\n\nTo automate desktop repository updates, schedule that command with your OS scheduler from a dedicated clean checkout. For example a user crontab can invoke `/usr/bin/python3 /absolute/repository/path/tools/checked_update.py` daily and append output to a local maintenance log. Scheduling is an installation choice on the user's machine; no cron service has been installed by this publication. Review failure logs. Test candidates may need the same optional codec dependencies as the existing checkout. Weekly GitHub Actions also runs bootstrap and verifies reproducible publication and extension outputs, alongside push and pull-request checks. Repository maintainers must repair newly discovered failures; scheduling tests cannot guarantee future Instagram layouts or platform compatibility.\n\nChrome does not automatically refresh a developer-mode unpacked extension from GitHub. After a repository update, reload it on Chrome's Extensions page and reload Instagram pages. Automatic browser-managed extension updates require a Chrome Web Store release or a properly configured enterprise distribution/update service. Neither is established here. No remote scripts are fetched into the extension, and no silent self-installation is attempted. Browser-managed updates must be configured before they can be claimed operational.\n\n## Acceptance and requested quality labels\n\nThe requested “ostar”, “lair”, “max”, “greatest” and “surasuch” labels remain editorial names, not recognised media measurements or a compatibility warranty. Operational acceptance consists of pixel/hash comparisons, input limits, permission checks, queue tests, pinned-source integrity, deterministic packaging, publication checks and scheduled regression tests. Live Instagram layout tests, personal-desktop watcher startup and Web Store automatic updates are distinct checks which have not been performed by this cloud publication. Original-source preservation and explicit failures take priority over presenting an unverified conversion as improved quality.\n",
+      "title": "docs/MEDIA-STANDARDISATION-AND-UPDATES.md — Current publication documentation"
+    },
+    {
       "sha256": "78f0259b82eab2ef93f360a62e671d3a1a4ac9429e7afd2353a13b390648abfd",
       "sources": [
         {
@@ -585,6 +598,19 @@
       ],
       "text": "# Validation record — 6 October 2026\n\nThe following checks executed in the cloud machine for this release:\n\n| Check | Observed result |\n| --- | --- |\n| New lab suite | 19 tests passed, including HTTP workflows, path rejection, symlink-root rejection, persistence and concurrent double-spend rejection. |\n| Quilt payload coverage | All 30 Boolean payloads across eight modes executed; all four exact-addition pairs returned the expected sums. |\n| Rasnikism full bootstrap, in a writable source copy | 16 Python tests and 12 JavaScript suite files passed; publications rebuilt and the example emitted `REFRAME DECISION RECORDED`. |\n| Guardian upstream suite | 14 tests passed. The error printed by its incomplete-baseline fixture was an expected tested condition. |\n| Vendored source integrity | All 111 listed source files matched the supplied provenance SHA-256 hashes. |\n| Browser workflow | Compilation/run, boot simulation, storage/scanning, demo economy, intranet bot, game, glossary, curriculum, mobile width and upstream history studio passed with no page errors. |\n| Live HTTPS bot | An explicitly enabled read-only request to `example.org` returned HTTP 200 and 577 bytes with TLS verification enabled. The desktop’s internet bot remains disabled by default. |\n| Saved startup instructions | Health and a compiled K0 `ready` program passed on the running local service. |\n| Recursive project scan | Complete scan of 153 files, zero errors, five review indicators. See explanation below. |\n\nThe project scan used Guardian unchanged and returned review status 1, rather than a clean verdict. Four findings are detection-token strings in Guardian’s mechanics and synthetic detection fixtures in its test suite. One informational finding is the harmless EICAR marker in Guardian’s generated Python bytecode. These locations were reviewed against their source and the recorded upstream hashes. The report stays outside the scanned root at `/tmp/rasniki-project-scan.json`; no files were deleted, quarantined or altered in response to findings. Counts describe that run, including local generated/state files, rather than a permanent repository file count.\n\nThe first browser harness attempted an eval-based wait blocked by the desktop’s Content Security Policy. The harness was corrected to use DOM locator assertions; the application policy was retained. The final browser workflow passed after the bot-inspection changes and a service restart.\n\nThese checks validate the finite hosted implementation. Native boot, UEFI firmware execution, hardware virtualisation, a protected OS kernel, public DNS/hosting, real finance and universal scientific correctness were not tested or implemented.\n",
       "title": "docs/VALIDATION.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers."
+    },
+    {
+      "sha256": "682b66a5a4c7cdf0c7ad024c41dfb0f52ce368d248be9ad5ffb399241514e376",
+      "sources": [
+        {
+          "kind": "editorial-document",
+          "name": "Current publication documentation",
+          "path": "extensions/instagram-orange/README.md",
+          "repository": "current-editorial"
+        }
+      ],
+      "text": "# Orange Instagram Saver\n\nAn original Manifest V3 Chrome extension and popup app, with orange **↓** single-download and **↓↓↓** bulk-download controls. It saves HTTPS photos and videos already loaded on Instagram pages in your browser session. Open a post, carousel item, reel or story to load its media, confirm permission in the extension popup, then use a button. Batch size is capped at 200; cancellation affects only this extension's downloads.\n\n## Installation\n\nDownload `releases/instagram-orange.zip`, extract it, open Chrome's Extensions page, enable Developer mode, choose **Load unpacked**, and select the extracted directory containing `manifest.json`. Open Instagram and click the extension icon. This repository release is not a Chrome Web Store listing.\n\n## Access and coverage\n\nThe follower checkbox is your assertion, not verified follower status. Instagram controls access through your existing signed-in session. No passwords, cookies, private API requests, access-control bypass, analytics or external service are used. Only Instagram content scripts and CDN media downloads are permitted.\n\nBulk means currently loaded media, not a guaranteed whole-account archive. Scroll or open additional items and repeat. Profile images can be thumbnails rather than full-resolution originals. Lazy carousel items, expired stories, inaccessible content, blob/MSE streams and unloaded videos cannot be saved by this version. Single download selects the first qualifying loaded media in a post, or on the current page for the popup/floating button; review the page first. All batches use original browser `currentSrc` URLs, which may expire. Save only media you own or have permission to copy.\n\nQueue progress and permissions are in memory. Browser/service-worker restart clears permission and progress; already accepted browser downloads continue. Reconfirm permission after a restart. Filenames use predictable numbering and Chrome's conflict handling. No persistent download inventory is collected. Chrome itself maintains its usual download history and files. A failed CDN request is reported by the browser; supported URL shape does not guarantee availability or file encoding. File suffixes are image `.jpg` or video `.mp4`, while the supplied media bytes remain unchanged.\n\n## Validation and design references\n\nRun `node tests/instagram-orange/core.cjs` from the repository root. Tests cover URL boundaries, deduplication, cap, authorization, download request, completion and cancellation using a mocked Chrome API. Live Instagram compatibility and Chrome Web Store approval have not been verified.\n\nDesign references supplied by the user: Mass Downloader (`ijcemfcomjlamigapfebkgdgehbmjpjj`), Turbo Downloader (`cpgaheeihidjmolbakklolchdplenjai`), Ulti Downloader (`ecocgofdjmiomgmgnchijbghkikolkkl`), Bulk Saver (`gkfioconmfepeapbgohmhdgccfkeddkb`), Reels Extractor (`ngfjkjdigiloiocgjehabfdiopknacmo`) and ToolMaster Downloader (`epocgljljclegljpgjdefgeejhiobnda`). Listing titles were checked where available; the Ulti listing returned only the generic store title. No third-party extension code or assets were copied.\n\n## Automatic standard renditions and upkeep\n\nInstall and run the desktop companion described in `docs/MEDIA-STANDARDISATION-AND-UPDATES.md` to watch this extension’s download folder and create verified TIFF/FFV1/FLAC renditions while preserving originals. The extension downloads source bytes; conversion is performed by the companion. The checked repository updater tests candidates before fast-forwarding. An unpacked extension still requires Chrome reload; automatic Web Store distribution is not configured.\n",
+      "title": "extensions/instagram-orange/README.md — Current publication documentation"
     },
     {
       "sha256": "2af53714c3ab5c3451eb35c22929d7a653cfb6465f0a6bd0204dda744407d777",
@@ -1342,14 +1368,14 @@
       "title": "vendor/rasnikism/UPSTREAM.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers."
     }
   ],
-  "edition": "3",
+  "edition": "4",
   "format": "rasniki-offline-reader",
   "lair": {
-    "editorial_file_count": 38,
+    "editorial_file_count": 40,
     "format": "rasniki-lair-tree",
     "max_depth": 32,
     "max_nodes": 4096,
-    "node_count": 321,
+    "node_count": 325,
     "nodes": [
       {
         "children": [
@@ -5790,7 +5816,8 @@
       },
       {
         "children": [
-          "lair-directory-d58aadfe0fff3baf6df58f454d50bfda086f3511f5f13cb2840351a9caefcaaa"
+          "lair-directory-d58aadfe0fff3baf6df58f454d50bfda086f3511f5f13cb2840351a9caefcaaa",
+          "lair-directory-dec4a56608c5c7700c213d1e80a5ecc7bc633d344f37b901588588ab9253870c"
         ],
         "depth": 1,
         "id": "lair-editorial",
@@ -5810,6 +5837,7 @@
           "lair-file-894cfca73c9b535be5a7572c14bb07d71a7ca7954ce1a01b34e136b148f7040b",
           "lair-file-5ef90977312b547091a4fec90fb62cd4fb678119380f87c0c92551da8965a44d",
           "lair-file-cc274bdaa8f1533644746e048b26fde0041141471894fc310cb6577fe4f377cd",
+          "lair-file-cc165de9b7d21e30741f89fa0c99abbc32b98c960ef64dbb4bc2dc9e71fbfc67",
           "lair-file-cf326b376f5cfd369f973f4321622a73db29c9c9f65984d3ddb0c1caa80d7388",
           "lair-file-be678b61fcc1ee38906add156c6d747d92f4251a7d13d2b7e4e7b3b1622fac5b",
           "lair-file-573a165c38532c30b0aee7e1d3e5119c0ba0f21727b570b6a242d701b06b5e0c",
@@ -5916,6 +5944,21 @@
         "repository": "current-editorial",
         "sha256": "adb2d0b0e70315e83c6612a8a62dd20e032cabca38fc0ebc2b581dd8dc506a00",
         "size": 7023
+      },
+      {
+        "archive_path": null,
+        "children": [],
+        "content_kind": "editorial-markdown",
+        "depth": 3,
+        "document_sha256": "b1222945f69a4e6015eb1fc68b2de79518ff86db153cc1918e03d0e7f98618a1",
+        "id": "lair-file-cc165de9b7d21e30741f89fa0c99abbc32b98c960ef64dbb4bc2dc9e71fbfc67",
+        "kind": "file",
+        "name": "MEDIA-STANDARDISATION-AND-UPDATES.md",
+        "parent": "lair-directory-d58aadfe0fff3baf6df58f454d50bfda086f3511f5f13cb2840351a9caefcaaa",
+        "path": "docs/MEDIA-STANDARDISATION-AND-UPDATES.md",
+        "repository": "current-editorial",
+        "sha256": "b1222945f69a4e6015eb1fc68b2de79518ff86db153cc1918e03d0e7f98618a1",
+        "size": 6605
       },
       {
         "archive_path": null,
@@ -6442,6 +6485,45 @@
         "repository": "current-editorial",
         "sha256": "f17f8fbd552cfe200b95e945f9c53e2ef245055330883c500c161dbd335c2d2a",
         "size": 3259
+      },
+      {
+        "children": [
+          "lair-directory-bb34dc33b918dabffdd5c2896450f6bb579d7d2cd1fc4a086ffba673d65836e6"
+        ],
+        "depth": 2,
+        "id": "lair-directory-dec4a56608c5c7700c213d1e80a5ecc7bc633d344f37b901588588ab9253870c",
+        "kind": "directory",
+        "name": "extensions",
+        "parent": "lair-editorial",
+        "path": "extensions",
+        "repository": "current-editorial"
+      },
+      {
+        "children": [
+          "lair-file-4a1d8c8df281c0c90852345b119ec8fc867834839be930d7b711fad131ba41e9"
+        ],
+        "depth": 3,
+        "id": "lair-directory-bb34dc33b918dabffdd5c2896450f6bb579d7d2cd1fc4a086ffba673d65836e6",
+        "kind": "directory",
+        "name": "instagram-orange",
+        "parent": "lair-directory-dec4a56608c5c7700c213d1e80a5ecc7bc633d344f37b901588588ab9253870c",
+        "path": "extensions/instagram-orange",
+        "repository": "current-editorial"
+      },
+      {
+        "archive_path": null,
+        "children": [],
+        "content_kind": "editorial-markdown",
+        "depth": 4,
+        "document_sha256": "682b66a5a4c7cdf0c7ad024c41dfb0f52ce368d248be9ad5ffb399241514e376",
+        "id": "lair-file-4a1d8c8df281c0c90852345b119ec8fc867834839be930d7b711fad131ba41e9",
+        "kind": "file",
+        "name": "README.md",
+        "parent": "lair-directory-bb34dc33b918dabffdd5c2896450f6bb579d7d2cd1fc4a086ffba673d65836e6",
+        "path": "extensions/instagram-orange/README.md",
+        "repository": "current-editorial",
+        "sha256": "682b66a5a4c7cdf0c7ad024c41dfb0f52ce368d248be9ad5ffb399241514e376",
+        "size": 3659
       }
     ],
     "root_id": "lair-collection",
