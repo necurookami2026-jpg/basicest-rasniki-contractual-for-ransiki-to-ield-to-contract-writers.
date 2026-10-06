@@ -1,3 +1,17 @@
+# Rasniki Hopput — Lair of Lairs
+
+*Max Greatest Exact Sciencerainbow · Exact Finalisable Catch · Finalisable Exact Final Quilt · Max Greatest Aimat*
+
+A recursively organised, sorted four-source publication of the Rasnikism collection, Guardian, contractual editions and fictional Ministry Archive. [Read the combined edition](publication/edition/PUBLICATION.md), [open the offline reader](publication/edition/index.html), or [download the pinned sources](publication/edition/sources.zip).
+
+```sh
+sh bootstrap.sh
+```
+
+The [bootstrap contract](docs/BOOTSTRAP.md), [source lock](publication/source-lock.json), [Lair of Lairs prose](docs/LAIR-OF-LAIRS.md), [reformed publication prose](docs/OMNIARCHY.md) and [ministry volume](docs/MINISTRY.md) identify construction steps, finite checks and the status of each source. Edition labels do not establish universal scientific proof or sovereign authority.
+
+---
+
 # basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers.
 basicest rasniki contractual for ransiki to ield to contract writers. oligarhy aka wolf children quality all u aneed write is thisf ro coampnies and or leagues.
 
@@ -29,3 +43,8 @@ Boot, UEFI, the OS kernel and DEMO_CREDIT mint are declared simulations. Guardia
 [Validation results](docs/VALIDATION.md) record the executed checks and remaining boundaries.
 
 ![Rasniki Madrigal local desktop](docs/desktop.png)
+
+
+[Combined edition validation](publication/VALIDATION.md) records the final bootstrap and reader checks.
+
+![Local Lair of Lairs reader](docs/lair-reader.png)

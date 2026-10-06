@@ -220,8 +220,19 @@ class HTTPTests(unittest.TestCase):
         self.assertEqual(self.request('GET','/api/session',headers={'Host':'evil.example'})[0],403)
         self.assertEqual(self.action('read',{'path':'../outside'})[0],400)
         self.assertEqual(self.action('internet-bot',{'url':'https://example.org'})[0],400)
-        for path in ('/.git/config','/collection/../../README.md','/collection/.git/config'):
+        for path in ('/.git/config','/collection/../../README.md','/collection/.git/config','/publication/../source-lock.json','/ministry/../../README.md'):
             self.assertNotEqual(self.request('GET',path)[0],200)
+
+    def test_ministry_static_route_and_script_policy(self):
+        status,body=self.request('GET','/ministry/')
+        self.assertEqual(status,200)
+        self.assertIn(b'The Final',body)
+        c=http.client.HTTPConnection('127.0.0.1',self.port,timeout=5)
+        c.request('GET','/ministry/')
+        response=c.getresponse();response.read()
+        policy=response.getheader('Content-Security-Policy');c.close()
+        self.assertIn("'sha256-",policy)
+        self.assertNotIn("script-src 'self' 'unsafe-inline'",policy)
 
     def test_session_catalogue_and_missing_action(self):
         self.assertEqual(self.request('GET','/api/session')[0],200)

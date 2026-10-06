@@ -1,7 +1,10 @@
 """Loopback desktop/API with bounded requests and a per-session write token."""
 import argparse
+import base64
+import hashlib
 import hmac
 import json
+import re
 import secrets
 import threading
 import urllib.parse
@@ -89,8 +92,14 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header('X-Content-Type-Options','nosniff')
         self.send_header('Cache-Control','no-store')
         self.send_header('Referrer-Policy','no-referrer')
-        # Upstream pages contain inline scripts; only the lab desktop uses this restrictive policy.
-        if not self.path.startswith('/collection/'):
+        if self.path.startswith(('/publication/','/ministry/')) and content_type.startswith('text/html'):
+            # Permit only the script bytes in the reviewed or generated page.
+            hashes=[]
+            for script in re.findall(rb'<script\b[^>]*>([\s\S]*?)</script>',body,re.I):
+                hashes.append("'sha256-"+base64.b64encode(hashlib.sha256(script).digest()).decode()+"'")
+            policy="default-src 'self'; script-src 'self' "+' '.join(hashes)+"; style-src 'self' 'unsafe-inline'; img-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'"
+            self.send_header('Content-Security-Policy',policy)
+        elif not self.path.startswith('/collection/'):
             self.send_header('Content-Security-Policy',"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'")
         self.end_headers()
         self.wfile.write(body)
@@ -106,6 +115,10 @@ class Handler(BaseHTTPRequestHandler):
             if path=='/api/health':return self.send(200,{'status':'ok','local_only':True})
             if path.startswith('/collection/'):
                 base=ROOT/'vendor'/'rasnikism';relative=path.removeprefix('/collection/')
+            elif path.startswith('/publication/'):
+                base=ROOT/'publication'/'edition';relative=path.removeprefix('/publication/') or 'index.html'
+            elif path.startswith('/ministry/'):
+                base=ROOT/'vendor'/'internetwomanagementministry'/'site';relative=path.removeprefix('/ministry/') or 'index.html'
             elif path.startswith('/docs/'):
                 base=ROOT/'docs';relative=path.removeprefix('/docs/')
             else:
@@ -114,7 +127,10 @@ class Handler(BaseHTTPRequestHandler):
             if not target.is_relative_to(base.resolve()) or any(p.startswith('.') for p in Path(relative).parts):
                 raise ValueError('Invalid document path')
             types={'.html':'text/html','.js':'text/javascript','.css':'text/css','.md':'text/plain','.json':'application/json','.svg':'image/svg+xml','.io':'text/plain','.kerot':'text/plain','.k0':'application/octet-stream'}
-            if target.suffix not in types or not target.is_file() or target.stat().st_size>8*1024*1024:
+            if path.startswith('/publication/'):
+                types['.zip']='application/zip'
+            maximum=32*1024*1024 if path.startswith('/publication/') else 8*1024*1024
+            if target.suffix not in types or not target.is_file() or target.stat().st_size>maximum:
                 return self.send(404,{'error':'Document not served'})
             return self.send(200,target.read_bytes(),types[target.suffix]+'; charset=utf-8')
         except (OSError,ValueError):return self.send(404,{'error':'Document not available'})

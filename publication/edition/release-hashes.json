@@ -1,0 +1,62 @@
+{
+  "current_editorial_inputs": {
+    "docs/BOOTSTRAP.md": {
+      "sha256": "587cd598e1fd2d248f995fd8ddbb5bf6c025ae9ca1545412f198c8ed6b10bb5c",
+      "size": 3093
+    },
+    "docs/IMPLEMENTATION.md": {
+      "sha256": "973dd9e337ae4d638ee30e7a3c52cab39e0cdbb70eb7429e56bffed88099286c",
+      "size": 11442
+    },
+    "docs/LAIR-OF-LAIRS.md": {
+      "sha256": "f0fb2fa1a51fe52fea0efb181ab20b2b814c3d2de27dff9339ed08ae7642227b",
+      "size": 8591
+    },
+    "docs/MINISTRY.md": {
+      "sha256": "78f0259b82eab2ef93f360a62e671d3a1a4ac9429e7afd2353a13b390648abfd",
+      "size": 8193
+    },
+    "docs/OMNIARCHY.md": {
+      "sha256": "9c52a278b6dd7ded37557346a499fc8a0a9aefc14bca0f2497e5bd1fdca00be8",
+      "size": 8980
+    },
+    "docs/PROVENANCE.md": {
+      "sha256": "c3f9565400fe18b8ba533b3b7d3fb48ebad0f53e7ad7f6b982ada92607300a73",
+      "size": 2714
+    },
+    "publication/catalogue-source.json": {
+      "sha256": "9d09770be572e88f6e039d85734acc0f47ddb151f430ea4ef28b5cc77c1217f1",
+      "size": 15433
+    }
+  },
+  "edition": "1",
+  "format": "rasniki-hopput-release-hashes",
+  "outputs": {
+    "PUBLICATION.md": {
+      "sha256": "a98a33e4727a7b175be631cbfa467c79b7f54b7d196b111b01e70051175b9495",
+      "size": 535444
+    },
+    "catalogue.json": {
+      "sha256": "df6bd268a5fb867e96b408a0249b66e4ceca410b51674f9cfe98e7508ffd99fa",
+      "size": 16627
+    },
+    "index.html": {
+      "sha256": "93539d40c19b2539bc0f7fade1f8d0a5da5c413b1d6cb460ae9262369669d885",
+      "size": 756104
+    },
+    "reader-data.json": {
+      "sha256": "6d944995f9963540a227bcdd2c9ab698dc80272ac19e6bbc58957378fb92d422",
+      "size": 800520
+    },
+    "sources.zip": {
+      "sha256": "9eb53537f1566044da45483bc9de007db7c7eaef82b143aa8ccbbcf029cec6b7",
+      "size": 9424341
+    }
+  },
+  "self_hash": "Excluded to avoid a circular hash; hash this file independently when archiving the release.",
+  "source_lock": {
+    "sha256": "034aa8381f5d3b2b518cd9cd0e231395aac4eab4553d6a761675838aaadffc23",
+    "size": 44043
+  },
+  "version": 1
+}

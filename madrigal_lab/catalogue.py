@@ -26,6 +26,27 @@ for term in ('henapenall', 'counterabolshivik', 'counteraantonymbloshivik', 'blo
              'emrome', 'counteraaantonymspyware', 'counteraaantonymrandomware', 'counter noninterpretable software'):
     GLOSSARY.append({'term': term, 'meaning': None, 'status': 'awaiting-author-definition', 'source': 'user supplied label'})
 
+
+# Publication labels are retained without inventing executable or political powers.
+for term in ('hopput', 'aimat', 'sciencerainbow', 'finalisable catch', 'max greatest', 'omniarchy'):
+    GLOSSARY.append({'term': term, 'meaning': 'Author-supplied publication label; no additional executable or governing semantics are established.', 'status': 'edition-label', 'source': 'user supplied edition title'})
+GLOSSARY += [
+    {'term': 'rawful', 'meaning': 'Direct construction with recorded derivations, as provisionally defined by the project.', 'status': 'source-defined', 'source': 'vendor/rasnikism/KEROT.md'},
+    {'term': 'Kerot (Ministry)', 'meaning': 'Fictional craft of tracing how a change to a thread affects its pattern; distinct from executable K0.', 'status': 'fictional-worldbuilding', 'source': 'vendor/internetwomanagementministry/site/index.html'},
+    {'term': 'Exact Final (Ministry)', 'meaning': 'A preserved version with a recorded boundary and keeper; exact does not mean universal perfection.', 'status': 'fictional-worldbuilding', 'source': 'vendor/internetwomanagementministry/site/index.html'},
+    {'term': 'Final Quilt (Ministry)', 'meaning': 'The fictional living archive of accepted patterns, preserving versions while new branches grow.', 'status': 'fictional-worldbuilding', 'source': 'vendor/internetwomanagementministry/site/index.html'},
+    {'term': 'Hensensual (Ministry)', 'meaning': 'Coined fictional mutual awareness among parts of a composite.', 'status': 'fictional-worldbuilding', 'source': 'vendor/internetwomanagementministry/site/index.html'},
+    {'term': 'Penfinal (Ministry)', 'meaning': 'The fictional reviewable stage before acceptance into the archive.', 'status': 'fictional-worldbuilding', 'source': 'vendor/internetwomanagementministry/site/index.html'},
+]
+
+
+GLOSSARY += [
+    {'term': 'lair', 'meaning': 'A chosen place of attention, rest, creation and return; here a bounded source or document container.', 'status': 'source-defined-with-editorial-application', 'source': 'vendor/rasnikism/LAIR.md'},
+    {'term': 'formate', 'meaning': 'User spelling retained as an editorial label for the selected view of a recorded form; no new instruction.', 'status': 'proposed-presentation-label', 'source': 'docs/LAIR-OF-LAIRS.md'},
+    {'term': 'sureasuch', 'meaning': None, 'status': 'awaiting-author-definition', 'source': 'user supplied label'},
+    {'term': 'asuresuch', 'meaning': None, 'status': 'awaiting-author-definition', 'source': 'user supplied label'},
+]
+
 COMPONENTS = [
     ('language', 'implemented', 'K0 assembler, disassembler, canonical formatter, Ras script compiler and bounded interpreter'),
     ('quilt', 'implemented', 'Eight finite source-backed modes; Boolean inputs are user assertions'),
@@ -45,6 +66,8 @@ COMPONENTS = [
     ('curriculum', 'implemented', 'Five exercises with stated acceptance evidence'),
     ('franchise', 'proposed', 'Derivative manifest and version/authority record; no rights granted'),
     ('sovereignty', 'editorial', 'Fictional governance notes with no grant of political authority'),
+    ('ministry-archive', 'implemented-static', 'Retained fictional archive, seven-term search and four rotating story seeds; no account or ministry integration'),
+    ('hopput-publication', 'implemented-publication', 'Sorted source locks, documentation, offline reader and reproducible source archive'),
 ]
 CURRICULUM = [
     {'cycle': 'Object', 'exercise': 'Compile emit "care", then round-trip its assembly.', 'evidence': 'Equal bytecode before and after canonical formatting.'},
@@ -56,8 +79,8 @@ CURRICULUM = [
 
 
 def catalogue():
-    return {'version': '0.1.0', 'components': [{'id':i,'status':s,'scope':d} for i,s,d in COMPONENTS],
-            'glossary': GLOSSARY, 'curriculum': CURRICULUM,
+    return {'version': '0.1.0', 'components': [{'id':i,'status':s,'scope':d} for i,s,d in sorted(COMPONENTS)],
+            'glossary': sorted(GLOSSARY,key=lambda record:record['term'].casefold()), 'curriculum': CURRICULUM,
             'prototype': 'Python-hosted local lab', 'archetypes': ['maintainer', 'reviewer', 'learner', 'steward'],
             'paradigms': ['bounded execution', 'explicit evidence', 'versioned repair', 'double-entry accounting'],
             'scope': 'Finite tools and simulations; no universal exact-science or native-sovereignty claim'}
