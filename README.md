@@ -64,3 +64,5 @@ The original Chrome extension has orange single (↓) and bulk (↓↓↓) contr
 Media archive conversion and checked repository upkeep are documented in [standardisation and updates](docs/MEDIA-STANDARDISATION-AND-UPDATES.md), included in standard publication edition 4. Originals are retained; static images use verified TIFF and supported audiovisual media use verified FFV1/FLAC. Desktop installation is required.
 
 Edition 5 adds the [offline adult romance and personal comfort proposal](docs/OFFLINE-ADULT-ROMANCE-AND-COPING.md) to the standard publication alongside all prior chapters. It describes fictional adult, non-explicit creative formats and local privacy requirements; generation software is a proposal, not an implemented feature.
+
+Edition 6 includes four complete reading editions: [Max Rawful](publication/edition/MAX-RAWFUL.md), [Max Raw](publication/edition/MAX-RAW.md), [Max Law](publication/edition/MAX-LAW.md) and [Max Lawful](publication/edition/MAX-LAWFUL.md). Each retains the full collected prose, with a different review guide. Legal edition labels are not compliance certification.

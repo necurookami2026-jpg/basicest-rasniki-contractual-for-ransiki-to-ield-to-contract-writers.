@@ -1,3 +1,13 @@
+# Max Lawful — full collection
+
+Publication edition 6.
+
+Use documented permissions, original or licensed assets, reversible consent, authorised access and preserved audit evidence. Keep simulations and proposed features labelled. Record which applicable rules were actually reviewed, by whom and when; decline to claim compliance without that evidence. This label is not certification.
+
+All four editions retain the same complete collected body below. Their review guides differ; they do not introduce new implemented capabilities or remove source limitations. Historical original file bytes and licences remain in sources.zip.
+
+---
+
 # Rasniki Hopput — Max Greatest Exact Sciencerainbow, Exact Finalisable Catch, Finalisable Exact Final Quilt, Max Greatest Aimat, Max Rawful Omniarchy
 
 ## Lair of Lairs — Recursive Form, Format and Formate

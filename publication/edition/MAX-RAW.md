@@ -1,3 +1,13 @@
+# Max Raw — full collection
+
+Publication edition 6.
+
+Read the unabridged collected Markdown text as recorded. This is a textual reading edition, not camera RAW, executable firmware or an alternative source snapshot. Exact binary and original file bytes remain in sources.zip.
+
+All four editions retain the same complete collected body below. Their review guides differ; they do not introduce new implemented capabilities or remove source limitations. Historical original file bytes and licences remain in sources.zip.
+
+---
+
 # Rasniki Hopput — Max Greatest Exact Sciencerainbow, Exact Finalisable Catch, Finalisable Exact Final Quilt, Max Greatest Aimat, Max Rawful Omniarchy
 
 ## Lair of Lairs — Recursive Form, Format and Formate

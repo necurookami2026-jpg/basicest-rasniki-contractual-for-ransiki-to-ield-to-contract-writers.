@@ -227,6 +227,19 @@
       "title": "docs/DEMO-ECONOMY-CONTRACTS.md — Current publication documentation"
     },
     {
+      "sha256": "0eda49d2466ecc061e3a02910910930bbb6f897d19519f4a2fd4bc705781a25a",
+      "sources": [
+        {
+          "kind": "editorial-document",
+          "name": "Current publication documentation",
+          "path": "docs/FOUR-PARALLEL-EDITIONS.md",
+          "repository": "current-editorial"
+        }
+      ],
+      "text": "# Max Rawful, Max Raw, Max Law and Max Lawful editions\n\nThe standard publication now supplies four parallel, unabridged Markdown reading editions of the entire collected prose. Each contains the same full publication body and a distinct introductory review guide. All prior topics remain included: language and bootstrap, defensive scanning, fictional ministry, organisation and governance proposals, practice economy, owner recovery, media and maintenance, conflict support, symbolic reflection, recursive handbooks, the orange Instagram saver, and the non-explicit fictional-adult romance and comfort proposal. Historical source snapshots and their licences remain unchanged.\n\n## Max Rawful\n\nRead the complete record together with provenance, implementation status and unresolved terminology. Keep editorial vocabulary and original source statements visible. The edition does not convert aspirational “max” claims into measured achievements.\n\n## Max Raw\n\nRead the unabridged collected Markdown, without an abridged substitute for the corpus. This is a textual reading format. It does not mean camera RAW, recovered deleted data, native firmware or extra source precision. Exact original binary and text files are separately preserved in the pinned source archive. Editorial framing remains distinguishable from original sources.\n\n## Max Law\n\nUse the full collection as material for legal review. Relevant questions include rights to source code and media, asset licensing, informed consent, data protection, access authorisation, platform terms, advertising claims and the boundary between practice finance and regulated services. A reviewer must identify the applicable jurisdiction and facts. This edition supplies review questions rather than legal advice or a completed assessment.\n\n## Max Lawful\n\nUse the full collection with an operational checklist: document permissions; use original or licensed assets; respect access controls; make participation reversible; retain necessary provenance; identify proposed and simulated functions; and record actual applicable-rule reviews before claiming compliance. Existing capability limits remain in force, including the fictional-adult, non-explicit scope of the romance proposal. No automated generator or real-person sexualisation is introduced by an edition label.\n\n## Reading, maintenance and acceptance\n\nOpen `MAX-RAWFUL.md`, `MAX-RAW.md`, `MAX-LAW.md` or `MAX-LAWFUL.md` from the standard reader's header or the publication directory. Each is generated from the full `PUBLICATION.md` body, not a separate manually maintained copy. The release hash manifest covers each file. Bootstrap checks reproducibility; the checked repository updater regenerates and validates candidate editions through the existing workflow. Browser refresh and desktop installation limits remain documented in the maintenance chapter.\n\n“Max” names coverage within this finite collection. “Law” and “Lawful” are requested edition labels, not findings that all historical source claims, features or proposed uses comply with every law. A legal assessment would require qualified review of a specific use, jurisdiction and current circumstances.\n",
+      "title": "docs/FOUR-PARALLEL-EDITIONS.md — Current publication documentation"
+    },
+    {
       "sha256": "23ec732c7f4ba7d2c56078410010999f98483596484effb5673511cd9ca551a1",
       "sources": [
         {
@@ -1381,14 +1394,14 @@
       "title": "vendor/rasnikism/UPSTREAM.md — necurookami2026-jpg/basicest-rasniki-contractual-for-ransiki-to-ield-to-contract-writers."
     }
   ],
-  "edition": "5",
+  "edition": "6",
   "format": "rasniki-offline-reader",
   "lair": {
-    "editorial_file_count": 41,
+    "editorial_file_count": 42,
     "format": "rasniki-lair-tree",
     "max_depth": 32,
     "max_nodes": 4096,
-    "node_count": 326,
+    "node_count": 327,
     "nodes": [
       {
         "children": [
@@ -5847,6 +5860,7 @@
           "lair-file-6f9247253a6e4578557e9163d4541802378c7651d1b6481f238d587edcd5bb00",
           "lair-file-cb9426308cdfdb42756b7ea60a4e60c9bb6b3a5d6a615e536d7d0ef106ea9375",
           "lair-file-e03a550a3677d264bd7b50a74ae7ef21eda01b2116635fa716b2bee918fdca22",
+          "lair-file-1c307f58500ea2fa94528e95d407b145d50309245a24d027aa8c8b92d637b81a",
           "lair-file-894cfca73c9b535be5a7572c14bb07d71a7ca7954ce1a01b34e136b148f7040b",
           "lair-file-5ef90977312b547091a4fec90fb62cd4fb678119380f87c0c92551da8965a44d",
           "lair-file-cc274bdaa8f1533644746e048b26fde0041141471894fc310cb6577fe4f377cd",
@@ -5913,6 +5927,21 @@
         "repository": "current-editorial",
         "sha256": "dc0ef05ef5da3611dbe92dd2d09f66913bcb6ab8d986def6308cc5374240299b",
         "size": 11476
+      },
+      {
+        "archive_path": null,
+        "children": [],
+        "content_kind": "editorial-markdown",
+        "depth": 3,
+        "document_sha256": "0eda49d2466ecc061e3a02910910930bbb6f897d19519f4a2fd4bc705781a25a",
+        "id": "lair-file-1c307f58500ea2fa94528e95d407b145d50309245a24d027aa8c8b92d637b81a",
+        "kind": "file",
+        "name": "FOUR-PARALLEL-EDITIONS.md",
+        "parent": "lair-directory-d58aadfe0fff3baf6df58f454d50bfda086f3511f5f13cb2840351a9caefcaaa",
+        "path": "docs/FOUR-PARALLEL-EDITIONS.md",
+        "repository": "current-editorial",
+        "sha256": "0eda49d2466ecc061e3a02910910930bbb6f897d19519f4a2fd4bc705781a25a",
+        "size": 3190
       },
       {
         "archive_path": null,

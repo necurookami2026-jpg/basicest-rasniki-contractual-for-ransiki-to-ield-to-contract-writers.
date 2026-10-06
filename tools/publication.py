@@ -26,8 +26,10 @@ MAX_LAIR_NODES = 4096
 OUTPUT_NAMES = (
     'catalogue.json', 'reader-data.json', 'index.html', 'PUBLICATION.md',
     'sources.zip', 'release-hashes.json',
+    'MAX-RAWFUL.md', 'MAX-RAW.md', 'MAX-LAW.md', 'MAX-LAWFUL.md',
 )
 CURRENT_DOCUMENTS = (
+    'docs/FOUR-PARALLEL-EDITIONS.md',
     'docs/OFFLINE-ADULT-ROMANCE-AND-COPING.md',
     'docs/MEDIA-STANDARDISATION-AND-UPDATES.md', 'extensions/instagram-orange/README.md',
     'docs/BOOTSTRAP.md', 'docs/CONFLICT-PROTECTION-LIBRARY.md', 'docs/IMPLEMENTATION.md',
@@ -331,7 +333,7 @@ def _html(reader: dict) -> bytes:
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Rasniki Hopput publication</title><style>
 :root{color-scheme:light dark;font-family:system-ui,sans-serif}body{margin:0 auto;max-width:100rem;padding:1.25rem}h1{font-size:clamp(1.4rem,3vw,2.1rem);overflow-wrap:anywhere}h2{overflow-wrap:anywhere}a{color:LinkText}label{display:block;margin-bottom:.4rem}input{box-sizing:border-box;width:100%;padding:.7rem;font:inherit}main{display:grid;grid-template-columns:minmax(14rem,28%) minmax(0,1fr);gap:1.5rem}aside,article{min-width:0}nav{max-height:42vh;overflow:auto}button{display:block;text-align:left;width:100%;font:inherit;overflow-wrap:anywhere;padding:.6rem;margin:.3rem 0}button[aria-current=true]{font-weight:bold}pre{font:inherit;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.6}#provenance{font-size:.85rem;overflow-wrap:anywhere}#provenance p{margin:.4rem 0}#chambers{display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:.5rem;margin:1rem 0;max-height:none}#chambers button{border:1px solid currentColor;border-top:4px solid var(--accent);border-radius:.3rem}#chambers button:nth-child(1){--accent:#ab5964}#chambers button:nth-child(2){--accent:#b47940}#chambers button:nth-child(3){--accent:#a79446}#chambers button:nth-child(4){--accent:#578967}#chambers button:nth-child(5){--accent:#598ca2}#chambers button:nth-child(6){--accent:#697aaa}#chambers button:nth-child(7){--accent:#9270a4}#lair{max-height:45vh;overflow:auto}#lair details{margin:.3rem 0 .3rem .8rem}#lair summary{cursor:pointer;overflow-wrap:anywhere}#lair button{font-size:.85rem;padding:.3rem}#returns{display:flex;flex-wrap:wrap;gap:.5rem}#returns button{width:auto}#breadcrumb{font-size:.85rem;overflow-wrap:anywhere}#nested-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));gap:.3rem}@media(max-width:700px){main{grid-template-columns:minmax(0,1fr)}nav{max-height:30vh}body{padding:.8rem}} </style></head>
-<body><header><h1 id="title"></h1><h2 id="subtitle"></h2><p>Offline reading edition. Edition labels identify the collection; observed checks establish its finite verification claims.</p><p>The ministry's fictional Kerot vocabulary is distinct from the executable K0 instruction set. Native OS boot and real finance remain simulations.</p><p><a href="PUBLICATION.md">Full prose collection</a> · <a href="catalogue.json">Sorted catalogue</a> · <a href="sources.zip">Exact source archive</a> · <a href="release-hashes.json">Release hashes</a></p><p>Seven chambers offer a reading guide through the finite collection.</p><nav id="chambers" aria-label="Seven reading chambers"></nav></header>
+<body><header><h1 id="title"></h1><h2 id="subtitle"></h2><p>Offline reading edition. Edition labels identify the collection; observed checks establish its finite verification claims.</p><p>The ministry's fictional Kerot vocabulary is distinct from the executable K0 instruction set. Native OS boot and real finance remain simulations.</p><p><a href="PUBLICATION.md">Full prose collection</a> · <a href="MAX-RAWFUL.md">Max Rawful</a> · <a href="MAX-RAW.md">Max Raw</a> · <a href="MAX-LAW.md">Max Law</a> · <a href="MAX-LAWFUL.md">Max Lawful</a> · <a href="catalogue.json">Sorted catalogue</a> · <a href="sources.zip">Exact source archive</a> · <a href="release-hashes.json">Release hashes</a></p><p>Seven chambers offer a reading guide through the finite collection.</p><nav id="chambers" aria-label="Seven reading chambers"></nav></header>
 <label for="search">Search document names and full text</label><input id="search" type="search" placeholder="Search this edition"><p id="count" aria-live="polite"></p>
 <div id="returns"><button id="return-root" type="button">Return to collection</button><button id="return-parent" type="button">Return to parent lair</button></div><p id="breadcrumb"></p>
 <main><aside><h2>Source lairs</h2><div id="lair"></div><h2>Matching prose</h2><nav id="documents" aria-label="Documents"></nav></aside><article><h2 id="document-title"></h2><div id="provenance"></div><div id="nested-links"></div><pre id="text"></pre></article></main>
@@ -434,6 +436,7 @@ def build(root, output_dir='publication/edition') -> dict:
               '- `index.html`: self-contained searchable reader; Markdown is displayed as inert text.',
               '- `reader-data.json`: deduplicated Markdown text, retained source references, seven reading chambers and a bounded recursively nested file tree.',
               '- `catalogue.json`: sorted sources, terms and components.',
+              '- `MAX-RAWFUL.md`, `MAX-RAW.md`, `MAX-LAW.md`, `MAX-LAWFUL.md`: four full-collection reading editions with distinct editorial review guides.',
               '- `sources.zip`: exact original files under each repository ID, including licenses and binary bytecode; `_publication/source-lock.json` preserves the registry.',
               '- `release-hashes.json`: SHA-256 and byte sizes for the other outputs, source lock and included current editorial inputs.', '',
               'No network requests or source-program execution are performed by this builder. Verification compares pinned sizes and SHA-256 hashes; it does not certify malware absence, legal authority, universal science or native operating-system readiness.', '',
@@ -456,6 +459,17 @@ def build(root, output_dir='publication/edition') -> dict:
     outputs = {'catalogue.json': _json_bytes(catalogue), 'reader-data.json': _json_bytes(reader),
                'index.html': _html(reader), 'PUBLICATION.md': '\n'.join(lines).encode('utf-8'),
                'sources.zip': _archive(lock, captured, lock_bytes)}
+    perspectives = {
+        'MAX-RAWFUL.md': ('Max Rawful', 'Read each retained source together with its provenance and implementation status. Keep the complete record visible, including unresolved vocabulary, fictional terminology and finite verification limits.'),
+        'MAX-RAW.md': ('Max Raw', 'Read the unabridged collected Markdown text as recorded. This is a textual reading edition, not camera RAW, executable firmware or an alternative source snapshot. Exact binary and original file bytes remain in sources.zip.'),
+        'MAX-LAW.md': ('Max Law', 'Review ownership and licensing, consent and personal-data handling, platform access terms, consumer claims, financial representations and jurisdiction-specific duties for every relevant chapter. No jurisdiction or legal clearance is assumed; obtain qualified advice before making legal claims.'),
+        'MAX-LAWFUL.md': ('Max Lawful', 'Use documented permissions, original or licensed assets, reversible consent, authorised access and preserved audit evidence. Keep simulations and proposed features labelled. Record which applicable rules were actually reviewed, by whom and when; decline to claim compliance without that evidence. This label is not certification.'),
+    }
+    catalogue['parallel_editions'] = [{'file': name, 'title': title, 'coverage': 'Complete collected Markdown corpus', 'certification': False} for name, (title, guide) in perspectives.items()]
+    outputs['catalogue.json'] = _json_bytes(catalogue)
+    for name, (title, guide) in perspectives.items():
+        preface = '# ' + title + ' — full collection\n\nPublication edition ' + lock['edition'] + '.\n\n' + guide + '\n\nAll four editions retain the same complete collected body below. Their review guides differ; they do not introduce new implemented capabilities or remove source limitations. Historical original file bytes and licences remain in sources.zip.\n\n---\n\n'
+        outputs[name] = preface.encode('utf-8') + outputs['PUBLICATION.md']
     hashes = {name: {'sha256': _sha(payload), 'size': len(payload)} for name, payload in sorted(outputs.items())}
     release = {'format': 'rasniki-hopput-release-hashes', 'version': 1, 'edition': lock['edition'],
                'source_lock': {'sha256': _sha(lock_bytes), 'size': len(lock_bytes)},

@@ -45,3 +45,7 @@ Live Instagram compatibility, personal-desktop systemd startup, Web Store review
 ## Edition 5: offline romance and comfort proposal
 
 The complete bootstrap and byte-reproducible publication rebuild passed. The reader contains 76 documents, 41 current editorial files and 326 lair nodes. Inclusion of the new offline adult romance and comfort chapter was checked directly in reader data. Historical snapshots remain at 254 verified files. The chapter documents a non-explicit fictional-adult creator proposal and general comfort guidance, not implemented generation, medical treatment or legal certification.
+
+## Edition 6: four complete parallel reading editions
+
+The complete bootstrap and deterministic rebuild passed. A new publication test verifies that all four generated editions end with the exact complete standard publication body, have distinct editorial introductions, are indexed in the reader and catalogue, and expressly do not represent legal certification. SHA-256 release records cover the four additional outputs. The reader contains 77 documents, 42 current editorial files and 327 lair nodes; 254 historical source files remain verified and unchanged.

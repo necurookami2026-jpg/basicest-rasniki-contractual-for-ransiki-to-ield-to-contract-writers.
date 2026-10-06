@@ -1,3 +1,13 @@
+# Max Rawful — full collection
+
+Publication edition 6.
+
+Read each retained source together with its provenance and implementation status. Keep the complete record visible, including unresolved vocabulary, fictional terminology and finite verification limits.
+
+All four editions retain the same complete collected body below. Their review guides differ; they do not introduce new implemented capabilities or remove source limitations. Historical original file bytes and licences remain in sources.zip.
+
+---
+
 # Rasniki Hopput — Max Greatest Exact Sciencerainbow, Exact Finalisable Catch, Finalisable Exact Final Quilt, Max Greatest Aimat, Max Rawful Omniarchy
 
 ## Lair of Lairs — Recursive Form, Format and Formate

@@ -42,6 +42,22 @@ class PublicationTests(unittest.TestCase):
     def write_lock(self):
         (self.root / 'publication/source-lock.json').write_text(json.dumps(self.lock), encoding='utf-8')
 
+    def test_four_parallel_editions_retain_complete_body_and_distinct_guides(self):
+        result = publication.build(self.root)
+        output = Path(result['output_dir'])
+        body = (output / 'PUBLICATION.md').read_bytes()
+        prefixes = []
+        for name in ('MAX-RAWFUL.md', 'MAX-RAW.md', 'MAX-LAW.md', 'MAX-LAWFUL.md'):
+            rendition = (output / name).read_bytes()
+            self.assertTrue(rendition.endswith(body), name)
+            prefixes.append(rendition[:-len(body)])
+        self.assertEqual(len(set(prefixes)), 4)
+        catalogue = json.loads((output / 'catalogue.json').read_text())
+        self.assertEqual(len(catalogue['parallel_editions']), 4)
+        self.assertTrue(all(entry['certification'] is False for entry in catalogue['parallel_editions']))
+        html = (output / 'index.html').read_text()
+        self.assertTrue(all(entry['file'] in html for entry in catalogue['parallel_editions']))
+
     def test_verifies_full_binary_and_licenses(self):
         result = publication.verify_sources(self.root)
         self.assertTrue(result['ok'])

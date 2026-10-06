@@ -166,9 +166,35 @@
       "status": "implemented-local"
     }
   ],
-  "edition": "5",
+  "edition": "6",
   "format": "rasniki-hopput-catalogue",
   "language_boundary": "Ministry fictional Kerot vocabulary does not extend or redefine the executable K0 ISA.",
+  "parallel_editions": [
+    {
+      "certification": false,
+      "coverage": "Complete collected Markdown corpus",
+      "file": "MAX-RAWFUL.md",
+      "title": "Max Rawful"
+    },
+    {
+      "certification": false,
+      "coverage": "Complete collected Markdown corpus",
+      "file": "MAX-RAW.md",
+      "title": "Max Raw"
+    },
+    {
+      "certification": false,
+      "coverage": "Complete collected Markdown corpus",
+      "file": "MAX-LAW.md",
+      "title": "Max Law"
+    },
+    {
+      "certification": false,
+      "coverage": "Complete collected Markdown corpus",
+      "file": "MAX-LAWFUL.md",
+      "title": "Max Lawful"
+    }
+  ],
   "repositories": [
     {
       "commit": "21e05fcfee4a9f098345d260ee3c6b2825c09cb0",
